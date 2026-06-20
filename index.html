@@ -63,12 +63,42 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Nowe style dla przełącznika baz danych */
+        .dataset-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dataset-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--primary);
+            color: var(--text-muted);
+            padding: 0.6rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dataset-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-main);
+        }
+
+        .dataset-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+        }
+
         .sections-nav {
             display: flex;
             justify-content: center;
             gap: 0.5rem;
             flex-wrap: wrap;
-            margin-top: 0.5rem;
         }
 
         .btn-section {
@@ -80,7 +110,6 @@
             border-radius: 20px;
             cursor: pointer;
             transition: all 0.2s ease;
-            /* Zmiany estetyczne dla równej szerokości */
             min-width: 110px;
             text-align: center;
             display: inline-block;
@@ -109,23 +138,17 @@
             transition: all 0.3s ease;
         }
 
-        button {
+        button.outline {
             font-family: 'Inter', sans-serif;
-            background: var(--primary);
-            color: white;
-            border: none;
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-        }
-
-        button.outline {
-            background: transparent;
-            border: 1px solid var(--primary);
-            color: var(--primary);
         }
 
         button.outline:hover {
@@ -146,6 +169,8 @@
         }
 
         .option {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem;
@@ -153,6 +178,7 @@
             cursor: pointer;
             text-align: left;
             color: var(--text-main);
+            transition: all 0.2s ease;
         }
 
         .option:hover:not(:disabled) {
@@ -239,6 +265,13 @@
 <div id="app">
     <header>
         <h1>Systemy operacyjne</h1>
+        
+        <!-- Przełącznik bazy pytań -->
+        <div class="dataset-toggle">
+            <button id="btn-po2017" class="dataset-btn active" onclick="loadDataset('questions_po2017.json', 'po2017')">Baza po 2017</button>
+            <button id="btn-przed2017" class="dataset-btn" onclick="loadDataset('questions_przed2017.json', 'przed2017')">Baza przed 2017</button>
+        </div>
+
         <div class="sections-nav" id="sections-navigation"></div>
     </header>
 
@@ -248,7 +281,7 @@
             <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: #34d399;">Rozwiązano: 0</div>
         </div>
         
-        <div id="list-container">Ładowanie pytań...</div>
+        <div id="list-container">Wybierz bazę pytań, aby rozpocząć...</div>
         
         <div style="text-align: center; margin-top: 2rem;">
              <button class="outline" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Wróć na górę &uarr;</button>
@@ -262,15 +295,26 @@ let listAnswers = [];
 const QUESTIONS_PER_SECTION = 50;
 let currentSection = 0;
 
-async function initQuiz() {
+// Główna funkcja ładująca wybrany plik JSON
+async function loadDataset(filename, btnId) {
     try {
-        const response = await fetch('questions.json');
+        // Zmiana aktywnego guzika
+        document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(`btn-${btnId}`).classList.add('active');
+
+        document.getElementById('list-container').innerHTML = '<div style="text-align:center; padding: 2rem;">Ładowanie pytań...</div>';
+        document.getElementById('sections-navigation').innerHTML = '';
+        
+        const response = await fetch(filename);
         if (!response.ok) {
-            throw new Error('Problem z załadowaniem pliku z pytaniami.');
+            throw new Error(`Nie znaleziono pliku: ${filename}. Upewnij się, że plik istnieje w folderze.`);
         }
+        
         qData = await response.json();
-        // Tablica odpowiedzi zachowuje stan dla wszystkich pytań globalnie
+        
+        // Resetowanie postępów po zmianie bazy
         listAnswers = new Array(qData.length).fill(null);
+        currentSection = 0;
         
         renderSectionTabs();
         renderList();
@@ -279,7 +323,6 @@ async function initQuiz() {
     }
 }
 
-// Generowanie zakładek u góry strony z nową numeracją
 function renderSectionTabs() {
     const nav = document.getElementById('sections-navigation');
     nav.innerHTML = '';
@@ -289,7 +332,6 @@ function renderSectionTabs() {
     if (totalSections <= 1) return;
 
     for (let i = 0; i < totalSections; i++) {
-        // Obliczanie numerów na guziku (np. 1-50, 51-100)
         const startNum = i * QUESTIONS_PER_SECTION + 1;
         const endNum = Math.min((i + 1) * QUESTIONS_PER_SECTION, qData.length);
 
@@ -304,7 +346,6 @@ function renderSectionTabs() {
 function switchSection(sectionIndex) {
     currentSection = sectionIndex;
     
-    // Aktualizacja podświetlenia aktywnej zakładki
     const buttons = document.querySelectorAll('.btn-section');
     buttons.forEach((btn, idx) => {
         if (idx === sectionIndex) btn.classList.add('active');
@@ -320,14 +361,12 @@ function renderList() {
     container.innerHTML = '';
     updateListStats();
 
-    // Obliczanie zakresu pytań dla bieżącej sekcji
     const startIndex = currentSection * QUESTIONS_PER_SECTION;
     const endIndex = Math.min(startIndex + QUESTIONS_PER_SECTION, qData.length);
     const sectionQuestions = qData.slice(startIndex, endIndex);
 
     let htmlBuffer = '';
     sectionQuestions.forEach((q, localIdx) => {
-        // Globalny indeks pytania w pełnej tablicy qData
         const globalIdx = startIndex + localIdx; 
         const hasAnswered = listAnswers[globalIdx] !== null;
 
@@ -354,15 +393,11 @@ function renderList() {
     
     container.innerHTML = htmlBuffer;
     
-    // Przywrócenie czerwonego tła dla błędnych odpowiedzi, jeśli użytkownik wraca na kartę
     for (let gIdx = startIndex; gIdx < endIndex; gIdx++) {
         if (listAnswers[gIdx] === false) {
             const optionsContainer = document.getElementById(`list-opt-${gIdx}`);
             if (optionsContainer) {
                 const allBtns = optionsContainer.querySelectorAll('.option');
-                // Jeśli jest potrzeba dokładnego zapamiętywania WYBRANEJ złej odpowiedzi, 
-                // trzeba by zmienić strukturę listAnswers na trzymanie indexu wybranej opcji.
-                // Obecnie uproszczono to do pokazania tylko zielonej poprawnej, co przy re-renderze jest czystym i jasnym rozwiązaniem.
             }
         }
     }
@@ -423,7 +458,10 @@ function formatTextWithCode(text) {
     return text.replace(/\n/g, '<br>');
 }
 
-initQuiz();
+// Uruchamiamy ładowanie bazy "po 2017" jako domyślnej po wejściu na stronę
+window.onload = () => {
+    loadDataset('questions_po2017.json', 'po2017');
+};
 </script>
 
 </body>
