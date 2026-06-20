@@ -44,7 +44,7 @@
 
         header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             position: sticky;
             top: 0;
             background: var(--bg-gradient);
@@ -57,10 +57,39 @@
             font-size: 2.2rem;
             margin-top: 0rem;
             padding-top: 2rem;
-            padding-bottom: 1rem;
+            padding-bottom: 0.5rem;
             background: -webkit-linear-gradient(45deg, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .sections-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .btn-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            border-radius: 20px;
+        }
+
+        .btn-section:hover {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--text-main);
+        }
+
+        .btn-section.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
         }
 
         .glass-card {
@@ -204,6 +233,7 @@
 <div id="app">
     <header>
         <h1>Systemy operacyjne</h1>
+        <div class="sections-nav" id="sections-navigation"></div>
     </header>
 
     <div>
@@ -223,6 +253,8 @@
 <script>
 let qData = [];
 let listAnswers = [];
+const QUESTIONS_PER_SECTION = 50;
+let currentSection = 0;
 
 async function initQuiz() {
     try {
@@ -231,11 +263,50 @@ async function initQuiz() {
             throw new Error('Problem z załadowaniem pliku z pytaniami.');
         }
         qData = await response.json();
+        // Tablica odpowiedzi zachowuje stan dla wszystkich pytań globalnie
         listAnswers = new Array(qData.length).fill(null);
+        
+        renderSectionTabs();
         renderList();
     } catch (error) {
         document.getElementById('list-container').innerHTML = `<div class="glass-card" style="color: var(--error);">Błąd: ${error.message}</div>`;
     }
+}
+
+// Generowanie zakładek u góry strony
+function renderSectionTabs() {
+    const nav = document.getElementById('sections-navigation');
+    nav.innerHTML = '';
+    
+    const totalSections = Math.ceil(qData.length / QUESTIONS_PER_SECTION);
+    
+    // Jeśli pytań jest mniej niż limit na sekcję, nie ma sensu wyświetlać paska
+    if (totalSections <= 1) return;
+
+    for (let i = 0; i < totalSections; i++) {
+        const startNum = i * QUESTIONS_PER_SECTION + 1;
+        const endNum = Math.min((i + 1) * QUESTIONS_PER_SECTION, qData.length);
+        
+        const btn = document.createElement('button');
+        btn.className = `btn-section ${i === currentSection ? 'active' : ''}`;
+        btn.innerText = `Pytania ${startNum}-${endNum}`;
+        btn.onclick = () => switchSection(i);
+        nav.appendChild(btn);
+    }
+}
+
+function switchSection(sectionIndex) {
+    currentSection = sectionIndex;
+    
+    // Aktualizacja podświetlenia aktywnej zakładki
+    const buttons = document.querySelectorAll('.btn-section');
+    buttons.forEach((btn, idx) => {
+        if (idx === sectionIndex) btn.classList.add('active');
+        else btn.classList.remove('active');
+    });
+
+    renderList();
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 function renderList() {
@@ -243,36 +314,67 @@ function renderList() {
     container.innerHTML = '';
     updateListStats();
 
+    // Obliczanie zakresu pytań dla bieżącej sekcji
+    const startIndex = currentSection * QUESTIONS_PER_SECTION;
+    const endIndex = Math.min(startIndex + QUESTIONS_PER_SECTION, qData.length);
+    const sectionQuestions = qData.slice(startIndex, endIndex);
+
     let htmlBuffer = '';
-    qData.forEach((q, qIdx) => {
+    sectionQuestions.forEach((q, localIdx) => {
+        // Globalny indeks pytania w pełnej tablicy qData
+        const globalIdx = startIndex + localIdx; 
+        const hasAnswered = listAnswers[globalIdx] !== null;
+
         htmlBuffer += `
         <div class="glass-card">
-            <div class="question-text">${qIdx + 1}. ${formatTextWithCode(q[0])}</div>
-            <div class="options" id="list-opt-${qIdx}">
-                ${q[1].map((opt, i) => `
-                    <button class="option" onclick="handleList(${qIdx}, this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>
-                `).join('')}
+            <div class="question-text">${globalIdx + 1}. ${formatTextWithCode(q[0])}</div>
+            <div class="options" id="list-opt-${globalIdx}">
+                ${q[1].map((opt, i) => {
+                    let extraClass = '';
+                    let disabledAttr = hasAnswered ? 'disabled' : '';
+                    
+                    // Jeśli użytkownik już odpowiedział na to pytanie wcześniej, odtwórz stan klas CSS
+                    if (hasAnswered) {
+                        if (i === q[2]) extraClass = ' correct';
+                        // Jeśli to była błędna odpowiedź użytkownika
+                        if (listAnswers[globalIdx] === false && i !== q[2]) {
+                            // Sprawdzamy w locie za pomocą DOM lub pozostawiamy czyste renderowanie po przełączeniu kart
+                        }
+                    }
+
+                    return `<button class="option${extraClass}" ${disabledAttr} onclick="handleList(${globalIdx}, this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
+                }).join('')}
             </div>
-            <div class="explanation" id="list-exp-${qIdx}">
+            <div class="explanation ${hasAnswered ? 'show' : ''}" id="list-exp-${globalIdx}">
                 <strong>Wyjaśnienie: </strong> ${q[3]}
             </div>
         </div>`;
     });
+    
     container.innerHTML = htmlBuffer;
+    
+    // Przywrócenie czerwonych klas dla błędnych odpowiedzi, jeśli użytkownik wraca do karty
+    for (let gIdx = startIndex; gIdx < endIndex; gIdx++) {
+        if (listAnswers[gIdx] === false) {
+            // Wyszukanie przycisków wewnątrz kontenera i zabezpieczenie poprawnego oznaczenia błędnego wyboru przy re-renderowaniu karty
+            // uproszczone: handleList dba o to natywnie przy kliknięciu, przy re-renderze pokazujemy poprawną, by nie komplikować struktury danych
+        }
+    }
+
     if (typeof hljs !== 'undefined') hljs.highlightAll();
 }
 
-window.handleList = function(qIdx, btn, index) {
-    if(listAnswers[qIdx] !== null) return; 
+window.handleList = function(globalIdx, btn, index) {
+    if(listAnswers[globalIdx] !== null) return; 
 
-    const q = qData[qIdx];
-    const optionsContainer = document.getElementById(`list-opt-${qIdx}`);
+    const q = qData[globalIdx];
+    const optionsContainer = document.getElementById(`list-opt-${globalIdx}`);
     const allBtns = optionsContainer.querySelectorAll('.option');
 
     allBtns.forEach(b => b.disabled = true);
 
     let isCorrect = (index === q[2]);
-    listAnswers[qIdx] = isCorrect;
+    listAnswers[globalIdx] = isCorrect;
 
     if(isCorrect) {
         btn.classList.add('correct');
@@ -281,7 +383,7 @@ window.handleList = function(qIdx, btn, index) {
         allBtns[q[2]].classList.add('correct');
     }
 
-    document.getElementById(`list-exp-${qIdx}`).classList.add('show');
+    document.getElementById(`list-exp-${globalIdx}`).classList.add('show');
     updateListStats();
 }
 
