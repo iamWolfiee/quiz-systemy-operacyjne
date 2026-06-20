@@ -1306,5 +1306,413 @@
     ],
     0,
     "Model sprzężenia procesor-urządzenie świetnie odzwierciedla klasyczny problem producenta-konsumenta (tzw. problem ograniczonego bufora), w którym jedno ogniwo produkuje strumień bajtów, a drugie ściąga go z bufora z inną prędkością."
+  ],
+  [
+    "Podział systemów operacyjnych ze względu na stanowiskowość wyróżnia:",
+    [
+      "Systemy wsadowe i interaktywne",
+      "Systemy czasu rzeczywistego i podziału czasu",
+      "Systemy jednostanowiskowe i wielostanowiskowe",
+      "Systemy jednolite i warstwowe",
+      "Systemy rozproszone i scentralizowane"
+    ],
+    2,
+    "Podział ze względu na stanowiskowość (liczbę stanowisk pracy, z których można jednocześnie korzystać) dzieli systemy na jednostanowiskowe (np. DOS, wczesny Windows) i wielostanowiskowe (np. UNIX, Linux)."
+  ],
+  [
+    "Przy podziale systemów operacyjnych w zależności od sposobu przetwarzania (użytkowania) wyróżniamy:",
+    [
+      "Systemy wsadowe i interaktywne",
+      "Systemy jednorodne i niejednorodne",
+      "Systemy jednostanowiskowe i wielostanowiskowe",
+      "Systemy monolityczne i mikrojądra",
+      "Systemy typu klient-serwer"
+    ],
+    0,
+    "Ze względu na sposób użytkowania (przetwarzania zleceń) systemy dzieli się historycznie na wsadowe (batch processing) oraz interaktywne (z bezpośrednią komunikacją z użytkownikiem)."
+  ],
+  [
+    "Właściwymi cechami systemu przeznaczonego do sterowania procesami (czasu rzeczywistego - RTOS) są:",
+    [
+      "Sprzężenie zwrotne, bezpieczne wyłączenie po awarii, niezawodność",
+      "Wielowątkowość, dwustanowiskowość, jednorodność",
+      "Tylko wysoka wydajność i graficzny interfejs",
+      "Brak możliwości ingerencji użytkownika po starcie",
+      "Udostępnianie zasobów w architekturze klient-serwer"
+    ],
+    0,
+    "Systemy czasu rzeczywistego (RTOS) muszą gwarantować czas reakcji (sprzężenie zwrotne), bardzo wysoką niezawodność oraz procedury bezpiecznego zachowania (fail-safe) w przypadku awarii sprzętu."
+  ],
+  [
+    "Działanie systemów wsadowych polega m.in. na tym, że:",
+    [
+      "Użytkownik nieustannie komunikuje się z procesem przez GUI",
+      "System reaguje na zdarzenia z urządzeń wejścia/wyjścia w czasie milisekund",
+      "Zadania są przydzielane losowo w modelu klient-serwer",
+      "Użytkownik zleca wykonanie zadania, system je wykonuje bez jego ingerencji, a wyniki przekazuje w formie pliku/wydruku",
+      "Procesor wykonuje zlecenia w trybie wirtualnej maszyny z pełną kontrolą użytkownika"
+    ],
+    3,
+    "W systemach wsadowych (Batch Systems) zadania są kolejkowane i przetwarzane sekwencyjnie. Użytkownik nie ma możliwości ingerencji w trakcie ich wykonywania, a wynik odbiera po zakończeniu całego zadania."
+  ],
+  [
+    "Systemy interaktywne charakteryzują się tym, że:",
+    [
+      "Są przeznaczone wyłącznie do renderowania grafiki 3D",
+      "Wykonują zadania sekwencyjnie bez dostępu do klawiatury",
+      "Posiadają możliwość stałej współpracy z użytkownikiem podczas wykonywania zadania",
+      "Są synonimem systemów wbudowanych (embedded)",
+      "Automatycznie zamykają procesy po wykryciu bezczynności"
+    ],
+    2,
+    "Interaktywność oznacza ciągły dialog systemu z użytkownikiem, który na bieżąco może wprowadzać komendy, parametry oraz reagować na zwracane przez system komunikaty."
+  ],
+  [
+    "Systemy rozproszone dzieli się ogólnie ze względu na typ wykorzystywanego sprzętu i oprogramowania na:",
+    [
+      "Jednorodne (homogeniczne) i niejednorodne (heterogeniczne)",
+      "Wsadowe i czasu rzeczywistego",
+      "Otwarte i zamknięte",
+      "Cykliczne i potokowe",
+      "Lokalne i globalne"
+    ],
+    0,
+    "Systemy rozproszone mogą łączyć komputery o identycznej architekturze i systemach operacyjnych (jednorodne) lub o całkowicie różnych platformach sprzętowo-programowych (niejednorodne)."
+  ],
+  [
+    "Do klasycznych typów struktur jądra systemu operacyjnego zaliczamy m.in.:",
+    [
+      "Strukturę rozproszoną, potokową i wielowątkową",
+      "Strukturę wsadową i interaktywną",
+      "Strukturę jednolitą (monolityczną), warstwową oraz model klient-serwer (mikrojądro)",
+      "Strukturę pierścieniową i gwiaździstą",
+      "Strukturę ciągłą i indeksową"
+    ],
+    2,
+    "Są to fundamentalne architektury systemów operacyjnych. Monolit to jeden wielki blok kodu, warstwowa układa funkcje w hierarchiczne poziomy, a model klient-serwer (mikrojądro) opiera się na komunikacji małego rdzenia z usługami."
+  ],
+  [
+    "Który z poniższych systemów operacyjnych najprawdopodobniej nigdy nie istniał na rynku?",
+    [
+      "BeOS",
+      "Sun Solaris",
+      "Apple MacOS/2",
+      "SGI Irix",
+      "NetBSD"
+    ],
+    2,
+    "Firma Apple wydawała systemy z rodziny MacOS (np. Mac OS 8, 9, OS X). System OS/2 był natomiast wspólnym projektem firm IBM oraz Microsoft. Skrzyżowanie tych nazw 'Apple MacOS/2' jest fikcyjne."
+  ],
+  [
+    "Macierzystym i docelowo projektowanym systemem plików dla architektury OS/2 był:",
+    [
+      "NTFS",
+      "FAT32",
+      "ext3",
+      "HPFS",
+      "ReiserFS"
+    ],
+    3,
+    "HPFS (High Performance File System) został stworzony przez IBM wspólnie z Microsoftem specjalnie na potrzeby systemu OS/2, oferując m.in. wsparcie dla długich nazw plików i lepszą wydajność niż ówczesny FAT."
+  ],
+  [
+    "Które z wymienionych systemów są implementacjami wywodzącymi się z bezpośredniej linii BSD (Berkeley Software Distribution)?",
+    [
+      "NetBSD oraz FreeBSD",
+      "SunOS oraz Solaris",
+      "Debian oraz Ubuntu",
+      "Minix oraz QNX",
+      "Red Hat oraz Slackware"
+    ],
+    0,
+    "FreeBSD, NetBSD, OpenBSD oraz DragonFly BSD to bezpośredni potomkowie uniksowego kodu rozwijanego na Uniwersytecie Kalifornijskim w Berkeley (BSD UNIX)."
+  ],
+  [
+    "Która z poniższych nazw NIE określa popularnej i znanej dystrybucji systemu Linux?",
+    [
+      "Red Hat",
+      "Debian",
+      "Slackware",
+      "Aurox",
+      "Mendreyk"
+    ],
+    4,
+    "Mendreyk to najprawdopodobniej fonetyczny, błędny zapis (lub żartobliwy) nazwy francuskiej dystrybucji Mandrake Linux (później przemianowanej na Mandriva)."
+  ],
+  [
+    "Z wymienionych środowisk graficznych (X Window System managers), do klasycznych i najpopularniejszych dla systemu Linux należą:",
+    [
+      "XPStyle i GLON",
+      "KWB i Xterm",
+      "KDE i GNOME",
+      "WinAPI i DirectX",
+      "GUI i CLI"
+    ],
+    2,
+    "KDE (K Desktop Environment) oraz GNOME (GNU Network Object Model Environment) to dwa najbardziej rozbudowane i klasyczne uniksowe środowiska graficzne pulpitu."
+  ],
+  [
+    "Czym właściwie jest skrót DOS?",
+    [
+      "Dyskowy system operacyjny (Disk Operating System)",
+      "Dwuprocesorowy system operacyjny",
+      "Deskryptor Obsługi Systemu",
+      "Dynamiczna Organizacja Skryptów",
+      "Domenowy system obrony"
+    ],
+    0,
+    "DOS (Disk Operating System) to kategoria wczesnych, jednoużytkownikowych i jednozadaniowych systemów operacyjnych (jak MS-DOS czy PC-DOS), które skupiały się na prostym zarządzaniu plikami na dyskach."
+  ],
+  [
+    "Skrót GUI oznacza w informatyce:",
+    [
+      "Global User Identification",
+      "Graphical User Interface (Graficzny Interfejs Użytkownika)",
+      "General Unix Interface",
+      "Guided Unit Installation",
+      "Graphic Unit Interconnect"
+    ],
+    1,
+    "GUI (Graficzny Interfejs Użytkownika) to środowisko prezentujące elementy systemu operacyjnego w postaci okienek, ikon i menu, z którymi użytkownik komunikuje się przy pomocy urządzenia wskazującego."
+  ],
+  [
+    "Systemem, który domyślnie i natywnie NIE posiada graficznego interfejsu użytkownika (GUI) jest:",
+    [
+      "MacOS",
+      "DOS",
+      "Windows 95",
+      "Symbian",
+      "BeOS"
+    ],
+    1,
+    "System DOS jest z założenia systemem operującym wyłącznie w znakowym trybie wiersza poleceń (CLI - Command Line Interface). Nakładki graficzne (jak wczesny Windows 1.0 - 3.11) były osobnymi programami."
+  ],
+  [
+    "Z jakiego urządzenia wejściowego korzysta się jako nieodzownego elementu do sprawnej obsługi systemów z GUI?",
+    [
+      "Skaner",
+      "Klawiatura numeryczna",
+      "Ploter",
+      "Mysz (lub inne urządzenie wskazujące)",
+      "Kamera internetowa"
+    ],
+    3,
+    "Istotą GUI (Graficznego Interfejsu Użytkownika) jest obecność kursora/wskaźnika na ekranie, którym użytkownik manipuluje za pomocą myszy, touchpada, trackballa itp."
+  ],
+  [
+    "W systemach typu UNIX/Linux przy pomocy potoków (pipes) można:",
+    [
+      "Zwiększyć częstotliwość taktowania procesora",
+      "Łączyć wyjście standardowe jednego polecenia bezpośrednio z wejściem standardowym następnego",
+      "Komunikować procesor z urządzeniami wejścia/wyjścia bez użycia przerwań",
+      "Sformatować zdalny dysk twardy na serwerze",
+      "Zablokować dostęp do plików dla grupy world"
+    ],
+    1,
+    "Potoki (znak `|`) to fundamentalny mechanizm komunikacji międzyprocesowej w powłokach, pozwalający tworzyć złożone łańcuchy poleceń, np. `cat plik.txt | sort | more`."
+  ],
+  [
+    "W systemie Windows (w plikach wsadowych .bat / .cmd) polecenia używane do hermetyzacji (ograniczenia zasięgu) zmiennych środowiskowych to:",
+    [
+      "begin / end",
+      "setlocal / endlocal",
+      "start / stop",
+      "push / pop",
+      "declare / release"
+    ],
+    1,
+    "Instrukcje `setlocal` i `endlocal` sprawiają, że wszelkie modyfikacje zmiennych systemowych dokonane pomiędzy nimi są lokalne dla tego skryptu i zostają anulowane po zakończeniu jego działania."
+  ],
+  [
+    "Do typowych poleceń filtrowania i przetwarzania strumieni w powłokach (np. często stosowanych w połączeniu z potokami) należą:",
+    [
+      "dir, cd, md",
+      "format, fdisk, chkdsk",
+      "more, sort, grep, cat",
+      "gcc, make, as",
+      "lsmod, insmod, rmmod"
+    ],
+    2,
+    "Programy te operują na strumieniach tekstowych: `cat` wypisuje strumień, `sort` go sortuje, `grep` przeszukuje, a `more` pozwala na jego stronicowanie na ekranie."
+  ],
+  [
+    "Na czym polega zasada współbieżności w systemach operacyjnych (w sensie systemów jednoprocesorowych)?",
+    [
+      "Na posiadaniu wielu procesorów w jednej maszynie",
+      "Na fizycznym dzieleniu pamięci RAM między procesy",
+      "Na złudzeniu jednoczesnego wykonywania kilku procesów, poprzez szybkie naprzemienne dzielenie czasu procesora",
+      "Na pobieraniu danych z internetu kilkoma kanałami",
+      "Na łączeniu wielu maszyn w jeden duży system rozproszony"
+    ],
+    2,
+    "Współbieżność (concurrency) pozorna na jednym procesorze polega na bardzo szybkim przełączaniu kontekstu (multitasking). W ułamkach sekund procesor obsługuje kolejne wątki, co daje użytkownikowi wrażenie ich jednoczesnego działania."
+  ],
+  [
+    "Z matematycznego i systemowego punktu widzenia, semafor opracowany przez Dijkstrę to:",
+    [
+      "Program antywirusowy działający w tle",
+      "Nieujemna liczba całkowita (zabezpieczona), na której można wykonać niepodzielne operacje Czekaj (P) i Sygnalizuj (V)",
+      "Znak graficzny w oknie logowania",
+      "Mechanizm przesyłania pakietów TCP/IP",
+      "Obszar pamięci dyskowej wykorzystywany przez mechanizm stronicowania"
+    ],
+    1,
+    "Semafor to zmienna używana do kontroli dostępu do zasobów współdzielonych. Jej wartość mówi o liczbie dostępnych wolnych zasobów, a operacje na niej są zaimplementowane sprzętowo lub jądrowo jako niepodzielne (atomowe)."
+  ],
+  [
+    "Sytuacja zakleszczenia (deadlock) lub potocznie 'blokada' to stan, w którym:",
+    [
+      "Procesor wykonuje nieskończoną pętlę w programie",
+      "Skończyło się miejsce na dysku i proces nie może pisać do pliku",
+      "Dwa lub więcej procesów oczekuje na zasoby przetrzymywane nawzajem przez siebie, przez co żaden z nich nie może ruszyć dalej",
+      "Użytkownik zablokował klawiaturę specjalnym skrótem",
+      "Wystąpił błąd odczytu pamięci operacyjnej (Blue Screen)"
+    ],
+    2,
+    "Zakleszczenie to patologiczna sytuacja w teorii współbieżności (cykl oczekiwań), z której uwikłane w nią procesy nie są w stanie wyjść bez drastycznej interwencji systemu operacyjnego (np. ubicia któregoś z procesów)."
+  ],
+  [
+    "Fragment kodu programu, w trakcie którego odwołuje się on do współdzielonego zasobu niepodzielnego (np. modyfikuje globalną zmienną) nazywamy:",
+    [
+      "Sekcją krytyczną",
+      "Zmienną środowiskową",
+      "Funkcją rekurencyjną",
+      "Podprogramem przerwania",
+      "Blokiem kontrolnym procesu (PCB)"
+    ],
+    0,
+    "Zgodnie z zasadami synchronizacji, tylko jeden proces na raz może przebywać i wykonywać instrukcje w swojej sekcji krytycznej odnoszącej się do danego zasobu (warunek wzajemnego wykluczania)."
+  ],
+  [
+    "Rozwiązanie problemu sekcji krytycznej w systemach wielozadaniowych MUSI bezwzględnie spełniać trzy klasyczne warunki:",
+    [
+      "Szybkość, wydajność i brak awaryjności",
+      "Wzajemne wykluczanie, postęp oraz ograniczone czekanie",
+      "Kompaktowanie, stronicowanie i segmentację",
+      "Współdzielenie kodu, stosu i rejestrów",
+      "Brak wywłaszczania, cykliczność i podział czasu"
+    ],
+    1,
+    "Dwa procesy nie mogą wejść do strefy naraz (wzajemne wykluczanie), system nie może blokować dostępu w nieskończoność jeśli strefa jest wolna (postęp) i proces nie może zostać zagłodzony przez inne szybkie procesy (ograniczone czekanie)."
+  ],
+  [
+    "W architekturze Windows API, do mechanizmów synchronizacji wątków (obiektów jądra) zalicza się m.in.:",
+    [
+      "Zdarzenia (Events), Mutexy oraz Semafory",
+      "Gniazda i pakiety",
+      "Okna dialogowe i przyciski",
+      "Klawiaturę i mysz",
+      "Strumienie i potoki anonimowe"
+    ],
+    0,
+    "Interfejs Win32 dostarcza różnorodne obiekty służące synchronizacji: Eventy sygnalizują zajście zdarzenia, Mutexy (Mutual Exclusion) strzegą dostępu dla jednego wątku, a Semafory limitują dostęp do określonej liczby wystąpień zasobu."
+  ],
+  [
+    "Za co odpowiedzialny jest dyspozytor (dispatcher) w systemie operacyjnym?",
+    [
+      "Za defragmentację dysku twardego w tle",
+      "Za przydzielanie adresów IP w sieci",
+      "Za fizyczne przełączanie kontekstu (wznawianie i wstrzymywanie procesów) oraz przypisywanie im czasu procesora",
+      "Za weryfikację uprawnień i ochronę plików w systemie NTFS",
+      "Za tworzenie nowego jądra w systemie Linux"
+    ],
+    2,
+    "Dyspozytor to kluczowy, niskopoziomowy element modułu planowania (schedulera). To jego kod ładuje i zrzuca zawartość rejestrów procesora przy każdorazowej zmianie obecnie realizowanego przez CPU procesu."
+  ],
+  [
+    "W logice struktury systemów plików, tzw. maska ochrony i lista kontroli dostępu (ACL) służą jako mechanizmy:",
+    [
+      "Fizycznego zapisu danych na talerzach dysku",
+      "Szyfrowania strumieni audio w internecie",
+      "Kontroli i definiowania praw dostępu (odczytu, zapisu, wykonania) dla użytkowników współdzielących pliki",
+      "Tłumaczenia nazw domen (DNS)",
+      "Formatowania niskopoziomowego dysków"
+    ],
+    2,
+    "Mechanizmy te zabezpieczają pliki systemowe i użytkowników. ACL rozszerza podstawowe maski uniksowe o możliwość zdefiniowania szczegółowych uprawnień dla dowolnego specyficznego użytkownika lub grupy w systemie."
+  ],
+  [
+    "Jednym ze sposobów realizacji struktury macierzy dostępu (kontroli ochrony obiektów w systemie) w praktycznych systemach operacyjnych są:",
+    [
+      "Kolejki FIFO i LIFO",
+      "Wykazy uprawnień skojarzone z obiektami (ACL) oraz wykazy uprawnień skojarzone z domenami/użytkownikami (Capability Lists)",
+      "Magistrale szeregowe i równoległe",
+      "Semafory i monitory",
+      "Tablice stron i katalogi stron"
+    ],
+    1,
+    "Ponieważ przechowywanie rzadkiej, ogromnej dwuwymiarowej tablicy obiekt/podmiot jest w pamięci nieefektywne, systemy tną macierz wierszami (Capability List trzymana przy użytkowniku) lub kolumnami (ACL trzymana przy pliku)."
+  ],
+  [
+    "Podstawową zasadą budowy struktury pierścieniowej (ochrony uprawnień, np. pierścienie Ring 0, Ring 3 w x86) jest to, że:",
+    [
+      "Zewnętrzne pierścienie mają najwięcej praw do sterowania sprzętem",
+      "Poziom bezpieczeństwa jest we wszystkich pierścieniach taki sam",
+      "Uprzywilejowanie rośnie do wewnątrz. Kod z warstw mniej uprzywilejowanych nie może bezpośrednio (dowolnie) wywoływać funkcji i korzystać z zasobów warstw bardziej uprzywilejowanych",
+      "Pamięć podręczna działa tylko w dwóch pierścieniach",
+      "Pierścienie rotują procesami, by zapewnić sprawiedliwy podział czasu CPU"
+    ],
+    2,
+    "Mechanizm pierścieni izoluje jądro (Ring 0) od aplikacji (Ring 3). Aplikacja nie może sama z siebie wykonać kodu uprzywilejowanego - musi zgłosić żądanie do systemu poprzez specjalną 'bramkę' wywołania systemowego (syscall)."
+  ],
+  [
+    "Plik o nazwie 'ntoskrnl.exe' występujący w systemach z rodziny Windows NT/2000/XP i nowszych, fizycznie reprezentuje:",
+    [
+      "Program służący do defragmentacji",
+      "Główne jądro (kernel) oraz warstwę wykonawczą (executive) systemu Windows",
+      "Bootloader odpowiedzialny za wybór systemu z listy",
+      "Sterownik kary graficznej",
+      "Katalog główny partycji NTFS"
+    ],
+    1,
+    "NTOSKRNL (Windows NT Operating System Kernel) to kluczowy plik wykonywalny serca systemu Windows, zawierający dyspozytora, menedżera pamięci i pozostałe krytyczne moduły jądra."
+  ],
+  [
+    "Zadaniem procesu obsługi przerwań (ISR - Interrupt Service Routine) wywoływanym np. po kliknięciu klawisza myszy, jest:",
+    [
+      "Oczekiwanie w pętli na zamknięcie systemu",
+      "Natychmiastowe zatrzymanie bieżącego procesu, przechowanie jego kontekstu i zainicjowanie odpowiedniej akcji powiązanej ze źródłem przerwania",
+      "Zapisywanie plików otwartych w Wordzie",
+      "Formatowanie partycji na poziomie sprzętowym",
+      "Uruchomienie planisty wysokiego poziomu"
+    ],
+    1,
+    "Podprogram obsługi przerwania musi zareagować jak najszybciej. Zabezpiecza używane rejestry, diagnozuje, które urządzenie sprzętowe domaga się uwagi, obsługuje je i przywraca przerwany program użytkownika."
+  ],
+  [
+    "W module zarządzania pamięcią, tzw. 'zbiór roboczy' (Working-Set) definiuje się jako:",
+    [
+      "Ilość pamięci podręcznej procesora w kilobajtach",
+      "Pojemność dostępnego wolnego miejsca w pliku stronicowania",
+      "Minimalną (lokalną) liczbę stron, które dany proces aktualnie potrzebuje mieć w pamięci RAM, aby pracować efektywnie i bez ciągłego wywoływania błędów braku strony",
+      "Zbiór wszystkich procesów oczekujących na procesor w stanie gotowości",
+      "Katalog, w którym użytkownik aktualnie zapisuje swoje skrypty"
+    ],
+    2,
+    "Mechanizm zbioru roboczego opiera się na zasadzie lokalności odwołań. Aby zapobiec zjawisku szamotania (thrashingu), system stara się trzymać zbiory robocze procesów na stałe w fizycznej pamięci RAM."
+  ],
+  [
+    "Czym jest potocznie pojęcie tzw. 'pamięci konwencjonalnej' stosowane historycznie w architekturze komputerów IBM PC (z systemem MS-DOS)?",
+    [
+      "Pamięcią typu Flash używaną jako pendrive",
+      "Pamięcią ukrytą w chipsecie płyty głównej",
+      "Pierwszymi 640 KB adresowalnej pamięci RAM, służącymi do umieszczania programów użytkowych w trybie rzeczywistym procesora",
+      "Obszarem pamięci wirtualnej o wielkości równej pamięci fizycznej",
+      "Całą pamięcią RAM przekraczającą barierę 1 Megabajta"
+    ],
+    2,
+    "W trybie rzeczywistym wczesnych procesorów x86 przestrzeń adresowa była ograniczona do 1 MB. Obszar górnych 384 KB (UMB) rezerwowano dla BIOSu i sprzętu, a dolne (konwencjonalne) 640 KB udostępniano pod programy i DOS."
+  ],
+  [
+    "Bezpośredni dostęp do pamięci, znany pod skrótem DMA (Direct Memory Access), oznacza mechanizm w którym:",
+    [
+      "Dwa procesy udostępniają sobie nawzajem zmienne",
+      "Urządzenia wejścia/wyjścia (np. kontroler dysku) przesyłają blokowe dane do pamięci operacyjnej z całkowitym lub niemal całkowitym pominięciem obciążania jednostki CPU",
+      "Procesor wykonuje operacje matematyczne bez użycia rejestrów L1",
+      "Pamięć podręczna jest sprzętowo wyłączona w BIOSie",
+      "System operacyjny przechowuje pliki bez systemu plików"
+    ],
+    1,
+    "Kanał DMA samodzielnie steruje liniami adresowymi i przesyła wielkie porcje danych (np. bajty z dysku do RAM), a główny procesor informuje jedynie specjalnym przerwaniem po zakończeniu całego transferu."
   ]
 ]
