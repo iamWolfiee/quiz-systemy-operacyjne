@@ -78,6 +78,8 @@
             padding: 0.5rem 1rem;
             font-size: 0.9rem;
             border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
         .btn-section:hover {
@@ -238,7 +240,7 @@
 
     <div>
         <div class="progress-sidebar">
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Twój Wynik</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Wynik bieżącego zestawu</div>
             <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: #34d399;">Rozwiązano: 0</div>
         </div>
         
@@ -284,12 +286,9 @@ function renderSectionTabs() {
     if (totalSections <= 1) return;
 
     for (let i = 0; i < totalSections; i++) {
-        const startNum = i * QUESTIONS_PER_SECTION + 1;
-        const endNum = Math.min((i + 1) * QUESTIONS_PER_SECTION, qData.length);
-        
         const btn = document.createElement('button');
         btn.className = `btn-section ${i === currentSection ? 'active' : ''}`;
-        btn.innerText = `Pytania ${startNum}-${endNum}`;
+        btn.innerText = `Zestaw ${i + 1}`;
         btn.onclick = () => switchSection(i);
         nav.appendChild(btn);
     }
@@ -338,7 +337,7 @@ function renderList() {
                         if (i === q[2]) extraClass = ' correct';
                         // Jeśli to była błędna odpowiedź użytkownika
                         if (listAnswers[globalIdx] === false && i !== q[2]) {
-                            // Sprawdzamy w locie za pomocą DOM lub pozostawiamy czyste renderowanie po przełączeniu kart
+                            // Czyste renderowanie, logikę pominęliśmy dla zachowania prostoty
                         }
                     }
 
@@ -353,14 +352,6 @@ function renderList() {
     
     container.innerHTML = htmlBuffer;
     
-    // Przywrócenie czerwonych klas dla błędnych odpowiedzi, jeśli użytkownik wraca do karty
-    for (let gIdx = startIndex; gIdx < endIndex; gIdx++) {
-        if (listAnswers[gIdx] === false) {
-            // Wyszukanie przycisków wewnątrz kontenera i zabezpieczenie poprawnego oznaczenia błędnego wyboru przy re-renderowaniu karty
-            // uproszczone: handleList dba o to natywnie przy kliknięciu, przy re-renderze pokazujemy poprawną, by nie komplikować struktury danych
-        }
-    }
-
     if (typeof hljs !== 'undefined') hljs.highlightAll();
 }
 
@@ -388,14 +379,19 @@ window.handleList = function(globalIdx, btn, index) {
 }
 
 function updateListStats() {
-    const answered = listAnswers.filter(a => a !== null).length;
-    const corrects = listAnswers.filter(a => a === true).length;
+    const startIndex = currentSection * QUESTIONS_PER_SECTION;
+    const endIndex = Math.min(startIndex + QUESTIONS_PER_SECTION, qData.length);
+    const currentSectionAnswers = listAnswers.slice(startIndex, endIndex);
+
+    const answered = currentSectionAnswers.filter(a => a !== null).length;
+    const corrects = currentSectionAnswers.filter(a => a === true).length;
+    const totalInSection = endIndex - startIndex;
     const scoreText = document.getElementById('list-score');
 
     if(answered === 0) {
-        scoreText.innerText = `Rozwiązano: 0 / ${qData.length}`;
+        scoreText.innerText = `Rozwiązano: 0 / ${totalInSection}`;
     } else {
-        scoreText.innerText = `Rozwiązano: ${answered} | Punkty: ${corrects} (${Math.round(corrects/answered*100)}%)`;
+        scoreText.innerText = `Rozwiązano: ${answered} / ${totalInSection} | Punkty: ${corrects} (${Math.round(corrects/answered*100)}%)`;
     }
 }
 
