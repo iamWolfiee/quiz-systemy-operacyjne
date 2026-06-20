@@ -4666,5 +4666,973 @@
     ],
     1,
     "Potoki uniksowe połączyły się do udoskonalonych strumieni (Streams z UNIX System V). Ta zmyślna potężna ukryta jako warstwowa idea stosu z połączenia otwiera symetryczny, pełnodupleksowy po obu rurach dwukierunkowy przepływ od powłok i zadań usera (jako zrzut bajt po bajcie) spływający elastycznie po obróbce u jądra i sterowników wyjściowych aż w tył na osprzęt na pinach stacji terminalowej u I/O z echem klawiaturowo wyjściowym."
+  ],
+  [
+    "W pliku wsadowym (Windows/DOS) do wywołania innego pliku wsadowego z opcją powrotu i kontynuacji należy użyć polecenia:",
+    [
+      "GOTO IPW",
+      "JUMP IPW",
+      "RUN IPW",
+      "CALL IPW"
+    ],
+    3,
+    "Polecenie CALL wykonuje zewnętrzny skrypt i po jego ukończeniu wraca do linijki wywołującej w skrypcie macierzystym."
+  ],
+  [
+    "Wynik działania poleceń `SET a=13` oraz `SET /A a=%a%+2` w skrypcie CMD sprawi, że zmienna przyjmie wartość:",
+    [
+      "0",
+      "1",
+      "132",
+      "15"
+    ],
+    3,
+    "Przełącznik /A w poleceniu SET pozwala na operacje arytmetyczne, więc 13 + 2 daje wynik 15."
+  ],
+  [
+    "Ile system Windows 2000 ma różnych poziomów priorytetu planowania procesów?",
+    [
+      "4",
+      "16",
+      "32",
+      "64"
+    ],
+    2,
+    "Systemy z rodziny Windows NT posiadają 32 poziomy priorytetów (od 0 do 31)."
+  ],
+  [
+    "Powłoką (interfejsem tekstowym) w systemie Linux NIE JEST z reguły:",
+    [
+      "csh (C Shell)",
+      "ksh (Korn Shell)",
+      "zsh (Z Shell)",
+      "Bsh"
+    ],
+    3,
+    "Istnieje powłoka Bash (Bourne-Again Shell), natomiast Bsh to wymyślona literówka lub archaizm często wskazywany w testach jako błędny."
+  ],
+  [
+    "Który z poniższych zapisów w systemie Linux prawidłowo odwołuje się do elementu tablicy:",
+    [
+      "tablica($3)",
+      "$(tablica[3])",
+      "${tablica[3]}",
+      "$tablica[3]"
+    ],
+    2,
+    "Zmienne tablicowe w powłoce Bash odczytuje się z wykorzystaniem nawiasów klamrowych określających ramy zmiennej."
+  ],
+  [
+    "System plików HPFS (High Performance File System) to macierzysty format dla systemu:",
+    [
+      "Windows NT",
+      "OS/2",
+      "BeOS",
+      "Linux"
+    ],
+    1,
+    "HPFS został zaprojektowany przez Microsoft i IBM specjalnie na potrzeby zaawansowanego systemu operacyjnego OS/2."
+  ],
+  [
+    "Skrypt BASH zawierający pętlę przesuwania parametrów: `while [ $1 ]; do echo $1; shift; done` odpowiada w swoim działaniu poleceniu:",
+    [
+      "echo $a",
+      "echo $@",
+      "cat *",
+      "ls"
+    ],
+    1,
+    "Zmienna $@ przechowuje wszystkie parametry przekazane do skryptu. Pętla z operacją 'shift' po prostu wypisuje je wszystkie jeden po drugim na ekran."
+  ],
+  [
+    "Aby w pliku wsadowym wyświetlić na ekranie wyłącznie sam napis 'Witaj' (bez ścieżki i znaku zachęty), należy umieścić wpis:",
+    [
+      "REM Witaj",
+      "ECHO Witaj",
+      "!Echo Witaj",
+      "@ECHO Witaj"
+    ],
+    3,
+    "Znak małpy '@' przed poleceniem ECHO ukrywa wypisanie samej wywoływanej komendy, zostawiając na ekranie tylko pożądany, czysty tekst."
+  ],
+  [
+    "Który z zapisów przesyłania potoków i poleceń jest poprawnie zbudowany w wierszu poleceń Windows 2000:",
+    [
+      "dir | more | lpt 1",
+      "dir > test & type test > prn",
+      "copy 'dir' lpt 2",
+      "żaden z powyższych"
+    ],
+    1,
+    "Znak '>' kieruje wynik operacji do pliku, '&' łączy dwa polecenia wykonując je po kolei, a 'prn' to stary identyfikator oznaczający domyślną drukarkę."
+  ],
+  [
+    "Pamięć CMOS w architekturze płyty głównej komputera to:",
+    [
+      "Centralna pamięć RAM komputera",
+      "Inaczej pamięć podręczna procesora L2",
+      "Pamięć zawierająca konfigurację sprzętową komputera (BIOS)",
+      "Wydzielona część twardego dysku MBR"
+    ],
+    2,
+    "CMOS to wydzielona pamięć podtrzymywana baterią pastylkową, która przechowuje krytyczne ustawienia konfiguracyjne i czas zegara RTC."
+  ],
+  [
+    "Podsystem Security Reference Monitor (SRM) w rodzinie systemów Windows NT:",
+    [
+      "pozwala na interaktywne logowanie użytkowników z sieci",
+      "generuje sprzętowe identyfikatory bezpieczeństwa (SID)",
+      "zarządza fizycznym formatowaniem dysków twardych",
+      "autoryzuje praworządny dostęp do obiektów (plików, katalogów itp.)"
+    ],
+    3,
+    "SRM to strażnik w jądrze Windows weryfikujący, czy dany proces ma pełne prawo dostępu do konkretnego chronionego obiektu na podstawie jego listy ACL."
+  ],
+  [
+    "Stripping (przeplot) bloków danych z zapisem kodów weryfikacyjnych na ściśle ODDZIELNYM dysku parzystości realizuje macierz poziomu:",
+    [
+      "RAID 0",
+      "RAID 3",
+      "RAID 5",
+      "RAID 4"
+    ],
+    3,
+    "RAID 4 używa przeplotu na poziomie wydajnych bloków, ale trzyma całą parzystość na jednym dedykowanym fizycznym dysku (w odróżnieniu od nowszego RAID 5, który rozprasza ją po wszystkich)."
+  ],
+  [
+    "O procesie gotowym (znajdującym się w kolejce do procesora, ale jeszcze niewykonywanym) mówi się inaczej:",
+    [
+      "Nowy",
+      "Niewykonywalny",
+      "Zakończony",
+      "Wykonywalny (Ready)"
+    ],
+    3,
+    "Proces wykonywalny (ready) posiada już wszystkie potrzebne do życia zasoby pamięci i po prostu oczekuje w kolejce dyspozytora na fizyczny przydział czasu układu CPU."
+  ],
+  [
+    "Centralne pliki konfiguracyjne w systemie operacyjnym Linux (zgodnie ze standardem) znajdują się domyślnie w katalogu:",
+    [
+      "/usr/local/bin",
+      "/mnt",
+      "/usr/bin",
+      "/etc"
+    ],
+    3,
+    "Zgodnie z systemem struktury plików (FHS) to katalog /etc zbiera wszystkie pliki konfiguracyjne powłoki, sieci oraz zainstalowanych w systemie demonów."
+  ],
+  [
+    "Nowy proces w programowaniu systemowym Linux (język C) tworzymy najczęściej przy użyciu podstawowej funkcji jądra:",
+    [
+      "wait()",
+      "signal()",
+      "exit()",
+      "fork()"
+    ],
+    3,
+    "Funkcja systemowa fork() klonuje bieżący proces główny na poziomie jądra, powołując do życia odseparowany proces potomny o nowym identyfikatorze (PID)."
+  ],
+  [
+    "Znak zachęty wyświetlany w terminalu użytkownika można swobodnie formatować, a określa go systemowa zmienna środowiskowa:",
+    [
+      "PATH",
+      "PPID",
+      "PWD",
+      "PS1"
+    ],
+    3,
+    "Zmienna PS1 (Prompt String 1) to główny wskaźnik formatujący tekst powłoki, który mówi terminalowi, by czekał na polecenia (np. w postaci [root@server~]#)."
+  ],
+  [
+    "Które z podanych sposobów objęcia polecenia (tzw. cytowanie poleceń) wymusi w powłoce najpierw wykonanie komendy i fizyczne podstawienie jej wyniku w to miejsce:",
+    [
+      "'polecenie' (apostrofy)",
+      "\"polecenie\" (cudzysłowy)",
+      "$polecenie",
+      "`polecenie` (odwrotne apostrofy / backticks)"
+    ],
+    3,
+    "Odwrotne apostrofy (backticks) nakazują interpreterowi BASH uruchomić polecenie ukryte w ich wnętrzu i wkleić tekstowy wynik (output) do nadrzędnej komendy."
+  ],
+  [
+    "Globalna Tablica Deskryptorów (GDT) w architekturze procesora Pentium posiada sprzętowy limit pojemności wynoszący:",
+    [
+      "1024",
+      "4096",
+      "16384",
+      "8192"
+    ],
+    3,
+    "Struktura układu GDT posiada zadeklarowaną sztywno pamięć pozwalającą na przechowywanie maksymalnie 8192 wpisów deskryptorów dla trybu chronionego."
+  ],
+  [
+    "Dyski logiczne w starym systemie zarządzania partycjonowaniem można utworzyć wyłącznie na:",
+    [
+      "partycji podstawowej",
+      "partycji wymiany SWAP",
+      "partycji NTFS bez ograniczeń dyskowych",
+      "partycji rozszerzonej"
+    ],
+    3,
+    "Ze względu na starożytny limit 4 partycji podstawowych na układzie MBR, wymyślono pojemnik zwany partycją rozszerzoną, w którym wolno wydzielać wiele kolejnych dysków logicznych."
+  ],
+  [
+    "Skrypt BASH o pętlowej zawartości `for x in *; do echo $x; done` odpowiada w swoim docelowym działaniu linuksowemu poleceniu:",
+    [
+      "echo $@",
+      "echo $*",
+      "cat *",
+      "ls"
+    ],
+    3,
+    "Znak wieloznaczny gwizdki (*) rozwija się jako wykaz wszystkich plików w bieżącym katalogu. Pętla wyświetlając je jeden po drugim imituje domyślne działanie komendy 'ls'."
+  ],
+  [
+    "W instrukcji warunkowej CMD `IF wartość1 operator wartość2`, operator oznaczający, że pierwsza wartość jest większa lub równa drugiemu to:",
+    [
+      "LSS",
+      "LEQ",
+      "GTR",
+      "GEQ"
+    ],
+    3,
+    "Skrót GEQ (Greater or Equal) stosowany w skryptach wsadowych wprost oznacza warunek 'Większy lub równy'."
+  ],
+  [
+    "Który z poniższych zapisów skoku w pętli dla plików wsadowych (.bat) jest poprawny operacyjnie:",
+    [
+      "GORO% ETYKIETA",
+      "GOTO $ETYKIETA",
+      "JUMP ETYKIETA",
+      "GOTO ETYKIETA (lub GOTO :ETYKIETA)"
+    ],
+    3,
+    "Polecenie bezwarunkowego skoku do określonego momentu kodu w środowisku wsadowym wymaga zdefiniowania instrukcji GOTO z docelową nazwą etykiety."
+  ],
+  [
+    "W środowisku programistycznym (API Windows) aplikacja zatrzymuje się i czeka na zaistnienie zdarzenia systemowego wywołując funkcję:",
+    [
+      "WaitForSingleEvent",
+      "GetEvent",
+      "IsEventSignaled",
+      "WaitForSingleObject"
+    ],
+    3,
+    "Klasyczna funkcja WaitForSingleObject() blokuje i usypia wykonujący ją wątek do czasu, aż wskazany w parametrach obiekt jądra zmieni stan na zasygnalizowany."
+  ],
+  [
+    "Komunikaty wymiany zdarzeń (messages) wewnątrz okienkowego systemu Windows 2000 przesyłane są w trybie sprzętowym z reguły w postaci:",
+    [
+      "liczby całkowitej ze znakiem",
+      "rekordu sztywnego 16 bajtów",
+      "zwykłego ciągu tekstowego Unicode",
+      "liczby całkowitej bez znaku"
+    ],
+    3,
+    "Zdarzenia takie jak kliknięcie myszką w przycisk to dla Windowsowego API tak naprawdę pod spodem po prostu 32-bitowe kody w postaci liczby całkowitej bez znaku (unsigned int)."
+  ],
+  [
+    "Znak tyldy (~) użyty w terminalu systemu Linux to bezwzględny skrót odwołujący powłokę katalogu do:",
+    [
+      "katalogu głównego root systemu (/)",
+      "poprzednio odwiedzonego katalogu",
+      "folderu wirtualnego urządzeń /dev",
+      "katalogu domowego (użytkownika)"
+    ],
+    3,
+    "Tylda stanowi systemowy skrót ułatwiający pracę, natychmiastowo przekierowując terminal użytkownika do jego prywatnego folderu (np. /home/student)."
+  ],
+  [
+    "W skrypcie BASH polecenie `echo ${#tablica[0]}` wyświetla na ekranie:",
+    [
+      "ilość elementów w całej tablicy",
+      "wartość pierwszego elementu tablicy",
+      "długość pierwszego elementu tablicy",
+      "adres fizyczny tablicy w pamięci"
+    ],
+    2,
+    "Znak '#' przed odwołaniem do indeksu zmiennej tablicowej w powłoce Bash służy do policzenia liczby znaków (długości) tego konkretnego stringu."
+  ],
+  [
+    "Skrypt BASH zawierający pętlę `for x in .* *; do echo $x; done` odpowiada w systemie Linux poleceniu:",
+    [
+      "echo $@",
+      "cat *",
+      "ls -al (lub ls -a)",
+      "żadne z powyższych"
+    ],
+    2,
+    "Pętla ta używa masek wyszukujących zarówno pliki ukryte (.*) jak i widoczne (*), po czym je wypisuje, co w efekcie wprost naśladuje zachowanie komendy 'ls -a'."
+  ],
+  [
+    "Który rejestr sprzętowy przechowuje fizyczny adres (numer ramki) Katalogu Stron w wirtualizacji pamięci architektur x86?",
+    [
+      "IP (Instruction Pointer)",
+      "CS (Code Segment)",
+      "CR3 (Control Register 3)",
+      "ESI (Source Index)"
+    ],
+    2,
+    "Rejestr kontrolny CR3 służy w procesorach sprzętowo wyłącznie mechanice stronicowania, wskazując jednostce MMU bazę do translacji adresów liniowych."
+  ],
+  [
+    "Wydanie polecenia `set` bez żadnych parametrów w wierszu poleceń powoduje:",
+    [
+      "przejście do trybu administratora",
+      "wyświetlenie bieżących ustawień zmiennych środowiskowych",
+      "ustawienie czasu zgodnie z zegarem systemowym",
+      "zatrzymanie procesu uruchomionego w tle"
+    ],
+    1,
+    "Polecenie 'set' zarówno w powłokach Windows jak i Linux służy do zadeklarowania, a w przypadku wywołania bez opcji – do wylistowania wszystkich zmiennych systemowych."
+  ],
+  [
+    "Jakim poleceniem wiersza poleceń Windows przeszukasz wszystkie pliki w bieżącym katalogu pod kątem tekstu \"Systemy Operacyjne\" i wyślesz wynik od razu na domyślną drukarkę?",
+    [
+      "grep \"Systemy Operacyjne\" * | lpr",
+      "search \"Systemy Operacyjne\" > lpt1",
+      "findstr /C:\"Systemy Operacyjne\" * > prn",
+      "find \"Systemy\" > com1"
+    ],
+    2,
+    "Zgodnie z systemem DOS/Windows, 'findstr /C' szuka konkretnego ciągu w plikach (*), a operator '>' przekierowuje wyjście zamiast na ekran na urządzenie drukarki (prn)."
+  ],
+  [
+    "W jaki sposób w skrypcie powłoki Linuksa można przypisać zmiennej 'x' pierwsze 10 linii z wybranego pliku tekstowego?",
+    [
+      "x=$(tail -10 plik)",
+      "x=$(head plik) / lub x=`head plik`",
+      "let x=head(10)",
+      "x=$(cat plik | limit 10)"
+    ],
+    1,
+    "Domyślne zachowanie komendy 'head' wyciąga pierwszych 10 linii pliku. Aby zapisać ten wynik, należy polecenie objąć konstrukcją podstawienia np. w odwrotne apostrofy."
+  ],
+  [
+    "W jaki sposób wyświetla się kod wyjścia (status błędu) ostatnio wykonanego programu w powłoce systemu Linux?",
+    [
+      "echo %ERRORLEVEL%",
+      "echo $!",
+      "echo $ERROR",
+      "echo $?"
+    ],
+    3,
+    "Zmienna środowiskowa '$?' to wbudowana funkcja Unixa przechowująca kod zwrotny po zamknięciu wcześniejszej aplikacji."
+  ],
+  [
+    "Co NIE NALEŻY do standardowych grup rozkazów uprzywilejowanych (wykonywanych tylko w trybie jądra, czyli Ring 0)?",
+    [
+      "Rozkazy włączania i wyłączania przerwań sprzętowych",
+      "Obsługa rejestrów pamięci wirtualnej i stronicowania",
+      "Wykonywanie podstawowych operacji arytmetycznych na procesorze (ALU)",
+      "Rozkazy wejścia/wyjścia odwołujące się do urządzeń peryferyjnych"
+    ],
+    2,
+    "Operacje matematyczne na własnych danych procesu wykonuje się swobodnie w trybie użytkownika. Reszta operacji dotyka bezpośrednio sprzętu komputera, więc wymaga trybu uprzywilejowanego."
+  ],
+  [
+    "Jakie jest przeznaczenie katalogu /etc/ w hierarchii systemu plików Linux?",
+    [
+      "Jest to katalog zawierający systemowe pliki konfiguracyjne.",
+      "Zawiera prywatne katalogi domowe użytkowników.",
+      "Zawiera zainstalowane pliki wykonywalne programów z repozytorium.",
+      "Jest tymczasowym punktem montowania dla dysków wymiennych."
+    ],
+    0,
+    "Katalog /etc/ odpowiada za przetrzymywanie tekstowych konfiguracji bootloadera, powłok, interfejsów sieci oraz usług (demonów) maszyny."
+  ],
+  [
+    "Co w rodzinie systemów Windows NT w kontekście list kontroli dostępu (ACL) oznacza atrybut prawny ukryty pod literą \"P\"?",
+    [
+      "Print Permission (Prawo do wydruku z serwera)",
+      "Take Ownership (Przejęcie na własność)",
+      "Read Properties (Odczyt atrybutów pliku)",
+      "Change Permission (Prawo do zmiany uprawnień obiektu)"
+    ],
+    3,
+    "Zezwolenie to pozwala użytkownikowi edytować na zakładce Zabezpieczenia kto jeszcze inny może uzyskać lub utracić dostęp do tego pliku."
+  ],
+  [
+    "Z jakich logicznych części składa się tradycyjna magistrala systemowa komputera?",
+    [
+      "Z magistrali danych, adresowej oraz sterującej",
+      "Z magistrali pamięciowej, procesorowej i wejścia-wyjścia",
+      "Z magistrali przerwań (IRQ) i styków zasilania",
+      "Z magistrali portów RS-232 i równoległych IDE"
+    ],
+    0,
+    "Są to trzy fizyczne drogi komunikacji: przesył właściwych bajtów pliku (dane), ścieżka do wskazanej komórki RAM (adres) oraz impuls synchronizujący układ (sterowanie)."
+  ],
+  [
+    "Ile razy system fizycznie ładuje do pamięci operacyjnej tę samą bibliotekę współdzieloną (np. formatu .dll), gdy odwołuje się do niej kilka procesów naraz?",
+    [
+      "Tyle razy, ile jest procesów żądających kodu",
+      "2 razy (dla bezpieczeństwa kopiowania)",
+      "1 raz",
+      "Zależy to od rozmiaru zadeklarowanych w niej zmiennych"
+    ],
+    2,
+    "Dzięki technice mapowania pamięci, jądro systemu oszczędza RAM ładując bibliotekę fizycznie raz, jedynie udostępniając do niej wskaźniki dla przestrzeni liniowej każdej kolejnej aplikacji."
+  ],
+  [
+    "W którym procesorze (zgodnie z notatkami) wprowadzono po raz pierwszy wsparcie dla stronicowania RAM-u oraz zintegrowano koprocesor matematyczny?",
+    [
+      "Intel 8086",
+      "Intel 80286",
+      "Intel 80386",
+      "Intel Pentium Pro"
+    ],
+    2,
+    "Rodzina układów z linii 386 była przełomem, integrującym na krzemie obsługę adresowania 32-bitowego i wirtualizacji z układem stronicowania wykorzystywanym powszechnie do dziś."
+  ],
+  [
+    "Wyrażenie z maską dopasowania `a*[1-5]` użyte na liście komend w powłoce Linuxa oznacza:",
+    [
+      "pętlę matematyczną przeliczającą zmienną od 1 do 5",
+      "wzorzec dopasowujący nazwy plików (zaczynające się na 'a', a kończące cyfrą od 1 do 5)",
+      "błąd składniowy i komendę nierozpoznawalną",
+      "wywołanie 5 kopii procesu w tle z atrybutem asynchronicznym"
+    ],
+    1,
+    "Standardowe wyrażenia maskujące w konsoli pozwalają inteligentnie zawężać listę plików (np. do polecenia rm lub ls) bazując na warunkach alfanumerycznych."
+  ],
+  [
+    "W jaki sposób stare oprogramowanie w systemie MS-DOS komunikowało się i wywoływało funkcje dostarczane przez system operacyjny?",
+    [
+      "Przez API potoków i bezpiecznych strumieni IPC",
+      "Przez bezpośrednie wywoływanie bibliotek .dll",
+      "Przez sprzętowe przerwania programowe (np. wywołaniem komendy asemblera INT 21h)",
+      "Przez nasłuchiwanie na określonych portach COM"
+    ],
+    2,
+    "Przerwania programowe (software interrupts) były głównym sposobem komunikacji dla DOS-a; kod generował ustandaryzowane przerwanie, przeskakując na czas do pamięci obsługi systemu."
+  ],
+  [
+    "Aby plik tekstowy ze skryptem mógł zostać samodzielnie uruchomiony jako program przez powłokę Linuksa, musi posiadać nałożony uprawnieniami atrybut:",
+    [
+      "R (Read - Odczyt)",
+      "X (Execute - Wykonywanie)",
+      "S (Sticky bit)",
+      "W (Write - Zapis)"
+    ],
+    1,
+    "Unixowe systemy, w przeciwieństwie do Windowsa, nie bazują w wykonaniu na nazwach rozszerzeń (jak .exe czy .bat). O zdolności do startu decyduje wprost atrybut wykonywalności (x) w masce chmod."
+  ],
+  [
+    "Zarezerwowane dawniej w systemie DOS i Windows nazwy własne takie jak PRN, COM1 czy AUX powszechnie oznaczają:",
+    [
+      "Pliki wymiany stronicowania ukryte w MBR",
+      "Zmienne środowiskowe zadeklarowane w BASH",
+      "Katalogi dla deweloperów oprogramowania",
+      "Porty sprzętowe i urządzenia znakowe (np. drukarka, porty szeregowe)"
+    ],
+    3,
+    "Nazwy te są głęboko zarezerwowane dla systemu wejścia-wyjścia i oznaczają aliasy wirtualne pod stykające się z płytą główną złącza, do których pisało się instrukcje po kablu."
+  ],
+  [
+    "W systemie Linux konsolowe polecenie narzędziowe `lsmod` na terminalu:",
+    [
+      "Wyświetla listę modułów (sterowników jądra) aktualnie załadowanych do pamięci komputera",
+      "Listuje ukryte pliki podlegające modyfikacjom roota",
+      "Zmienia w locie uprawnienia plików (zamiennik chmod)",
+      "Całkowicie i awaryjnie usuwa wszystkie niepotrzebne moduły jądra z pamięci (działanie rmmod)"
+    ],
+    0,
+    "Komenda ta wyciąga i wypisuje z pamięci roboczej /proc/modules przyjazną listę wszystkiego, co steruje aktualnie sprzętem serwera."
+  ],
+  [
+    "W systemie Linux zlokalizowany u szczytu drzewa katalog z nazwą `/dev/` zawiera:",
+    [
+      "Narzędzia i kody źródłowe dla deweloperów",
+      "Zbiór logów po przeprowadzaniu awaryjnej kontroli dysku fsck",
+      "Skrypty i usługi ładowane automatycznie przy restarcie komputera",
+      "Pliki specjalne (wirtualne) reprezentujące interfejsy z podpiętymi urządzeniami blokowymi i znakowymi"
+    ],
+    3,
+    "W konwencji \"wszystko jest plikiem\", to tam system mapuje stacje dysków (np. /dev/sda), czy mikrofony, z których aplikacje docelowo zczytują wiersze bajtów."
+  ],
+  [
+    "Jakim poleceniem z narzędzi linii poleceń MS-DOS/Windows można było przesłać wprost i 'ręcznie' zawartość pliku do fizycznego druku na domyślną drukarkę?",
+    [
+      "cat plik.txt | lp",
+      "echo plik.txt > COM1",
+      "print plik.txt -p",
+      "type plik.txt >> PRN"
+    ],
+    3,
+    "Komenda 'type' wysypuje tekst z dokumentu, a operator przekierowania strumienia wyjściowego >> przenosi całą tę treść z monitora prosto do bufora wirtualnego urządzenia z oznaczeniem PRN."
+  ],
+  [
+    "W jakiej z wymienionych podstawowych bibliotek .dll Windows zaimplementowano najważniejsze funkcje API dotyczące powoływania procesów, zarządzania systemem i pamięcią:",
+    [
+      "USER32.DLL",
+      "HAL.DLL",
+      "KERNEL32.DLL",
+      "NTOSKRNL.EXE"
+    ],
+    2,
+    "Ta klasyczna współdzielona biblioteka jest trzonem oprogramowania; każda 32-bitowa aplikacja importuje jej metody by użyć funkcji systemowych takich jak np. malloc() pod alokacje."
+  ],
+  [
+    "Co na listach ACL (Listach Kontroli Dostępu) rodziny Windows NT w kontekście uprawnień specjalnych oznacza atrybut nadania prawa 'O'?",
+    [
+      "Open (Prawo do Otwierania plików wykonywalnych)",
+      "Overwrite (Prawo do Nadpisania w trybie potokowym)",
+      "Output (Zapis do strumienia wyjściowego ukrytego)",
+      "Take Ownership (Przejęcie pliku na własność)"
+    ],
+    3,
+    "Prawo to nadaje jednostce przywilej pozwalający jej na fizyczne stanie się nowym, niepodzielnym autorem (Właścicielem) obiektu folderu z pominięciem poprzednich restrykcji."
+  ],
+  [
+    "W powłokach uniksowych wdrożony dla wygody mechanizm znany pod wbudowanym pojęciem 'alias' służy głównie do:",
+    [
+      "Wymuszania ukrywania adresu IP użytkownika podczas łączenia sesji SSH",
+      "Zastąpienia wpisywania skomplikowanych, wylistowanych komend krótkimi nazwami definiowanymi wcześniej jako 'skróty'",
+      "Podmieniania logicznych kont i podszywania loginów dla roota na czas testu chroot",
+      "Całkowitego przekierowania z logu informacji u błędach (stderr) na strumień zerowy"
+    ],
+    1,
+    "Alias zwalnia użytkowników z wpisywania ciągle tej samej długiej komendy z zestawem ścieżek, podmieniając wywołanie spersonalizowanym zdefiniowanym w plikach małym szyfrem słownym."
+  ],
+  [
+    "Historycznie, na czym polega w pełni tzw. wielozadaniowość koleżeńska (kooperatywna)?",
+    [
+      "Gdy procesy wykonują się na różnych, oddzielnych fizycznie rdzeniach współdzielonego procesora",
+      "Gdy system wymaga podania zgody (hasła) administratora przed startem każdego z procesów systemowych",
+      "Gdy to sprzętowy timer systemu operacyjnego wywłaszcza, brutalnie przerywając program po paru milisekundach",
+      "Gdy aktywna aplikacja decyduje samodzielnie i dobrowolnie, w jakim momencie oddać sterowanie w kolejce systemowi i innej aplikacji"
+    ],
+    3,
+    "Ta wielozadaniowość pozwalała aplikacjom na uprzejme (koleżeńskie) oddawanie rdzenia. Wymagała pisania dobrego kodu – jeśli gra weszła w pętlę i zapomniała zawołać komendę 'zwróć czas', cały komputer zamarzał bez ratunku."
+  ],
+  [
+    "Gdzie fizycznie bywa ukryty najmniejszy i ładowany jako pierwszy moduł instalatora starego programu rozruchowego LILO (Linux Loader)?",
+    [
+      "Wyłącznie w ukrytym, specjalnie stworzonym pliku konfiguracyjnym boot.ini",
+      "Wewnątrz asocjacyjnej pamięci TLB procesora",
+      "Na odseparowanej, dedykowanej dla jądra partycji SWAP",
+      "W absolutnie pierwszym Głównym Sektorze Rozruchowym MBR dysku twardego lub ew. w boot sektorze pojedynczej partycji"
+    ],
+    3,
+    "LILO był bardzo ograniczony rozmiarem. Rezydując w skąpym miejscu na szczycie sektorów na dysku 0 zmuszony był trzymać fizyczne współrzędne pliku, aby po włączeniu maszyny po prostu przeskoczyć igłą dysku do sektora uruchamiającego jądro."
+  ],
+  [
+    "Co oznacza powszechnie stosowany w informatyce skrót GUI?",
+    [
+      "General User Interface",
+      "Graficzny interfejs użytkownika (Graphical User Interface)",
+      "Globalny układ informacyjny",
+      "Główny interfejs urządzeń (Gate User Interface)"
+    ],
+    1,
+    "GUI to rodzaj interfejsu opartego na grafice, oknach i wskaźnikach, ułatwiający użytkownikowi pracę z systemem bez konieczności zapamiętywania poleceń tekstowych."
+  ],
+  [
+    "Co wchodzi w podstawowy skład elementów środowiska GUI?",
+    [
+      "Procesor i płyta główna",
+      "System plików i jądro",
+      "Urządzenia wejścia/wyjścia (I/O)",
+      "Okna, przyciski, paski i ikony"
+    ],
+    3,
+    "GUI to czysto programowa powłoka graficzna składająca się z elementów wizualnych, na których użytkownik operuje za pomocą myszy."
+  ],
+  [
+    "Który z poniższych systemów operacyjnych architektonicznie NIE posiadał natywnego środowiska GUI (graficznego interfejsu)?",
+    [
+      "Apple MacOS",
+      "Symbian",
+      "DOS (Disk Operating System)",
+      "Windows CE"
+    ],
+    2,
+    "Systemy MS-DOS bazowały wyłącznie na interfejsie linii poleceń (CLI). Uruchomienie nakładki graficznej wymagało instalacji osobnego programu (np. wczesnego Windows 3.1)."
+  ],
+  [
+    "Co jest absolutnie nieodzownym i charakterystycznym sprzętowym elementem do sprawnej obsługi graficznego interfejsu GUI?",
+    [
+      "Drukarka laserowa",
+      "Skaner optyczny",
+      "Urządzenie wskazujące (np. mysz lub touchpad)",
+      "Szybki modem internetowy"
+    ],
+    2,
+    "Paradygmat WIMP (Windows, Icons, Menus, Pointer) zakłada, że do nawigacji po GUI absolutnie konieczne jest urządzenie potrafiące sterować kursorem na ekranie."
+  ],
+  [
+    "Okno dialogowe (Dialog Box) w interfejsie graficznym komputera:",
+    [
+      "tworzy je tylko administrator systemu dla zabezpieczeń",
+      "uruchamia się zawsze w postaci zminimalizowanej",
+      "umożliwia interakcję z użytkownikiem i pozwala na wprowadzanie określonych danych",
+      "jest charakterystyczne tylko i wyłącznie dla systemu Windows"
+    ],
+    2,
+    "Okienka dialogowe to małe formularze wywoływane przez aplikacje w celu poproszenia użytkownika o potwierdzenie decyzji lub podanie dodatkowych parametrów (np. okno drukowania)."
+  ],
+  [
+    "Przy pomocy potoków (Pipes) w środowiskach uniksowych i powłokach systemowych można:",
+    [
+      "sformatować dysk twardy na system ext3",
+      "łączyć wyjście jednego polecenia bezpośrednio z wejściem następnego polecenia",
+      "zapisywać dane bezpośrednio do wirtualnego pliku",
+      "wykonywać wyłącznie procesy uprzywilejowane w trybie administratora"
+    ],
+    1,
+    "Potok oznaczany znakiem pionowej kreski '|' to genialny mechanizm pozwalający przekazać strumień tekstu wypluty przez jeden program od razu jako paliwo wejściowe dla drugiego."
+  ],
+  [
+    "Do komputerowych urządzeń czysto wejściowych (Input) z definicji NIE należy:",
+    [
+      "Klawiatura",
+      "Mysz",
+      "Skaner",
+      "Monitor (bądź Ploter)"
+    ],
+    3,
+    "Monitor oraz ploter drukujący to klasyczne urządzenia wyjściowe (Output), ponieważ system wysyła do nich wygenerowane wyniki pracy procesora."
+  ],
+  [
+    "Technika powszechnie nazywana „przeciągnij-i-upuść” (Drag-and-Drop):",
+    [
+      "stosowana jest do defragmentacji dysku twardego pod kątem wirusów",
+      "umożliwia przenoszenie plików i danych między oknami w sposób wizualny",
+      "powoduje znaczący wzrost wydajności systemu operacyjnego",
+      "jest możliwa tylko w starym systemie Windows 95"
+    ],
+    1,
+    "Drag-and-Drop to podstawa wygody GUI, pozwalająca np. przenieść ikonę pliku do okna innego folderu, by skopiować dane w tle."
+  ],
+  [
+    "Czym w środowisku Windows (DOS) jest Plik Wsadowy (.bat / .cmd):",
+    [
+      "ma on zawsze postać binarną niewidoczną dla użytkownika",
+      "uruchamiany jest automatycznie przy każdym formacie dysku",
+      "nie może w żadnym wypadku przyjmować argumentów",
+      "to inaczej skrypt, który może potężnie uprościć wielokrotnie wykonywane rutynowe zadania"
+    ],
+    3,
+    "Pliki wsadowe to zbiory poleceń tekstowych ułożonych linia pod linią, które powłoka (cmd.exe) wykonuje automatycznie bez angażowania człowieka w każdy pojedynczy krok."
+  ],
+  [
+    "Konsola użytkownika (Command Line Interface - CLI):",
+    [
+      "jest rodzajem zabezpieczenia sprzętowego sieci komputerowej",
+      "jest zawsze i wyłącznie ukryta w trybie graficznym i-węzłów",
+      "umożliwia uruchamianie programów i tekstową komunikację użytkownika z systemem",
+      "to inna ukryta nazwa zaawansowanego podsystemu zabezpieczeń SAM"
+    ],
+    2,
+    "Konsola to podstawowy, tekstowy interfejs pozwalający na wywoływanie aplikacji systemowych za pomocą klawiatury i odczyt strumienia wyjściowego."
+  ],
+  [
+    "Które z poniższych poleceń powłoki powszechnie stosuje się do przetwarzania danych wewnątrz potoków tekstowych:",
+    [
+      "format c: oraz fdisk",
+      "more, sort (oraz grep)",
+      "dir oraz cd",
+      "echo oraz cls"
+    ],
+    1,
+    "Narzędzia takie jak 'more' (stronicowanie wyniku), 'sort' (sortowanie wierszy) czy 'grep' (wyszukiwanie wyrażeń) to małe programy stworzone wręcz do odbierania i filtrowania przesyłanych do nich potoków (Pipes)."
+  ],
+  [
+    "Jakie polecenia używane są w plikach wsadowych środowiska Windows do ograniczenia zasięgu życia definiowanych zmiennych lokalnych?",
+    [
+      "begin oraz end",
+      "start oraz goto",
+      "setlocal oraz endlocal",
+      "limit_on oraz limit_off"
+    ],
+    2,
+    "Instrukcje setlocal/endlocal w CMD zapobiegają wyciekowi zadeklarowanych w skrypcie zmiennych (np. ścieżek) do głównego środowiska systemu po zamknięciu pliku wsadowego."
+  ],
+  [
+    "Jednym z rodzajów dostępnych powłok interaktywnych (Shell) w systemach z rodziny Unix obok BASH jest:",
+    [
+      "csh (C Shell) oraz tcsh",
+      "trash (Trash Shell)",
+      "pow (Power Shell Unix)",
+      "hsab"
+    ],
+    0,
+    "Systemy uniksowe oferują bogaty wybór powłok różniących się składnią skryptów – bardzo popularne historycznie były m.in. Bourne Shell (sh), C Shell (csh) i Z Shell (zsh)."
+  ],
+  [
+    "Dokąd z technicznego punktu widzenia NIE MOGĄ być przesyłane (przekierowywane) dane wyjściowe polecenia (tzw. Standard Output):",
+    [
+      "do drukarki lub plotera na port wirtualny LPT",
+      "na ekran monitora terminala",
+      "do nowo utworzonego pliku na nośniku na dyskietce",
+      "do standardowego urządzenia czysto wejściowego (np. klawiatury lub myszy)"
+    ],
+    3,
+    "Strumień wyjściowy kierujemy w stronę pamięci dyskowej lub na ekran. Klawiatura nie potrafi fizycznie 'wyświetlić' przesyłanych do niej bajtów tekstu z programu."
+  ],
+  [
+    "Jakie główne rodzaje interfejsów użytkownika wymienia się współcześnie jako podstawowe formy interakcji z komputerem:",
+    [
+      "brzegowy i centralny",
+      "graficzny, tekstowy oraz komendy głosowe",
+      "półautomatyczny i sferyczny",
+      "klawiaturowy wykluczający użycie myszy"
+    ],
+    1,
+    "Rozwój informatyki poprowadził nas od czarnych ekranów linii komend (CLI), przez nakładki okienkowe i kursory (GUI), aż po nowoczesną komunikację werbalną (VUI - Voice User Interface)."
+  ],
+  [
+    "Jakie znaki lub polecenia należy użyć w powłoce Linuxa, aby zadeklarowany długi skrypt wykonywał swoje polecenia w tle, oddając nam od razu wolną konsolę?",
+    [
+      "Należy dodać znak ampersand (&) na końcu polecenia lub użyć polecenia `bg`",
+      "Należy rozpocząć komendę od słowa `start`",
+      "Należy wpisać skrót klawiszowy Ctrl+C",
+      "Należy objąć komendę w odwrotne apostrofy"
+    ],
+    0,
+    "Dopisanie znaku `&` po komendzie instruuje dyspozytora zadań Basha, aby uruchomił ten proces asynchronicznie, zawracając nam natychmiast mrugający kursor znaku zachęty."
+  ],
+  [
+    "Z ilu tzw. równoległych potoków przetwarzania (pipelines) składał się i mógł korzystać procesor Pentium Pro?",
+    [
+      "Z 4 potoków wykonawczych",
+      "Z 2 potoków",
+      "Był architekturą jednpotokową",
+      "Z 16 potoków wirtualnych"
+    ],
+    1,
+    "Historyczny układ Pentium, wprowadzając superskalarność do maszyn domowych, posiadał architekturę 2-potokową (potoki oznaczane jako U i V), co pozwalało mu wydawać dwie instrukcje w tym samym cyklu zegara."
+  ],
+  [
+    "Jakie główne wewnętrzne magistrale rozszerzeń można było powszechnie spotkać na płytach głównych komputerów PC na przestrzeni lat?",
+    [
+      "SATA, NVMe, Thunderbolt",
+      "AGP, PCI, ISA, SCSI (odnotowane w starych notatkach jako SCAZI)",
+      "Modemowe złącza RJ45 i LPT",
+      "Tylko złącza portów zasilania molex"
+    ],
+    1,
+    "Złącza ISA (wolne, czarne), PCI (białe, pod karty dźwiękowe/sieciowe) oraz AGP (szybkie złącze brązowe, wyłącznie pod karty graficzne 3D) to panteon historii budowy maszyn IBM PC."
+  ],
+  [
+    "W jakim obszarze pamięci operacyjnej znajduje się pamięć zgodna ze specyfikacją XMS (Extended Memory)?",
+    [
+      "Powielana wyłącznie w pliku SWAP na dysku",
+      "Tylko w ramach pierwszych 640 KB pamięci konwencjonalnej",
+      "W obszarze poniżej jednego megabajta (Upper Memory)",
+      "Powyżej granicy 1 MB (w notatce błąd: 'Do 1 MB' często dotyczył UMB)"
+    ],
+    3,
+    "Pamięć rozszerzona XMS (Extended Memory) odnosi się do wszystkiego powyżej pierwszego megabajta fizycznej przestrzeni, w przeciwieństwie do UMB i pamięci konwencjonalnej zarezerwowanej u podstaw RAM."
+  ],
+  [
+    "Co wchodzi w skład podstawowych, logicznych i fizycznych bloków typowej architektury komputera klasy PC?",
+    [
+      "Procesor, magistrala systemowa, pamięć operacyjna oraz urządzenia wejścia/wyjścia",
+      "Tylko i wyłącznie Płyta Główna i Zasilacz",
+      "Jądro Linuksa i powłoka BASH",
+      "Karta graficzna połączona z monitorem CRT i drukarką"
+    ],
+    0,
+    "Schemat blokowy architektury von Neumanna dzieli komputer na cztery nierozłączne filary: mózg przeliczający, nośnik tymczasowy, okablowanie (szyny) oraz porty z peryferiami na zewnątrz maszyny."
+  ],
+  [
+    "Który system plików był historycznie domyślnym, natywnym formatem w początkowych latach popularyzacji środowisk Linux?",
+    [
+      "ext4",
+      "FAT32 z dodatkowymi flagami PnP",
+      "NTFS v1.0",
+      "ext2 (Second Extended File System)"
+    ],
+    3,
+    "Zanim wprowadzono mechanizmy księgowania (kroniki) w systemach ext3 i ext4, potężnym fundamentem open source dla partycji był szybki i oparty na prostych i-węzłach standard ext2."
+  ],
+  [
+    "Co dokładnie w nazewnictwie partycjonowania i BIOS opisują parametry zapisane jako CHS (często ujęte jako CSH w materiałach)?",
+    [
+      "Cylindry (Cylinders), Głowice (Heads) oraz Ścieżki/Sektory (Sectors)",
+      "Czasy, Synchronizację, Hiperwątkowość",
+      "Centralne Systemy Hibernacji płyty ATX",
+      "Control, Shift, Home – skróty ratunkowe bootloadera"
+    ],
+    0,
+    "CHS (Cylinder-Head-Sector) to starożytna i przestarzała technika geometrycznego podawania adresów lokalizacji na dyskach HDD, zanim wprowadzono nowocześniejszy standard LBA (Logical Block Addressing)."
+  ],
+  [
+    "W jakim pliku systemowym konfigurowało się listę do uruchomienia systemów przez stare oprogramowanie menedżera rozruchu LILO?",
+    [
+      "W ukrytym pliku `boot.ini`",
+      "W folderze `/boot/grub/grub.cfg`",
+      "Bezpośrednio w pliku tekstowym `/etc/lilo.conf`",
+      "W zmiennej środowiskowej `$LILO_START`"
+    ],
+    2,
+    "Konfiguracja LILO wymagała edycji tego pliku przez roota, a następnie ręcznego odpalenia samego programu `lilo` w terminalu, aby zapisał on uaktualnione koordynaty w fizycznym MBR."
+  ],
+  [
+    "W którym procesorze (wg. starożytnych skryptów) z rodziny Intela zainstalowano / można było zamontować dedykowany koprocesor matematyczny kładący fundament pod operacje zmiennoprzecinkowe?",
+    [
+      "Intel 8086",
+      "Intel 80286",
+      "Intel 80386 (oraz zintegrowany w 80486DX)",
+      "Intel Pentium MMX"
+    ],
+    2,
+    "Układ i386 sam z siebie nie miał wbudowanego pełnego przelicznika FPU na płytce – dokupowało się do niego dedykowany układ towarzyszący 80387 (koprocesor), co dało masowy początek operacjom CAD i 3D w domach."
+  ],
+  [
+    "Ile wpisów (stron) mieści jedna klasyczna, wypełniona tablica w architekturze sprzętowej wirtualizacji nazywana Katalogiem Stron (Page Directory) dla układów 32-bit?",
+    [
+      "1024 wpisy",
+      "512 wpisów",
+      "4096 wpisów",
+      "Równo 1 milion wpisów"
+    ],
+    0,
+    "Katalog Stron zajmuje fizycznie 1 Ramkę (czyli 4 KB / 4096 bajtów). Ponieważ jeden wskaźnik na podrzędną tablicę (PTE) zajmuje 4 bajty, po podzieleniu daje nam to miejsce na idealnie 1024 wpisy indeksowe."
+  ],
+  [
+    "W poleceniu powłoki `Polecenie1 operator Polecenie2`, jaki operator spowoduje, że drugie polecenie wykona się TYLKO WTEDY, gdy pierwsze się nie uda (zakończy się błędem)?",
+    [
+      "&",
+      "&&",
+      "|",
+      "||"
+    ],
+    3,
+    "Operator `||` to logiczne LUB (OR). Powłoka uruchamia drugą komendę tylko w ostateczności, gdy pierwsza zwróciła kod błędu (ERRORLEVEL różny od 0)."
+  ],
+  [
+    "Skrypt BASH o treści: `rm $1.old; mv $1 $1.old; cat $1.old` wykonuje w systemie następującą logikę:",
+    [
+      "Kopiuje plik do nowego katalogu",
+      "Dodaje rozszerzenie .old do pliku podanego jako parametr i wyświetla go",
+      "Usuwa bezpowrotnie plik wpisany w parametrze $1",
+      "Jest napisany niepoprawnie składniowo"
+    ],
+    1,
+    "Skrypt usuwa ewentualną starszą wersję (.old), następnie zmienia nazwę podanego pliku ($1) dopisując mu '.old', a na koniec odczytuje i wypisuje jego zawartość (cat)."
+  ],
+  [
+    "W systemie Linux, polecenie `echo ${#tablica[@]}` (z użyciem znaku @) spowoduje wyświetlenie:",
+    [
+      "Wartości pierwszego elementu tablicy",
+      "Ilości elementów (wielkości) całej tablicy",
+      "Długości znakowej pierwszego elementu tablicy",
+      "Adresu pamięci tablicy w procesie jądra"
+    ],
+    1,
+    "Znak `@` wewnątrz tablicy w systemie Bash odwołuje się do wszystkich jej elementów. W połączeniu ze znakiem `#` zliczającym wielkość, zwraca to w efekcie całkowitą liczbę elementów (długość tablicy)."
+  ],
+  [
+    "Który z zapisów wyrażenia arytmetycznego modyfikującego zmienną z użyciem parametrów w skryptach systemów Windows (CMD) jest poprawny:",
+    [
+      "SET /A x=%x+1",
+      "SET /A %x%=%x%+1",
+      "SET /A x=%x%+1",
+      "SET /A %x%=x+1"
+    ],
+    2,
+    "W składni Windows CMD do przypisania modyfikowanej wartości, po lewej stronie znaku równości podaje się czystą nazwę zmiennej, a po prawej wywołuje się jej dotychczasową wartość ujętą w znaki procentów."
+  ],
+  [
+    "Policja (np. drogówka sprawdzająca w radiowozie ważność prawa jazdy) korzysta w centrali z reguły z systemu informatycznego klasy:",
+    [
+      "Systemu przepytywania plików",
+      "Systemu sterowania procesami z buforowaniem",
+      "Systemu czasu rzeczywistego (Hard RTOS)",
+      "Systemu przetwarzania transakcji"
+    ],
+    3,
+    "Jest to system klasy Transaction Processing System (TPS). Jego głównym zadaniem jest bezbłędna, błyskawiczna i współbieżna obsługa zapytań (transakcji) do wielkiej scentralizowanej bazy danych (np. bazy PESEL/CEPiK)."
+  ],
+  [
+    "W systemach komercyjnych (np. w serwerowniach), rozliczanie użytkownika za wykonane działania na koncie OPARTE JEST przeważnie o:",
+    [
+      "Priorytet przypisany użytkownikowi w systemie",
+      "Zegar czasu rzeczywistego płyty głównej komputera",
+      "Ilość wykonanych (stworzonych) procesów w tle",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Komercyjne rozliczanie (biling) opiera się o metryki zasobożerne, takie jak faktyczny czas dzierżawy mocy procesora (CPU Time), zajęte megabajty w pamięci RAM oraz ilość wysłanych bajtów przez sieć lub I/O, a nie o sam 'priorytet'."
+  ],
+  [
+    "Deskryptor procesu o przypisanym statusie \"niewykonywalny\" (zablokowany) przebywa fizycznie w systemie najczęściej w kolejce:",
+    [
+      "Procesora głównego (Gotowych)",
+      "Semafora (lub kolejce zamówień urządzenia We/Wy)",
+      "Wirtualnego potoku wymiany",
+      "Dyspozytora zadań nadzorcy"
+    ],
+    1,
+    "Proces staje się niewykonywalny, gdy poprosi o zasób, który jest już zajęty. Trafia wtedy do 'poczekalni' danego urządzenia lub uśpionej kolejki semafora przypisanego do tego chronionego zasobu."
+  ],
+  [
+    "Groźnemu sprzętowemu zjawisku zakleszczenia procesów (Deadlock) można systemowo zapobiec przez prewencyjne:",
+    [
+      "Dodanie kolejnych poziomów do sprzętowej kolejki CPU",
+      "Zwiększenie ilości procesów priorytetowych w systemie",
+      "Określenie i wymuszenie z góry ścisłej hierarchii (kolejności) zamówień zasobów",
+      "Ograniczenie ilości wątków z dołu tablicy w systemie do 10"
+    ],
+    2,
+    "Jedną z metod łamania warunków zakleszczenia jest wymuszenie na programistach, aby wątki zawsze prosiły o dostęp do urządzeń w tej samej, stałej kolejności (np. najpierw drukarka, potem dysk). Zapobiega to zamkniętemu cyklowi oczekiwania."
+  ],
+  [
+    "System operacyjny może najszybciej przejrzeć strukturę, własności i metadane pliku w systemie plików:",
+    [
+      "FAT16",
+      "FAT32",
+      "ext3",
+      "NTFS"
+    ],
+    3,
+    "NTFS pozwala na ekstremalnie szybki wgląd, ponieważ dla bardzo małych plików przechowuje ich zawartość i wszystkie atrybuty bezpośrednio zintegrowane w samym głównym wpisie tabeli MFT (tzw. atrybut rezydentny)."
+  ],
+  [
+    "Wstępna obsługa przerwań ze strony urządzeń w architekturze komputera może być realizowana całkowicie i bezkolizyjnie przez sam sprzęt elektroniczny:",
+    [
+      "tylko gdy liczba urządzeń podpiętych do systemu jest mniejsza bądź równa liczbie linii przerwań sprzętowych",
+      "zawsze i w każdym możliwym scenariuszu bez wytycznych",
+      "tylko gdy liczba urządzeń w systemie jest radykalnie większa od liczby przerwań",
+      "tylko po programowym zablokowaniu magistrali adresowej"
+    ],
+    0,
+    "Jeżeli kontroler ma do dyspozycji 15 linii IRQ (przerwań) i tylko 10 podłączonych kart w PCI, sprzęt wie dokładnie, kto dzwoni. Jeśli urządzeń jest więcej niż przerwań, muszą one współdzielić linie (IRQ Sharing), co wymaga już ingerencji oprogramowania, by ustalić źródło sygnału."
+  ],
+  [
+    "Jakim poleceniem w wierszu poleceń systemu Windows 2000 można wydrukować na domyślnej drukarce wszystkie nazwy PODKATALOGÓW bieżącego katalogu posortowane w porządku alfabetycznym:",
+    [
+      "dir /s /b > lpt1",
+      "dir /ad /o:n > prn",
+      "tree /f | print",
+      "ls -l | sort > prn"
+    ],
+    1,
+    "Flaga `/ad` (attribute: directory) filtruje wydruk tylko do samych folderów, flaga `/o:n` (order: name) sortuje je alfabetycznie, a operator `> prn` rzuca strumień tekstowy prosto na domyślną drukarkę."
+  ],
+  [
+    "Jakie dwie główne podklasy wyróżnia inżynieria środowisk dla systemów czasu rzeczywistego (RTOS) w zależności od nałożonych rygorów bezpieczeństwa?",
+    [
+      "Otwarte (Open RTOS) i Zamknięte (Closed RTOS)",
+      "Priorytetowe i Wsadowe",
+      "Twarde (Hard real-time) oraz Miękkie (Soft real-time)",
+      "Jednolite i Rozproszone w chmurze"
+    ],
+    2,
+    "W systemach 'Miękkich' opóźnienie w podaniu wyniku psuje jakość usługi (np. zacięcie wideo na YouTube), natomiast w systemach 'Twardych' spóźnienie o milisekundę prowadzi do absolutnej katastrofy (np. systemy hamowania ABS w samochodzie, awionika samolotu)."
+  ],
+  [
+    "Wymień klasyczne sposoby (algorytmy) planowania dostępu do dysku (ruchu głowicy HDD):",
+    [
+      "FIFO, LRU, LFU, OPT",
+      "Round Robin, Priority, SJF",
+      "Bankiera, Bliźniaków",
+      "FCFS, SSTF, SCAN, C-SCAN, LOOK, C-LOOK"
+    ],
+    3,
+    "To zestaw sztandarowych algorytmów optymalizujących mechanikę talerzy dyskowych. Skróty te to kolejno: First Come First Served, Shortest Seek Time First, algorytmy 'Windy' (SCAN / C-SCAN) oraz ich zoptymalizowane, nie dobijające do brzegów talerza wersje LOOK."
   ]
 ]

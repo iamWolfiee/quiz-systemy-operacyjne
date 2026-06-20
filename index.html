@@ -76,7 +76,7 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--primary);
             color: var(--text-muted);
-            min-width: 210px;
+            min-width: 180px;
             padding: 0.6rem 1.5rem;
             border-radius: 8px;
             font-size: 0.95rem;
@@ -269,8 +269,9 @@
         <h1>Systemy operacyjne</h1>
         
         <div class="dataset-toggle">
-            <button id="btn-main" class="dataset-btn" onclick="loadDataset('questions.json', 'main')">LISTA PYTAŃ</button>
-            <button id="btn-random" class="dataset-btn" onclick="startRandomMode('random')">LOSOWANE PYTANIE</button>
+            <button id="btn-main" class="dataset-btn" onclick="loadDataset('questions.json', 'main')">CAŁA LISTA</button>
+            <button id="btn-newest" class="dataset-btn" onclick="loadDataset('questions_najnowsze.json', 'newest')">NAJNOWSZE</button>
+            <button id="btn-random" class="dataset-btn" onclick="startRandomMode('random')">LOSOWE</button>
         </div>
 
         <div class="sections-nav" id="sections-navigation"></div>
@@ -332,7 +333,7 @@ async function loadDataset(filename, btnId) {
 
 async function startRandomMode(btnId) {
     isRandomMode = true;
-    document.getElementById('list-score-title').innerText = "Tryb losowy";
+    document.getElementById('list-score-title').innerText = "Tryb losowy (Wszystkie bazy)";
 
     document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(`btn-${btnId}`).classList.add('active');
@@ -341,17 +342,21 @@ async function startRandomMode(btnId) {
     document.getElementById('sections-navigation').innerHTML = '';
 
     try {
-        const response = await fetch('questions.json');
-        if (!response.ok) {
-            throw new Error('Nie udało się załadować bazy pytań.');
+        // Próba pobrania obu baz i połączenia ich w jedną dużą pulę losową
+        const [res1, res2] = await Promise.all([
+            fetch('questions.json').catch(() => null),
+            fetch('questions_najnowsze.json').catch(() => null)
+        ]);
+
+        let pool = [];
+        if (res1 && res1.ok) pool = pool.concat(await res1.json());
+        if (res2 && res2.ok) pool = pool.concat(await res2.json());
+
+        if (pool.length === 0) {
+            throw new Error('Baza pytań jest pusta lub pliki nie istnieją.');
         }
 
-        randomPool = await response.json();
-
-        if (randomPool.length === 0) {
-            throw new Error('Baza pytań jest pusta.');
-        }
-
+        randomPool = pool;
         randomStats = { answered: 0, corrects: 0 };
         renderRandomQuestion();
 
@@ -569,7 +574,7 @@ function formatTextWithCode(text) {
     return text.replace(/\n/g, '<br>');
 }
 
-// Uruchamiamy ładowanie jedynej bazy od razu
+// Uruchamiamy ładowanie głównej bazy od razu
 window.onload = () => {
     loadDataset('questions.json', 'main');
 };
