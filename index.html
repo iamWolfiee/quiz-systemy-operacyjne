@@ -382,7 +382,7 @@ function renderRandomQuestion() {
         <div class="question-text">${formatTextWithCode(q[0])}</div>
         <div class="options" id="random-opt">
             ${q[1].map((opt, i) => {
-                return `<button class="option" onclick="handleRandomAnswer(this, ${i})">\${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
+                return `<button class="option" onclick="handleRandomAnswer(this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
             }).join('')}
         </div>
         <div class="explanation" id="random-exp">
