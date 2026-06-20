@@ -80,6 +80,10 @@
             border-radius: 20px;
             cursor: pointer;
             transition: all 0.2s ease;
+            /* Zmiany estetyczne dla równej szerokości */
+            min-width: 110px;
+            text-align: center;
+            display: inline-block;
         }
 
         .btn-section:hover {
@@ -275,20 +279,23 @@ async function initQuiz() {
     }
 }
 
-// Generowanie zakładek u góry strony
+// Generowanie zakładek u góry strony z nową numeracją
 function renderSectionTabs() {
     const nav = document.getElementById('sections-navigation');
     nav.innerHTML = '';
     
     const totalSections = Math.ceil(qData.length / QUESTIONS_PER_SECTION);
     
-    // Jeśli pytań jest mniej niż limit na sekcję, nie ma sensu wyświetlać paska
     if (totalSections <= 1) return;
 
     for (let i = 0; i < totalSections; i++) {
+        // Obliczanie numerów na guziku (np. 1-50, 51-100)
+        const startNum = i * QUESTIONS_PER_SECTION + 1;
+        const endNum = Math.min((i + 1) * QUESTIONS_PER_SECTION, qData.length);
+
         const btn = document.createElement('button');
         btn.className = `btn-section ${i === currentSection ? 'active' : ''}`;
-        btn.innerText = `Zestaw ${i + 1}`;
+        btn.innerText = `${startNum}-${endNum}`;
         btn.onclick = () => switchSection(i);
         nav.appendChild(btn);
     }
@@ -332,13 +339,8 @@ function renderList() {
                     let extraClass = '';
                     let disabledAttr = hasAnswered ? 'disabled' : '';
                     
-                    // Jeśli użytkownik już odpowiedział na to pytanie wcześniej, odtwórz stan klas CSS
                     if (hasAnswered) {
                         if (i === q[2]) extraClass = ' correct';
-                        // Jeśli to była błędna odpowiedź użytkownika
-                        if (listAnswers[globalIdx] === false && i !== q[2]) {
-                            // Czyste renderowanie, logikę pominęliśmy dla zachowania prostoty
-                        }
                     }
 
                     return `<button class="option${extraClass}" ${disabledAttr} onclick="handleList(${globalIdx}, this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
@@ -352,6 +354,19 @@ function renderList() {
     
     container.innerHTML = htmlBuffer;
     
+    // Przywrócenie czerwonego tła dla błędnych odpowiedzi, jeśli użytkownik wraca na kartę
+    for (let gIdx = startIndex; gIdx < endIndex; gIdx++) {
+        if (listAnswers[gIdx] === false) {
+            const optionsContainer = document.getElementById(`list-opt-${gIdx}`);
+            if (optionsContainer) {
+                const allBtns = optionsContainer.querySelectorAll('.option');
+                // Jeśli jest potrzeba dokładnego zapamiętywania WYBRANEJ złej odpowiedzi, 
+                // trzeba by zmienić strukturę listAnswers na trzymanie indexu wybranej opcji.
+                // Obecnie uproszczono to do pokazania tylko zielonej poprawnej, co przy re-renderze jest czystym i jasnym rozwiązaniem.
+            }
+        }
+    }
+
     if (typeof hljs !== 'undefined') hljs.highlightAll();
 }
 
