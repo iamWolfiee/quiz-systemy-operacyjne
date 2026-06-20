@@ -1,1 +1,482 @@
-
+[
+  [
+    "Plik NTLDR (NT Loader) zajmuje się:",
+    [
+      "Inicjowaniem trybu graficznego Windows",
+      "Kompilacją dynamicznych bibliotek DLL",
+      "Wykrywaniem wirusów w sektorze rozruchowym",
+      "Formatowaniem partycji na FAT32",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Podstawowym zadaniem programu NTLDR w starszych systemach z rodziny Windows NT (w tym XP) jest załadowanie głównego jądra systemu operacyjnego (ntoskrnl.exe) do pamięci RAM oraz przekazanie mu sterowania."
+  ],
+  [
+    "Master Boot Record (MBR) znajduje się fizycznie w:",
+    [
+      "Tabeli MFT",
+      "Pamięci CMOS na płycie głównej",
+      "Ostatnim sektorze dysku logicznego",
+      "Pierwszym sektorze dysku twardego",
+      "Pliku systemowym boot.ini"
+    ],
+    3,
+    "MBR znajduje się w bezwzględnie pierwszym sektorze dysku fizycznego (Cylinder 0, Głowica 0, Sektor 1) i zawiera program rozruchowy oraz główną tablicę podziału na partycje."
+  ],
+  [
+    "Który z poniższych NIE JEST predefiniowanym profilem użytkownika w środowisku Windows?",
+    [
+      "Lokalny",
+      "Mobilny",
+      "Obowiązkowy",
+      "Bezpieczny",
+      "Tymczasowy"
+    ],
+    3,
+    "Zarządzanie profilami w systemach Windows rozróżnia profile lokalne, mobilne (wędrujące), obowiązkowe oraz tymczasowe. Profil 'Bezpieczny' w tej nomenklaturze nie istnieje."
+  ],
+  [
+    "W środowiskach wielowątkowych mechanizm 'Mutex' służy do:",
+    [
+      "Rozdzielania pamięci pomiędzy karty graficzne",
+      "Zapewnienia wzajemnego wykluczania dostępu do obiektu/zasobu",
+      "Zarządzania plikami tymczasowymi na serwerze",
+      "Ochrony przed wirusami typu ransomware",
+      "Wielokrotnego ładowania jądra do pamięci"
+    ],
+    1,
+    "Mutex (Mutual Exclusion) to obiekt jądra służący do synchronizacji. Działa jak 'klucz' do pokoju z ważnym zasobem – tylko jeden wątek w danej chwili może go trzymać, blokując innym dostęp."
+  ],
+  [
+    "System operacyjny Linux (z historycznego, edukacyjnego punktu widzenia) był pierwotnie inspirowany/wzorowany na systemie:",
+    [
+      "Windows 95",
+      "MS-DOS",
+      "Minix / UNIX",
+      "OS/2",
+      "AIX"
+    ],
+    2,
+    "Linus Torvalds stworzył Linuxa wzorując się bezpośrednio na Minixie i czerpiąc ze standardów UNIXa. Uwaga: Jeśli w kluczu uczelni pojawia się 'AIX', jest to ogromny błąd, chociaż AIX również należy do rodziny Uniksów."
+  ],
+  [
+    "Wpisanie znaków '!!' w interpreterze poleceń BASH systemu Linux spowoduje:",
+    [
+      "Usunięcie całego katalogu domowego",
+      "Zamknięcie i wylogowanie z powłoki",
+      "Zatrzymanie aktualnie uruchomionego procesu w tle",
+      "Wymuszone wywołanie przerwania sprzętowego",
+      "Powtórzenie (wykonanie) ostatniego polecenia z historii"
+    ],
+    4,
+    "To klasyczny mechanizm 'History Expansion' w Bashu. Podwójny wykrzyknik automatycznie podstawia i uruchamia dokładnie to samo polecenie, które użytkownik wykonał przed chwilą."
+  ],
+  [
+    "W procesie kompilacji jądra Linuxa, komenda 'make bzImage' (często mylona z literówką lzImage) powoduje:",
+    [
+      "Skasowanie dotychczasowych plików konfiguracji",
+      "Kompilację jądra w postaci skompresowanej (big zImage)",
+      "Automatyczne przeniesienie obrazu na dyskietkę startową",
+      "Spakowanie plików użytkownika do archiwum .zip",
+      "Kompilację wyłącznie zewnętrznych modułów i sterowników"
+    ],
+    1,
+    "Tworzy to skompresowany, binarny obraz jądra (big zImage), który jest w stanie ominąć historyczne ograniczenia wielkości pliku startowego nałożone przez architekturę x86."
+  ],
+  [
+    "W katalogu domowym użytkownika systemu Linux z powłoką Bash znajduje się domyślnie ukryty plik konfiguracyjny noszący nazwę:",
+    [
+      ".config_system",
+      "boot.ini",
+      ".profile (lub .bash_profile)",
+      "autoexec.bat",
+      "config.sys"
+    ],
+    2,
+    "Pliki .profile lub .bash_profile ukryte w katalogu domowym użytkownika (~) są wykonywane automatycznie po udanym zalogowaniu tekstowym, konfigurując m.in. zmienne środowiskowe."
+  ],
+  [
+    "Bit ziarnistości (Granularity flag - bit G) w deskryptorze segmentu w architekturze procesorów x86 bezpośrednio wpływa na:",
+    [
+      "Szybkość obrotową dysku twardego",
+      "Zarządzanie priorytetem sprzętowym karty sieciowej",
+      "Uprawnienia do zapisu lub odczytu z segmentu",
+      "Rozmiar (limit) segmentu (mnożnik wielkości)",
+      "Wybór tablicy przerwań"
+    ],
+    3,
+    "Ustawienie bitu G=1 sprawia, że 20-bitowe pole limitu segmentu interpretowane jest w 4-kilobajtowych stronach, a nie pojedynczych bajtach, pozwalając na zaadresowanie segmentu o rozmiarze 4 GB."
+  ],
+  [
+    "Przy podziale dysku twardego wykorzystującego klasyczną tablicę partycji MBR, na dysku można utworzyć maksymalnie partycji rozszerzonych:",
+    [
+      "Nieograniczoną liczbę",
+      "4",
+      "3",
+      "1",
+      "Zależy od pojemności nośnika"
+    ],
+    3,
+    "Standard MBR obsługuje maksymalnie cztery partycje podstawowe, ale jedną z nich można zamienić na dokładnie *jedną* partycję rozszerzoną (Extended Partition), wewnątrz której można zakładać wiele dysków logicznych."
+  ],
+  [
+    "Rejestr CX w klasycznej, podstawowej architekturze procesorów Intel x86 (np. u progu epoki Pentium) ma fizyczny rozmiar:",
+    [
+      "8 bitów",
+      "16 bitów",
+      "32 bity",
+      "64 bity",
+      "128 bitów"
+    ],
+    1,
+    "Rejestr CX (z ang. Counter Register) w swojej podstawowej formie jest rejestrem 16-bitowym. W architekturach nowszych doczekał się rozszerzenia do 32 bitów pod nazwą ECX oraz 64 bitów jako RCX."
+  ],
+  [
+    "Po fizycznym włączeniu zasilania, procesory z serii x86 natychmiast rozpoczynają pracę i pobierają pierwszą instrukcję spod logicznego adresu:",
+    [
+      "0000:0000",
+      "0000:FFFF",
+      "C000:0000",
+      "FFFF:0000",
+      "FFFF:FFFF"
+    ],
+    3,
+    "Adres ten znany jest jako 'Reset Vector'. Znajduje się zaledwie 16 bajtów poniżej szczytu fizycznej pamięci 1 MB pierwszej generacji PC. Znajduje się tam rozkaz bezwarunkowego skoku inicjalizujący uruchomienie BIOSu."
+  ],
+  [
+    "Który z poniższych standardów/skrótów NIE odnosi się do fizycznej magistrali (slotu) służącej do montażu kart rozszerzeń na płycie głównej?",
+    [
+      "PCI",
+      "AGP",
+      "SCSI",
+      "ISA",
+      "PCI Express"
+    ],
+    2,
+    "SCSI (Small Computer System Interface) to interfejs (szyna) służący głównie do podłączania dysków twardych, napędów optycznych i skanerów. Kart rozszerzeń fizycznie się do niego nie wpina."
+  ],
+  [
+    "W środowisku zabezpieczeń rodziny Windows (w architekturze podsystemu LSA/SAM), żeton (Token Access) zdefiniowany bywa potocznie jako Security Access Token (SAT), którego zadaniem jest:",
+    [
+      "Fizyczne formatowanie i szyfrowanie partycji FAT32",
+      "Aktualizacja definicji antywirusowych",
+      "Zawieranie potwierdzonej tożsamości i przywilejów dostępu dla danego procesu użytkownika (tworzy klucz dostępu)",
+      "Szyfrowanie połączeń sieciowych na porcie 80",
+      "Tworzenie wirtualnych pulpitów"
+    ],
+    2,
+    "Po udanym zalogowaniu, podsystem zabezpieczeń generuje 'żeton dostępu' (Token), który jest kopiowany i przypinany do każdego uruchamianego przez tego użytkownika procesu."
+  ],
+  [
+    "Rozwiązaniu bazującemu na architekturze dysków lustrzanych (gdzie dane są w całości i równolegle dublowane na dwóch niezależnych napędach - mirroring) odpowiada standard poziomu RAID:",
+    [
+      "RAID 0",
+      "RAID 5",
+      "RAID 6",
+      "RAID 10",
+      "RAID 1"
+    ],
+    4,
+    "RAID 1 to najprostsza i najbardziej bezpośrednia forma redundancji (Mirroring). Dysk B jest dokładną lustrzaną kopią (klonem) Dysku A. Awaria jednego nie przerywa pracy systemu."
+  ],
+  [
+    "Jeżeli w systemie Linux nie potrzebujemy już konkretnego sterownika (modułu) lub chcemy go wyładować z jądra systemu, robimy to poleceniem:",
+    [
+      "insmod",
+      "modprobe",
+      "lsmod",
+      "rmmod",
+      "delmod"
+    ],
+    3,
+    "Polecenie 'rmmod' (remove module) usuwa z pamięci dynamicznie załadowane moduły jądra pod warunkiem, że żadne urządzenie lub proces w tej chwili z niego nie korzysta."
+  ],
+  [
+    "Która z poniższych nazw NIE określa popularnej, powszechnie stosowanej przez użytkowników powłoki środowiska Linux?",
+    [
+      "Bash (Bourne-Again shell)",
+      "Zsh (Z shell)",
+      "Csh (C shell)",
+      "Ksh (Korn shell)",
+      "Bsh"
+    ],
+    4,
+    "Skrót 'bsh' może istnieć w dawnych wersjach UNIX jako dowiązanie do binarnego pliku 'sh' (Bourne shell). Czasem określa się nim też aplety w Javie (BeanShell). Jednak klasyczne powłoki to Bash, Tcsh/Csh lub Zsh."
+  ],
+  [
+    "W kodowaniu skryptów powłoki Linux (Bash), kod błędu zwracany przez zakończenie ostatniego wykonywanego programu jest automatycznie zapisywany w zmiennej specjalnej:",
+    [
+      "$@",
+      "$$",
+      "$#",
+      "$!",
+      "$?"
+    ],
+    4,
+    "Zmienna `$?` zwraca status wyjścia operacji. Ogólnie przyjętym standardem de facto jest to, że liczba '0' zwracana do tej zmiennej oznacza zakończenie sukcesem, a jakakolwiek inna cyfra oznacza kod specyficznego błędu."
+  ],
+  [
+    "System plików NTFS, wprowadzony dla rodziny Windows NT, dziedziczy bardzo wiele z nowoczesnych architektonicznych wzorców pochodzących bezpośrednio od formatu systemu plików:",
+    [
+      "ext3",
+      "FAT16",
+      "ZFS",
+      "HPFS z systemu OS/2",
+      "ReiserFS"
+    ],
+    3,
+    "Microsoft we wczesnych latach współpracował z IBM nad systemem OS/2, do którego stworzono zaawansowany High Performance File System (HPFS). Gdy ich drogi się rozeszły, fundamenty i założenia HPFS posłużyły Microsoftowi do wybudowania struktury NTFS."
+  ],
+  [
+    "Rozmiar (Limit) segmentu jest polem bitowym przechowywanym w wektorze GDT (Global Descriptor Table). Ile bitów zajmuje to pole?",
+    [
+      "8 bitów",
+      "16 bitów",
+      "24 bity",
+      "20 bitów",
+      "32 bity"
+    ],
+    3,
+    "Rozmiar określa 20-bitowe pole wektora. To w połączeniu z 'Bitem ziarnistości' (G=1, mnożnik x 4096) pozwala adresować strony i ostatecznie przydzielać przestrzeń w wirtualnej strukturze dochodzącej do 4 GB."
+  ],
+  [
+    "Dysk twardy (jako jednostka pamięci masowej w obudowie stacjonarnej) podłącza się do płyty głównej klasycznie poprzez popularne interfejsy:",
+    [
+      "LPT i COM",
+      "AGP i PCI Express",
+      "PS/2",
+      "SCSI, ATA, SATA (oraz SAS i eSATA)",
+      "FireWire wyłącznie"
+    ],
+    3,
+    "Są to fundamentalne wewnętrzne kontrolery pamięci masowej. PATA/SATA służą rynkowi konsumenckiemu, podczas gdy wydajne protokoły SCSI / SAS używa się gównie w maszynach typu serwer i potężnych macierzach."
+  ],
+  [
+    "Domyślnym i predefiniowanym wbudowanym szablonem zabezpieczeń na platformie Microsoft (w menedżerze MMC) absolutnie NIE JEST szablon o nazwie:",
+    [
+      "Kompatybilny (compatws.inf)",
+      "Zabezpieczony serwer",
+      "Bardzo bezpieczny",
+      "Podstawowy system",
+      "Mobilny"
+    ],
+    4,
+    "Słowo 'Mobilny' odnosi się do profili konta użytkowników Windows działających po usługach domenowych (Roaming profiles), a nie do ścisłych polityk secpol (szablonów zabezpieczeń)."
+  ],
+  [
+    "Klasycznym, tekstowym i opartym na prostej sekwencyjnej ankiecie sposobem na prekonfigurację kodu źródłowego jądra systemu Linux jest użycie komendy:",
+    [
+      "make install",
+      "make menuconfig",
+      "make xconfig",
+      "make config",
+      "make clean"
+    ],
+    3,
+    "Zwykłe 'make config' wyświetla na terminalu linijka po linijce ogromną ilość pytań konfiguracyjnych dotyczących włączania / wyłączania specyficznych modułów i sterowników wspierających kompilowane jądro."
+  ],
+  [
+    "Znak tyldy (~) wywołany podczas pracy w uniksowych powłokach jest uniwersalnym aliasem (skrótem) oznaczającym:",
+    [
+      "Katalog instalacyjny bieżącego polecenia",
+      "Katalog nadrzędny w strukturze drzewa",
+      "Katalog konfiguracyjny jądra Linux (/boot)",
+      "Katalog kosza użytkownika",
+      "Katalog domowy aktualnie zalogowanego użytkownika"
+    ],
+    4,
+    "Niezależnie od poziomu w hierarchii na jakim obecnie pracujesz (np. katalog /var/log/), wpisanie `cd ~` przeniesie Cię natychmiastowo z powrotem do bezpiecznego, prywatnego katalogu operacyjnego `/home/nazwa_użytkownika`."
+  ],
+  [
+    "Wszystkie aktywne i ustalone zmienne konfiguracyjne dla sesji powłoki Linux można błyskawicznie wyświetlić, wydając wewnętrzne polecenie:",
+    [
+      "dir",
+      "cd",
+      "ls",
+      "export",
+      "set (lub env/printenv)"
+    ],
+    4,
+    "Puszczenie komendy `set` wydrukuje na strumień (najlepiej przeciągnięty na pipe less ze względu na długość) absolutnie wszystkie wektory aktualnego środowiska PATH, nazwy procesów czy wersję bieżącej sesji."
+  ],
+  [
+    "Aby przekierować Standardowe Wyjście (STDOUT) pierwszego programu jako całkowite Standardowe Wejście (STDIN) dla kolejnego procesu, w ekosystemie Unix wykorzystujemy potok, generowany na klawiaturze przy pomocy znaku:",
+    [
+      ">",
+      "<",
+      ">>",
+      "&",
+      "| (kreska pionowa - Pipe)"
+    ],
+    4,
+    "Mechanizm 'Rurki' (Pipe | ) pozwala łączyć filtry, w sposób w jaki np. strumień wyrzucony z `dmesg` płynnie wpada do filtra `grep 'error'`, który z całości na wyjście zwraca już tylko określony błąd."
+  ],
+  [
+    "Procesory architektury Pentium (oraz nowoczesne x86) utrzymują na stanie określony zestaw rejestrów operujących segmentami. W ich skład zaliczamy zbiór:",
+    [
+      "A, B, C, D, X, Y",
+      "EAX, EBX, ECX, EDX, EDI, ESI",
+      "CS, DS, ES, SS, FS, GS",
+      "Z, N, V, C, H, M",
+      "Tylko CS, DS, ES i SS"
+    ],
+    2,
+    "Rejestry takie jak Kodowy (Code Segment CS), Danych (DS), Stosu (SS) oraz Pomocnicze (ES, FS, GS) stanowią zaszłości klasycznej inżynierii operującej w trybach rzeczywistych, dzisiaj w trybie Long Mode pełniące w dużej mierze tylko poboczne funkcje ochronne w GDT."
+  ],
+  [
+    "Wskaźnik i fizyczny 32-bitowy adres przetrzymujący informację o tym, gdzie dokładnie leży podstawowy Katalog Stron (Page Directory) dla realizowanego właśnie w CPU procesu określa specjalny wektor:",
+    [
+      "Rejestr flag (EFLAGS)",
+      "Rejestr kontrolny CR0",
+      "Rejestr GDT",
+      "Rejestr EIP",
+      "Rejestr kontrolny CR3 (PDBR)"
+    ],
+    4,
+    "Podczas przełączania kontekstu do nowego procesu, system jako jedną z pierwszych instrukcji podmienia zawartość CR3 - informując jednostkę tłumaczącą MMU od jakiego fizycznego adresu rzutować teraz nową tablicę dla wirtualnej alokacji okna programu."
+  ],
+  [
+    "Bezpośredni Dostęp do Pamięci dla zewnętrznych jednostek sprzętowych (powszechnie znany skrótem DMA), historycznie sterowany był w środowiskach PC przez wyspecjalizowany mechanizm nazywany:",
+    [
+      "Dyspozytorem wejściowym",
+      "Rejestrem bazowym",
+      "Systemem LIFO",
+      "Bramką Logiczną",
+      "Kanałem"
+    ],
+    4,
+    "Kanał DMA zwalnia na ułamek milisekund przepustowość głównej szyny procesora. Po ustaleniu źródła sygnału, przerzuca fizycznie ogromny ładunek wektorowy bitów z bufora urządzenia obwodowego, wprost do kości pamięci operacyjnej - a po pomyślnym skopiowaniu generuje jedno zbiorcze przerwanie systemowe."
+  ],
+  [
+    "Wykorzystywana rutynowo w placówkach takich jak szpitale/przychodnie technika gromadzenia danych i informacji medycznej (np. baza wywiadów pacjentów) stosuje mechanikę znaną pod akademicką nazwą:",
+    [
+      "Przetwarzania potokowego",
+      "Wymiany ze stronicowaniem",
+      "Operacji czekaj na semaforze",
+      "Modelu zbioru roboczego",
+      "Systemu przepytywania (wyszukiwania) plików"
+    ],
+    4,
+    "Jest to ciekawostka pojawiająca się na specyficznym uczelnianym teście. Wpisy i logi medyczne archiwizowane i odpytywane w wielkich środowiskowych bazach uosabiają zagadnienia typowe dla architektur typu 'Retrieval File System / Query Systems'."
+  ],
+  [
+    "Podczas wystąpienia asynchronicznego zdarzenia (np. kliknięcia w przycisk myszy), po uruchomieniu podprogramu obsługi przerwań, konieczne jest natychmiastowe zabezpieczenie środowiska z rejestrów CPU odkładając je bezpiecznie na strukturę:",
+    [
+      "Tablicy MFT",
+      "Dysku wirtualnym FAT",
+      "Szczycie bieżącego Stosu",
+      "Pamięci podręcznej drukarki",
+      "Rejestrach koprocesora numerycznego"
+    ],
+    2,
+    "Stos (Stack) działający w trybie LIFO to niezwykle efektywna wektorowa ściana operacyjna w rdzeniu procesów operacyjnych. Instrukcja CALL przerywająca stan wrzuca na niego wskaźniki adresu powrotnego, z którego z łatwością Instrukcja IRET pobierze go po rozwiązaniu problemu we/wy."
+  ],
+  [
+    "Rodzaj implementacji znany jako Współbieżność Kooperatywna (koleżeńska), oparty był w pełni na dobrej woli producenta programu aplikacyjnego. Ten niebezpieczny model odrzuca z założenia m.in.:",
+    [
+      "Windows 10",
+      "Windows XP",
+      "Windows 7",
+      "System Linux",
+      "Wszystkie nowoczesne systemy (posiadają wywłaszczanie, XP też!)"
+    ],
+    4,
+    "UWAGA: Z racji błędów na Twojej liście z pytaniami trzeba uważać - Windows XP stanowczo wywłaszcza procesy! Współbieżność Kooperatywna panowała za czasów Windows 3.1x i starożytnego Mac OS 9. Przepełnienie / zawieszenie jednej głupiej aplikacji w tym systemie zatrzymywało absolutnie CAŁY komputer w bezruchu."
+  ],
+  [
+    "Jednym z algorytmicznych sposobów radzenia sobie z brutalnym i niesprawiedliwym zachowaniem planisty priorytetowego procesów skutkującym ich Głodzeniem (Starvation), jest wdrożenie taktyki:",
+    [
+      "Zawłaszczania semafora tylko do obczytu",
+      "Skrócenia rozmiaru strony",
+      "Natychmiastowego zrzucenia procesów o niskich walorach na Twardy Dysk",
+      "Odkładania ich na stos",
+      "Dynamicznego Podwyższenia Priorytetu z czasem (tzw. postarzanie/aging) lub zastosowania kolejki rotacyjnej Round-Robin"
+    ],
+    4,
+    "Postarzanie (aging) to zjawisko polegające na subtelnym doczepianiu punktów do niskopriorytetowych programów przebywających przez dziesiątki sekund w kolejce z powodu braku limitu procesora, by w końcu przekroczyć masę i stać się wyczuwalnymi dla CPU."
+  ],
+  [
+    "Adres wektorowy wyliczany z instrukcji przez moduł segmentacji jądra (przed przepuszczeniem go na bramki w stronicowaniu) tłumaczony bywa wedle prostego ciągu:",
+    [
+      "Fizyczny -> Logiczny",
+      "Liniowy -> Liniowy Płaski",
+      "Asocjacyjny -> Modułowy",
+      "Logiczny -> Podrzędny",
+      "Logiczny -> Fizyczny"
+    ],
+    4,
+    "W najczystszej teorii modelowania przestrzennego architektury nieposiadającej nakładek ze stronicowania dyskowego, kompilator wypuszcza sygnały reprezentujące zbiór zmiennych jako Czysto Logiczne wirtualne wskazania, rzutowane na twarde fizyczne RAM-owe bloki."
+  ],
+  [
+    "W teorii bezpieczeństwa inżynieryjnego struktur systemowych, Błąd (Error) definiuje się najprecyzyjniej jako niezamierzony i fatalny defekt będący wyłącznie skutkiem logicznej zaszłości określonej w specyfikacji jako:",
+    [
+      "Awarie nośnika mechanicznego RAM",
+      "Użycie błędnego przerwania",
+      "Wada kodowa/implementacyjna",
+      "Wyjątek Page_Fault_In_Non_Paged",
+      "Sektor fizycznie badowany (Bad Sector)"
+    ],
+    2,
+    "Błąd w obliczeniach to wynik. Jego korzeniami i źródłami są wady (defekty implementacyjne) stworzone pierwotnie przez projektanta-programistę, ujawniające swój obrys dopiero w wyjątkowych ułożeniach zdarzeń."
+  ],
+  [
+    "Kiedy planistyczny dyspozytor analizujący żądania natrafia na próbę sforsowania zablokowanego (zamkniętego) zamka semafora opatrzonego operacją CZEKAJ, fizycznie do jego buforowej kolejki zawieszeń trafiają wskaźniki na:",
+    [
+      "Aktywną klawiaturę i kursor myszy",
+      "Pojedyncze bloki systemowe partycji NTFS",
+      "Dyski twarde w macierzy RAID",
+      "Całe systemy podrzędne i logowania operacyjne",
+      "Zawieszone, pojedyncze i odizolowane Wątki"
+    ],
+    4,
+    "Kolejka semafora jest listą (często typu FIFO lub priorytetową), na której śpią uśpione na bloku zasobu wielozadaniowe wykonawcze struny - konkretne i niezależne wątki, którym wirtualny policjant CPU odmówił dostępu do operacyjnej puli w RAM."
+  ],
+  [
+    "Strategia systemowa oznaczona mianem Algorytmu Bliźniaków (Buddy Memory Allocation) dedykowana była by sprostać zagadnieniu:",
+    [
+      "Podwajania przepustowości karty sieciowej na potokach",
+      "Równoważenia dwóch obciążeń na rdzeniach CPU",
+      "Replikacji plików w lustrze RAID 1",
+      "Wyszukiwania zduplikowanych błędnych sektorów na powierzchni magnetycznej napędu",
+      "Szybkiego, bezstronicowego rozmieszczania (zwartego przydziału blokowego w potęgach liczby 2) zasobów RAM na bieżąco"
+    ],
+    4,
+    "Algorytm dzieli blok pamięci na połowy za każdym razem gdy proces prosi o kawałek ciasta z pamięci. Kiedy oba procesy w tej parze zakończą działania (będą bliźniakami i zwolnią miejsce), kontroler łączy je we fragment dwukrotnie silniejszy i spójniejszy."
+  ],
+  [
+    "Aby wydrukować na ekranie środowiska Linux powolny, jednostronny zrzut ogromnego dokumentu konfiguracyjnego umożliwiając swobodną wędrówkę góra-dół przy użyciu strzałek, polecenie CAT zastępuje się potężniejszym i oszczędnym:",
+    [
+      "more",
+      "grep",
+      "touch",
+      "head",
+      "less"
+    ],
+    4,
+    "Aplikacja 'less' nie rzuca na procesor całego tekstu by po sekundzie zasypać stos wyjścia graficznego, lecz czyta z dysku wyłącznie ilość linijek wystarczającą do pokrycia rozmiaru pojedynczej i skromnej linii twojego ekranu na podczerwieni terminalowej, ładując kolejne porcje na żądanie scroll-locka klawiatury."
+  ],
+  [
+    "W systemach zabezpieczeń jądra odczytana z deskryptora wektora przerwań sygnatura NMI (Non-Maskable Interrupt) rzuca na procesor status priorytetu o mocy przerwania:",
+    [
+      "Tymczasowego (może zostać odłożone)",
+      "Zależnego od humoru sprzętowego DMA",
+      "Wywoływanego tylko w operacjach z plikiem SWAP",
+      "Ignorowanego przez jądra nowsze niż DOS",
+      "Bezwzględnie i twardo Niemaskowalnego, którego sprzętowy procesor nie zdoła nigdy, w żaden sposób obejść ani odłożyć"
+    ],
+    4,
+    "NMI używa się do sygnalizowania absolutnie najpoważniejszych awarii sprzętowych w architekturze wewnętrznej scalaków komputera (np. spaleniu portu pamięci RAM lub odcięcia zegara kwarcowego), wywołujących najczęściej drastyczny Kernel Panic."
+  ],
+  [
+    "Jak pod względem wykonawczym dyspozytor opisuje status dla Wątku wtrąconego pod ścianę, odrzuconego pod strefą Krytyczną i wepchniętego w blokującą pułapkę kolejki semafora?",
+    [
+      "Status 'Statyczny' (Gotowy by zająć wektor RAM)",
+      "Status 'Osierocony' (Wymagający zamknięcia i usunięcia)",
+      "Status 'Zombi' (Martwy lecz podtrzymywany przez zasoby)",
+      "Status 'Bieżący' (Wykorzystujący rdzeń, ale ukrywający go w tle)",
+      "Status 'Niewykonywalny' (Zablokowany / Oczekujący na wydarzenie sprzętowe)"
+    ],
+    4,
+    "Taki nieszczęśliwie zamrożony systematycznie na wirtualnym znaku CZEKAJ proces trafia do czarnej listy procesów Oczekujących (Blocked State), których kod nie przesyła sygnałów, odciążając cenne zasoby chłodzące rurki procesora od bezustannego przeliczania uśpionych bitów."
+  ]
+]
