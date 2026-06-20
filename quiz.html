@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz systemy operacyjne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a, #1e1b4b);
+            --card-bg: rgba(30, 41, 59, 0.85);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --primary: #6366f1;
+            --success: #10b981;
+            --success-bg: rgba(16, 185, 129, 0.15);
+            --error: #ef4444;
+            --error-bg: rgba(239, 68, 68, 0.15);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-radius: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        #app {
+            max-width: 850px;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            background: var(--bg-gradient);
+            z-index: 1000;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            background: -webkit-linear-gradient(45deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+        }
+
+        button {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button.outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        button.outline:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .question-text {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: left;
+            color: var(--text-main);
+        }
+
+        .option:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateX(4px);
+        }
+
+        .option.correct {
+            background: var(--success-bg);
+            border-color: var(--success);
+            color: #34d399;
+            font-weight: 600;
+        }
+
+        .option.wrong {
+            background: var(--error-bg);
+            border-color: var(--error);
+            color: #f87171;
+        }
+
+        .explanation {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            display: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .explanation.show { display: block; animation: fadeIn 0.4s ease forwards; }
+        .explanation strong { color: #818cf8; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        pre {
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border: 1px solid var(--card-border);
+        }
+        
+        code {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+        }
+
+        .progress-sidebar {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        @media (max-width: 1300px) {
+            .progress-sidebar {
+                top: auto;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 90%;
+                max-width: 400px;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <header>
+        <h1>Systemy operacyjne</h1>
+    </header>
+
+    <div>
+        <div class="progress-sidebar">
+            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Twój Wynik</div>
+            <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: #34d399;">Rozwiązano: 0</div>
+        </div>
+        
+        <div id="list-container">Ładowanie pytań...</div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+             <button class="outline" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Wróć na górę &uarr;</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let qData = [];
+let listAnswers = [];
+
+async function initQuiz() {
+    try {
+        // Pobieranie pliku (musi być w tym samym folderze lub pod wskazanym adresem)
+        const response = await fetch('questions.json');
+        if (!response.ok) {
+            throw new Error('Problem z załadowaniem pliku z pytaniami.');
+        }
+        qData = await response.json();
+        listAnswers = new Array(qData.length).fill(null);
+        renderList();
+    } catch (error) {
+        document.getElementById('list-container').innerHTML = `<div class="glass-card" style="color: var(--error);">Błąd: ${error.message}</div>`;
+    }
+}
+
+function renderList() {
+    const container = document.getElementById('list-container');
+    container.innerHTML = '';
+    updateListStats();
+
+    let htmlBuffer = '';
+    qData.forEach((q, qIdx) => {
+        htmlBuffer += `
+        <div class="glass-card">
+            <div class="question-text">${qIdx + 1}. ${formatTextWithCode(q[0])}</div>
+            <div class="options" id="list-opt-${qIdx}">
+                ${q[1].map((opt, i) => `
+                    <button class="option" onclick="handleList(${qIdx}, this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>
+                `).join('')}
+            </div>
+            <div class="explanation" id="list-exp-${qIdx}">
+                <strong>Wyjaśnienie: </strong> ${q[3]}
+            </div>
+        </div>`;
+    });
+    container.innerHTML = htmlBuffer;
+    if (typeof hljs !== 'undefined') hljs.highlightAll();
+}
+
+window.handleList = function(qIdx, btn, index) {
+    if(listAnswers[qIdx] !== null) return; 
+
+    const q = qData[qIdx];
+    const optionsContainer = document.getElementById(`list-opt-${qIdx}`);
+    const allBtns = optionsContainer.querySelectorAll('.option');
+
+    allBtns.forEach(b => b.disabled = true);
+
+    let isCorrect = (index === q[2]);
+    listAnswers[qIdx] = isCorrect;
+
+    if(isCorrect) {
+        btn.classList.add('correct');
+    } else {
+        btn.classList.add('wrong');
+        allBtns[q[2]].classList.add('correct');
+    }
+
+    document.getElementById(`list-exp-${qIdx}`).classList.add('show');
+    updateListStats();
+}
+
+function updateListStats() {
+    const answered = listAnswers.filter(a => a !== null).length;
+    const corrects = listAnswers.filter(a => a === true).length;
+    const scoreText = document.getElementById('list-score');
+
+    if(answered === 0) {
+        scoreText.innerText = `Rozwiązano: 0 / ${qData.length}`;
+    } else {
+        scoreText.innerText = `Rozwiązano: ${answered} | Punkty: ${corrects} (${Math.round(corrects/answered*100)}%)`;
+    }
+}
+
+function formatTextWithCode(text) {
+    if (text.includes('\n') && (text.includes('{') || text.includes('let') || text.includes('public') || text.includes('var') || text.includes('()'))) {
+        let parts = text.split(/\n(?=class|public|let|var|type|if|\(|T\[\])/);
+        if (parts.length > 1) {
+            let desc = parts[0];
+            let code = parts.slice(1).join('\n');
+            return `<p>${desc}</p><pre><code class="language-csharp">${code}</code></pre>`;
+        }
+        return `<pre><code>${text}</code></pre>`;
+    }
+    return text.replace(/\n/g, '<br>');
+}
+
+initQuiz();
+</script>
+
+</body>
+</html>

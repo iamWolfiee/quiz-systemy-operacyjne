@@ -1,0 +1,26 @@
+[
+  [
+    "Upakowanie pamięci jest wymuszone przez:",
+    [
+      "System obsługi przerwań",
+      "Fragmentację wewnętrzną",
+      "Synchronizację wątków",
+      "Stronicowanie",
+      "Żadna z powyższych"
+    ],
+    4,
+    "Jeszcze tu nic nie ma"
+  ],
+  [
+    "Charakterystyczne dla struktury klient-serwer systemu operacyjnego jest:",
+    [
+      "Przesyłanie komunikatów",
+      "Przesyłanie pakietów TCP/IP",
+      "Przesyłanie plików poprzez spooler",
+      "Wszystkie odpowiedzi są poprawne",
+      "Żadna z powyższych"
+    ],
+    0,
+    "Jeszcze tu nic nie ma"
+  ]
+]
