@@ -478,5 +478,557 @@
     ],
     4,
     "Taki nieszczęśliwie zamrożony systematycznie na wirtualnym znaku CZEKAJ proces trafia do czarnej listy procesów Oczekujących (Blocked State), których kod nie przesyła sygnałów, odciążając cenne zasoby chłodzące rurki procesora od bezustannego przeliczania uśpionych bitów."
+  ],
+  [
+    "Proces to:",
+    [
+      "Statyczny zestaw instrukcji na dysku",
+      "Dynamiczny zestaw instrukcji (ciąg działań) w pamięci",
+      "Kawałek sprzętu komputerowego",
+      "Zbiór danych w rejestrze procesora",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Proces to program w trakcie wykonywania, czyli dynamiczny ciąg instrukcji przetwarzanych przez procesor i znajdujących się w pamięci operacyjnej."
+  ],
+  [
+    "Wśród mechanizmów blokad (synchronizacji) wyróżniamy m.in.:",
+    [
+      "Stronicowanie i segmentację",
+      "Monitory i regiony krytyczne",
+      "Kolejki FIFO i LIFO",
+      "Zbiory robocze i bufory",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Do popularnych wysokopoziomowych mechanizmów synchronizacji i blokowania dostępu do zasobów (poza semaforami) należą monitory oraz regiony krytyczne."
+  ],
+  [
+    "Dyspozytor (Dispatcher) to moduł, który:",
+    [
+      "Ustala, które zadania wejdą do pamięci operacyjnej",
+      "Zarządza pamięcią wirtualną",
+      "Przydziela procesor procesom (jest planistą niskiego poziomu)",
+      "Wykrywa wirusy w systemie",
+      "Tworzy nowe konta użytkowników"
+    ],
+    2,
+    "Dyspozytor (planista niskiego poziomu) zajmuje się fizycznym przełączaniem kontekstu i przekazywaniem sterowania jednostki centralnej (procesora) wybranemu wątkowi."
+  ],
+  [
+    "Kiedy (w jakim etapie) mogą być tworzone/wiązane adresy logiczne z fizycznymi?",
+    [
+      "Tylko podczas edycji kodu",
+      "Na poziomie kompilacji, w momencie ładowania lub w trakcie wykonywania procesu",
+      "Tylko w trakcie wyłączania systemu",
+      "Wyłącznie na poziomie działania BIOS-u",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Wiązanie adresów może nastąpić w fazie kompilacji (kod absolutny, np. CP/M), w fazie ładowania (kod relokowalny, np. DOS) lub dynamicznie w fazie wykonywania (pamięć wirtualna, sprzętowe MMU)."
+  ],
+  [
+    "Przykładem tzw. urządzeń wirtualnych (lub abstrakcji urządzeń) w systemach operacyjnych są:",
+    [
+      "Klawiatura i mysz",
+      "Kable zasilające",
+      "Strumienie i potoki",
+      "Procesory fizyczne",
+      "Monitor i drukarka"
+    ],
+    2,
+    "Strumień (stream) czy potok (pipe) to wirtualne urządzenia komunikacyjne, pozwalające na przesyłanie danych między procesami w sposób niezależny od sprzętu, traktowane przez system często jak pliki."
+  ],
+  [
+    "Zastosowanie mechanizmu spooler'a (np. buforowania wydruku) zapewnia:",
+    [
+      "Ochronę przed wirusami",
+      "Przyspieszenie działania procesora",
+      "Wirtualną podzielność urządzeń sprzętowo niepodzielnych (np. drukarki)",
+      "Bezpośredni dostęp do pamięci (DMA)",
+      "Ciągły zapis na dysk lustrzany"
+    ],
+    2,
+    "Spooler (Simultaneous Peripheral Operations On-line) przyjmuje zadania od wielu procesów naraz i składuje je na dysku/w pamięci, co eliminuje zakleszczenia i daje złudzenie podzielności urządzenia takiego jak drukarka."
+  ],
+  [
+    "Wybór rozmiaru klastra na dysku wiąże się z kompromisem. Cechą klastrów jest to, że:",
+    [
+      "Duży klaster zapewnia szybszy dostęp do danych, ale mały klaster lepiej wykorzystuje przestrzeń dysku",
+      "Zawsze należy stosować klastry o rozmiarze 1 Bajta",
+      "Mały klaster przyspiesza odczyt filmów, a duży jest lepszy na dokumenty tekstowe",
+      "Rozmiar klastra nie ma żadnego wpływu na działanie dysku",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Duże klastry przyspieszają sekwencyjny odczyt z dysku (mniej pofragmentowanych wpisów w tablicy alokacji), z kolei małe klastry zmniejszają marnotrawstwo miejsca przy tysiącach malutkich plików (mniejsza fragmentacja wewnętrzna)."
+  ],
+  [
+    "Jakie główne zadania wykonuje planista (scheduler)?",
+    [
+      "Formatuje partycje twardego dysku",
+      "Zarządza wyłącznie pamięcią wirtualną",
+      "Ustala, kiedy można wprowadzić nowe procesy do systemu oraz w jakiej kolejności powinny działać",
+      "Uruchamia interfejs graficzny użytkownika",
+      "Odpowiada za logowanie użytkowników do systemu"
+    ],
+    2,
+    "Planista długoterminowy decyduje o wprowadzeniu zadań z puli do pamięci (stopień wieloprogramowości), a krótko/średnioterminowy ustala priorytety i kolejność dostępu do procesora."
+  ],
+  [
+    "Bezpieczny system operacyjny charakteryzuje się m.in. tym, że:",
+    [
+      "Wszystkie procesy współdzielą ten sam obszar pamięci bez ograniczeń",
+      "Każdy użytkownik ma dostęp do jądra systemu",
+      "Izoluje zadania oraz zapewnia ścisłą ochronę przestrzeni adresowej pamięci",
+      "Nie posiada w ogóle systemu plików",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Izolacja zadań (izolacja procesów) i sprzętowa ochrona przestrzeni pamięci (MMU) to fundamenty bezpiecznego wielozadaniowego systemu operacyjnego, uniemożliwiające jednemu procesowi zepsucie pamięci drugiego."
+  ],
+  [
+    "Mechanizm 'postarzania haseł' (password aging) w polityce bezpieczeństwa:",
+    [
+      "Zmniejsza liczbę znaków w haśle wraz z upływem czasu",
+      "Wymusza na użytkowniku okresową, obowiązkową zmianę hasła na nowe",
+      "Automatycznie odblokowuje konto po pewnym czasie",
+      "Jest algorytmem szyfrowania haseł",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Postarzanie haseł definiuje maksymalny czas (np. 30 dni) ważności danego hasła. Po tym czasie system wymusza na koncie jego zmianę, aby zapobiec długotrwałemu korzystaniu ze złamanych lub podsłuchanych poświadczeń."
+  ],
+  [
+    "Dobry i nowoczesny język poleceń (powłoka systemowa) powinien:",
+    [
+      "Ograniczać się tylko do uruchamiania programów zewnętrznych",
+      "Zapewniać możliwość tworzenia skryptów m.in. przy użyciu instrukcji warunkowych i pętli",
+      "Działać wyłącznie w środowisku graficznym",
+      "Nie pozwalać na tworzenie zmiennych środowiskowych",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Powłoki takie jak Bash czy PowerShell to zaawansowane interpretery skryptowe, które w pełni obsługują przepływ sterowania (if, while, for) i zmienne, pozwalając na szeroką automatyzację."
+  ],
+  [
+    "Która część systemu operacyjnego decyduje o nadawaniu i modyfikowaniu priorytetów procesom?",
+    [
+      "Planista (Scheduler)",
+      "Sterownik drukarki",
+      "Menedżer plików (Explorer)",
+      "Pamięć podręczna poziomu pierwszego",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Planista (szczególnie planista krótkoterminowy) na podstawie wybranych algorytmów oblicza i dynamicznie modyfikuje priorytety procesów w kolejkach, decydując o dostępie do procesora."
+  ],
+  [
+    "Wykorzystanie sprzętowych rejestrów bazowego (base) i granicznego (limit) służyło historycznie do fizycznego wspomagania:",
+    [
+      "Algorytmu Bankiera",
+      "Ochrony pamięci oraz mechanizmów segmentacji",
+      "Szyfrowania partycji NTFS",
+      "Protokołów sieciowych TCP/IP",
+      "Zarządzania buforami myszy i klawiatury"
+    ],
+    1,
+    "Rejestr bazowy określał fizyczny początek pamięci przydzielonej dla procesu, a rejestr graniczny wyznaczał jej maksymalny rozmiar, co stanowiło sprzętowy fundament izolacji i segmentacji."
+  ],
+  [
+    "Do podstawowych strategii (polityk) zarządzania pamięcią w systemach operacyjnych należą m.in. strategie:",
+    [
+      "Kompilacji i konsolidacji",
+      "Pobierania, rozmieszczania oraz wymiany (zastępowania)",
+      "Formatowania i partycjonowania",
+      "Wstrzymywania i wywłaszczania wątków",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Zarządzanie pamięcią decyduje o tym *kiedy* pobrać stronę (pobieranie np. na żądanie), *gdzie* ją umieścić (rozmieszczanie) oraz *którą* stronę wyrzucić na dysk w razie braku miejsca (wymiana/zastępowanie)."
+  ],
+  [
+    "Które z wymienionych mechanizmów służą jawnie do blokowania dostępu i synchronizacji zasobów współdzielonych?",
+    [
+      "Rejestry i sumatory",
+      "Wątki i procesy",
+      "Mutexy i Semafory",
+      "Klastry i i-węzły",
+      "Zbiory robocze i deskryptory"
+    ],
+    2,
+    "Mutex (wzajemne wykluczanie) oraz Semafor to podstawowe obiekty synchronizujące używane przez programistów do sterowania i blokowania dostępu do sekcji krytycznych."
+  ],
+  [
+    "Która z poniższych informacji (metod identyfikacji) zazwyczaj NIE JEST docelowo traktowana jako parametr kontroli racjonowania zasobów (w klasycznym logu księgującym)?",
+    [
+      "Prywatna treść otwieranych plików tekstowych",
+      "Czas zużycia CPU",
+      "Ilość alokowanej pamięci operacyjnej",
+      "Ilość wykonanych operacji wejścia-wyjścia",
+      "Numer identyfikacyjny procesu (PID) i jego nazwa"
+    ],
+    0,
+    "Dzienniki rozliczeń/księgowania w systemach operacyjnych (OS Accounting) śledzą zasoby (np. numer identyfikacyjny procesu, czas CPU, zajętość RAM), a nigdy nie zaglądają w prywatne dane wewnątrz przetwarzanych plików użytkownika."
+  ],
+  [
+    "Najskuteczniejszy i najpewniejszy (najwyższy) poziom ochrony procesów w architekturze systemu komputerowego uzyskuje się dzięki:",
+    [
+      "Mechanizmom opartym wyłącznie na oprogramowaniu antywirusowym",
+      "Kontroli na poziomie sprzętu (np. sprzętowa izolacja MMU, pierścienie ochrony procesora)",
+      "Ustawieniu skomplikowanego hasła administratora",
+      "Szyfrowaniu komunikatorów internetowych",
+      "Systemowi plików FAT32"
+    ],
+    1,
+    "Zabezpieczenia softwarowe można zazwyczaj obejść. Prawdziwa izolacja (zapobieganie modyfikacji pamięci jądra) jest skuteczna tylko wtedy, gdy wspiera ją bezpośrednio architektura sprzętowa procesora (Ring 0, sprzętowe MMU)."
+  ],
+  [
+    "Do typowych błędów i wewnątrz-systemowych zagrożeń programowych (Software Threats) zaliczamy m.in.:",
+    [
+      "Przecięcie kabla sieciowego",
+      "Awarie zasilacza UPS",
+      "Przepełnienie buforów (Buffer Overflow) oraz wycieki pamięci (Memory Leaks)",
+      "Błędy typu 'Bad Sector' na talerzach dysku",
+      "Przegrzanie procesora na skutek złego chłodzenia"
+    ],
+    2,
+    "Wycieki pamięci czy przepełnienie bufora to klasyczne usterki w kodzie programistycznym (wady oprogramowania), w przeciwieństwie do awarii fizycznych i mechanicznych sprzętu."
+  ],
+  [
+    "W teorii niezawodności systemów, do mechanizmów służących WYKRYWANIU błędów należą między innymi:",
+    [
+      "Kompilowanie i konsolidacja kodu",
+      "Algorytmy FIFO i LIFO",
+      "Zastosowanie nadmiarowości informacyjnej (np. bity parzystości) oraz testy zgody (consistency checks)",
+      "Użycie programu Paint i Kalkulatora",
+      "Defragmentacja dysku"
+    ],
+    2,
+    "Testy zgody (sprawdzanie np. czy struktury systemu plików są spójne) oraz nadmiarowość (kody ECC w RAM, RAID) pozwalają systemowi łatwo wykryć, że dany bit zmienił swoją wartość wskutek usterki."
+  ],
+  [
+    "Nowoczesne języki poleceń (powłoki, np. Bash, PowerShell) są na tyle rozbudowane, że bez problemu pozwalają na wykorzystywanie:",
+    [
+      "Tylko i wyłącznie predefiniowanych 5 komend",
+      "Zarządzania bazą danych SQL w kodzie natywnym powłoki",
+      "Konstrukcji warunkowych, mechanizmów tworzenia pętli, operacji arytmetycznych oraz struktur danych (np. tablic)",
+      "Projektowania grafiki 3D bezpośrednio w terminalu",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Współczesne powłoki systemowe nie różnią się strukturalnie od pełnoprawnych języków skryptowych. Posiadają pętle (for, while), instrukcje (if, switch) oraz możliwości obliczeniowe."
+  ],
+  [
+    "Pojęcie tzw. 'surowej maszyny' (bare metal / bare machine) odnosi się do:",
+    [
+      "Komputera, który nie posiada obudowy",
+      "Oprogramowania typu maszyna wirtualna, np. VirtualBox",
+      "Maszyny fizycznej (sprzętu) pozbawionej absolutnie jakiegokolwiek systemu operacyjnego",
+      "Komputera, który działa w sieci lokalnej bez dostępu do Internetu",
+      "Procesora bez nałożonej pasty termoprzewodzącej"
+    ],
+    2,
+    "Surowa maszyna to czysty sprzęt, goły hardware (procesor, pamięć, płyta), który do użytecznego działania czeka na zainicjowanie i załadowanie jakiejkolwiek warstwy oprogramowania systemowego."
+  ],
+  [
+    "Pojęcie 'wielosystemowości' oznacza:",
+    [
+      "Fakt, że w sieci lokalnej działa wiele komputerów",
+      "Możliwość zainstalowania wielu niezależnych systemów operacyjnych na jednym sprzęcie i wyboru jednego z nich przy uruchamianiu komputera",
+      "Posiadanie antywirusa i firewalla jednocześnie",
+      "Technologię łączenia dwóch procesorów w jedno jądro",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Wielosystemowość to popularny mechanizm 'Dual-Boot' lub 'Multi-Boot', umożliwiający współistnienie np. Windowsa i Linuxa na różnych partycjach tego samego dysku."
+  ],
+  [
+    "W systemach komputerowych o 'współbieżności pozornej' mówimy wtedy, gdy:",
+    [
+      "Ilość pamięci RAM jest mniejsza niż wymagają tego programy",
+      "Mamy do dyspozycji system z 16 procesorami, a działa tylko 1 program",
+      "Liczba aktywnych procesów (czynności) przewyższa liczbę dostępnych procesorów (wykonawców), co wymusza przełączanie czasu",
+      "Proces uruchamia inne procesy potomne",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Współbieżność pozorna oznacza, że na np. jednym procesorze działa 100 programów. Aby dać złudzenie jednoczesności (współbieżności), system rozdziela mikrosekundy dla każdego procesu krok po kroku."
+  ],
+  [
+    "Zasobem 'niepodzielnym' (wymagającym wzajemnego wykluczania przy dostępie) w systemie operacyjnym jest m.in.:",
+    [
+      "Zwykły plik przeznaczony tylko i wyłącznie do odczytu (read-only)",
+      "Zasób z którego może korzystać naraz 100 użytkowników bez ingerencji",
+      "Plik otwarty do modyfikacji (zapisywalny), współdzielona zmienna w pamięci lub fizyczna drukarka",
+      "Płyta CD-ROM w napędzie",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Zasób niepodzielny to taki, który zostanie uszkodzony lub zwróci błędny wynik, jeśli w tym samym ułamku sekundy dwie osoby spróbują dokonać w nim modyfikacji (stąd konieczność stosowania blokad i semaforów)."
+  ],
+  [
+    "W skład architektoniczny głównego jądra (Kernela) systemu operacyjnego wchodzą typowo:",
+    [
+      "Tylko graficzne elementy pulpitu i okna",
+      "Jedynie programy antywirusowe dodane przez użytkownika",
+      "Dyspozytor procesów, moduły zarządzania pamięcią oraz podprogramy obsługi przerwań",
+      "Pliki z historią przeglądarki",
+      "Bazy danych SQL"
+    ],
+    2,
+    "Jądro zawiera najbardziej podstawowe, niskopoziomowe elementy systemu, pracujące w ringu najwyższych uprawnień: sterowniki, przydział czasu dla procesora i reakcję na asynchroniczne przerwania sprzętowe."
+  ],
+  [
+    "Cechą charakterystyczną tzw. 'Puli prac' (job pool / spool) w systemach planowania jest to, że:",
+    [
+      "Wykonuje operacje matematyczne bez użycia CPU",
+      "Służy do przechowywania wygaszaczy ekranu",
+      "Prace/zadania, które czekają na wczytanie do pamięci przez planistę są w niej trzymane (często w strukturze jednej lub wielu list na dysku twardym)",
+      "Pula zawsze mieści się w małej pamięci Cache procesora",
+      "Zabezpiecza partycję ext4 przed awarią"
+    ],
+    2,
+    "W dawnych i obecnych systemach (szczególnie wsadowych) pamięć operacyjna nie pomieści wszystkich zadań od razu, więc są one zbierane na dysku masowym w specjalnym katalogu uformowanym w 'Puli prac'."
+  ],
+  [
+    "Do wbudowanych, warstwowych mechanizmów bezpieczeństwa systemów rodziny Windows NT należą:",
+    [
+      "Ochrona zasobów (m.in. listy ACL w NTFS) oraz w pełni izolująca warstwa abstrakcji sprzętu HAL",
+      "Natywny system plików Ext2 i powłoka csh",
+      "Moduł GRUB i plik xorg.conf",
+      "Zarządzenie rotacją ekranu i widgetami na pulpicie",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Warstwa HAL (Hardware Abstraction Layer) izoluje jądro i sterowniki od bezpośredniego dostępu do sprzętu, przez co wirus czy źle napisany program nie może z poziomu ring 3 sam z siebie wywołać krytycznej awarii zasilania płyty głównej."
+  ],
+  [
+    "Jak w systemach Windows oraz Linux można przejrzeć historyczne ostrzeżenia, błędy lub komunikaty systemowe jądra?",
+    [
+      "W Windows: Regedit, w Linux: polecenie format",
+      "W Windows: Narzędzia administracyjne -> Podgląd zdarzeń (Event Viewer), w Linux: polecenie dmesg",
+      "W Windows: Oczyszczanie dysku, w Linux: polecenie ls",
+      "W Windows: Menedżer urządzeń, w Linux: polecenie fdisk",
+      "Oba systemy nie zapisują takich logów"
+    ],
+    1,
+    "W Windows służy do tego zunifikowana przystawka MMC (Podgląd zdarzeń), która zbiera logi systemowe. W Linux bufor komunikatów z przestrzeni jądra (Kernel ring buffer) wywołuje się szybką komendą 'dmesg'."
+  ],
+  [
+    "Interfejs rozpoznawania głosu i syntezy znany pod architekturą MS Speech API (wersja SAPI 5) był natywnie wbudowywany i dystrybuowany w systemach takich jak:",
+    [
+      "Tylko w systemie Windows 95 i 98",
+      "Jedynie w Linux Ubuntu i Debian",
+      "Wyłącznie na platformach mobilnych (Windows Phone)",
+      "Windows XP, Vista, Windows 7, Windows 8 oraz serwerowych odpowiednikach (2003, 2008)",
+      "We wczesnych wersjach MS-DOS"
+    ],
+    3,
+    "Interfejs SAPI w wersji 5 to klasyczny silnik mowy dodawany jako wbudowany komponent systemowy w erze systemów Windows XP (2001) aż po architekturę nowszą (Windows 8)."
+  ],
+  [
+    "Usuwanie (łatanie) wad oprogramowania w jądrach systemów operacyjnych odbywa się klasycznie poprzez:",
+    [
+      "Skanowanie komputera programem antywirusowym i defragmentację dysku",
+      "Częste restartowanie zasilania",
+      "W systemie Windows przez pakiety Service Pack / Windows Update, w systemie Linux m.in. przez aktualizację pakietów lub pełną rekompilację jądra",
+      "Przeniesienie systemu plików z NTFS na FAT32",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Błąd systemowy to efekt pomyłki programistycznej – aby usunąć wadę całkowicie, Microsoft wypuszcza skompilowane poprawki (Service Pack/Hotfix), podczas gdy w Linuxie poprawki nakłada się również podmieniając otwarte łatki w kodzie źródłowym i dokonując rekompilacji na własnym sprzęcie."
+  ],
+  [
+    "Z punktu widzenia budowy nowoczesnych systemów wielozadaniowych, które stwierdzenie jest CAŁKOWICIE BŁĘDNE (NIEPRAWIDŁOWE)?",
+    [
+      "Mechanizmy przerwań są podstawą sprzężania We/Wy",
+      "System Linux obsługuje dowiązania twarde i miękkie",
+      "Tablica FAT32 obsługuje partycje większe niż 2 GB",
+      "Każdy nowoczesny system operacyjny bez wyjątków pozwala jednemu procesowi na zawłaszczenie dla siebie całego 100% czasu procesora bez limitu",
+      "Katalogi mogą mieć budowę hierarchiczną drzewiastą"
+    ],
+    3,
+    "Współczesne systemy wdrażają tzw. współbieżność z wywłaszczeniem (Preemptive Multitasking), w której jądro siłą odbiera czas procesora zachłannym procesom i przekazuje go dalej – nie ma opcji nieograniczonego, w pełni wyłącznego dostępu."
+  ],
+  [
+    "Podczas gdy układ DMA (Direct Memory Access) obsługuje ogromny transfer strumienia z dysku do pamięci operacyjnej, główny procesor (CPU) przez ułamek sekundy NIE MOŻE:",
+    [
+      "Wykonywać żadnych operacji arytmetycznych z rejestrami wewnętrznymi",
+      "Przetwarzać instrukcji z pamięci Cache L1",
+      "Odwoływać się i zapisywać/czytać danych z głównej magistrali współdzielonej z pamięcią RAM",
+      "Korzystać z układu chłodzenia na płycie",
+      "Uruchamiać nowych wyjątków we wewnątrz swojego rdzenia"
+    ],
+    2,
+    "Ponieważ kontroler DMA na czas transferu musi 'wypożyczyć' główną magistralę łączącą (Front Side Bus/Memory Bus), sam CPU traci z nią kontakt i nie może adresować pamięci RAM zewnętrznie (pracuje tylko na własnym Cache)."
+  ],
+  [
+    "Instrukcja zamykająca semafor – z ang. WAIT (zajmij / czekaj) – jeśli zasób jest niedostępny (zajęty przez kogoś innego), zawsze powoduje:",
+    [
+      "Dodanie tego procesu do blokującej kolejki danego semafora (wstrzymanie jego wątku)",
+      "Wymuszenie uruchomienia operacji I/O",
+      "Zamknięcie programu ze statusem błędu 0x05",
+      "Spadek wydajności układu graficznego komputera",
+      "Skasowanie pliku, który miał być otworzony"
+    ],
+    0,
+    "Operacja Czekaj (P) na zajętym semaforze nie marnuje zasobów w aktywnej pętli. System uśypia dany proces, wpisuje go na listę (kolejkę semafora) i czeka na moment, gdy inny program zawoła Sygnalizuj (V)."
+  ],
+  [
+    "W kontekście bezpieczeństwa synchronizacji, za absolutnie bezpieczny i PODZIELNY ZASÓB (z którego może jednocześnie korzystać milion procesów naraz bez konfliktów) uważa się m.in.:",
+    [
+      "Plik tekstowy w trybie dopisywania tekstu na końcu",
+      "Zmienna globalna w programie C++ inkrementowana (x++) przez 5 wątków",
+      "Komórka pamięci lub plik otwarty w trybie ŚCIŚLE I TYLKO DO ODCZYTU (Read-Only)",
+      "Sektor zerowy MBR podczas zapisu",
+      "Moduł instalacji nowego jądra systemu"
+    ],
+    2,
+    "Jeżeli żaden proces nie ma prawa modyfikować wartości fizycznej (czyli tylko pobierają z niej dane - read-only), taki zasób jest zasobem w pełni podzielnym, nie wymagającym kłódki na poziomie sekcji krytycznej."
+  ],
+  [
+    "Zgodnie z historycznym zbiorem kryteriów klasyfikacji TCSEC (tzw. Pomarańczowa Księga - Orange Book wydana przez departament obrony USA), system Windows NT/2000 certyfikowano z domyślną klasą bezpieczeństwa na poziomie:",
+    [
+      "A1",
+      "B3",
+      "C2",
+      "D",
+      "Żadnym z powyższych"
+    ],
+    2,
+    "Klasa C2 (Controlled Access Protection) określa komercyjne środowiska z wymaganą rozliczalnością, bezpiecznym logowaniem kont i nadawaniem precyzyjnych praw dostępu do zasobów (zależnych od uprawnień uznaniowych w ACL)."
+  ],
+  [
+    "Struktura znana jako Blok Kontrolny Procesu (PCB / Deskryptor Procesu) utrzymywana dla każdego procesu przez system operacyjny, musi bezwzględnie zawierać:",
+    [
+      "Kod źródłowy systemu operacyjnego z komentarzami",
+      "Wersję sterownika karty graficznej",
+      "Pełną zawartość pamięci dysku twardego",
+      "Stan rejestrów procesora (czyli m.in. licznik rozkazów) oraz środowisko ulotne niezbędne przy przełączaniu kontekstu",
+      "Pakiety odebrane z serwera po uruchomieniu komputera"
+    ],
+    3,
+    "Deskryptor procesu to 'dowód osobisty' oraz 'notatnik' programu. Gdy jądro wyrywa mu z rąk procesor, musi gdzieś spisać punkt przerwania, by program mógł go później bezawaryjnie podjąć – te punkty lądują właśnie w PCB jako kopie rejestrów CPU."
+  ],
+  [
+    "Z definicji modelu macierzy dostępowej, tzw. Wykaz Możliwości (Capability List / C-List) implementowany jest w systemie fizycznie jako:",
+    [
+      "Kolumna z pliku, przypisująca uprawnienia dla danego Obiektu",
+      "Długi tekstowy log opisujący aktywność antywirusa",
+      "Skompresowany plik .zip służący do przesyłu mailowego bazy kont",
+      "Zbiór par 'obiekt - prawa' trzymany i przypisany do konkretnej DOMENY (czyli Użytkownika / Procesu)",
+      "Lista sterowników podpisanych cyfrowo przez Microsoft"
+    ],
+    3,
+    "Lista ACL (Access Control List) to trzymanie rzędu z Macierzy i przyczepianie uprawnień do każdego Piku. Wykaz Możliwości to sytuacja odwrotna – trzymanie wiersza Macierzy i podpinanie portfela z kluczami do samego wędrującego po systemie Użytkownika (Domeny)."
+  ],
+  [
+    "Pojęcie 'Redundancja' używane szeroko m.in. w architekturze kopii zapasowych lub macierzach RAID, tłumaczy się bezpośrednio na język informatyczny jako:",
+    [
+      "Niezawodność układów zasilania na płycie głównej",
+      "Tajemnicę szyfrowania asymetrycznego 128-bitowego",
+      "Szybką transmisję sygnału przerywającą operacje magistrali",
+      "Nadmiarowość (np. posiadanie dodatkowego elementu, informacji czy kopii używanej w razie awarii nośnika głównego)",
+      "Tworzenie nowych domen ochrony w systemie typu klient-serwer"
+    ],
+    3,
+    "Klasyczna macierz RAID jest z definicji technologią opartą na Niezależnych Nadmiarowych (Redundant) Talerzach Magnetycznych, powołaną do niwelowania wady na skutek usterki pojedynczej kości."
+  ],
+  [
+    "W układach komputerowych typu 'Fault-Tolerant' do skutecznego sprzętowego unikania błędów (maskowania usterki i przetrwania maszyny mimo uszkodzonego bloku decyzyjnego) stosuje się architekturę:",
+    [
+      "Księgowania czasu procesorów i zrzucania informacji o logach do dmesg",
+      "Wybierania większościowego (np. z 3 podzespołów system akceptuje wynik pokrywający się przynajmniej z odpowiedziami 2 z nich)",
+      "Odwróconych tablic asocjacyjnych dla MMU z zastosowaniem pętli opóźniających FIFO",
+      "Cyklicznych rezerwacji w systemie pamięci wymiany SWAP na systemach plików dyskowych FAT",
+      "Niszczenia procesów o najniższych identyfikatorach w strefach TMR"
+    ],
+    1,
+    "To TMR – Potrójna Architektura Modułowa (Triple Modular Redundancy), typowa dla środowisk o super-krytycznym zaufaniu, która oblicza 3 razy to samo zadanie na 3 obwodach i na końcu ustala wynik przez 'głosowanie', gdzie mniejszość wykluczona zostaje jako zepsuty błąd maszyny."
+  ],
+  [
+    "Klasyczny system operacyjny VMS (OpenVMS) tworzony pierwotnie przez firmę DEC dla maszyn VAX zasłynął szeroko m.in. z tego, że architektura maszyny wirtualnej/pamięci wirtualnej w nim wbudowanej:",
+    [
+      "Pozwalała na bezpieczne symultaniczne, wielodostępne (podział czasu) uruchamianie wielu programów użytkowników na jednym fizycznym super-sprzęcie jednocześnie",
+      "Była pierwszym systemem okienkowym typu nakładki jak wczesny Windows",
+      "Służyła tylko do kompilacji czystego jądra systemu operacyjnego na pendrive USB",
+      "Była stworzona ściśle i wyłącznie dla architektury PowerPC i procesorów w konsolach domowych PlayStation",
+      "W całości opierała się na jednym gigantycznym programie ładującym bez jądra monolitycznego"
+    ],
+    0,
+    "Systemy potężnej klasy Mainframe'owej takie jak VAX/VMS skupiały się na silnej hermetyzacji zadań wieloprogramowych z zastosowaniem innowacyjnej koncepcji wirtualizacji na procesorach w taki sposób, by tysiące podpiętych do serwera terminali znakowych posiadało ułudę potężnego komputera osobistego i jednoczesnego zjawiska wielu programów bez ich kolidowania."
+  ],
+  [
+    "Na czym polega istota i przewaga pracy w nowoczesnym reżimie 'interakcyjnym' (w przeciwieństwie do przestarzałych kart perforowanych z systemów wsadowych)?",
+    [
+      "Program sam podejmuje decyzje, zrzucając użytkownika w tło procesu planistycznego bez szans na powrót",
+      "Jest stosowana tylko do kompilacji jądra w systemach czasu rzeczywistego (RTOS)",
+      "Użytkownik dostaje bieżące sprzężenie zwrotne, co umożliwia mu bezpośrednie sterowanie, modyfikowanie parametrów, nadzorowanie wykonywania programów oraz pracę w dynamicznym dialogu z maszynami wielozadaniowymi",
+      "Polega ona na całkowitym braku wirtualnego interfejsu graficznego powłoki na komputerze docelowym podłączonym z Internetem",
+      "Bazuje w 100% na buforowaniu DMA przy jednoczesnym odłączeniu klawiatury standardowej"
+    ],
+    2,
+    "Tryb pracy interaktywnej to taki w którym na pętli wyjściu natychmiast wraca informacja zwrotna dająca sygnał (monit systemu i kursor) oczekujący na komendę - dzięki czemu na bieżąco zmieniamy wektor przepływu aplikacji po wystąpieniu warunku."
+  ],
+  [
+    "Które z poniższych stwierdzeń odnoszących się do własności informatycznej klasycznych typów struktur zwanych Semafory, określić możemy jednoznacznie jako PRAWIDŁOWE I PRAWDZIWE?",
+    [
+      "Licznik semafora obniżyć można także przy użyciu wbudowanej funkcji systemowej o nazwie FORMAT",
+      "Semafor nie jest w żadnym ułożeniu zabezpieczony sprzętowo na operacjach arytmetycznych inkrementacji wektora wywołania pamięci podręcznej typu L3",
+      "Operacja 'sygnalizuj' (Podnieś) nigdy bezwarunkowo NIE ZMIENIA stanu licznika semafora o +1, jeśli akurat w pętli blokującej czeka zamrożony, wyciągany fizycznie do pobudki proces (dostaje on 'przekazany dzwonek' bez inkrementacji liczbowej, zostawiając wartość np. na zerze)",
+      "Gdy semafor wskazuje 0, jakikolwiek nowy wywołujący proces zostanie przymusowo przez planistę zniszczony i wyrzucony za błędy logiki programu i zabezpieczenia ochrony TMR",
+      "Semafory zawsze zastępują podprogramy obsługi przerwań dysków w modelu maszyny surowej pozbawionej absolutnie całego systemu ochrony przestrzeni z wymianą blokową DMA"
+    ],
+    2,
+    "Klasyczny Semafor Dijkstry, dla ochrony spójności strukturalnej, jeśli na jego 'śpiącej liście' zalega usypiany tam wcześniej (i zablokowany brakiem wejściówek) program kliencki, to wywoływana procedura 'Sygnalizuj (V)' budzi pierwszego wyciągniętego stamtąd klienta i po prostu oddaje mu wejściówkę z ominięciem matematycznego inkrementowania 'pustego i zajętego' zasobu - zapobiega to niebezpiecznym wyścigom na wieloprocesorach."
+  ],
+  [
+    "Istnienie klasycznego systemowego modelu przerwania zegarowego sprzętowego układu (Hardware Timer Interrupt) stanowi bezpośredni i konieczny fundament bez którego kompletnie nie moglibyśmy zaimplementować logicznej zasady:",
+    [
+      "Pamięci Masowej z wykorzystaniem woluminów na systemie FAT32 i rozszerzonych listach wielowarstwowych",
+      "Twardej wieloprogramowości polegającej na niezawodnym przymusowym przydziale CPU (tzw. wywłaszczaniu, odcinania zachłannych na cykle operacyjne procesów zapętlonych nie oddających go samemu dobrowolnie do puli sterującej rdzenia planisty)",
+      "Komunikacji z zablokowanymi stacjami dyskietek z systemem ochrony Ring",
+      "Kompresji i upakowania pamięci zapobiegającej tworzeniu się błędów fragmentacji zewnętrznej plików na NTFS",
+      "Poziomu zabezpieczeń środowisk wielowarstwowych na ruterach warstwy 3 modelu pakietowego klient-serwer z podziałem komunikacji na asynchroniczne kanały potokowe wymiany DMA bezpośredniej."
+    ],
+    1,
+    "Zjawisko Wywłaszczenia oznacza siłowe zdjęcie i wstrzymanie procesu z procesora pomimo faktu że proces chce iść dalej i nie zatrzymuje się dla urządzenia. To twardy cykliczny wstrząs ukrytego układu Zegara wywołujący co X ułamków sekundy w systemie przerwanie, rzuca brutalnie rdzeń prosto na jądro planisty sprawdzając, czy uwięziony proces nie siedzi w procesorze za długo."
+  ],
+  [
+    "Fizyczna implementacja Kolejki Procesów Gotowych w architekturze wewnętrznej Dyspozytora planistycznego CPU wpływa niezwykle potężnie z punktu widzenia efektywności i wydajności środowiska systemowego głównie na obszar związany fundamentalnie z problematyką:",
+    [
+      "Optymalnego fizycznego upakowania bloków na talerzach dysku MFT",
+      "Bezpośredniego, bezpiecznego i uczciwego przydziału / dzielenia cennego okna czasu wykonawczego Procesora (CPU) dla mnóstwa domagających się go symultanicznie na pamięci programów użytkownika we współbieżności z odpowiednim wykorzystaniem wskaźników postarzania czy limitu blokad zjawiska Głodzenia",
+      "Sterowania wbudowaną sprzętową zintegrowaną szyną grafiki AGP i buforowania potrójnego strumienia pikseli GUI",
+      "Kontrolą haseł poprzez szyfrowane moduły powłoki bezpiecznego z cieniem haseł w modelu strukturalnego wielowarstwowego pierścienia ochronnego Ring 0 dla izolowanego zjawiska maszyn surowych",
+      "Wybieraniem priorytetowym najkrótszych procesów za pomocą klasycznego wskaźnika algorytmicznej wymiany z odsyłaniem pamięci na żądanie przy prawdopodobieństwach uszkodzenia usterki sprzętowej w redundancji lustrzanej typu RAID z przeplotem sektorów bez tolerancji błędu wieloprocesorowej architektury SMP w podziale obciążeń na rdzeniach matematycznych."
+    ],
+    1,
+    "Wszystkie zawirowania związane z implementacją odpowiedniej klasy Kolejki (Rotacyjna, Priorytetowa, Wielopoziomowa ze sprzężeniami zwrotnymi itp.) istnieją wyłącznie po to aby zadowolić odczucie sprawiedliwości lub optymalności wydawania limitów obciążeń cykli procesora między użytkownikami domagającymi się akcji."
+  ],
+  [
+    "Głównym zjawiskiem potężnego modelu abstrakcji informatycznej potocznie nazywanego mechanizmem 'Pamięci Wirtualnej' (zastosowanym dzisiaj powszechnie w komputerach po upowszechnieniu układów MMU i systemów wymiany typu SWAP) jest fizyczna:",
+    [
+      "Ułuda polegająca na możliwości udostępnienia dla ogromnych programów pamięciowo-adresowej symulowanej przestrzeni roboczej pozornie o wiele większej niż fizycznie skromna ilość wpiętych w komputer twardych kości krzemowych RAM, łagodząc blokady alokacji przenosząc obciążenie bezczynnych obszarów okna poprzez stronicowanie na darmowe, wielkie nośniki Pamięci Dyskowej (traktowane jak wirtualny RAM).",
+      "Przepustowość umożliwiająca bezpośrednie wykonanie pliku wsadowego pod powłoką Linuxowego kernela symulującego procesor 16-bitowy przez emulator BIOS",
+      "Zwiększona ochrona przed blokowaniem niepodzielnych drukarek laserowych za sprawą modelu współdzielenia plików systemowych ukrytych poza strefami zapisu i możliwością wykonania operacji podniesienia flagi i przerwania wektora sprzętowego błędu bez wyłączania maszyny na surowym ułożeniu segmentacji w wirtualnej warstwie HAL izolacji od sprzętów płyty wieloprocesorowej SMP na szynach IDE w protokołach.",
+      "Ograniczenie liczby podawanych jednocześnie na matrycę błędów typu Bug_check, omijających twarde jądro systemowe monolityczne przy kompilacji polecenia demesg dla wyświetlenia ukrytego błędu potoku wejścia na powłoce systemowej wyjściowej powłoki potokowej przy pliku rozliczeń uprawnień maski ACL w sieciach.",
+      "Zabezpieczenie pliku hasła shadow w systemie z domyślnym brakiem wsparcia praw zapisu użytkownika zewnętrznego powłoki."
+    ],
+    0,
+    "O to dokładnie chodzi - o możliwość uruchamiania aplikacji których wymóg wagowy absolutnie nie ma racji fizycznie zmieścić się pod pokrywą zainstalowanego ciasnego fizycznego zasobu ramki operacyjnej RAM, przez systematyczne zrzucanie (Swap Out / Page Out) nie używanych fragmentów w wolne sektory ukrytego pliku Paging File (np. w Windows pagefile.sys)."
+  ],
+  [
+    "W definicji rozwarstwienia systemów wielozadaniowych na ciężkie procesy oraz zagnieżdżone w nich mniejsze potoki wykonawcze, które ułożenie zdań z definicjami Wątków posiada logiczny charakter prawdziwy i merytoryczny na sprawdzianach uczelnianych środowisk:",
+    [
+      "Wątki stanowią całkowicie zamknięte strukturalnie w osobnych bańkach procesy dziedziczące kod podprogramów wyłącznie na prawach oddzielnego rejestru bazowego przestrzeni alokowanej za granicą chronionego MMU w tablicach pamięci operacyjnej z zachowaniem osobnego obszaru danych zmiennych globalnych pod osłoną własnego pliku wykonywalnego na dysku.",
+      "Wątki (często noszące zaszczytne miano tzw. 'Lekkich Procesów' z ang. Light-Weight Process) pomimo tego że każdy z osobna nosi w wirtualnym środowisku pod wirtualnym jądrem własny, odrębny i niepowtarzalny licznik wskaźnika rozkazów procesora wraz z osobnym fizycznie rozciągniętym stosem wywołań wewnątrz - w odróżnieniu od obcych, wyobcowanych na systemie procesów domyślnie współdzielą między swoimi pobratymcami wewnątrz powłoki tego samego rodzicielskiego ciężkiego procesu wspólną otwartą pulę przestrzeni wektorów z danymi, kodem całego programu i deskryptorami chociażby wspólnie operowanych otwartych wcześniej deskryptorów dla odczytu plików na dysku masowym.",
+      "Wątki nigdy i pod żadnym pozorem systemowym nie mogą uruchomić się jako twór oddzielnego procesu macierzystego zmuszając model do blokady na potoku przy otwarciu rurki strumieniowej między buforem kanału i sprzęgu portów z przerwaniami przy ułożeniu wieloprocesorowym z dyspozytorem planistycznym najniższego ułożenia cyklów czasu na podniesieniu semafora w strefach sekcji krytycznej z ominięciem wywołania warunków rygorystycznego zakleszczenia Dijkstry przy ułudzie wzajemnego i wyłącznego braku zatrzymania wykonania z odłożeniem do listy",
+      "Wątek jest tylko instrukcją asemblera działającą na sprzęcie",
+      "Obydwa zagadnienia powyższe definiują wadę i błąd na poziomie implementacji skryptu pętli ułudy systemu operacyjnego w modelu surowym środowiska wyciągniętego z BIOS bez obecności układu HAL warstw ochrony przerwania maskowalnego od sprzętu na magistralach dysków wieloprocesorowych symetrycznych serwerowych i stacjach klienckich typu desktop."
+    ],
+    1,
+    "Kluczowym pojęciem wątku jest to że jest to niezwykle zwinny 'lekki proces'. Wątki w grupie należą do jednego wielkiego bloku przestrzeni matczynego programu w RAM i współdzielą wszystkie jego zasoby globalne bez bolesnych ograniczeń bariery ochrony przeskoku IPC podczas wymiany tablic MMU w odróżnieniu od nieporęcznego przerzucania uciętego sygnału przy wywłaszczaniu między wrogimi sobie wielkimi programami w OS."
   ]
 ]
