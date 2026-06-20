@@ -10,41 +10,24 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         :root {
-            --bg-gradient: linear-gradient(135deg, #020617, #0f172a);
-            --card-bg: rgba(15, 23, 42, 0.7);
-            --card-border: rgba(255, 255, 255, 0.05);
-            --primary: #e2e8f0;
-            --success: #059669;
-            --success-bg: rgba(5, 150, 105, 0.1);
-            --error: #dc2626;
-            --error-bg: rgba(220, 38, 38, 0.1);
-            --text-main: #e2e8f0;
-            --text-muted: #64748b;
-            --border-radius: 16px;
+            --bg-color: #000000;
+            --card-bg: #121212;
+            --border-color: #333333;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --primary: #ffffff;
+            --success: #4ade80;
+            --error: #f87171;
+            --border-radius: 12px;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            background-color: #020617;
-            background-image: var(--bg-gradient);
-            background-attachment: fixed;
+            background-color: var(--bg-color);
             color: var(--text-main);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-        }
-
-        .explanation {
-            margin-top: 1.5rem;
-            padding: 1.25rem;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-            display: none;
-            font-size: 0.95rem;
-            line-height: 1.6;
         }
 
         #app {
@@ -56,14 +39,12 @@
         }
 
         header {
-            text-align: center;
-            margin-bottom: 1.5rem;
+            background: #000000;
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0 1rem 0;
             position: sticky;
             top: 0;
-            background: var(--bg-gradient);
             z-index: 1000;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--card-border);
         }
 
         h1 {
@@ -83,16 +64,13 @@
         }
 
         .dataset-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--primary);
+            background: transparent;
+            border: 1px solid var(--border-color);
             color: var(--text-muted);
-            min-width: 180px;
             padding: 0.6rem 1.5rem;
             border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.2s;
         }
 
         .dataset-btn:hover {
@@ -102,8 +80,8 @@
 
         .dataset-btn.active {
             background: var(--primary);
-            color: white;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+            color: #000000;
+            border-color: var(--primary);
         }
 
         .sections-nav {
@@ -116,17 +94,12 @@
         }
 
         .btn-section {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--card-border);
-            color: var(--card-bg);
+            background: #1a1a1a;
+            border: 1px solid var(--border-color);
+            color: #ffffff;
             padding: 0.5rem 1rem;
-            font-size: 0.9rem;
             border-radius: 20px;
             cursor: pointer;
-            transition: all 0.2s ease;
-            min-width: 110px;
-            text-align: center;
-            display: inline-block;
         }
 
         .btn-section:hover {
@@ -136,20 +109,15 @@
 
         .btn-section.active {
             background: var(--primary);
-            color: var(--card-bg);
-            border-color: var(--primary);
-            box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+            color: #000000;
         }
 
         .glass-card {
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: 2rem;
             margin-bottom: 1.5rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            transition: all 0.3s ease;
         }
 
         button.outline {
@@ -183,35 +151,36 @@
         }
 
         .option {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #1a1a1a;
+            border: 1px solid var(--border-color);
+            color: #ffffff;
             padding: 1rem;
             border-radius: 8px;
             cursor: pointer;
             text-align: left;
-            color: var(--text-main);
-            transition: all 0.2s ease;
         }
 
         .option:hover:not(:disabled) {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.25);
-            transform: translateX(4px);
+            border-color: #666;
         }
 
         .option.correct {
-            background: var(--success-bg);
+            background: #064e3b;
             border-color: var(--success);
-            color: #34d399;
-            font-weight: 600;
+            color: #ffffff;
         }
 
         .option.wrong {
-            background: var(--error-bg);
+            background: #7f1d1d;
             border-color: var(--error);
-            color: #f87171;
+            color: #ffffff;
+        }
+
+        .explanation {
+            background: #000000;
+            border-left: 4px solid var(--primary);
+            margin-top: 1rem;
+            padding: 1rem;
         }
 
         .explanation.show { display: block; animation: fadeIn 0.4s ease forwards; }
@@ -223,11 +192,8 @@
         }
 
         pre {
-            background: rgba(0,0,0,0.3);
-            padding: 1rem;
-            border-radius: 8px;
-            overflow-x: auto;
-            border: 1px solid var(--card-border);
+            background: #000000;
+            border: 1px solid var(--border-color);
         }
         
         code {
@@ -236,18 +202,9 @@
         }
 
         .progress-sidebar {
-            position: fixed;
-            top: 50%;
-            left: 20px;
-            transform: translateY(-50%);
-            z-index: 1000;
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            border: 1px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            text-align: center;
+            background: #121212;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
         }
 
         @media (max-width: 1300px) {
