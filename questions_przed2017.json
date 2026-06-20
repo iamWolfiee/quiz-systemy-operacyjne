@@ -1030,5 +1030,185 @@
     ],
     1,
     "Kluczowym pojęciem wątku jest to że jest to niezwykle zwinny 'lekki proces'. Wątki w grupie należą do jednego wielkiego bloku przestrzeni matczynego programu w RAM i współdzielą wszystkie jego zasoby globalne bez bolesnych ograniczeń bariery ochrony przeskoku IPC podczas wymiany tablic MMU w odróżnieniu od nieporęcznego przerzucania uciętego sygnału przy wywłaszczaniu między wrogimi sobie wielkimi programami w OS."
+  ],
+  [
+    "W jakim rejestrze sprzętowym w architekturze x86 może znaleźć się adres fizyczny tablicy deskryptorów segmentów?",
+    [
+      "CR3 i CR0",
+      "EAX i EBX",
+      "CS i DS",
+      "GDTR i LDTR",
+      "Żadne z powyższych"
+    ],
+    3,
+    "GDTR (Global Descriptor Table Register) przechowuje adres globalnej tablicy deskryptorów dla jądra, a LDTR (Local Descriptor Table Register) przechowuje wskaźnik do tablicy lokalnej dla bieżącego zadania (procesu)."
+  ],
+  [
+    "We wsadowych systemach operacyjnych (Batch Systems):",
+    [
+      "System działa pod pełną kontrolą użytkownika w czasie rzeczywistym",
+      "Użytkownik nie może ingerować w proces przetwarzania zadania",
+      "Programy korzystają wyłącznie z graficznego interfejsu GUI",
+      "Zadania są przetwarzane z wywłaszczeniem i dzieleniem czasu",
+      "Wszelkiego rodzaju błędy są automatycznie naprawiane przez powłokę"
+    ],
+    1,
+    "Idea systemów wsadowych polega na tym, że użytkownik dostarcza kompletne zadanie (kod + dane + polecenia sterujące, tzw. wsad), a system przetwarza je w kolejce na serwerze bez jakiejkolwiek interakcji z użytkownikiem."
+  ],
+  [
+    "Który z poniższych systemów plików NIE ma zaimplementowanego zaawansowanego mechanizmu praw dostępu (list ACL)?",
+    [
+      "NTFS",
+      "FAT16 / FAT32",
+      "ext3",
+      "ReiserFS",
+      "Wszystkie powyższe posiadają mechanizm praw"
+    ],
+    1,
+    "Rodzina systemów plików FAT (File Allocation Table) została zaprojektowana dla systemów jednoużytkownikowych (DOS). Nie przechowuje ona metadanych o właścicielu pliku ani praw dostępu, czyniąc pliki dostępnymi dla każdego."
+  ],
+  [
+    "Gdzie w bezpieczny sposób przechowywane są zakodowane (zhaszowane) hasła użytkowników w nowoczesnym systemie Linux?",
+    [
+      "/etc/passwd",
+      "/var/log/auth.log",
+      "/etc/shadow",
+      "/home/.passwords",
+      "/boot/grub/shadow.cfg"
+    ],
+    2,
+    "Dawniej hasła przechowywano w pliku `/etc/passwd`, który musi być czytelny dla wszystkich użytkowników (co ułatwiało łamanie haseł). Mechanizm 'shadowing' przenosi hasze haseł do pliku `/etc/shadow`, dostępnego tylko dla konta root."
+  ],
+  [
+    "Jaką strukturę jądra systemowego przypisuje się klasycznie systemowi Windows 2000 / XP w testach akademickich?",
+    [
+      "Monolityczną",
+      "Sieciową",
+      "Rozproszoną",
+      "Klient-serwer (mikrojądro)",
+      "Jednolitą"
+    ],
+    3,
+    "Chociaż Windows NT jest fizycznie systemem hybrydowym (dla wydajności wiele usług umieszczono w jądrze), architektonicznie wywodzi się z koncepcji mikrojądra i modelu klient-serwer, gdzie np. podsystemy środowiskowe (Win32, POSIX) działają jako serwery usług w trybie użytkownika."
+  ],
+  [
+    "Jaki plik wykorzystywany był przez bootloader NTLDR w systemach Windows XP do konfigurowania i wyświetlania menu wyboru systemu operacyjnego?",
+    [
+      "bootmgr",
+      "config.sys",
+      "grub.cfg",
+      "boot.ini",
+      "autoexec.bat"
+    ],
+    3,
+    "Plik `boot.ini` (ukryty na partycji systemowej) przechowywał ścieżki w formacie ARC wskazujące menedżerowi rozruchu (NTLDR), z którego dysku i partycji należy ładować jądro systemu Windows."
+  ],
+  [
+    "W systemie operacyjnym Windows NT / XP występuje m.in.:",
+    [
+      "Brak jakiejkolwiek współbieżności",
+      "Współbieżność kooperatywna (koleżeńska)",
+      "Współbieżność rzeczywista jednowątkowa",
+      "Współbieżność pozorna z wywłaszczeniem",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Rodzina Windows NT wdrożyła stabilny model wielozadaniowości (współbieżności pozornej) na pojedynczym procesorze, stosując twarde wywłaszczanie (preemption) – system sam odbiera czas procesora procesom, które go nadużywają."
+  ],
+  [
+    "Jaką nazwę nosi specjalne przerwanie sprzętowe, które musi być bezwzględnie obsłużone przez procesor w każdej sytuacji (np. awaria pamięci)?",
+    [
+      "Niemaskowalne (NMI - Non-Maskable Interrupt)",
+      "Maskowalne (IRQ)",
+      "Programowe (INT)",
+      "Wirtualne",
+      "Wyjątek stronicowania (Page Fault)"
+    ],
+    0,
+    "Przerwania niemaskowalne omijają rejestr flag procesora (flagę IF). Komputer nie może ich zignorować ani odłożyć na później. Są używane do raportowania o krytycznych, fizycznych uszkodzeniach sprzętu (zwykle wywołując Kernel Panic lub Blue Screen)."
+  ],
+  [
+    "Semafory (w odróżnieniu od pojedynczych Mutexów) wykorzystuje się do synchronizacji dostępu do zasobów, dla których:",
+    [
+      "Nie ma absolutnie żadnych ograniczeń dostępu",
+      "Tylko i wyłącznie jeden proces może mieć do nich dostęp w całym cyklu",
+      "Istnieje pewien limit równocześnie odwołujących się wątków",
+      "Wymagana jest izolacja partycji sprzętowej",
+      "System nie obsługuje środowisk graficznych"
+    ],
+    2,
+    "Semafor zliczający (posiadający wartość początkową N) działa jak bramkarz z pulą 'biletów'. Pozwala wpuścić do sekcji krytycznej zasobu dokładnie N wątków naraz, blokując dopiero wątek (N+1)."
+  ],
+  [
+    "Zjawisko głodzenia procesów (starvation) może najpewniej i najszybciej wystąpić, gdy planista sprzętowy (kolejka procesora) bazuje na modelu:",
+    [
+      "Kolejki FIFO (First-In, First-Out)",
+      "Kolejki LIFO",
+      "Kolejki rotacyjnej (Round-Robin)",
+      "Kolejki priorytetowej",
+      "Kolejki najkrótszego zadania z rotacją"
+    ],
+    3,
+    "W sztywnym algorytmie priorytetowym proces o niskim priorytecie nie zostanie wpuszczony do procesora, jeśli do systemu będą nieustannie spływać procesy o wyższych priorytetach, co powoduje zjawisko zagłodzenia. Łagodzi się to techniką postarzania (aging)."
+  ],
+  [
+    "Wysokopoziomową strukturę programistyczną składającą się z hermetycznych danych, funkcji dostępu (metod) oraz kodu inicjalizującego, wbudowaną w celu ułatwienia synchronizacji nazywa się:",
+    [
+      "Semaforem",
+      "Potokiem sprzętowym",
+      "Monitorem",
+      "Bramką logiczną",
+      "Tablicą FAT"
+    ],
+    2,
+    "Monitor (wprowadzony m.in. przez Hoare'a) automatyzuje użycie semaforów na poziomie obiektu w programowaniu (np. w języku Java). Tylko jeden wątek naraz może wykonywać metodę wewnątrz danego monitora, co zapewnia bezpieczne wzajemne wykluczanie."
+  ],
+  [
+    "Co stanie się z metadanymi i prawami dostępu (listami ACL / zabezpieczeniami) do pliku po przeniesieniu go z partycji systemu NTFS na partycję starszego systemu FAT32?",
+    [
+      "Zostaną w pełni zachowane i przekonwertowane w ukrytym pliku",
+      "System Windows zapyta użytkownika o zdefiniowanie nowych praw dla partycji FAT",
+      "Plik zostanie automatycznie zaszyfrowany, aby chronić dane",
+      "Plik w ogóle nie skopiuje się, system wyrzuci błąd I/O",
+      "Prawa dostępu zostaną bezpowrotnie utracone (Żadne z powyższych / brak opcji na zachowanie)"
+    ],
+    4,
+    "Kopiowanie między różnymi systemami plików przenosi tylko zawartość (bajty danych). Architektura FAT nie rozumie i nie potrafi przechować flag zabezpieczeń NTFS, dlatego plik na nowym dysku staje się własnością wszystkich (traci ochronę)."
+  ],
+  [
+    "Klasyczną metodą na uruchomienie i działanie programów fizycznie większych niż dostępna pamięć operacyjna, w systemach bez sprzętowej jednostki MMU i pamięci wirtualnej, jest:",
+    [
+      "Stronicowanie dynamiczne",
+      "Segmentacja pamięci na żądanie",
+      "Upakowanie pamięci w potokach",
+      "Technika nakładkowania (Overlays)",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Technika nakładek (Overlays) zmuszała programistę do ręcznego podziału programu na części (nakładki), które na przemian były wczytywane z dysku do tego samego, małego fragmentu pamięci RAM, nadpisując stary kod."
+  ],
+  [
+    "W architekturze procesorów Pentium (działających w klasycznym trybie 32-bitowym bez rozszerzeń PAE), sprzętowa tablica stron jest strukturą:",
+    [
+      "Jednopoziomową",
+      "Dwupoziomową",
+      "Trójpoziomową",
+      "Rozproszoną",
+      "Odwróconą"
+    ],
+    1,
+    "Domyślne 32-bitowe stronicowanie w architekturze x86 wykorzystuje dokładnie dwa poziomy adresacji w pamięci: Katalog Stron (Page Directory) oraz ostateczne Tablice Stron (Page Tables)."
+  ],
+  [
+    "W terminologii niezawodności inżynierii oprogramowania i systemów komputerowych, prawidłową relacją logiczną definiującą usterki jest stwierdzenie:",
+    [
+      "Wada jest skutkiem awarii sprzętowej",
+      "Błąd jest skutkiem wady",
+      "Wada, błąd i usterka oznaczają technicznie to samo",
+      "Błąd występuje wyłącznie po zaniku zasilania CPU",
+      "Błąd wynika zawsze z fragmentacji dysku twardego"
+    ],
+    1,
+    "Według definicji: 'Wada' (Defect/Fault) to np. błędny kod (źle wstawiona literka w instrukcji if). 'Błąd' (Error) pojawia się dopiero w trakcie działania (np. zły wynik na ekranie), i jest on fizycznym następstwem (skutkiem) tej ukrytej wady."
   ]
 ]
