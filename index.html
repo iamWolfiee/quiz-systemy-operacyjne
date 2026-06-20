@@ -10,16 +10,19 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         :root {
-            --bg-gradient: linear-gradient(135deg, #0f172a, #1e1b4b);
-            --card-bg: rgba(30, 41, 59, 0.85);
-            --card-border: rgba(255, 255, 255, 0.1);
-            --primary: #6366f1;
-            --success: #10b981;
-            --success-bg: rgba(16, 185, 129, 0.15);
-            --error: #ef4444;
-            --error-bg: rgba(239, 68, 68, 0.15);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            /* Nowy, bardziej "głęboki" i ciemny gradient */
+            --bg-gradient: linear-gradient(135deg, #020617, #0f172a);
+            /* Jeszcze ciemniejsze karty z lepszym efektem glassmorphism */
+            --card-bg: rgba(15, 23, 42, 0.7);
+            --card-border: rgba(255, 255, 255, 0.05);
+            /* Zmienione akcenty na nieco bardziej stonowane */
+            --primary: #4f46e5;
+            --success: #059669;
+            --success-bg: rgba(5, 150, 105, 0.1);
+            --error: #dc2626;
+            --error-bg: rgba(220, 38, 38, 0.1);
+            --text-main: #e2e8f0;
+            --text-muted: #64748b;
             --border-radius: 16px;
         }
 
@@ -27,11 +30,25 @@
             margin: 0;
             padding: 0;
             font-family: 'Inter', sans-serif;
-            background: var(--bg-gradient);
+            background-color: #020617; /* Solidny kolor bazowy */
+            background-image: var(--bg-gradient);
+            background-attachment: fixed;
             color: var(--text-main);
             min-height: 100vh;
             display: flex;
             justify-content: center;
+        }
+
+        /* Dodatkowe przyciemnienie dla lepszego kontrastu wewnątrz kart */
+        .explanation {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: rgba(0, 0, 0, 0.4); /* Ciemniejsze tło wyjaśnienia */
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            display: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         #app {
