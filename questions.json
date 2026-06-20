@@ -670,5 +670,389 @@
     ],
     2,
     "W powłoce Bash znak dolara ($) służy jako operator wyciągnięcia wartości przypisanej do zmiennej lub pobrania wartości parametru pozycyjnego (np. $1, $var)."
+  ],
+  [
+    "Nie występuje tablica stron:",
+    [
+      "odwrócona",
+      "grupowanych",
+      "żadna z pozostałych",
+      "haszowana",
+      "dwupoziomowa"
+    ],
+    2,
+    "Wszystkie wymienione typy tablic stron (odwrócona, haszowana, wielopoziomowa, a także grupowana - ang. clustered) istnieją w teorii zarządzania pamięcią systemów operacyjnych, dlatego odpowiedź 'żadna z pozostałych' jest prawidłowa."
+  ],
+  [
+    "Fragmentacja zewnętrzna nie występuje dla",
+    [
+      "segmentacji",
+      "żadne z pozostałych",
+      "wszystkich pozostałych z wyjątkiem \"żadne z pozostałych\"",
+      "pamięci opartej o rejestr bazowy i graniczny",
+      "stronicowania"
+    ],
+    4,
+    "Stronicowanie rozwiązuje problem fragmentacji zewnętrznej poprzez podział logicznej i fizycznej pamięci na równe bloki (ramki o stałym rozmiarze), co eliminuje powstawanie w pamięci luk o zmiennej wielkości."
+  ],
+  [
+    "System najszybciej może przejrzeć informacje o pliku w systemie plików",
+    [
+      "FAT32",
+      "FAT16",
+      "NTFS",
+      "żadne z pozostałych",
+      "Ext3"
+    ],
+    1,
+    "Ze względu na bardzo mały rozmiar tablicy alokacji i prostrzą, liniową strukturę katalogów w stosunku do złożonych systemów z księgowaniem (NTFS, Ext3), wyszukiwanie wpisu w FAT16 (dla obsługiwanych, niewielkich wolumenów) jest najszybsze."
+  ],
+  [
+    "Małe pliki na partycji NTFS zapisywane są jako",
+    [
+      "zawartość ostatniego klastra dużego pliku eliminując fragmentację wewnętrzną",
+      "plik na partycji ukrytej",
+      "części dużego pliku specjalnego",
+      "atrybut rezydentny tabeli MFT",
+      "żadne z pozostałych"
+    ],
+    3,
+    "W systemie plików NTFS obiekty o bardzo małym rozmiarze (zwykle do około 900 bajtów) mieszczą się w całości wewnątrz rekordu MFT jako tzw. atrybut rezydentny."
+  ],
+  [
+    "Jaki mechanizm umożliwia bezpośredni dostęp do pamięci z pominięciem procesora?",
+    [
+      "dyspozytor",
+      "przerwanie",
+      "deskryptor",
+      "kanał",
+      "nie istnieje taki mechanizm"
+    ],
+    3,
+    "Kanał dostępu (układ DMA - Direct Memory Access) to sprzętowy mechanizm pozwalający urządzeniom I/O na przesyłanie bloków danych bezpośrednio do i z pamięci RAM, minimalnie obciążając główny procesor."
+  ],
+  [
+    "Dynamiczny ciąg działań wykonywanych przez jednostkę centralną to:",
+    [
+      "Żaden z pozostałych",
+      "Wątek",
+      "Kod wynikowy",
+      "Kod źródłowy",
+      "Program"
+    ],
+    1,
+    "Program (lub kod źródłowy/wynikowy) to statyczny zbiór instrukcji przechowywany na dysku. Dopiero uruchomiony proces, a w nim pojedynczy wątek, stanowi właściwy, dynamiczny ciąg działań wykonywany przez rejestry jednostki centralnej."
+  ],
+  [
+    "W strategii wymiany ze stronicowaniem występują metody:",
+    [
+      "żadna z pozostałych",
+      "wszystkie są poprawne z wyjątkiem \"żadna z pozostałych\"",
+      "odsyłania na dysk najdawniej używanej strony",
+      "odsyłania na dysk najdawniej załadowanej strony",
+      "odsyłania na dysk najmniej używanej strony"
+    ],
+    1,
+    "Wymienione w opcjach mechanizmy to odpowiednio klasyczne algorytmy zastępowania stron: LRU (najdawniej używana), FIFO (najdawniej załadowana) oraz LFU (najmniej używana)."
+  ],
+  [
+    "Stos to struktura:",
+    [
+      "typu FIFO",
+      "rotacyjna",
+      "żadna z pozostałych",
+      "typu LIFO",
+      "listowa"
+    ],
+    3,
+    "Stos (Stack) działa z założenia w oparciu o regułę LIFO (Last-In, First-Out), co oznacza, że element dodany na wierzchołek struktury jako ostatni, zdejmowany jest z niej jako pierwszy."
+  ],
+  [
+    "Metodą ciągłego zabezpieczania danych przed ich utratą z powodu awarii dysku twardego jest",
+    [
+      "Składowanie",
+      "Segmentacja",
+      "Nakładkowanie",
+      "Stronicowanie",
+      "Żadna z pozostałych"
+    ],
+    4,
+    "Żadna z wymienionych odpowiedzi nie opisuje zabezpieczania danych. Do fizycznego zabezpieczenia nośników i odtwarzania w locie służy np. mirroring dysków (RAID 1) lub systemy kopii lustrzanych."
+  ],
+  [
+    "Charakterystyczne dla struktury klient-serwer systemu operacyjnego jest:",
+    [
+      "przesyłanie pakietów TCP/IP",
+      "wszystkie odpowiedzi poprawne z wyjątkiem \"żadna z pozostałych\"",
+      "przesyłanie plików poprzez spooler",
+      "przesyłanie rejestrów na stos",
+      "żadna z pozostałych"
+    ],
+    4,
+    "Dla tej architektury (koncepcja mikrojądra) natywna jest szybka komunikacja międzyprocesowa (IPC) oparta o przesyłanie komunikatów, której definitywnie brakuje na podanej liście."
+  ],
+  [
+    "Pamięć asocjacyjna",
+    [
+      "Przechowuje ostatnio używany kod lub dane",
+      "Przechowuje deskryptory ostatnio używanych stron",
+      "Przechowuje strony ostatnio zapisane na dysku twardym",
+      "Zawiera konfigurację komputera w czasie jego wyłączenia",
+      "Jest to inna nazwa na pamięć podręczną"
+    ],
+    1,
+    "Sprzętowa pamięć asocjacyjna (CAM) w architekturze zarządzania pamięcią RAM to nic innego jak bufor TLB, który przechowuje ostatnio przetłumaczone wektory/deskryptory stron logicznych na fizyczne."
+  ],
+  [
+    "Wiązanie adresów w trakcie ładowania występuje w systemie",
+    [
+      "DOS",
+      "CP/M",
+      "Żadne z pozostałych",
+      "Linux",
+      "Windows Vista"
+    ],
+    0,
+    "W systemie DOS ostateczne adresy fizyczne dla relokowalnych programów skompilowanych (np. w standardowym formacie .EXE) są wiązane bezpośrednio w momencie analizy nagłówka i ładowania kodu do pamięci RAM."
+  ],
+  [
+    "Ile jest możliwych wpisów do tabeli MFT?",
+    [
+      "2",
+      "63",
+      "255",
+      "nie ma pozostałych ograniczeń",
+      "16"
+    ],
+    3,
+    "W systemie Windows tabela MFT jest wewnętrznie traktowana jako plik dynamiczny ($MFT), który na bieżąco rośnie i rezerwuje nowe ekstenty klastrów w miarę pojawiania się nowych plików."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "żadne z pozostałych",
+      "nie występuje takie zjawisko",
+      "jest za mało pamięci",
+      "dwa procesy jednocześnie odwołują się do tych samych zasobów niepodzielnych",
+      "jest zbyt wolny procesor"
+    ],
+    2,
+    "Szamotanie (thrashing) to fizyczny objaw sytuacji, w której system posiada w pamięci zbyt mało wolnych ramek, by obsłużyć bieżące zbiory robocze procesów, wywołując u procesora ciągłe, blokujące zrzucanie stron na dysk twardy."
+  ],
+  [
+    "W kolejce semafora znajduje się:",
+    [
+      "żadne z pozostałych",
+      "wątek",
+      "deskryptor procesora",
+      "operacja czekaj",
+      "program"
+    ],
+    1,
+    "Gdy proces/wątek wywołuje operację wejścia do strefy krytycznej (zajmij/wait) na zablokowanym semaforze, jest wstrzymywany, a jego wektor kontrolny trafia do fizycznej kolejki powiązanej z danym semaforem."
+  ],
+  [
+    "Fragmentacja zewnętrzna występuje dla",
+    [
+      "żadne z pozostałych",
+      "segmentacji ze stronicowaniem",
+      "segmentacji",
+      "wszystkich pozostałych z wyjątkiem \"żadne z pozostałych\"",
+      "stronicowania"
+    ],
+    2,
+    "Podczas czystej segmentacji jądro rozdziela i operuje blokami kodu o nieregularnym rozmiarze. Tworzy to puste „szczeliny” między ciągłymi blokami zajętej pamięci (fragmentację zewnętrzną)."
+  ],
+  [
+    "Nawiasy kwadratowe w powłoce BASH służą do:",
+    [
+      "żadne z pozostałych",
+      "dziedziczenia z klas poza skryptem",
+      "poruszania się po historii poleceń",
+      "zastąpienia polecenia test",
+      "dziedziczenia w klasach skryptu"
+    ],
+    3,
+    "Składnia warunkowa używająca pojedynczego nawiasu np. `[ \"$a\" -eq 5 ]` to w Bashu wbudowany synonim dla instrukcji `test`."
+  ],
+  [
+    "System Windows 10 jest systemem o strukturze",
+    [
+      "jednolitej",
+      "warstwowej",
+      "klient-serwer",
+      "żadne z pozostałych",
+      "monolitycznej"
+    ],
+    3,
+    "Nowoczesne jądro rodziny Windows NT określa się formalnie jako architekturę hybrydową (łączącą szybkość monolitu z ideą podsystemów i usług ubsługiwanych jak w strukturze klient-serwer). Jako że odpowiedzi 'hybrydowa' brakuje, w rygorystycznym teście poprawna jest weryfikacja negatywna."
+  ],
+  [
+    "Model zbioru roboczego wynika z:",
+    [
+      "zasady lokalności",
+      "strategii rozmieszczania ze stronicowaniem",
+      "algorytmu bliźniaków",
+      "testu zgody",
+      "żadne z pozostałych"
+    ],
+    0,
+    "Zbiór roboczy (Working-Set) i predykcja braku strony wykorzystuje zjawisko empiryczne tzw. lokalności odwołań (przestrzennej oraz czasowej), które mówi, że program statystycznie spędza większość czasu pętląc określone, sąsiadujące obszary kodu."
+  ],
+  [
+    "Dyspozytorem nazywamy",
+    [
+      "wątek zarządzający przerwaniami",
+      "żadne z pozostałych",
+      "wątek zarządzający semaforami",
+      "planistę niskiego poziomu",
+      "planistę średniego poziomu"
+    ],
+    3,
+    "Dyspozytor (ang. Dispatcher) to zintegrowany mechanizm planisty krótko-terminowego (niskiego poziomu), odpowiadający fizycznie za operację przełączenia rejestrów, kontekstu i przekazania procesora wątkowi gotowemu."
+  ],
+  [
+    "Zakończenie transmisji poprzez kanał sygnalizowane jest przez:",
+    [
+      "operację uwolnij",
+      "fragmentację zewnętrzną",
+      "proces sterownika",
+      "stronicowanie",
+      "żadne z powyższych"
+    ],
+    4,
+    "Układ kontrolera/kanału po skończeniu transportu (np. przy operacji wejścia-wyjścia DMA) wystawia fizyczny sygnał na magistrali systemowej - przesyła do jednostki centralnej standardowe przerwanie sprzętowe."
+  ],
+  [
+    "Mikrojądro charakterystyczne jest dla struktury systemu operacyjnego:",
+    [
+      "jednolitej",
+      "warstwowej",
+      "pierścieniowej",
+      "klient-serwer",
+      "żadne z powyższych"
+    ],
+    3,
+    "W systemach typu mikrojądro, niemal wszystkie ciężkie składniki (sterowniki, obsługa plików, procesów) wyciągnięte są do przestrzeni użytkownika, udostępniając usługi na zasadzie klient-serwer poprzez IPC obsługiwane przez maleńki rdzeń."
+  ],
+  [
+    "W procesorach Intel występuje tablica stron:",
+    [
+      "haszowana",
+      "odwrócona",
+      "grupowana",
+      "wszystkie powyższe",
+      "żadna z powyższych"
+    ],
+    4,
+    "Standardowe implementacje jednostek MMU w architekturze rodziny x86/x64 bazują bezwzględnie na systemach wielopoziomowej hierarchii (tablice dwu-, trzy- i czteropoziomowe), której nie ujęto w bezpośrednich odpowiedziach."
+  ],
+  [
+    "Wątki posiadają wspólny:",
+    [
+      "licznik rozkazów",
+      "deskryptor procesu",
+      "stos",
+      "wszystkie powyższe",
+      "żadne z powyższych"
+    ],
+    1,
+    "Wątki współdzielą wirtualną przestrzeń operacyjną przyporządkowaną rodzicowi (jego PCB - blok kontrolny, czyli deskryptor procesu). Posiadają za to własne (nie wspólne) wskaźniki i liczniki rozkazów (PC) oraz stos wywołań wewnątrz pamięci globalnej."
+  ],
+  [
+    "W przypadku stosowania segmentacji dla adresów zachodzi:",
+    [
+      "logiczny = fizyczny = liniowy",
+      "tylko liniowy = logiczny",
+      "tylko logiczny = fizyczny",
+      "tylko fizyczny = liniowy",
+      "żadne z powyższych"
+    ],
+    4,
+    "W najczystszym, referencyjnym modelu segmentacyjnym nie występuje faza pomocniczego tłumaczenia na adres liniowy. Adres logiczny z instrukcji jest rzutowany niepośrednio na adres fizyczny z tablicy segmentów, przez co żadna relacja łącząca go ze wskaźnikami liniowymi nie zachodzi."
+  ],
+  [
+    "Proces wprowadzający nowe procesy wsadowe do systemu nazywamy:",
+    [
+      "planistą wysokiego poziomu",
+      "dyspozytorem",
+      "procesem zarządzającym deskryptorami",
+      "powłoką",
+      "żadne z powyższych"
+    ],
+    0,
+    "Planista długoterminowy (wysokiego poziomu / Job Scheduler) określa globalny poziom wieloprogramowości analizując bufor zapytań zadaniowych (spool/batch) pod kątem obciążenia I/O oraz zasobów dyskowych."
+  ],
+  [
+    "Mechanizm odsyłania i wymiany stron:",
+    [
+      "pozwala uruchomić więcej procesów",
+      "może powodować szamotanie",
+      "powoduje przechowywanie w pamięci tylko potrzebnych stron",
+      "wszystkie powyższe odpowiedzi są poprawne",
+      "wszystkie powyższe odpowiedzi są błędne"
+    ],
+    3,
+    "Wykorzystanie przestrzeni masowej jako swap'u poszerza sztucznie dostępny bufor witalny pamięci wirtualnej procesów. Pozwala to na trzymanie części zbioru na dysku, wczytywanie go na żądanie i w konsekwencji uruchamianie większej ilości kodu naraz - narażając dysk na blokujące szamotanie (thrashing)."
+  ],
+  [
+    "Przy zastosowaniu stronicowania dwupoziomowego bez użycia pamięci asocjacyjnej czas dostępu do pamięci zwiększa się:",
+    [
+      "2 razy",
+      "3 razy",
+      "4 razy",
+      "o 1 ns",
+      "nie zwiększa się"
+    ],
+    1,
+    "Jeśli system nie wykorzystuje TLB (pamięci asocjacyjnej), to odwołanie wymaga potrójnego przejścia fizycznego: pierwszego cyklu po katalog, drugiego po wpis do tablicy oraz trzeciego o faktyczną daną wskazaną przesunięciem. Czas wydłuża się 3-krotnie."
+  ],
+  [
+    "System plików FAT16 oparty jest o:",
+    [
+      "przydział ciągły",
+      "przydział indeksowy",
+      "tablicę przydziału plików",
+      "przydział listowy",
+      "tablicę bloków indeksów"
+    ],
+    2,
+    "FAT (File Allocation Table) w 16-bitowej wariacji bazuje technologicznie na jednolitej tabeli zajmującej predefiniowane sektory początkowe woluminu, stanowiącej główną listę klastrów należących do danego obiektu."
+  ],
+  [
+    "Metodą zwiększenia szybkości dostępu do dysku bez zabezpieczania danych przed ich utratą z powodu awarii twardego dysku jest:",
+    [
+      "macierz RAID 5",
+      "segmentacja",
+      "składowanie",
+      "macierz RAID 6",
+      "macierz RAID 0"
+    ],
+    4,
+    "Technika dyskowa RAID 0 (znana też jako striping) dzieli ciągi bitowe naprzemiennie i proporcjonalnie na kilka dysków. Umożliwia niemal dwukrotnie szybszy odczyt i zapis liniowy, jednak w przypadku błędu na pojedynczym talerzu paraliżuje nieodwracalnie wszystkie zawarte informacje."
+  ],
+  [
+    "Bufory TLB to inaczej:",
+    [
+      "pamięć operacyjna",
+      "pamięć asocjacyjna",
+      "pamięć masowa",
+      "pamięć notatnikowa",
+      "bufory portów wejściowych"
+    ],
+    1,
+    "TLB (Translation Lookaside Buffer) wykorzystuje sprzętowy wzorzec CAM (Content-Addressable Memory) czyli pamięć asocjacyjną, pozwalającą wyszukiwać i rzutować mapowania stron przy użyciu samej ich kluczowej wartości."
+  ],
+  [
+    "Podprogram obsługi przerwania musi zabezpieczyć:",
+    [
+      "wszystkie rejestry procesora",
+      "tylko używane rejestry procesora",
+      "wyłącznie wybrane rejestry procesora",
+      "semafory procesu przerywanego",
+      "żadne z powyższych"
+    ],
+    2,
+    "Dla utrzymania wydajności wektorów, klasyczne kontrolery systemowe zabezpieczają jedynie wysoce newralgiczne zbiory, takie jak rejestr wskaźnika rozkazów (EIP), rejestry flag, oraz kontekst kodu - wstrzymując kopiowanie ogromnych banków danych (np. setek bitów na rejestrach AVX) jeżeli układ ich jednoznacznie nie wezwał."
   ]
 ]
