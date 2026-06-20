@@ -9,7 +9,7 @@
       "Żadna z powyższych"
     ],
     4,
-    "Jeszcze tu nic nie ma"
+    "Prawidłowym powodem jest fragmentacja zewnętrzna. Upakowanie (kompaktowanie) polega na przesunięciu zajętych obszarów w celu scalenia rozproszonych wolnych bloków pamięci."
   ],
   [
     "Charakterystyczne dla struktury klient-serwer systemu operacyjnego jest:",
@@ -21,6 +21,402 @@
       "Żadna z powyższych"
     ],
     0,
-    "Jeszcze tu nic nie ma"
+    "W architekturze mikrojądra usługi systemu działają jako serwery w przestrzeni użytkownika, a komunikacja między procesami (klientami) opiera się na przesyłaniu komunikatów (Message Passing)."
+  ],
+  [
+    "Podprogram obsługi przerwania musi zabezpieczyć:",
+    [
+      "Adres powrotu",
+      "Rejestry procesora",
+      "Zmienne procesu przerywanego",
+      "Semafory procesu przerywanego",
+      "Wszystkie powyższe"
+    ],
+    4,
+    "Aby proces przerywany mógł bezbłędnie kontynuować działanie po powrocie z przerwania, cały jego kontekst procesora oraz nienaruszony stan pamięci muszą zostać zachowane."
+  ],
+  [
+    "Wiązanie adresów w trakcie ładowania występuje w systemie:",
+    [
+      "Linux",
+      "CP/M",
+      "Windows Vista",
+      "DOS",
+      "Żadne z powyższych"
+    ],
+    3,
+    "System DOS (dla programów typu .EXE) wykorzystuje relokowalny kod, którego adresy fizyczne są ostatecznie mapowane w momencie ładowania programu do pamięci przez loader."
+  ],
+  [
+    "Podczas bezpośredniego dostępu do pamięci procesor może odwoływać się do:",
+    [
+      "Pamięci operacyjnej",
+      "Pamięci ROM (BIOS)",
+      "Notatnikowej",
+      "Urządzeń wej / wyj",
+      "Nie może odwoływać się do powyższych"
+    ],
+    0,
+    "W klasycznym bezpośrednim cyklu rozkazowym procesor pobiera instrukcje oraz przetwarza dane znajdujące się w pamięci RAM (operacyjnej)."
+  ],
+  [
+    "W procesorach 80386 występuje tablica stron:",
+    [
+      "Jednopoziomowa",
+      "Dwupoziomowa",
+      "Rozproszona",
+      "Odwrócona",
+      "Żadna z powyższych"
+    ],
+    1,
+    "Architektura Intel 80386 wprowadziła 32-bitowe stronicowanie oparte na Katalogu Stron (Page Directory) oraz Tablicach Stron (Page Tables), tworząc strukturę dwupoziomową."
+  ],
+  [
+    "Wartość semafora może być odczytana przez:",
+    [
+      "Proces w dowolnym momencie",
+      "Proces tylko w czasie otwierania semafora",
+      "Tylko przez system operacyjny",
+      "Przez proces stosując odwołanie do systemu operacyjnego",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Semafory są chronionymi obiektami systemowymi zarządzanymi w przestrzeni jądra. Proces użytkownika nie ma do nich bezpośredniego dostępu – musi użyć wywołania systemowego."
+  ],
+  [
+    "Wątek:",
+    [
+      "Jest statyczny",
+      "Jest dynamiczny",
+      "Jest statyczny albo dynamiczny w zależności od bieżącego stanu wątku",
+      "Nie jest ani statyczny ani dynamiczny",
+      "Ma taki sam stan jak program"
+    ],
+    1,
+    "Wątek jest jednostką wykonawczą reprezentującą aktywny przepływ sterowania (posiada rejestry, licznik rozkazów i zmienia stany), przez co jest strukturą ściśle dynamiczną."
+  ],
+  [
+    "Głodzenie procesów eliminuje się stosując:",
+    [
+      "Kolejkę rotacyjną procesora",
+      "Kolejkę priorytetową procesora",
+      "Rozdzielne stosy procesów",
+      "Sekcje krytyczne",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Algorytm Round Robin (rotacyjny) przydziela każdemu procesowi określony kwant czasu, co gwarantuje, że każdy proces ostatecznie otrzyma dostęp do procesora."
+  ],
+  [
+    "W jaki sposób w przypadku stosowania segmentacji adres generowany przez proces zmienia się na adres, dzięki któremu możemy odwołać się do konkretnej komórki pamięci?:",
+    [
+      "Logiczny -> fizyczny -> liniowy",
+      "Liniowy -> logiczny",
+      "Fizyczny -> liniowy -> logiczny",
+      "Logiczny -> fizyczny",
+      "Żadne z powyższych"
+    ],
+    3,
+    "W czystej segmentacji adres logiczny (numer segmentu i przesunięcie) jest tłumaczony bezpośrednio na adres fizyczny przy pomocy tablicy segmentów."
+  ],
+  [
+    "Planistę wysokiego poziomu zajmującego się określeniem priorytetów procesów w kolejce procesorów w kolejności procesora nazywamy:",
+    [
+      "Monitorem",
+      "Semaforem",
+      "Dyspozytorem",
+      "Deskryptorem",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Chodzi o planistę długoterminowego (Long-term / Job scheduler), który kontroluje stopień wieloprogramowości i decyduje, które zadania przechodzą z dysku do pamięci RAM."
+  ],
+  [
+    "W strategii wymiany ze stronicowaniem występują metody:",
+    [
+      "Odsyłania na dysk ostatnio używanej strony",
+      "Odsyłania na dysk najczęściej używanej strony",
+      "Odczytania na dysk najdawniej załadowanej strony",
+      "Wszystkie powyższe odpowiedzi są poprawne",
+      "Wszystkie powyższe odpowiedzi są błędne"
+    ],
+    4,
+    "Klasyczne algorytmy to FIFO (najdawniej załadowana - w opcji 'c' jest błąd 'odczytania'), LRU (najdawniej używana) oraz LFU (najrzadziej używana). Metody z opcji a i b są nielogiczne."
+  ],
+  [
+    "Przy prawdopodobieństwie braku strony równym 0.0001 oraz szybkości dostępu do pamięci i dysku równym 10 ns i 10 ms średni czas dostępu do pamięci wynosi:",
+    [
+      "10 ns",
+      "20 ns",
+      "100 ns",
+      "1 \u03bcs",
+      "10 \u03bcs"
+    ],
+    3,
+    "Ze wzoru EAT = (1-p)*RAM + p*HDD otrzymujemy: 0.9999*10ns + 0.0001*10ms = 9.999ns + 1000ns = 1009.999ns, co daje w przybliżeniu 1 \u03bcs."
+  ],
+  [
+    "Fragmentacja zewnętrzna występuje dla:",
+    [
+      "Stronicowania",
+      "Segmentacji",
+      "Segmentacji ze stronicowaniem",
+      "Wszystkich powyższych",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Segmentacja przydziela bloki o zmiennej długości, co powoduje powstawanie luk między nimi. Stronicowanie eliminuje ten problem, dzieląc pamięć na stałe ramki."
+  ],
+  [
+    "Ile jest możliwych typów partycji w tablicy MBR?:",
+    [
+      "255",
+      "63",
+      "16",
+      "2",
+      "Nie ma powyższych ograniczeń"
+    ],
+    0,
+    "Identyfikator typu partycji w sektorze rozruchowym MBR zajmuje dokładnie 1 bajt, co pozwala na zdefiniowanie 255 unikalnych typów systemów plików (wartość 0x00 oznacza brak partycji)."
+  ],
+  [
+    "Małe pliki na partycji NTFS zapisywane są jako:",
+    [
+      "Części dużego pliku specjalnego",
+      "Zawartość ostatniego klastra dużego pliku eliminując fragmentację wewnętrzną",
+      "Atrybut rezydentny tabeli MFT",
+      "Plik na partycji ukrytej",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Jeśli plik jest bardzo mały, system plików NTFS zapisuje jego zawartość bezpośrednio wewnątrz rekordu głównej tabeli plików (MFT) jako tzw. atrybut rezydentny."
+  ],
+  [
+    "Metodą ciągłego zabezpieczania danych przed ich utratą z powodu awarii dysku twardego jest:",
+    [
+      "Stronicowanie",
+      "Segmentacja",
+      "Nakładkowanie",
+      "Składowanie",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Właściwą odpowiedzią jest mirroring (RAID 1) lub dupleksing, polegający na równoległym zapisywaniu tych samych danych na niezależnych dyskach."
+  ],
+  [
+    "Algorytm bankiera to:",
+    [
+      "Algorytm unikania zakleszczeń",
+      "Strategia rozmieszczania bez stronicowania",
+      "Metoda ochrony danych z użyciem zamka i klucza",
+      "Sposób zapisu na dysku lustrzanym",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Algorytm bankiera, opracowany przez Dijkstrę, służy do unikania zakleszczeń poprzez analizę, czy przydział zasobu nie doprowadzi systemu do stanu niebezpiecznego."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "W kolejce do zasobów czeka zbyt wiele procesów",
+      "Procesor zajmuje się wymianą stron pomiędzy pamięcią operacyjną, a dyskiem twardym, a nie wykonywaniem procesów",
+      "Dwa procesy jednocześnie odwołują się do tych samych zasobów niepodzielnych",
+      "Nie występuje takie zjawisko",
+      "Żadna z powyższych"
+    ],
+    1,
+    "Szamotanie (thrashing) pojawia się, gdy system przydzielił procesom zbyt mało ramek pamięci, co powoduje ciągłe błędy braku strony i blokuje CPU operacjami wejścia/wyjścia."
+  ],
+  [
+    "Nawiasy kwadratowe w powłoce BASH służą do:",
+    [
+      "Zastąpienia polecenia test",
+      "Poruszania się po historii poleceń",
+      "Dziedziczenia w klasach skryptu",
+      "Dziedziczenia z klas poza skryptem",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Pojedynczy nawias kwadratowy [ ] w Bashu stanowi wbudowany odpowiednik i skróconą formę wywołania standardowego polecenia test."
+  ],
+  [
+    "Pamięć podręczna:",
+    [
+      "Przechowuje strony ostatnio zapisane na dysku twardym",
+      "Zawiera konfigurację komputera w czasie jego wyłączenia",
+      "Przechowuje deskryptory ostatnio uzywanych stron",
+      "Przechowuje ostatnio używany kod lub dane",
+      "Jest to inna nazwa na pamięć asocjacyjną"
+    ],
+    3,
+    "Pamięć Cache procesora (SRAM) przechowuje kopie najczęściej używanych danych i instrukcji z pamięci RAM, skracając czas dostępu rdzenia CPU do tych informacji."
+  ],
+  [
+    "Bufory TLB (Translation Lookaside Buffer) przechowują:",
+    [
+      "Deskryptory ostatnio używanych stron pamięci",
+      "Tablice alokacji plików dla dysków sieciowych",
+      "Instrukcje assemblera oczekujące w kolejce potoku",
+      "Rejestry procesora zapisanego stanu kontekstu",
+      "Żadne z powyższych"
+    ],
+    0,
+    "TLB to szybka, sprzętowa pamięć podręczna MMU o charakterze asocjacyjnym, przechowująca ostatnie translacje adresów wirtualnych na fizyczne."
+  ],
+  [
+    "Fragmentację zewnętrzną wymusza podjęcie akcji o nazwie:",
+    [
+      "Stronicowanie dynamiczne",
+      "Upakowanie (kompaktowanie) pamięci",
+      "Segmentacja adaptacyjna",
+      "Wymiana blokowa",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Występowanie fragmentacji zewnętrznej uniemożliwia przydział ciągły wolnych obszarów, co wymusza na systemie operacyjnym uruchomienie procesu upakowania."
+  ],
+  [
+    "Charakterystyczne dla struktury klient-serwer SO jest:",
+    [
+      "Odkładanie rejestrów na stos",
+      "Bezpośredni dostęp procesów do rejestrów I/O",
+      "Wykonywanie wszystkich usług w trybie jądra",
+      "Wszystkie odpowiedzi są poprawne",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Kluczową cechą architektury klient-serwer jest przesyłanie komunikatów (IPC). Ponieważ ta opcja nie pojawiła się w zestawie, poprawnym wyborem jest 'Żadne z powyższych'."
+  ],
+  [
+    "Wiązanie adresów w trakcie kompilacji występuje w systemie:",
+    [
+      "Windows 11",
+      "Linux (Ubuntu)",
+      "CP/M",
+      "Każdym systemie z pamięcią wirtualną",
+      "Żadne z powyższych"
+    ],
+    2,
+    "System CP/M kompilował programy bezpośrednio pod stałe adresy fizyczne w pamięci RAM (obszar TPA zaczynający się sztywno od adresu 0x0100)."
+  ],
+  [
+    "Podczas bezpośredniego dostępu do pamięci procesor może odwoływać się do pamięci:",
+    [
+      "Wyłącznie zewnętrznej pamięci masowej",
+      "Taśmowej lub optycznej",
+      "Notatnikowej bądź podręcznej (SRAM / Cache)",
+      "Urządzeń wyjściowych bez użycia magistrali",
+      "Nie może odwoływać się do powyższych"
+    ],
+    2,
+    "Pamięci podręczne oraz rejestry notatnikowe są integralną, szybką częścią struktury procesora i są obsługiwane bezpośrednio w wewnętrznych cyklach CPU."
+  ],
+  [
+    "Rozmiar tabeli MFT (Master File Table) w systemie plików NTFS:",
+    [
+      "Wynosi sztywno maksymalnie 65536 wpisów",
+      "Wynosi maksymalnie 255 wpisów",
+      "Jest ograniczona liczbą cylindrów dysku podzieloną przez 2",
+      "Nie ma powyższych ograniczeń",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Tabela MFT jest specjalnym plikiem ($MFT), który w razie potrzeby alokuje kolejne klastry i rośnie dynamicznie wraz z liczbą plików – nie ma sztywnego limitu wpisów."
+  ],
+  [
+    "W komputerach PowerPC występuje tablica stron:",
+    [
+      "Jednopoziomowa",
+      "Dwupoziomowa",
+      "Odwrócona (Inverted Page Table)",
+      "Trójpoziomowa progresywna",
+      "Żadna z powyższych"
+    ],
+    2,
+    "Architektura PowerPC (oraz np. UltraSPARC) stosuje globalną, odwróconą tablicę stron, która posiada dokładnie tyle wpisów, ile fizycznych ramek znajduje się w pamięci RAM."
+  ],
+  [
+    "Strukturę adresu logicznego w segmentacji ze stronicowaniem opisuje relacja:",
+    [
+      "Selektor : Przesunięcie liniowe",
+      "Numer ramki : Przesunięcie strony",
+      "Identyfikator procesu : Adres fizyczny",
+      "Wszystkie powyższe są poprawne",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Adres logiczny w segmentacji ze stronicowaniem składa się z trzech elementów: [Numer segmentu | Numer strony | Przesunięcie]. Brak takiej opcji oznacza wybór 'Żadne z powyższych'."
+  ],
+  [
+    "Planista niskiego poziomu przydzielający procesor do wybranego procesu to:",
+    [
+      "Monitor zasobów",
+      "Scheduler długoterminowy",
+      "Dyspozytor (Dispatcher)",
+      "Semaforyzator wątków",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Dyspozytor (Dispatcher) jest modułem niskiego poziomu odpowiedzialnym za faktyczne przełączenie kontekstu procesora, załadowanie rejestrów i skok do kodu procesu."
+  ],
+  [
+    "Szamotanie nie występuje (jest skutecznie minimalizowane) w:",
+    [
+      "Modelu zbioru roboczego (Working-Set Model)",
+      "Strategii FIFO przy braku wolnych ramek",
+      "Przypadku algorytmu bez wywłaszczania",
+      "Strukturach czystej alokacji statycznej bez wymiany",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Model zbioru roboczego monitoruje lokalność odwołań i dopuszcza proces do działania tylko wtedy, gdy w pamięci zmieści się komplet jego najpotrzebniejszych stron."
+  ],
+  [
+    "Wątek niezależny i niewidoczny dla jądra systemu operacyjnego to wątek realizowany w przestrzeni:",
+    [
+      "Użytkownika (User-level threads)",
+      "Jądra (Kernel-level threads)",
+      "Układu wejścia/wyjścia (DMA)",
+      "Pamięci asocjacyjnej cache",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Wątki na poziomie użytkownika są zarządzane w całości przez bibliotekę aplikacyjną. Jądro systemu nie wie o ich istnieniu i widzi cały proces jako pojedynczy ciąg wykonawczy."
+  ],
+  [
+    "W strategii wymiany ze stronicowaniem występują metody odsyłania na dysk strony:",
+    [
+      "Najwcześniej zmodyfikowanej w bieżącym cyklu",
+      "O losowym indeksie nieparzystym",
+      "Najrzadziej używanej / najdawniej załadowanej",
+      "Wszystkie powyższe odpowiedzi są poprawne",
+      "Wszystkie powyższe odpowiedzi są błądem"
+    ],
+    2,
+    "Wskazuje to na zasady działania klasycznych algorytmów zastępowania stron: LFU (Least Frequently Used) oraz FIFO (First-In, First-Out)."
+  ],
+  [
+    "Przy prawdopodobieństwie błędu braku strony równym 0.00001 (oraz parametrach RAM 10 ns i HDD 10 ms) średni czas dostępu wynosi:",
+    [
+      "100 ns",
+      "10 ns",
+      "1 \u03bcs",
+      "10 \u03bcs",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Podstawiając do wzoru EAT: 0.99999*10ns + 0.00001*10000000ns \u2248 10ns + 100ns = 110ns, co w przybliżeniu daje wynik 100 ns."
+  ],
+  [
+    "W powłoce BASH, aby odwołać się do parametru pozycyjnego o indeksie wyższym niż 9 (np. dziesiątego), należy użyć:",
+    [
+      "Znaków ucieczki \\10",
+      "Podwójnego dolara $$10",
+      "Nawiasów klamrowych ${10}",
+      "Cudzysłowu \"$10\"",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Bez nawiasów klamrowych zapis $10 zostanie zinterpretowany jako zmienna $1 z doklejonym znakiem tekstowym '0'. Klamry ${10} jednoznacznie wskazują na dwucyfrowy indeks."
   ]
 ]
