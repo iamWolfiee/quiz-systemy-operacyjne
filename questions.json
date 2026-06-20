@@ -1,0 +1,3845 @@
+[
+    [
+    "Plik NTLDR",
+    [
+      "Plik jądra systemu Linux",
+      "Zarządca pamięci RAM w systemie Unix",
+      "Program szyfrujący dysk w systemie MacOS",
+      "Żadne z powyższych"
+    ],
+    3,
+    "NTLDR (NT Loader) to program ładujący (bootloader) dla starszych systemów operacyjnych z rodziny Windows NT (m.in. Windows XP). Ponieważ poprawnej definicji brakuje w standardowych opcjach (zgodnie z kluczem z egzaminu), jedyną właściwą opcją jest 'Żadne z powyższych'."
+  ],
+  [
+    "Master Boot Record znajduje się w:",
+    [
+      "pliku boot.ini",
+      "pamięci ROM płyty głównej",
+      "ostatnim sektorze partycji systemowej",
+      "pierwszym sektorze dysku twardego"
+    ],
+    3,
+    "MBR (Master Boot Record) zapisany jest zawsze w absolutnie pierwszym sektorze nośnika danych (sektor 0). Znajduje się tam główny kod rozruchowy oraz tablica partycji."
+  ],
+  [
+    "Predefiniowanym profilem użytkownika nie jest profil:",
+    [
+      "Gość",
+      "Administrator",
+      "Użytkownik domyślny (Default User)",
+      "Bezpieczny"
+    ],
+    3,
+    "W systemach rodziny Windows konta typu 'Administrator' czy 'Gość' są predefiniowane przez system w trakcie jego instalacji. Profil 'Bezpieczny' nie istnieje w tej nomenklaturze."
+  ],
+  [
+    "Mutex to:",
+    [
+      "Typ partycji dyskowej",
+      "System plików w Linuksie o wysokiej wydajności",
+      "Wzajemne wykluczanie dostępu do obiektu / Algorytm wzajemnego wykluczania",
+      "Zarządca przerwań sprzętowych"
+    ],
+    2,
+    "Mutex (skrót od mutual exclusion) to mechanizm w programowaniu współbieżnym chroniący zasoby współdzielone przez wątki lub procesy. Gwarantuje, że w danej chwili z zasobu może korzystać tylko jeden wątek."
+  ],
+  [
+    "System Linux jest „wzorowany” na systemie:",
+    [
+      "Windows NT",
+      "MS-DOS",
+      "OS/2",
+      "AIX"
+    ],
+    3,
+    "Historycznie Linus Torvalds inspirował się Minixem, a cała rodzina to Uniksy. Jednakże w kluczach tego konkretnego przedmiotu system AIX (Unix od IBM) jest wskazywany jako prawidłowa odpowiedź reprezentująca rodzinę systemów wzorcowych."
+  ],
+  [
+    "Wpisanie znaków !! w powłoce Linux’a spowoduje:",
+    [
+      "Wyjście z powłoki i wylogowanie użytkownika",
+      "Usunięcie ostatnio modyfikowanego pliku",
+      "Wymuszone zabicie aktualnie wykonywanego procesu",
+      "Powtórzenie ostatniego polecenia"
+    ],
+    3,
+    "Znaki '!!' to mechanizm rozwijania historii (history expansion) w powłokach typu Bash. Powoduje natychmiastowe wczytanie i wykonanie dokładnie tego samego polecenia, co krok wcześniej."
+  ],
+  [
+    "Polecenie make lzImage (lub bzImage):",
+    [
+      "Tworzy czysty obraz nowej partycji ekst3",
+      "Rozpakowuje archiwa z logami systemowymi",
+      "Buduje zestaw podstawowych modułów jądra",
+      "Kompiluje jądro Linux’a w postaci skompresowanej"
+    ],
+    3,
+    "Polecenie np. make bzImage (Big zImage) z wiersza poleceń uruchamia proces kompilacji i kompresuje wynikowe jądro (kernel), aby mogło się zmieścić w obszarze bootowania."
+  ],
+  [
+    "W katalogu użytkownika systemu Linux znajduje się plik konfiguracyjny:",
+    [
+      "config.sys",
+      "ntoskrnl.exe",
+      "init.rc",
+      ".profile"
+    ],
+    3,
+    "Plik .profile (ukryty ze względu na kropkę na początku nazwy) uruchamiany jest przez powłokę (shell) w momencie logowania. Zawiera zmienne środowiskowe lub aliasy ustalone dla danego użytkownika."
+  ],
+  [
+    "Bit ziarnistości:",
+    [
+      "Określa priorytet wątku w kolejce procesora",
+      "Zarządza pamięcią podręczną poziomu drugiego",
+      "Zabezpiecza przed głodzeniem procesów",
+      "wpływa na rozmiar segmentu"
+    ],
+    3,
+    "W architekturze procesorów x86 bit ziarnistości (Granularity flag, oznaczany jako G) w deskryptorze segmentu decyduje o tym, czy pole 'limit' określa rozmiar segmentu w pojedynczych bajtach (G=0), czy w jednostkach 4 KB (G=1)."
+  ],
+  [
+    "Na dysku można utworzyć partycji rozszerzonych:",
+    [
+      "2",
+      "4",
+      "Dowolną liczbę",
+      "1"
+    ],
+    3,
+    "Według specyfikacji tablicy partycji typu MBR dysk może posiadać maksymalnie do 4 partycji podstawowych lub 3 podstawowe i tylko 1 partycję rozszerzoną (w której następnie tworzy się dyski logiczne)."
+  ],
+  [
+    "Rejestr CX w procesorze Pentium jest ilu bitowy:",
+    [
+      "8",
+      "32",
+      "64",
+      "16"
+    ],
+    3,
+    "Rejestr CX jest historycznym rejestrem 16-bitowym (C-Register od Count Register). Jego 32-bitowym odpowiednikiem dostępnym w architekturze IA-32 (w tym Pentium) jest rejestr ECX."
+  ],
+  [
+    "Po włączeniu komputera procesory serii x86 rozpoczynają pracę od instrukcji o adresie:",
+    [
+      "0000:0000",
+      "0000:FFFF",
+      "8000:0000",
+      "FFFF:0000"
+    ],
+    3,
+    "To tzw. 'reset vector'. Po starcie zasilania lub restarcie procesor x86 zaczyna wykonywać kod od segmentu FFFFh i ofsetu 0000h (FFFF0h fizycznie), co mapuje się dokładnie w miejsce, gdzie w pamięci ROM rezyduje kod startowy BIOS/UEFI."
+  ],
+  [
+    "Kart rozszerzeń nie wkłada się do magistrali:",
+    [
+      "PCI",
+      "ISA",
+      "AGP",
+      "SCSI"
+    ],
+    3,
+    "SCSI (Small Computer System Interface) to magistrala przesyłania danych m.in. dla dysków twardych, skanerów i napędów taśmowych za pomocą kabli. Do instalacji fizycznych kart rozszerzeń wykorzystuje się sloty m.in. PCI czy ISA."
+  ],
+  [
+    "Podsystem SAT:",
+    [
+      "Szyfruje całe partycje dyskowe NTFS",
+      "Zarządza przydziałem czasu procesora",
+      "Tłumaczy adresy liniowe na fizyczne",
+      "tworzy klucz dostępu"
+    ],
+    3,
+    "SAT (Security Access Token) w terminologii systemów Windows oznacza obiekt uwierzytelnienia (Token), który generowany jest podczas udanego logowania i tworzy klucz/przepustkę weryfikującą uprawnienia użytkownika."
+  ],
+  [
+    "Mirroringowi(dyskom lustrzanym) odpowiada poziom RAID:",
+    [
+      "RAID 0",
+      "RAID 5",
+      "RAID 10",
+      "RAID 1"
+    ],
+    3,
+    "Macierz RAID 1 polega na jednoczesnym zapisywaniu tych samych danych na dwóch (lub więcej) dyskach, tworząc ich lustrzane odbicie w celu zapobiegania utracie danych podczas awarii nośnika."
+  ],
+  [
+    "Moduł systemu Linux wyładowuje się poleceniem:",
+    [
+      "insmod",
+      "modprobe",
+      "lsmod",
+      "rmmod"
+    ],
+    3,
+    "Polecenie 'rmmod' służy do usuwania (remove module) z pamięci jądra nieużywanych bądź zawieszonych modułów. Insmod i modprobe służą do ich ładowania, a lsmod do ich wyświetlania."
+  ],
+  [
+    "Powłoką Linuxa nie jest:",
+    [
+      "bash",
+      "zsh",
+      "ksh",
+      "bsh"
+    ],
+    3,
+    "Klasyczny Bourne Shell jest oznaczany jako 'sh', Bourne-Again shell jako 'bash', Z shell to 'zsh' itp. Skrót 'bsh' nie jest oficjalnym standardem popularnej powłoki, więc w kontekście egzaminu stanowi poprawny dystraktor."
+  ],
+  [
+    "Kod zakończenia programu przechowywany jest w zmiennej:",
+    [
+      "$$",
+      "$!",
+      "$#",
+      "$?"
+    ],
+    3,
+    "Zmienna '$?' w powłokach typu Unix zawiera status wyjścia (exit code) ostatniego zsynchronizowanego, wykonanego procesu (np. 0 oznacza sukces, a inny kod błąd)."
+  ],
+  [
+    "Wartość zwracana przez program w Linuxie jest umieszczana w zmiennej:",
+    [
+      "$$",
+      "$!",
+      "$#",
+      "$?"
+    ],
+    3,
+    "To pytanie jest niemalże kalką pytania nr 18 z innego wariantu egzaminu. Wartość powrotna programu (np. po wykonaniu 'return 0' w języku C) to status wyjścia programu lądujący w zmiennej systemowej '$?'."
+  ],
+  [
+    "System plików NTFS …. System:",
+    [
+      "MS-DOS",
+      "Linux",
+      "Mac OS",
+      "OS/2"
+    ],
+    3,
+    "Architektura systemu plików NTFS wywodzi się bezpośrednio z systemu HPFS (High Performance File System), który był wspólnym dziełem Microsoftu i IBM dla systemu operacyjnego OS/2."
+  ],
+  [
+    "Rozmiar segmentu jest polem ilu bitowym:",
+    [
+      "8",
+      "16",
+      "32",
+      "20"
+    ],
+    3,
+    "W architekturze x86 pole limitu wskazujące maksymalny dopuszczalny offset, do którego może sięgać segment (czyli jego rozmiar), ma 20 bitów wewnątrz 64-bitowego deskryptora segmentu."
+  ],
+  [
+    "Ile partycji podstawowych można utworzyć na jednym dysku",
+    [
+      "Z tablicą MBR do 2, z tablicą GPT do 64 partycji",
+      "Z tablicą MBR do 8, z tablicą GPT do 256 partycji",
+      "Z tablicą MBR do 1, z tablicą GPT brak limitów",
+      "Z tablicą MBR 4, z tablicą GPT do 128 partycji"
+    ],
+    3,
+    "W specyfikacji MBR zarezerwowano miejsce w głównym sektorze rozruchowym zaledwie na cztery 16-bajtowe wpisy o partycjach. Standard GPT oferuje przestrzeń domyślnie na 128 wpisów pod systemami Windows."
+  ],
+  [
+    "Dysk twardy podłączamy stosując interfejs:",
+    [
+      "ISA, PCI, PCIe",
+      "RJ-45, RS-232, HDMI",
+      "AGP, PCI-Express",
+      "SCSI, ATA, SATA(ESATA), (USB)"
+    ],
+    3,
+    "Wszystkie z wymienionych interfejsów służą do podłączeń pamięci masowych. Złącza takie jak ATA (IDE), SATA czy SCSI są projektowane ściśle z myślą o transferze danych z/do dysków."
+  ],
+  [
+    "Predefiniowanym szablonem zabezpieczeń nie jest szablon:",
+    [
+      "Zgodny (Compatws)",
+      "Podstawowy (Basic)",
+      "Bezpieczny (Secure)",
+      "Mobilny"
+    ],
+    3,
+    "Szablony zabezpieczeń (np. pliki .inf używane do narzucania polityk bezpieczeństwa w GPO) w starych systemach to na przykład 'securews', 'compatws' czy 'setup security'. Szablon 'Mobilny' to element dystrakcyjny."
+  ],
+  [
+    "Jednym ze sposobów konfiguracji jądra jest użycie komendy:",
+    [
+      "make install",
+      "make kernel",
+      "build core",
+      "make config"
+    ],
+    3,
+    "Make config to narzędzie tekstowe wykorzystywane do krokowej konfiguracji każdego z elementów jądra systemu z wiersza poleceń przed finalną kompilacją (choć obecnie popularniejsze jest okienkowe 'make menuconfig')."
+  ],
+  [
+    "Znak ~(tylda) oznacza w Linuxie:",
+    [
+      "Katalog główny (root)",
+      "Poprzednio odwiedzony katalog",
+      "Katalog użytkownika",
+      "Zmienną systemową środowiska"
+    ],
+    2,
+    "Tylda (~) to powszechnie używany w powłokach uniksowych skrót, który odnosi się do katalogu domowego bieżącego użytkownika (np. /home/nazwa_uzytkownika)."
+  ],
+  [
+    "Zmienne systemu Linux wyświetla się poleceniem:",
+    [
+      "var",
+      "set",
+      "get",
+      "echo"
+    ],
+    1,
+    "Polecenie 'set' w powłoce systemowej (np. Bash) służy do wyświetlenia nazw i wartości wszystkich zmiennych powłoki oraz zmiennych środowiskowych."
+  ],
+  [
+    "Potok tworzy się przy użyciu:",
+    [
+      "&",
+      ">",
+      "<",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Potok (pipe) w systemach Unix/Linux tworzy się przy użyciu pionowej kreski '|'. Skoro w opcjach egzaminacyjnych jej nie było, poprawną odpowiedzią wymuszoną przez klucz jest 'Żadne z powyższych'."
+  ],
+  [
+    "Procesory Pentium posiadają następujące rejestry segmentowe:",
+    [
+      "EAX, EBX, ECX, EDX",
+      "CS, DS, ES, SS, FS, GS",
+      "CR0, CR1, CR2, CR3",
+      "AX, BX, CX, DX, SI, DI"
+    ],
+    1,
+    "Architektura x86 (w tym procesory Pentium) definiuje 6 podstawowych rejestrów segmentowych używanych do adresowania pamięci: Code, Data, Stack oraz trzy dodatkowe (Extra, F-segment, G-segment)."
+  ],
+  [
+    "Numer strony zawierającej katalog stron zawiera rejestr:",
+    [
+      "CR3",
+      "CR0",
+      "EIP",
+      "EBP"
+    ],
+    0,
+    "W architekturze x86 rejestr kontrolny CR3 (Control Register 3) jest kluczowy dla mechanizmu stronicowania pamięci – przechowuje fizyczny adres bazowy głównego katalogu stron (Page Directory Base Register)."
+  ],
+  [
+    "Bezpośredni dostęp do pamięci jest realizowany przez:",
+    [
+      "Semafor systemowy",
+      "Dyspozytora zadań",
+      "Kanał (teraz DMA)",
+      "Podprogram obsługi przerwań"
+    ],
+    2,
+    "Bezpośredni dostęp do pamięci (DMA - Direct Memory Access) pozwala na transfer danych z urządzeń do pamięci operacyjnej z pominięciem głównego procesora. Historycznie odpowiadał za to specjalizowany procesor wejścia/wyjścia zwany 'kanałem'."
+  ],
+  [
+    "Lekarz w przychodni stosuje:",
+    [
+      "System pamięci wirtualnej",
+      "System przepytywania plików",
+      "Mechanizm przerwań sprzętowych",
+      "Aktywne czekanie w pętli"
+    ],
+    1,
+    "To wykładowa metafora: lekarz sprawdzający karty pacjentów jedno po drugim ilustruje system przepytywania (polling), czyli aktywne, sekwencyjne odpytywanie obiektów/urządzeń o ich stan (w przeciwieństwie do mechanizmu przerwań)."
+  ],
+  [
+    "Które stwierdzenie jest prawdziwe:",
+    [
+      "Stos przechowuje tylko zmienne globalne programów",
+      "Stos jest zawsze pamięcią tylko do odczytu",
+      "Stos jest wykorzystywany w czasie obsługi przerwań",
+      "Stos zwalnia pamięć na zasadzie FIFO (First In, First Out)"
+    ],
+    2,
+    "W momencie wystąpienia przerwania, procesor automatycznie odkłada na stos tzw. środowisko ulotne (m.in. adres powrotu, rejestr flag), aby wiedzieć, w którym miejscu wznowić przerwany program."
+  ],
+  [
+    "UWAGA - BŁĄD NOTATEK. Współbieżność koleżeńska (kooperatywna / non-preemptive), charakteryzująca się koniecznością dobrowolnego oddania CPU przez sam proces, WYSTĘPOWAŁA GŁÓWNIE W historycznych systemach:",
+    [
+      "Windows 10 Pro",
+      "Windows 3.1x oraz klasyczny Mac OS 9",
+      "Windows XP i Windows 7",
+      "Linux Debian",
+      "Windows NT"
+    ],
+    1,
+    "W Twoich starych notatkach jest błąd (oznaczono tam Windows XP, co jest nieprawdą). XP działa we współbieżności z wywłaszczeniem. Kooperatywna to era Windows 3.1 (brak wywłaszczania), gdzie zawieszenie 1 programu paraliżowało i blokowało cały procesor."
+  ],
+  [
+    "Aby nie występowało zjawisko głodzenia procesów stosuje się:",
+    [
+      "Zmniejszanie kwantu czasu procesora",
+      "Algorytm szeregowania LIFO",
+      "Podwyższenie priorytetów procesów / rotacyjną kolejkę semafora",
+      "Blokowanie wywłaszczania zadań"
+    ],
+    2,
+    "Zjawisko głodzenia (starvation) polega na tym, że procesy o niskim priorytecie nigdy nie dostają czasu CPU. Rozwiązuje się to m.in. mechanizmem 'starzenia' (aging), czyli stopniowym podwyższaniem priorytetu długo oczekujących procesów."
+  ],
+  [
+    "W jaki sposób w przypadku stosowania segmentacji adres generowany przez proces zmienia się na adres, dzięki któremu możemy odwołać się do konkretnej komórki pamięci:",
+    [
+      "fizyczny -> logiczny",
+      "logiczny -> liniowy -> fizyczny",
+      "logiczny -> fizyczny",
+      "liniowy -> logiczny"
+    ],
+    2,
+    "W systemach używających wyłącznie segmentacji, adres logiczny (składający się z selektora segmentu i offsetu) tłumaczony jest bezpośrednio na fizyczny. (Adres liniowy występuje dodatkowo, gdy włączone jest stronicowanie)."
+  ],
+  [
+    "W systemie komputerowym prawdą jest:",
+    [
+      "błąd jest skutkiem wady",
+      "wada i błąd to zawsze pojęcia tożsame",
+      "wada jest bezpośrednim skutkiem błędu",
+      "usterka celowo naprawia błąd w kodzie"
+    ],
+    0,
+    "Zgodnie z inżynierią niezawodności i bezpieczeństwa systemów, wada (fault/bug) ukryta w oprogramowaniu lub sprzęcie uaktywnia się w określonych warunkach i powoduje niepożądany stan nazywany błędem (error)."
+  ],
+  [
+    "W kolejce semafora znajdują się:",
+    [
+      "adresy pamięci podręcznej L2",
+      "zasoby sprzętowe oczekujące na sterownik",
+      "wątki (procesy)",
+      "numery przerwań IRQ"
+    ],
+    2,
+    "Kolejka semafora służy do przetrzymywania w stanie zablokowanym (oczekującym) wątków lub procesów, które zażądały dostępu do zasobu w momencie, gdy semafor miał wartość ujemną (lub zero w semaforach binarnych)."
+  ],
+  [
+    "Algorytm bliźniaków jest:",
+    [
+      "strategią unikania zakleszczeń",
+      "sposobem zarządzania macierzami dyskowymi RAID 1",
+      "mechanizmem tworzenia podprocesów potomnych w powłoce",
+      "strategią rozmieszczania pamięci bez stronicowania"
+    ],
+    3,
+    "Algorytm bliźniaków (buddy memory allocation) dzieli dostępną pamięć na połowy tak, aby dopasować odpowiedni ciągły blok danych, co jest formą zarządzania obszarami bez wykorzystywania tradycyjnego stronicowania na dysk."
+  ],
+  [
+    "W systemie Linux do przeglądania zawartości plików tekstowych służy polecenie:",
+    [
+      "grep",
+      "less",
+      "find",
+      "pwd"
+    ],
+    1,
+    "Polecenie 'less' to pager służący do podglądu tekstu. W przeciwieństwie do starszego 'more', 'less' pozwala na przewijanie zawartości również do tyłu bez ładowania całego pliku do pamięci z góry."
+  ],
+  [
+    "O stanie procesu, który czeka w kolejce semafora mówimy, że jest:",
+    [
+      "gotowy (ready)",
+      "niewykonywalny (oczekujący / blocked)",
+      "wykonywany (running)",
+      "uśpiony w tle (zombie)"
+    ],
+    1,
+    "Proces trafiający do kolejki zablokowanego semafora jest dobrowolnie lub siłowo wywłaszczany i staje się 'niewykonywalny' do czasu, aż inny proces zwolni zasób wykonując na semaforze operację sygnalizacji."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "dwa procesy trwale zablokują siebie nawzajem (zakleszczenie)",
+      "procesor zajmuje się wymianą stron pomiędzy pamięcią operacyjną a dyskiem twardym a nie wykonywaniem procesów",
+      "zostanie wyczerpany cały zapas wolnych i-węzłów na partycji",
+      "proces wykonuje się nieskończenie długo z powodu braku pętli przerwania"
+    ],
+    1,
+    "Szamotanie (thrashing) to załamanie wydajności wywołane brakiem pamięci RAM. System zaczyna ciągle swapować (zapisywać i odczytywać strony z powolnego dysku) zamiast wykonywać faktyczną pracę obliczeniową."
+  ],
+  [
+    "System przesyłania komunikatów między procesami nie może istnieć w systemie o strukturze:",
+    [
+      "klient-serwer",
+      "mikrojądra",
+      "warstwowej",
+      "żadne z powyższych"
+    ],
+    3,
+    "Komunikacja międzyprocesowa oparta na przesyłaniu komunikatów (Message Passing) jest modelem uniwersalnym i MOŻE zostać zaimplementowana w dowolnej architekturze SO (mikrojądro, warstwowa, jednolita), więc wyklucza je odpowiedź 'żadne z powyższych'."
+  ],
+  [
+    "Kiedy wykonywany jest podprogram wstępnej obsługi przerwań:",
+    [
+      "zawsze przed wejściem procesu w stan gotowości",
+      "gdy liczba urządzeń w systemie jest większa od liczby przerwań",
+      "podczas bezpośredniego zapisu pliku na dysk metodą DMA",
+      "tylko podczas aktualizacji jądra systemu"
+    ],
+    1,
+    "W komputerach często liczba linii przerwań sprzętowych (IRQ) jest mniejsza niż ilość zainstalowanych układów scalonych. Wymusza to współdzielenie przerwań – podprogram wstępny musi wtedy zidentyfikować, które ze współdzielonych urządzeń zgłosiło przerwanie."
+  ],
+  [
+    "Proces to:",
+    [
+      "pasywny blok danych zapisany na dysku twardym",
+      "fizyczny obszar wymiany w pamięci wirtualnej (swap)",
+      "dynamiczny zestaw instrukcji / znajduje się w pamięci operacyjnej",
+      "fragment kodu odpowiedzialny wyłącznie za operacje I/O"
+    ],
+    2,
+    "Program staje się procesem w momencie wczytania jego kodu z dysku do pamięci RAM, gdzie dyspozytor zaczyna przydzielać mu czas procesora. Stanowi dynamiczny odpowiednik pasywnego pliku bitowego."
+  ],
+  [
+    "Z czego składa się blokada (wśród blokad wyróżniamy):",
+    [
+      "z zasilacza i magistrali",
+      "z mechanizmu stron i segmentacji",
+      "z algorytmów FIFO i LIFO",
+      "z regionu krytycznego / z monitoru"
+    ],
+    3,
+    "W teorii współbieżności, aby zabezpieczyć dane przed błędami wyścigu, tworzy się 'blokady'. Wyróżniamy na to różne spojrzenia programistyczne i systemowe, np. monitory chroniące całe struktury lub wydzielone sekcje (regiony) krytyczne."
+  ],
+  [
+    "Dyspozytor:",
+    [
+      "zarządza alokacją pamięci masowej na dysku",
+      "jest wysokopoziomowym planistą zadań długoterminowych",
+      "przydziela procesor procesom / jest niskopoziomowym planistą",
+      "odpowiada za wyświetlanie logów systemowych na ekranie"
+    ],
+    2,
+    "Dyspozytor (ang. dispatcher) to komponent systemu operacyjnego zintegrowany z planistą niskiego poziomu, którego jedynym i bardzo szybkim zadaniem jest faktyczne przełączanie kontekstu i dawanie kontroli procesorowi wybranemu wątkowi/procesowi."
+  ],
+  [
+    "Kiedy są tworzone adresy:",
+    [
+      "na poziomie kompilacji / w momencie ładowania i wykonywania procesu",
+      "tylko w momencie zamknięcia i usunięcia pliku z dysku",
+      "wyłącznie w BIOSie po starcie komputera",
+      "tylko po wystąpieniu błędu strony (Page Fault)"
+    ],
+    0,
+    "Proces wiązania adresów w pamięci może nastąpić statycznie podczas samej kompilacji (tworzenie adresów absolutnych), podczas ładowania relokowalnego kodu z dysku, lub w pełni dynamicznie dopiero na etapie wykonywania w CPU."
+  ],
+  [
+    "Urządzenia wirtualne to:",
+    [
+      "zewnętrzne pendrive'y",
+      "modele blokowe / strumieniowe",
+      "procesory wirtualnych maszyn",
+      "rejestry procesora głównego"
+    ],
+    1,
+    "W architekturze systemów takich jak Unix/Linux wszystkie interfejsy do urządzeń zewnętrznych abstrahuje się (wirtualizuje) do formy odczytu/zapisu. Są one modelowane jako urządzenia blokowe (np. dyski) lub strumieniowe/znakowe (np. klawiatury, porty COM)."
+  ],
+  [
+    "Spooler zapewnia:",
+    [
+      "ciągły zapis logów do pliku tekstowego",
+      "podzielność urządzeń niepodzielnych (np. drukarki)",
+      "izolację pamięci przed przepełnieniem bufora",
+      "jednoczesny dostęp do komórek rejestru procesora"
+    ],
+    1,
+    "Spooling gromadzi zadania we/wy dla konkretnego urządzenia z różnych procesów w jednym buforze na dysku (np. kolejka wydruku). Rozwiązuje to problem podziału urządzeń, które z przyczyn fizycznych potrafią wykonywać tylko jedną czynność naraz."
+  ],
+  [
+    "Klaster na dysku twardym powinien być:",
+    [
+      "zawsze jak najmniejszy, ponieważ gwarantuje to szybszy transfer z i do pamięci RAM",
+      "wyłącznie o rozmiarze 512 bajtów ze względu na ograniczenia sprzętowe",
+      "duży, ponieważ zapewnia szybki dostęp do danych, lub mały, ponieważ przestrzeń dysku jest wtedy lepiej wykorzystana",
+      "niezależny od systemu plików, ponieważ klastry to fizyczne elementy dysku magnetycznego"
+    ],
+    2,
+    "Rozmiar klastra (jednostki alokacji) to zawsze kompromis. Duże klastry oznaczają mniejszą fragmentację i szybszy odczyt dużych plików, ale powodują straty miejsca (fragmentacja wewnętrzna) przy dużej ilości bardzo małych plików."
+  ],
+  [
+    "Planista (Scheduler):",
+    [
+      "odpowiada za fizyczne przełączanie kontekstu w procesorze (wykonywanie instrukcji)",
+      "zarządza alokacją wolnej przestrzeni na dyskach twardych",
+      "zajmuje się ustaleniem, kiedy nowe procesy wprowadzić do systemu oraz w jakiej kolejności powinny działać",
+      "dokonuje kompilacji kodu źródłowego programu w pamięci operacyjnej"
+    ],
+    2,
+    "Planista (w tym długoterminowy i krótkoterminowy) decyduje odpowiednio o tym, które zadania zostaną załadowane do pamięci oraz który z gotowych procesów otrzyma w danym momencie kwant czasu procesora."
+  ],
+  [
+    "Bezpieczny system operacyjny:",
+    [
+      "izoluje zadania oraz zapewnia ochronę przestrzeni pamięci",
+      "zapisuje wszystkie hasła systemowe w postaci jawnej, aby uniknąć błędów odczytu",
+      "pozwala każdemu procesowi użytkownika na bezpośrednie odwołania do sprzętu",
+      "korzysta wyłącznie ze struktury monolitycznej pozbawionej jądra"
+    ],
+    0,
+    "Podstawą bezpieczeństwa systemów wielozadaniowych jest ochrona pamięci, co zapobiega modyfikowaniu lub odczytywaniu obszarów pamięci należących do innych procesów lub samego jądra systemu."
+  ],
+  [
+    "Postarzanie haseł (password aging):",
+    [
+      "to metoda szyfrowania haseł starszymi, ale sprawdzonymi algorytmami (np. DES)",
+      "to zjawisko zapominania haseł przez użytkowników w systemach nieużywanych przez ponad 90 dni",
+      "wydłuża czas oczekiwania na kolejne logowanie po błędnym wpisaniu hasła",
+      "wymusza okresowe zmiany hasła i powoduje zmianę hasła użytkownika"
+    ],
+    3,
+    "Postarzanie haseł to polityka bezpieczeństwa, w której hasłu nadaje się maksymalny 'czas życia'. Po jego upływie system zmusza użytkownika do ustawienia nowego hasła."
+  ],
+  [
+    "Język poleceń (np. powłoki systemowej) powinien:",
+    [
+      "wymagać graficznego środowiska okienkowego do poprawnego działania",
+      "być bezpośrednio kompilowany do kodu maszynowego pomijając jądro",
+      "zapewniać możliwość tworzenia skryptów oraz tworzenia pętli",
+      "ograniczać się do wykonywania pojedynczych, podstawowych komend bez możliwości parametryzacji"
+    ],
+    2,
+    "Dobre języki poleceń (np. BASH, PowerShell) oferują funkcjonalności typowe dla języków programowania wysokiego poziomu (zmienne, instrukcje warunkowe, pętle), co pozwala automatyzować złożone operacje."
+  ],
+  [
+    "Jaka część systemu operacyjnego nadaje priorytety procesom:",
+    [
+      "Dispatcher (Dyspozytor)",
+      "Semafor systemowy",
+      "Planista (Scheduler)",
+      "Kompilator kodu"
+    ],
+    2,
+    "Nadawaniem priorytetów i układaniem kolejki oczekujących zadań zajmuje się Planista (Scheduler). Dyspozytor (Dispatcher) to z kolei mechanizm, który wykonuje już samą fizyczną zmianę procesów na bazie decyzji Planisty."
+  ],
+  [
+    "Co wspomaga mechanizm rejestru bazowego i granicznego:",
+    [
+      "pamięć wirtualną oraz segmentację",
+      "urządzenia typu spooler",
+      "systemy plików typu FAT",
+      "mechanizm podwójnego buforowania grafiki"
+    ],
+    0,
+    "Rejestr bazowy przechowuje początkowy adres fizyczny przydzielony procesowi, a graniczny (limit) jego maksymalny rozmiar. Są to sprzętowe podstawy wczesnych mechanizmów ochrony pamięci i segmentacji."
+  ],
+  [
+    "Strategią zarządzania pamięcią jest:",
+    [
+      "szyfrowanie, kompresja i defragmentacja",
+      "podwójne i potrójne buforowanie",
+      "wymiany, rozmieszczania i pobierania",
+      "round-robin oraz SJF (Shortest Job First)"
+    ],
+    2,
+    "System operacyjny musi decydować, kiedy pobrać stronę z dysku (strategia pobierania), gdzie ją umieścić w pamięci fizycznej (strategia rozmieszczania) oraz kogo z niej usunąć, gdy brakuje miejsca (strategia wymiany/zastępowania)."
+  ],
+  [
+    "Sposobem blokowania zasobów do ochrony sekcji krytycznych jest:",
+    [
+      "potok i strumień",
+      "mutex i semafor",
+      "klaster i sektor",
+      "przerwanie i wyjątek"
+    ],
+    1,
+    "Muteksy (wzajemne wykluczanie) i semafory to klasyczne prymitywy synchronizacyjne wykorzystywane w programowaniu współbieżnym do blokowania zasobów przed jednoczesnym dostępem z wielu wątków."
+  ],
+  [
+    "Jakich metod kontroli racjonowania (w pliku rozliczeń) zgodnie z wykładem NIE używa się do szacowania kosztów:",
+    [
+      "czas działania procesora i ilość zajętej pamięci RAM",
+      "ilość wygenerowanych przerwań programowych",
+      "numer identyfikacyjny procesu (PID) i nazwa procesu",
+      "ilość odczytanych stron i wykonanych operacji wejścia/wyjścia"
+    ],
+    2,
+    "Racjonowanie polega na kontrolowaniu faktycznego zużycia cennych zasobów (czas CPU, I/O, pamięć). Sama nazwa programu czy jego chwilowy identyfikator PID to metadane nieokreślające kosztu i obciążenia."
+  ],
+  [
+    "Najwyższy poziom ochrony systemu operacyjnego umożliwia:",
+    [
+      "kontrola na poziomie sprzętu",
+      "zainstalowanie oprogramowania antywirusowego w warstwie użytkownika",
+      "wykorzystanie trybu awaryjnego",
+      "formatowanie niskopoziomowe dysku twardego"
+    ],
+    0,
+    "Prawdziwa ochrona (np. ochrona pamięci, tryb nadzoru vs. tryb użytkownika, izolacja instrukcji) musi być wspierana sprzętowo przez procesor. Bez kontroli na poziomie sprzętu oprogramowanie zawsze można by potencjalnie ominąć."
+  ],
+  [
+    "Zagrożeniami programowymi są:",
+    [
+      "awarie zasilaczy awaryjnych (UPS)",
+      "błędy parzystości modułów pamięci RAM",
+      "uszkodzenia mechaniczne talerzy dysków",
+      "przepełnienia buforów wejścia/wyjścia oraz wycieki pamięci"
+    ],
+    3,
+    "Przepełnienie bufora (buffer overflow) czy gubienie referencji (memory leaks) to klasyczne luki w logice oprogramowania, które mogą prowadzić do zawieszenia systemu operacyjnego lub włamań."
+  ],
+  [
+    "Jakie istnieją mechanizmy wykrywania błędów na niższych warstwach systemu:",
+    [
+      "strategia wymiany FIFO i LIFO",
+      "nadmiarowość (redundancja) i test zgody",
+      "pamięć wirtualna typu swap",
+      "algorytm bankiera"
+    ],
+    1,
+    "Dodawanie bitów parzystości, sum kontrolnych CRC, kody Hamminga (nadmiarowość) oraz testowanie zgodności zapisanych i odczytywanych wyników (wybieranie większościowe) to metody weryfikacji poprawności danych."
+  ],
+  [
+    "Nowoczesne języki sterowania pozwalają na:",
+    [
+      "uruchamianie systemu bez procesora",
+      "konstrukcje warunkowe, pętle, operacje arytmetyczne i struktury danych",
+      "zmianę architektury procesora z x86 na ARM",
+      "zastąpienie zasilacza instrukcjami wirtualnymi"
+    ],
+    1,
+    "Języki skryptowe powłok wyewoluowały z prostych parserów komend na w pełni funkcjonalne, kompletne w sensie Turinga języki programowania pozwalające na tworzenie skomplikowanych zmiennych i pętli."
+  ],
+  [
+    "Surowa maszyna (bare machine / bare metal) to:",
+    [
+      "serwer wirtualny oparty na hipernadzorcy typu drugiego",
+      "komputer z usuniętą obudową w celu lepszego chłodzenia",
+      "urządzenie pozbawione pamięci operacyjnej i dysku twardego",
+      "maszyna fizyczna (komputer) bez zainstalowanego systemu operacyjnego"
+    ],
+    3,
+    "Pojęcie surowej maszyny opisuje środowisko uruchomieniowe składające się wyłącznie ze sprzętu. Uruchamiany kod musi sam zajmować się sprzętem z pominięciem ułatwień systemu operacyjnego."
+  ],
+  [
+    "Co to jest wielosystemowość:",
+    [
+      "możliwość zainstalowania wielu systemów operacyjnych na jednym sprzęcie",
+      "obsługa wielu monitorów podłączonych do jednej karty graficznej",
+      "dzielenie tego samego pliku stronicowania przez Linuksa i Windowsa",
+      "zastosowanie wielu rdzeni procesora w jednym procesie"
+    ],
+    0,
+    "Wielosystemowość to zazwyczaj koncepcja Multibootingu - instalacji np. systemu Windows i Linux na osobnych partycjach tego samego komputera z możliwością wyboru systemu podczas rozruchu."
+  ],
+  [
+    "Kiedy mówimy o współbieżności pozornej (pseudorównoległości):",
+    [
+      "gdy komputer w ogóle nie posiada wielozadaniowości (jak MS-DOS)",
+      "gdy wątki są wykonywane na wielu procesorach fizycznie w tym samym momencie",
+      "gdy liczba procesów przewyższa liczbę procesorów / czynności jest więcej od wykonawców",
+      "gdy program zatrzymuje się i czeka na wejście z klawiatury użytkownika"
+    ],
+    2,
+    "Na maszynie z jednym rdzeniem CPU nie da się robić dwóch rzeczy naraz. Złudzenie równoległości uzyskuje się poprzez ekstremalnie szybkie przydzielanie i odbieranie czasu procesora procesom."
+  ],
+  [
+    "Co jest zasobem niepodzielnym:",
+    [
+      "pamięć ROM BIOSu",
+      "drukarki oraz pliki zapisywalne (obszary ulegające zmianom)",
+      "pamięć dyskowa na partycji typu ext4 z uprawnieniami do odczytu",
+      "czas procesora w trybie wielozadaniowości"
+    ],
+    1,
+    "Zasoby niepodzielne (wymagające wzajemnego wykluczenia) to takie, na których jednoczesna praca wielu procesów skończyłaby się chaosem. Na drukarce nie można mieszać linii tekstu z różnych programów; zmiennych nie może zapisywać kilku wątków na raz bez synchronizacji."
+  ],
+  [
+    "W skład jądra systemu operacyjnego wchodzą m.in.:",
+    [
+      "menedżer okien GUI i przeglądarka internetowa",
+      "aplikacje trybu użytkownika oraz pliki pomocy tekstowej",
+      "podprogramy obsługi przerwań sprzętowych i dyspozytor procesów",
+      "program ładujący (bootloader) taki jak GRUB"
+    ],
+    2,
+    "Jądro realizuje zadania najbardziej elementarne dla utrzymania życia maszyny: reagowanie na przerwania, decydowanie, kto ma działać na CPU, i sterowanie najniższymi warstwami pamięci."
+  ],
+  [
+    "Które cechy są charakterystyczne dla puli prac (job pool):",
+    [
+      "jest to inna nazwa pamięci podręcznej poziomu pierwszego (L1 Cache)",
+      "pula przechowuje prace uśpione, ale znajdujące się już fizycznie w pamięci RAM",
+      "prace czekające na zainicjowanie przez planistę są tam przechowywane na dysku",
+      "obsługuje jedynie operacje wyjścia na urządzenia strumieniowe"
+    ],
+    2,
+    "We wsadowych systemach oraz układach z planistą długoterminowym, procesy, które nie zmieściły się jeszcze w pamięci głównej, oczekują w postaci plików dyskowych w tzw. 'puli prac' na moment ładowania."
+  ],
+  [
+    "Wbudowane mechanizmy bezpieczeństwa w architekturze rodziny systemów Windows to:",
+    [
+      "ochrona zasobów i warstwa abstrakcji sprzętu (HAL)",
+      "powłoka Bash i mechanizm tablicy i-węzłów",
+      "całkowite pozbawienie systemu trybu jądra i trybu użytkownika",
+      "brak obsługi starszych programów w wersji 32-bitowej"
+    ],
+    0,
+    "HAL (Hardware Abstraction Layer) to warstwa kodu jądra Windows uniemożliwiająca programom bezpośrednie dotykanie fizycznego sprzętu, a ochrona zasobów (Windows Resource Protection) nie pozwala nadpisywać ważnych bibliotek DLL."
+  ],
+  [
+    "Aby wyświetlić komunikaty systemowe (logi zdarzeń systemowych):",
+    [
+      "w Windows wybieramy Podgląd zdarzeń, a w systemie Linux wywołuje się komendę dmesg",
+      "w obu systemach korzystamy z polecenia eventvwr z uprawnieniami roota",
+      "w systemie Linux używamy narzędzia msconfig",
+      "w Windows sprawdzamy ukryty plik ~/.bash_history"
+    ],
+    0,
+    "Microsoft wykorzystuje graficzne narzędzie Event Viewer (Podgląd zdarzeń) do zarządzania audytem, ostrzeżeniami i błędami, natomiast w Linuksie logi z bufora jądra (ring buffer) wyciąga się standardowym poleceniem 'dmesg'."
+  ],
+  [
+    "Które systemy operacyjne z rodziny Windows mają wbudowany interfejs głosowy w postaci programu MS SPEECH (w wersji API 5):",
+    [
+      "Wyłącznie systemy mobilne Windows Phone i Windows 10 Mobile",
+      "Jedynie edycje od Windows 10 wzwyż",
+      "Windows 95, Windows 98 oraz Windows Millenium Edition",
+      "Windows XP, Windows Vista, Windows 7, Windows 8, Windows Server 2003 i 2008"
+    ],
+    3,
+    "Speech API (SAPI 5.1/5.3) było kluczową częścią architektury ułatwień dostępu i syntezy mowy zintegrowaną począwszy od Windows XP, pozostając standardem również w erze Windows 7."
+  ],
+  [
+    "Usuwanie zidentyfikowanych wad w systemach operacyjnych możliwe jest m.in.:",
+    [
+      "poprzez reset płyty głównej zworką CMOS",
+      "tylko poprzez całkowity format dysku i reinstalację",
+      "w systemie Windows poprzez instalacje Service Packów, a w Linuxie poprzez rekompilacje/aktualizacje jądra",
+      "przez manualne przepisanie kodu wykonywalnego .exe"
+    ],
+    2,
+    "Zgłaszane wady oprogramowania łata się wprowadzając pakiety aktualizacji – zbiorcze poprawki w przypadku starszych systemów Windows nazwano Service Packami, z kolei błędy jądra Linuksa wymuszają wydanie jego zaktualizowanej wersji."
+  ],
+  [
+    "Które z poniższych zdań JEST NIEPRAWIDŁOWE:",
+    [
+      "W systemach wielozadaniowych procesy dzielą miedzy siebie wspólną przestrzeń dyskową",
+      "Każdy system operacyjny zezwala procesowi na nieprzerwany dostęp do całego czasu procesora / systemy czasu rzeczywistego mają stały dostęp do dysku twardego",
+      "Algorytm planowania priorytetowego bywa narażony na problem głodzenia procesów",
+      "Zasoby w komputerze mogą być przydzielane statycznie lub dynamicznie"
+    ],
+    1,
+    "Zgodnie z Twoimi notatkami oba te zdania są nieprawidłowe. Żaden system wielozadaniowy nie oddaje procesowi czasu w 100% na stałe (istnieje przerwanie zegarowe), a systemy RTOS unikają nieprzewidywalnych fizycznych operacji dyskowych z powodu braku gwarancji czasu dostępu."
+  ],
+  [
+    "Podczas transmisji danych za pomocą układu DMA procesor nie może:",
+    [
+      "wykonywać instrukcji w rejestrach wewnętrznych",
+      "zapisywać danych do pamięci",
+      "obsługiwać pamięci podręcznej (cache)",
+      "komunikować się z koprocesorem arytmetycznym"
+    ],
+    1,
+    "Podczas operacji DMA (Direct Memory Access) zewnętrzny kontroler przejmuje kontrolę nad magistralą systemową. Procesor zostaje odcięty od głównej pamięci operacyjnej (nie może do niej zapisywać ani z niej czytać), choć może kontynuować pracę na danych wewnątrz własnych rejestrów i cache."
+  ],
+  [
+    "Instrukcja „zajmij”(uwolnij) w implementacji operacji „czekaj”(sygnalizuj):",
+    [
+      "zawsze usuwa proces z pamięci operacyjnej",
+      "zawsze dodaje proces do kolejki semafora (procesora)",
+      "wywłaszcza proces z najwyższym priorytetem",
+      "zmienia stan procesu z uśpionego na gotowy (tylko instrukcja zajmij)"
+    ],
+    1,
+    "W klasycznej implementacji semaforów, jeśli zasób jest niedostępny (wartość semafora <= 0), operacja P (czekaj/zajmij) zawsze blokuje proces i dodaje go do kolejki oczekujących (kolejki semafora). Operacja V (sygnalizuj/uwolnij) budzi proces z tej kolejki."
+  ],
+  [
+    "Sposobem podzielnym jest (Prawdopodobnie chodzi o zasób podzielny):",
+    [
+      "rejestr procesora w trakcie zapisu",
+      "drukarka sieciowa",
+      "komórka pamięci do odczytu",
+      "napęd taśmowy podczas nagrywania"
+    ],
+    2,
+    "Zasób podzielny to taki, z którego może korzystać wiele procesów jednocześnie bez ryzyka błędu. Pamięć tylko do odczytu (Read-Only) jest idealnym przykładem zasobu podzielnego, ponieważ żaden proces jej nie modyfikuje."
+  ],
+  [
+    "System Windows 2000 posiada klasę bezpieczeństwa typu:",
+    [
+      "A1",
+      "B3",
+      "C2",
+      "D1"
+    ],
+    2,
+    "W amerykańskim standardzie TCSEC (Orange Book), rodzina Windows NT (w tym Windows 2000) została certyfikowana na poziomie C2, co oznacza m.in. kontrolowany dostęp do zasobów (Discretionary Access Control) oraz audyt zdarzeń."
+  ],
+  [
+    "Deskryptor procesu zawiera:",
+    [
+      "Pełny kod źródłowy programu",
+      "Stan rejestrów procesora (część sprzętowego środowiska ulotnego)",
+      "Kopie zapasowe plików systemowych",
+      "Tablicę alokacji plików (FAT)"
+    ],
+    1,
+    "Deskryptor procesu (PCB - Process Control Block) przechowuje wszelkie informacje niezbędne do zarządzania procesem, w tym stan sprzętowy (rejestry, licznik rozkazów), który musi zostać zachowany i odtworzony podczas przełączania kontekstu."
+  ],
+  [
+    "Wykazem możliwości w systemie ochrony jest:",
+    [
+      "wykaz wszystkich haseł użytkowników",
+      "lista priorytetów procesów w kolejce",
+      "zbiór par: obiekt-prawa dla każdej domeny",
+      "rejestr błędów aplikacji w systemie"
+    ],
+    2,
+    "Wykaz możliwości (Capability List) dla danej domeny (użytkownika lub procesu) to wprost lista obiektów, do których podmiot ma dostęp, połączona z określeniem operacji (praw), które może na nich wykonać."
+  ],
+  [
+    "Co to jest redundancja:",
+    [
+      "kompresja plików",
+      "nadmiarowość",
+      "szyfrowanie danych",
+      "fragmentacja dysku"
+    ],
+    1,
+    "Redundancja oznacza celowe wprowadzenie dodatkowych (nadmiarowych) elementów sprzętowych lub danych (np. bity parzystości, kopiowanie w RAID 1), aby zwiększyć niezawodność systemu w przypadku awarii głównego komponentu."
+  ],
+  [
+    "W celu unikania błędów stosujemy:",
+    [
+      "wybieranie większościowe",
+      "aktywne czekanie",
+      "algorytm FIFO",
+      "upakowanie pamięci"
+    ],
+    0,
+    "Wybieranie większościowe (majority voting) to technika stosowana w systemach o bardzo wysokiej niezawodności, polegająca na wykonywaniu tych samych obliczeń przez zwielokrotnione moduły i uznaniu za prawidłowy wynik tego, który powtórzył się najczęściej."
+  ],
+  [
+    "Co umożliwia system VMS:",
+    [
+      "tylko wykonywanie jednego zadania jednocześnie",
+      "uruchomienie wielu programów (bądź wielu systemów) na jednym sprzęcie",
+      "pracę bez konieczności używania procesora",
+      "bezpośrednie połączenie z macierzami RAID 0 bez sterownika"
+    ],
+    1,
+    "OpenVMS to zaawansowany system operacyjny rozwijany przez DEC, znany m.in. z potężnych możliwości wielozadaniowości, pracy wielodostępnej (wielu użytkowników i programów) oraz klastrowania pozwalającego na iluzję jednego wielkiego systemu ze złączonych fizycznych maszyn."
+  ],
+  [
+    "Co umożliwia praca interakcyjna:",
+    [
+      "wykonywanie zadań w nocy bez obecności człowieka",
+      "sterowanie i nadzorowanie wykonywania programów przez użytkownika (oraz wykonywanie kilku naraz)",
+      "drukowanie dokumentów w tle przez spooler",
+      "szyfrowanie plików na żądanie jądra systemu"
+    ],
+    1,
+    "Praca interakcyjna (charakterystyczna dla systemów z podziałem czasu) pozwala użytkownikowi na bieżącą komunikację z systemem za pomocą konsoli i natychmiastowe sterowanie uruchomionymi aplikacjami, w przeciwieństwie do systemów wsadowych."
+  ],
+  [
+    "Wskaż prawdziwe zdanie:",
+    [
+      "Semafor może mieć przypisanych wiele operacji arytmetycznych (mnożenie, dzielenie)",
+      "Semafor wykonuje tylko 2 niepodzielne operacje / operacja „sygnalizuj” nie zmieni wartości semafora, jeśli w kolejce są procesy",
+      "Wartość semafora można dowolnie modyfikować poleceniem z powłoki BASH",
+      "Semafory są używane tylko w jednowątkowych systemach typu MS-DOS"
+    ],
+    1,
+    "Na semaforze można wykonać wyłącznie operacje atomowe P (zajmij) oraz V (sygnalizuj). Co więcej, jeśli semafor blokuje dostęp i w jego kolejce czekają procesy, uwolnienie semafora przez operację V po prostu budzi jeden proces z kolejki bez fizycznego podnoszenia zmiennej licznikowej."
+  ],
+  [
+    "Bez mechanizmu przerwań nie można stworzyć:",
+    [
+      "plików tekstowych",
+      "współbieżności i wywłaszczania procesów",
+      "struktury katalogów",
+      "systemu przepytywania (polling)"
+    ],
+    1,
+    "Aby system operacyjny mógł odebrać procesor aktualnie wykonywanemu zadaniu w celu przekazania czasu innemu procesowi (współbieżność z wywłaszczaniem), musi zajść przerwanie sprzętowe narzucające zmianę kontekstu, najczęściej generowane przez timer (zegar systemowy)."
+  ],
+  [
+    "Na co ma wpływ kolejka procesora:",
+    [
+      "na zmniejszenie ilości pamięci RAM w systemie",
+      "dzielenie czasu procesora pomiędzy procesami (i zwiększenie wydajności systemu)",
+      "na proces chłodzenia płyty głównej komputera",
+      "na szybkość obrotową talerzy dysku twardego"
+    ],
+    1,
+    "Zorganizowanie procesów w kolejkę gotowych do wykonania i odpowiednie nimi zarządzanie (np. przez algorytmy planowania) pozwala na sprawiedliwe i sprawne współdzielenie czasu CPU, co przekłada się na wysoką wydajność całego systemu."
+  ],
+  [
+    "Co umożliwia pamięć wirtualną:",
+    [
+      "fizyczne zwiększenie taktowania kości RAM",
+      "wyłączenie mechanizmu stronicowania",
+      "odłączanie uszkodzonych sektorów dysku",
+      "możliwość dostępu do większej pamięci operacyjnej niż posiadamy (użycie dysku jako RAM)"
+    ],
+    3,
+    "Pamięć wirtualna rozszerza fizyczną pamięć, przerzucając nieużywane w danej chwili bloki danych (strony) na dysk twardy (partycja/plik swap), stwarzając dla procesów iluzję posiadania ogromnej, ciągłej przestrzeni adresowej."
+  ],
+  [
+    "Które zdanie na temat wątku jest prawdziwe:",
+    [
+      "wątek nie może mieć własnego niezależnego stosu",
+      "wątek jest w pełni odizolowany i nie współdzieli pamięci z programem głównym",
+      "wątek określa się jako proces lekki, który dzieli dane i kod z innymi wątkami w zadaniu",
+      "wątek zawsze ładuje się z dysku wolniej niż oddzielny proces"
+    ],
+    2,
+    "Wątek (thread) dzieli z innymi wątkami tego samego procesu przestrzeń adresową (sekwencje kodu, zmienne globalne, otwarte pliki), przez co określany jest procesem lekkim, niewymagającym dużego nakładu zasobów do przełączania kontekstu."
+  ],
+  [
+    "W jakim rejestrze sprzętowym może znaleźć się adres tablicy deskryptorów:",
+    [
+      "AL, AH",
+      "GDTR / LDTR",
+      "CR0, CR3",
+      "EAX, EBX"
+    ],
+    1,
+    "W architekturze procesorów x86 struktury ochronne używane do segmentacji wykorzystują dedykowane rejestry: GDTR (Global Descriptor Table Register) oraz LDTR (Local Descriptor Table Register) zawierające bazowe adresy tych tablic w pamięci."
+  ],
+  [
+    "We wsadowych systemach operacyjnych:",
+    [
+      "użytkownik komunikuje się z programem na bieżąco poprzez myszkę",
+      "błędy są ignorowane, a program wykonuje się w nieskończoność",
+      "użytkownik nie może ingerować w proces przetwarzania, a błędy nie są naprawiane w locie",
+      "zadania są wykonywane z najwyższym priorytetem w czasie rzeczywistym (RTOS)"
+    ],
+    2,
+    "W systemach wsadowych zadania są łączone w pakiety i uruchamiane jedno po drugim. Użytkownik nie ma z nimi kontaktu (brak pracy interakcyjnej), co oznacza, że wystąpienie błędu przerywa program bez możliwości poprawy wejścia przez operatora."
+  ],
+  [
+    "Który system plików nie ma zaimplementowanego systemu praw dostępu:",
+    [
+      "NTFS",
+      "ext4",
+      "FAT16 / FAT32",
+      "ZFS"
+    ],
+    2,
+    "W przeciwieństwie do zaawansowanych systemów (NTFS czy rodzina ext), systemy FAT projektowane do starych systemów MS-DOS i Windows 9x nie posiadały natywnych rozwiązań bezpieczeństwa wspierających uprawnienia dostępu do pojedynczych plików dla różnych użytkowników."
+  ],
+  [
+    "Gdzie znajdują się zakodowane hasła użytkowników w systemie Linux:",
+    [
+      "w pliku /boot/grub/grub.cfg",
+      "w bazie rejestru systemowego (Regedit)",
+      "w pliku /etc/shadow (lub /etc/passwd przy wyłączonym shadowingu)",
+      "w ukrytym pliku ~/.passwords w katalogu domowym"
+    ],
+    2,
+    "Z powodów bezpieczeństwa skróty (hashe) haseł przechowuje się w chronionym pliku /etc/shadow, dostępnym tylko dla roota. W starych systemach bez tej technologii przechowywano je w pliku /etc/passwd."
+  ],
+  [
+    "Która z podanych nazw jest nazwą algorytmu planowania:",
+    [
+      "algorytm bankiera",
+      "Najpierw najkrótsza praca (SJF) oraz algorytm rotacyjny (Round Robin)",
+      "algorytm bliźniaków",
+      "algorytm optymalnego zastępowania stron (OPT)"
+    ],
+    1,
+    "SJF (Shortest Job First) oraz Round Robin to klasyczne algorytmy przydziału czasu procesora. Algorytm bankiera służy do radzenia sobie z zakleszczeniami, a OPT i Bliźniaki to rozwiązania dla zarządzania pamięcią."
+  ],
+  [
+    "Co powoduje sterowanie pracami przy użyciu kart perforowanych:",
+    [
+      "bardzo wysoką wydajność przetwarzania wielowątkowego",
+      "niemożność zmiany kolejności wykonywanych operacji oraz rozproszenie informacji",
+      "dynamiczną relokację pamięci operacyjnej podczas trwania programu",
+      "wymuszenie stosowania stronicowania asocjacyjnego do czytnika"
+    ],
+    1,
+    "Karty perforowane to najstarsza metoda wprowadzania danych, która narzucała całkowicie sztywny harmonogram. Zszyty plik kart nie pozwalał na łatwą zmianę instrukcji, a komendy sterujące dla maszyny przeplatały się z danymi samego programu."
+  ],
+  [
+    "Jakie zadania spoczywają na planiście w procesie przydziałów zasobów i planowania:",
+    [
+      "alokuje fizyczną przestrzeń i klastry na dysku twardym",
+      "steruje przerwaniami sprzętowymi z płyt głównych",
+      "ustala, kiedy nowe procesy wprowadzać do systemu oraz kolejność ich działania",
+      "bezpośrednio i manualnie modyfikuje kod źródłowy programów w pamięci"
+    ],
+    2,
+    "Decyzje o wpuszczaniu procesów (planowanie długoterminowe) oraz szeregowanie procesów gotowych do bieżącego wykonania w oparciu o algorytmy priorytetowe (planowanie krótkoterminowe) to podstawowy zakres pracy schedulerów (planistów)."
+  ],
+  [
+    "Jakie znaczenie dla podsystemu wejścia/wyjścia ma zastosowanie urządzeń wirtualnych:",
+    [
+      "zwiększa drastycznie ryzyko uszkodzenia głowic dysków magnetycznych",
+      "uniemożliwia podłączanie jakichkolwiek urządzeń poprzez porty USB",
+      "daje możliwość dzielenia zasobów niepodzielnych i drukowania z punktu widzenia procesu na niesprawnym sprzęcie",
+      "wymaga obowiązkowej instalacji dwóch systemów operacyjnych obok siebie"
+    ],
+    2,
+    "Dzięki urządzeniom wirtualnym (i technikom typu spooling), proces zleca druk lub zapis do bufora systemowego i uważa czynność za wykonaną. System operacyjny martwi się potem faktyczną wysyłką do urządzenia fizycznego, które w tym ułamku sekundy mogło być zajęte lub odłączone."
+  ],
+  [
+    "Jaki jest jeden z dwóch składników macierzy dostępowej (macierzy dostępu):",
+    [
+      "pliki i foldery",
+      "wątki i procesy sprzętowe",
+      "domeny (podmioty) oraz obiekty",
+      "sektory i klastry magnetyczne"
+    ],
+    2,
+    "W systemach ochrony opartych o Access Matrix (macierz dostępu) zbiór uprawnień jest prezentowany w formie tabeli, w której wiersze stanowią domeny (np. użytkownicy lub grupy żądające dostępu), a kolumny oznaczają zasoby/obiekty systemu (np. konkretne pliki czy drukarki)."
+  ],
+  [
+    "W szpitalu do monitorowania stanu pacjentów wykorzystuje się:",
+    [
+      "system wsadowy",
+      "przerwania maskowalne dysku",
+      "przepytywania plików (polling)",
+      "stronicowanie na żądanie"
+    ],
+    2,
+    "Aby sprzęt medyczny działał niezawodnie, często zamiast przerwaniami steruje się nim metodą przepytywania (aktywnego odpytywania), w której procesor regularnie sprawdza stan poszczególnych czujników i plików."
+  ],
+  [
+    "Które stwierdzenie jest prawdziwe:",
+    [
+      "stos zwalnia pamięć dla DMA",
+      "stos przechowuje cały kod jądra",
+      "stos jest typu FIFO (First-In, First-Out)",
+      "stos wykorzystywany jest w czasie obsługi przerwań"
+    ],
+    3,
+    "Stos sprzętowy (struktura LIFO) jest automatycznie używany przez procesor do zapisywania tzw. środowiska ulotnego (adres powrotu, flagi) w momencie asynchronicznego wystąpienia przerwania."
+  ],
+  [
+    "Aby nie występowało zjawisko głodzenia procesów stosuje się:",
+    [
+      "Zmniejszanie kwantu czasu procesora",
+      "Blokowanie wywłaszczania zadań",
+      "Podwyższenie priorytetów procesów / rotacyjną kolejkę semafora",
+      "Algorytm planowania LIFO"
+    ],
+    2,
+    "Mechanizm podwyższania priorytetów wraz z upływem czasu (tzw. postarzanie / aging) lub sprawiedliwa kolejka rotacyjna gwarantują, że nawet proces o najniższym priorytecie po pewnym czasie dostanie procesor."
+  ],
+  [
+    "W systemie komputerowym prawdą jest:",
+    [
+      "błąd jest skutkiem wady",
+      "wada i błąd to zawsze pojęcia tożsame",
+      "wada jest bezpośrednim skutkiem błędu",
+      "usterka celowo naprawia błąd w kodzie"
+    ],
+    0,
+    "W inżynierii systemów istnieje hierarchia: ukryta 'wada' (fault) w kodzie ujawnia się podczas działania i prowadzi do wygenerowania 'błędu' (error), który ostatecznie może skończyć się widoczną 'awarią' (failure)."
+  ],
+  [
+    "W kolejce semafora znajdują się:",
+    [
+      "zarezerwowane adresy pamięci operacyjnej",
+      "wątki (lub procesy)",
+      "nieaktywne sterowniki sprzętowe",
+      "przerwania niemaskowalne"
+    ],
+    1,
+    "Gdy proces wykonuje na semaforze operację zajmij (P) a wartość semafora jest niedodatnia, proces ten jest blokowany i trafia do struktury danych nazywanej kolejką semafora."
+  ],
+  [
+    "W powłoce BASH nawias kwadratowy [ służy do:",
+    [
+      "zastąpienia polecenia test",
+      "uruchamiania procesu w tle",
+      "deklarowania zmiennych środowiskowych",
+      "tworzenia pętli while"
+    ],
+    0,
+    "W systemach linuksowych nawias kwadratowy `[` nie jest tylko znakiem, lecz wbudowanym w powłokę aliasem na polecenie sprawdzające warunki, które normalnie wywołujemy jako `test`."
+  ],
+  [
+    "O stanie procesu, który czeka w kolejce semafora mówimy, że jest:",
+    [
+      "wykonywany (running)",
+      "gotowy do przypisania zasobów (ready)",
+      "niewykonywalny / oczekujący (blocked)",
+      "zawieszony przez administratora"
+    ],
+    2,
+    "Proces zablokowany brakiem dostępu do współdzielonego zasobu jest usuwany z kolejki gotowych do wykonania i oznacza się go jako 'niewykonywalny' do momentu uwolnienia semafora."
+  ],
+  [
+    "Jaką strukturę ma system Windows 2000:",
+    [
+      "mikrokodu sprzętowego",
+      "czysto warstwową (ring architecture)",
+      "klient-serwer",
+      "monolityczną"
+    ],
+    2,
+    "Rodzina Windows NT, w tym Windows 2000, została zaprojektowana w dużej mierze w oparciu o architekturę klient-serwer na zewnątrz modyfikowanego mikrojądra (podsystemy m.in. Win32, POSIX działały jako serwery dla aplikacji-klientów)."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "proces wykonuje się nieskończenie długo z powodu braku pętli",
+      "zostanie wyczerpany cały zapas wolnych i-węzłów na dysku",
+      "procesor zajmuje się wymianą stron pomiędzy pamięcią operacyjną a dyskiem twardym a nie wykonywaniem procesów",
+      "dwa wątki zapisują naraz do tego samego pliku systemowego"
+    ],
+    2,
+    "Zjawisko szamotania (thrashing) to drastyczny spadek wydajności w systemach z pamięcią wirtualną, spowodowany ciągłym pobieraniem i odsyłaniem ram pamięci na wolny dysk twardy, tzw. swap."
+  ],
+  [
+    "Jaki plik używany jest przez bootloader w windows XP:",
+    [
+      "winload.efi",
+      "grub.cfg",
+      "boot.ini",
+      "bcdedit.exe"
+    ],
+    2,
+    "NTLDR w systemach Windows XP, 2000 i NT wykorzystywał specjalny plik tekstowy `boot.ini` zamieszczony na ukrytej partycji rozruchowej do prezentacji dostępnych systemów użytkownikowi podczas startu."
+  ],
+  [
+    "W systemie Windows NT/XP występuje:",
+    [
+      "współbieżność pozorna z wywłaszczeniem",
+      "współdzielenie przerwane bez izolacji pamięci",
+      "wielozadaniowość w pełni kooperatywna",
+      "współbieżność rzeczywista na maszynach z jednym procesorem"
+    ],
+    0,
+    "Systemy wielozadaniowe zainstalowane na jednym rdzeniu wykonują kod asynchronicznie, tak szybko przełączając kontekst (dzięki sprzętowemu wywłaszczaniu - preemption), że tworzą pozorną, płynną iluzję równoległości."
+  ],
+  [
+    "Upakowanie pamięci jest stosowane aby:",
+    [
+      "skrócić dostęp do dysku dla macierzy RAID 5",
+      "uniknąć fragmentacji wewnętrznej w stronicowaniu",
+      "skompilować większe moduły binarne jądra",
+      "uniknąć fragmentacji ZEWNĘTRZNEJ (w kluczu: żadne z powyższych)"
+    ],
+    3,
+    "W systemach przydzielających pamięć ciągłą powstają luki między blokami zwalnianej pamięci (fragmentacja zewnętrzna). Upakowanie, czyli przesunięcie procesów fizycznie obok siebie, naprawia ten problem, stąd poprawną odpowiedzią opisową jest walka z fragmentacją zewnętrzną."
+  ],
+  [
+    "Struktura klient-serwer w systemie operacyjnym to:",
+    [
+      "Zarządzanie uprawnieniami za pomocą Active Directory",
+      "Budowa oparta wyłącznie na jednym wielkim monolicie",
+      "Implementacja protokołów sieciowych w systemie (przesyłanie komunikatów)",
+      "Wirtualizacja procesorów i dzielenie klastrów dyskowych"
+    ],
+    2,
+    "W teorii architektur systemowych koncepcja klient-serwer polega na izolacji procesów użytkowych i usług, które komunikują się z centralnym jądrem (i ze sobą nawzajem) za pośrednictwem bezpiecznych komunikatów, na wzór protokołów sieciowych."
+  ],
+  [
+    "Jaką nazwę nosi przerwanie, które musi być obsłużone w każdej sytuacji:",
+    [
+      "Niemaskowalne",
+      "Zegarowe (PIT)",
+      "Programowe (Exception)",
+      "Maskowalne sprzętowe"
+    ],
+    0,
+    "Przerwania niemaskowalne (NMI - Non-Maskable Interrupts) nie mogą zostać zablokowane z poziomu CPU. Sygnalizują najważniejsze i najbardziej krytyczne awarie sprzętu (jak np. wadliwa kość pamięci RAM)."
+  ],
+  [
+    "Wiązanie adresów w trakcie kompilacji występuje dla plików typu:",
+    [
+      "EXE",
+      "Kod absolutny CP/M (w kluczach: Żadne z powyższych)",
+      "CMD",
+      "COM"
+    ],
+    1,
+    "Bezpośrednie wpisanie twardych adresów fizycznych do pliku podczas samej kompilacji to przeżytek spotykany w systemach takich jak stary CP/M. W nowoczesnych formatach (jak współczesne EXE) adresy ładuje się i przypisuje w trakcie ładowania programu do RAMu lub wykonania."
+  ],
+  [
+    "Jaki mechanizm umożliwia bezpośredni dostęp do pamięci z pominięciem procesora:",
+    [
+      "Dyspozytor jądra",
+      "Pamięć asocjacyjna (TLB)",
+      "Przerwanie systemowe",
+      "Kanał / mechanizm DMA (w kluczach często: Żadne z powyższych)"
+    ],
+    3,
+    "Rozwiązaniem tym jest DMA (Direct Memory Access). Pozwala ono urządzeniom jak karty graficzne czy dyski na bezpośredni zrzut danych do RAMu, aby oszczędzić obciążenie głównego rdzenia. W starszych pytaniach bywa nazywane 'Kanałem'."
+  ],
+  [
+    "W procesorach Pentium występuje tablica stron:",
+    [
+      "odwrócona",
+      "asocjacyjna z jednym poziomem",
+      "dwupoziomowa",
+      "liniowa"
+    ],
+    2,
+    "W klasycznej, 32-bitowej architekturze procesorów x86 mechanizm wirtualizacji pamięci (stronicowania) bazuje na dwupoziomowej strukturze drzewa: Page Directory (Katalog główny) wskazujący na wpisy w Page Tables (Tabelach stron)."
+  ],
+  [
+    "Semafory wykorzystuje się do synchronizacji dostępu do zasobów dla których:",
+    [
+      "nieograniczona liczba procesów wymaga jednoczesnego zapisu bez zablokowania",
+      "istnieje pewien limit równocześnie odwołujących się wątków",
+      "adresy są szyfrowane sprzętowo kluczem prywatnym",
+      "plik jest uszkodzony i odłączony z tabeli i-węzłów"
+    ],
+    1,
+    "Semafor (np. zliczający) pełni rolę 'strażnika'. Jeśli serwer pozwala na 10 jednoczesnych połączeń, semafor ustawia się na wartość 10. Każdy kolejny proces odwołujący się po przekroczeniu tego limitu zostanie zawieszony w kolejce oczekujących."
+  ],
+  [
+    "Dynamiczny ciąg działań wykonywanych przez jednostkę centralną to:",
+    [
+      "Proces (w kluczach: żaden z powyższych)",
+      "Kod źródłowy",
+      "Kompilator instrukcji C++",
+      "Wątek jądra bez pamięci podręcznej"
+    ],
+    0,
+    "Ciąg działań, które jednostka CPU faktycznie realizuje operując na danych i instrukcjach, to definicja uruchomionego, żywego programu – czyli procesu. Ponieważ w wariantach odpowiedzi na egzaminie z reguły brakuje tego słowa, prawidłowe jest 'żadne z powyższych'."
+  ],
+  [
+    "Zjawisko głodzenia procesów może najpewniej wystąpić, gdy kolejka procesora jest:",
+    [
+      "kolejką rotacyjną wielopoziomową",
+      "buforem opartym o czyste sprzętowe FIFO",
+      "kolejką priorytetową",
+      "systemem szeregowania Round Robin"
+    ],
+    2,
+    "Głodzenie pojawia się typowo w czysto priorytetowych kolejkach bez limitów. Jeśli system faworyzuje zadania ważne, to przy ich stałym napływie zadanie o znikomym priorytecie nigdy w historii działania komputera nie otrzyma kwantu czasu procesora."
+  ],
+  [
+    "Adres liniowy jest tożsamy z adresem:",
+    [
+      "logicznym, przy wykorzystaniu samej segmentacji",
+      "fizycznym, w stronicowaniu",
+      "wirtualnym, zarezerwowanym na pliku wymiany dysku SSD",
+      "absolutnym wygenerowanym przed kompilacją asemblera"
+    ],
+    1,
+    "W uproszczonej nomenklaturze tego przedmiotu, gdy maszyna korzysta tylko ze stronicowania, wygenerowany adres uważa się za adres liniowy, który sprzętowo przekłada się bezpośrednio za pomocą tabel na adres fizyczny komórki."
+  ],
+  [
+    "Strukturę składającą się z danych, funkcji dostępu i kodu inicjalizującego nazywa się:",
+    [
+      "Semaforem zliczającym",
+      "Dyspozytorem zadań pobocznych",
+      "Monitorem",
+      "Klasą w programowaniu imperatywnym baz danych"
+    ],
+    2,
+    "Monitor to wysokopoziomowy element synchronizujący zasoby współbieżne, udostępniający metody chroniące hermetyzowane w jego wnętrzu zmienne. Zabezpiecza on automatycznie dany zasób przed wyścigiem (tylko 1 proces naraz we wnętrzu monitora)."
+  ],
+  [
+    "W strategii rozmieszczania ze stronicowaniem występują metody:",
+    [
+      "LRU (Least Recently Used) oraz LFU",
+      "algorytm optymalny wymiany stron Belady'ego",
+      "Best Fit, Worst Fit oraz First Fit",
+      "Wszystkie powyższe odpowiedzi są błędne"
+    ],
+    3,
+    "Podchwytliwe pytanie. Strategie rozmieszczania (Placement) mają sens dla ciągłych bloków danych. Przy zastosowaniu stronicowania pamięć dzieli się na równo wymiarowe ramki i adresuje się za pomocą tablic - fizyczne położenie (rozmieszczenie) ramki na ogół nie ma absolutnie żadnego znaczenia."
+  ],
+  [
+    "Przy prawdopodobieństwie braku strony równym 0,000001 oraz szybkości dostępu do pamięci i dysku równymi 10ns i 10ms średni czas dostępu do pamięci wynosi:",
+    [
+      "dokładnie 10 ns, ponieważ brak strony pomija pamięć asocjacyjną",
+      "około 20 ns (obliczone ze wzoru / w niektórych notatkach mylnie 100ns)",
+      "równo 10 milisekund",
+      "ponad 100 mikrosekund ze względu na czasy transferu DMA"
+    ],
+    1,
+    "Z matematycznego wzoru na Efektywny Czas Dostępu (EAT): (1-p)*T_mem + p*T_dysk -> czyli (0.999999)*10ns + (0.000001)*(10 000 000 ns). Daje to w przybliżeniu 10ns + 10ns = 20ns. Odpowiedź 100ns krążąca czasem w bazach pytań to błąd obliczeniowy (lub ucięte w druku cyfry we wsadach egzaminacyjnych)."
+  ],
+  [
+    "Utrata miejsca na dysku przy stosowaniu dużych klastrów wynika z:",
+    [
+      "uszkodzenia struktury tabeli wejść/wyjść w bootloaderze",
+      "zbyt silnej fragmentacji zewnętrznej",
+      "Fragmentacji wewnętrznej",
+      "mechanizmu lustrzanej kopii danych (Mirroring)"
+    ],
+    2,
+    "Systemy operacyjne muszą przypisywać do każdego zapisanego pliku co najmniej jeden cały klaster na dysku (nawet jeśli plik waży tylko kilkadziesiąt bajtów). Pozostałe, puste miejsce w obszarze przydzielonego klastra to straty, nazywane fragmentacją wewnętrzną."
+  ],
+  [
+    "Ile partycji podstawowych można utworzyć na dysku twardym:",
+    [
+      "Do 128 przy strukturze plików FAT32 i MBR",
+      "Dokładnie 4 przy architekturze MBR",
+      "Nieskończoną ilość pod warunkiem stosowania dysków półprzewodnikowych NVMe",
+      "Jedną, którą system rezerwuje na tablice rozdzielczą MFT"
+    ],
+    1,
+    "Standardowa archaiczna tablica partycji MBR (Master Boot Record) rezerwuje jedynie 64 bajty pamięci dla opisów dyskowych. Ponieważ każdy adresowany wpis wymaga pełnych 16 bajtów, matematycznie starcza w niej miejsca na maksymalnie 4 partycje główne."
+  ],
+  [
+    "Co stanie się z prawami dostępu do pliku po przeniesieniu go z partycji NTFS na partycję FAT?",
+    [
+      "Prawa zostaną bezpowrotnie utracone (Żadne z powyższych)",
+      "Prawa zostaną ukryte w atrybucie 'Tylko do Odczytu'",
+      "Klucze uprawnień przeniosą się do nowego i-węzła systemu FAT",
+      "System wyświetli okienko pop-up z prośbą o odświeżenie haseł certyfikatu"
+    ],
+    0,
+    "NTFS wspiera zaawansowany system list praw dostępu i bezpieczeństwa dziedziczonego. FAT, jako technologia z ery dyskietek DOS, w ogóle nie rozróżnia takich meta danych i po przeniesieniu ulegają one zupełnemu zniszczeniu."
+  ],
+  [
+    "Metodą uruchomienia programów większych niż dostępna pamięć, w systemie bez pamięci wirtualnej jest:",
+    [
+      "aktywacja potokowego buforowania wyprzedzającego",
+      "metoda 'NAKŁADKI' (overlays) / Żadne z powyższych",
+      "skompresowanie programu źródłowego do pliku .zip w locie",
+      "fizyczne skracanie priorytetu wątków poprzez dyspozytora w plikach konfiguracyjnych"
+    ],
+    1,
+    "Stosowane głównie dawniej w systemach DOS 'nakładki' (overlays) to sztuczka programistyczna polegająca na fizycznym podzieleniu ogromnego kodu na bloki. W RAM trzymano mały rdzeń, który dynamicznie usuwał i wczytywał na siebie z dysku tylko aktywnie żądany fragment, oszczędzając pamięć operacyjną."
+  ],
+  [
+    "Algorytm bankiera to:",
+    [
+      "metoda rotacji logów zdarzeniowych",
+      "podprogram przyspieszania zapisów do tabel MFT w klastrach Windowsa",
+      "algorytm optymalnej alokacji sektorów do systemu FAT32",
+      "algorytm unikania zakleszczeń (Deadlock avoidance)"
+    ],
+    3,
+    "Zaprojektowany przez Dijkstrę algorytm bankiera symuluje przydzielanie zasobów w oparciu o zadeklarowane z góry maksymalne zapotrzebowania wątków. Gwarantuje on przyznanie zasobu tylko w sytuacji, która nie doprowadzi środowiska do niebezpiecznego 'zakleszczenia' (wzajemnego permanentnego paraliżu zadań)."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "w kolejce procesora jest zbyt wiele procesów oczekujących na wywłaszczenie",
+      "dwa procesy jednocześnie odwołują się do tych samych zasobów w regionie krytycznym",
+      "procesor zajmuje się wymianą stron pomiędzy pamięcią operacyjną a dyskiem twardym a nie wykonywaniem procesów",
+      "w kolejce do zasobów czeka zbyt wiele procesów blokując system (Deadlock)"
+    ],
+    2,
+    "Zjawisko szamotania (thrashing) to stan, w którym system wielozadaniowy ulega załamaniu wydajności – fizycznego RAMu jest na tyle mało, że system marnuje czas CPU bez przerwy na pobieranie i wyrzucanie stron pamięci do pliku na wolnym dysku twardym."
+  ],
+  [
+    "Nawiasy kwadratowe w powłoce BASH służą do:",
+    [
+      "zastąpienia polecenia test",
+      "uruchamiania procesu potomnego w tle",
+      "deklarowania globalnych zmiennych środowiskowych",
+      "tworzenia nieskończonej pętli while"
+    ],
+    0,
+    "W systemach opartych na uniksowym bashu znak `[` to w rzeczywistości program/alias systemowy wykonujący te same operacje logiczne co wbudowana instrukcja `test`."
+  ],
+  [
+    "Pamięć asocjacyjna:",
+    [
+      "służy wyłącznie do przechowywania nieskompresowanego jądra systemu",
+      "zastępuje pamięć podręczną L3 w nowych procesorach serwerowych",
+      "przechowuje deskryptory ostatnio używanych stron",
+      "zapisuje klastry na wypadek awarii dysku z partycją FAT"
+    ],
+    2,
+    "Pamięć asocjacyjna (Translation Lookaside Buffer - TLB) jest bardzo małą, niezwykle szybką sprzętową strukturą na procesorze, buforującą ostatnie tłumaczenia z tablicy stron z pamięci głównej, by przyspieszyć wirtualizację adresów."
+  ],
+  [
+    "Upakowanie pamięci jest wymuszone przez:",
+    [
+      "zjawisko głodzenia procesów niskiego priorytetu",
+      "konieczność unikania występowania fragmentacji wewnętrznej",
+      "brak wolnych i-węzłów na dysku rozruchowym MBR",
+      "żadne z powyższych (stosowane aby uniknąć fragmentacji ZEWNĘTRZNEJ)"
+    ],
+    3,
+    "Upakowanie pamięci (memory compaction) polega na zsuwaniu zawartości pamięci fizycznej do jednego końca, aby pozbyć się 'dziur' pomiędzy blokami. Jest to odpowiedź na zjawisko fragmentacji zewnętrznej."
+  ],
+  [
+    "Charakterystyczne dla struktury klient-serwer systemu operacyjnego jest:",
+    [
+      "tworzenie wielopoziomowych, odwróconych tablic stron",
+      "Przesyłanie komunikatów",
+      "bezpośredni dostęp wszystkich aplikacji użytkownika do sprzętu procesora",
+      "dzielenie czasu procesora wyłącznie metodą round-robin"
+    ],
+    1,
+    "Architektura mikrojądra typu klient-serwer opiera się na tym, że bardzo odchudzone jądro pełni głównie rolę listonosza. Komunikacja między serwisami systemowymi (np. sterownikami dysków) a aplikacjami polega na bezpiecznym przesyłaniu ustandaryzowanych komunikatów IPC."
+  ],
+  [
+    "Podprogram obsługi przerwania musi zabezpieczyć:",
+    [
+      "tylko zawartość pamięci asocjacyjnej TLB",
+      "Wszystkie powyższe (Adres powrotu, Rejestr procesora, Zmienne i Semafory procesu przerywanego)",
+      "tylko adres, z którego wywołano przerwanie",
+      "wyłącznie sektor rozruchowy partycji MFT"
+    ],
+    1,
+    "Aby przerwany program po wznowieniu działania nie zorientował się, że przerwano mu pracę, procedura obsługująca wywołanie asynchroniczne musi zabezpieczyć jego absolutnie pełny kontekst sprzętowy i logiczny (tzw. środowisko ulotne)."
+  ],
+  [
+    "Wiązanie adresów w trakcie ładowania występuje w systemie:",
+    [
+      "CP/M",
+      "Windows 7",
+      "MS-DOS",
+      "Linux z rodziny Debian"
+    ],
+    2,
+    "Starsze systemy jednozadaniowe takie jak MS-DOS w dużej mierze generowały relokowalne instrukcje dla plików wykonywalnych (np. EXE), które przekładano na fizyczne adresy podczas wczytywania programu z dysku bezpośrednio do RAM."
+  ],
+  [
+    "Podczas bezpośredniego dostępu do pamięci procesor może odwoływać się do:",
+    [
+      "karty sieciowej poprzez szynę PCIe",
+      "sektora startowego w głównym rejestrze dysku (MBR)",
+      "głównej pamięci RAM w celu doczytania kodu systemowego",
+      "Pamięci notatnikowej (pamięci L1 / cache)"
+    ],
+    3,
+    "Gdy sterownik DMA zwalnia procesor z kopiowania bloków danych do RAM i przejmuje kontrolę nad główną magistralą, to odcina rdzeń procesora od RAM-u. Procesor w tym czasie musi zająć się obróbką danych i kodu dostępnego w jego wewnętrznych rejestrach i cache'u (pamięci notatnikowej)."
+  ],
+  [
+    "W procesorach 80386 występuje tablica stron:",
+    [
+      "Odwrócona",
+      "Jednopoziomowa",
+      "Dwupoziomowa",
+      "Drzewiasta tablica b-tree"
+    ],
+    2,
+    "Historyczny, 32-bitowy procesor Intel 80386 stosował strukturę dwupoziomową stronicowania pamięci, dzieląc 32-bitowy adres liniowy na sekcje Katalogu Stron (10 bitów), Tablicy Stron (10 bitów) i offset w ramce (12 bitów)."
+  ],
+  [
+    "Wartość semafora może być odczytana przez:",
+    [
+      "Proces tylko w czasie otwierania semafora",
+      "Proces stosujący odwołanie do powłoki systemu w trybie debugowania",
+      "Proces w dowolnym momencie",
+      "Żadne z powyższych (semaforów się nie odczytuje)"
+    ],
+    3,
+    "Z założenia akademickiej teorii Dijkstry zmienna całkowita wewnątrz klasycznego semafora jest całkowicie ukryta dla procesów i wątków zewnętrznych. Jedyny kontakt z semaforem to niepodzielne wywołanie na nim funkcji sygnalizuj/uwolnij."
+  ],
+  [
+    "Wątek:",
+    [
+      "jest dynamiczny",
+      "jest jednostką całkowicie pasywną zarezerwowaną dla dysków magnetycznych",
+      "nie współdzieli żadnej pamięci z kodem swojego macierzystego procesu",
+      "nie posiada własnego stosu programowego oraz licznika rozkazów"
+    ],
+    0,
+    "Podobnie jak proces, wątek wykonuje działania w jednostce czasu (zmienia swój stan w rejestrach procesora w odróżnieniu od pasywnego pliku z kodem na dysku), dlatego uważa się go za byt z natury dynamiczny."
+  ],
+  [
+    "Głodzenie procesów eliminuje się stosując:",
+    [
+      "Wyłączenie wszystkich przerwań maskowalnych",
+      "Podwyższenie priorytetów procesów (postarzanie) lub rotacyjną kolejkę",
+      "Szyfrowanie pamięci wirtualnej z poziomu sprzętowego mikrojądra",
+      "Algorytm planowania SJF (Najkrótsze Zadanie Pierwsze)"
+    ],
+    1,
+    "Problemem procesów o niskim priorytecie jest to, że napływ ważniejszych zadań może pozbawić je czasu na stałe. Wprowadzenie algorytmu uwzględniającego upływ czasu oczekiwania procesu w systemie (postarzanie / aging) naturalnie gwarantuje wyeliminowanie zjawiska głodu zasobów."
+  ],
+  [
+    "W jaki sposób w przypadku stosowania segmentacji adres generowany przez proces zmienia się na adres, dzięki któremu możemy odwołać się do konkretnej komórki pamięci?",
+    [
+      "liniowy -> logiczny -> offset bazowy",
+      "fizyczny -> logiczny",
+      "Żadne z powyższych (prawidłowa: logiczny -> fizyczny)",
+      "logiczny -> wirtualny -> sieciowy"
+    ],
+    2,
+    "Gdy sprzęt korzysta wyłącznie z obsługi trybu ochrony i segmentacji, adresy z formy logicznej (selekcja segmentu i przesunięcia) mapowane są wprost do formy fizycznej pamięci bazowej RAM."
+  ],
+  [
+    "Planistę wysokiego poziomu zajmującego się określaniem priorytetów procesów w kolejce do procesora nazywamy:",
+    [
+      "Monitorem",
+      "Dyspozytorem zadań wejścia-wyjścia",
+      "Deskryptorem plików",
+      "Żadne z powyższych (Scheduler)"
+    ],
+    3,
+    "Wyborem zadań i zarządzaniem gotowością zajmuje się algorytm planisty (short-term scheduler), podczas gdy samo fizyczne, błyskawiczne przełączanie wątków na rdzeniu realizuje dyspozytor (dispatcher)."
+  ],
+  [
+    "W strategii wymiany ze stronicowaniem występują metody:",
+    [
+      "odsyłania na dysk najczęściej używanej strony",
+      "wszystkie powyższe odpowiedzi są błędne",
+      "odczytania na dysk najdawniej załadowanej z dysku strony pamięci podręcznej",
+      "odsyłania na dysk ostatnio używanej strony z rejestru EAX"
+    ],
+    1,
+    "Skuteczne algorytmy decydujące, co wyrzucić z RAM do SWAP-u dyskowego (np. metoda LRU), zakładają pozbycie się z pamięci tych porcji kodu, których procesor używał NAJRZADZIEJ. Dystraktory sugerują odsyłanie stron używanych często i najświeższych, co całkowicie przeczy logice."
+  ],
+  [
+    "Przy prawdopodobieństwie braku strony równym 0.0001 oraz szybkości dostępu do pamięci i dysku równym 10 ns i 10 ms średni czas dostępu do pamięci wynosi:",
+    [
+      "10 μs (mikrosekund)",
+      "około 20 ns",
+      "dokładnie 1 pełna milisekunda",
+      "dokładnie 1 nanosekunda"
+    ],
+    0,
+    "Przy prawdopodobieństwie P = 0,0001. EAT = (1-p)*T_mem + p*T_dysk. Skoro odczyt z dysku zajmuje 10 milisekund (czyli aż 10 000 000 ns), to awaria stronicowania waży bardzo dużo. 0.0001 * 10 000 000 = 1 000 ns = 1 mikrosekunda (uwaga: to pytanie to pułapka matematyczna z dawnego zbioru)."
+  ],
+  [
+    "Fragmentacja zewnętrzna występuje dla:",
+    [
+      "Stronicowania",
+      "Zapisywania atrybutów w macierzy MFT systemu NTFS",
+      "Wykonywania procesów systemowych w tle bez priorytetów",
+      "Segmentacji"
+    ],
+    3,
+    "Gdy system wielozadaniowy lokuje i zwalnia ciągłe segmenty pamięci o różnych długościach w nieskończoność, RAM zaczyna wyglądać jak ser szwajcarski – pełen wolnych przestrzeni, ale żadna z nich nie jest na tyle duża (ciągła), by pomieścić nowy program. Wstrzymuje to system – wystąpiła fragmentacja zewnętrzna."
+  ],
+  [
+    "Fragmentacja wewnętrzna występuje dla:",
+    [
+      "Rejestrów procesora przy 16-bitowym kodowaniu",
+      "Systemów pracujących jako surowa maszyna bez systemu operacyjnego",
+      "Segmentacji",
+      "Stronicowania"
+    ],
+    3,
+    "Stronicowanie używa ramek sztywnych o identycznej długości (np. 4 KB bajtów). Jeśli plik ma 5 KB bajtów, sprzęt położy dane w dwóch ramkach – cała pierwsza i tylko 1 KB bajt na drugiej. Pozostałe 3 KB bajtów ulegną stratnej wewnątrzblokowej fragmentacji wewnętrznej."
+  ],
+  [
+    "Ile jest możliwych typów partycji w tablicy (np. identyfikatory ID dysku MBR):",
+    [
+      "128 ze względu na limit tablicy dysku GPT",
+      "256 (wg tablic: 255)",
+      "4 ze względu na limit klastrów głównych",
+      "Dowolna, narzucona sprzętowo przez nośnik NVMe"
+    ],
+    1,
+    "Pojedynczy pole bitowe alokowane w klasycznej tablicy partycji przypisane dla System ID wynosi bajt - stąd ilość rozpoznawalnych rodzajów systemów plików (NTFS, Ext2 itd) wynosi w systemie MBR dokładnie $2^8 = 256$ możliwości z wykluczeniem 00h dla sektora niepartycjonowanego."
+  ],
+  [
+    "Małe pliki na partycji NTFS zapisywane są jako:",
+    [
+      "Atrybut rezydentny tabeli MFT",
+      "Pliki tymczasowe w swapie (Pagefile)",
+      "I-węzły bez odniesień twardych (Hard Links)",
+      "Zapis lustrzany w boot-sektorze"
+    ],
+    0,
+    "Aby skrócić czas opóźnień do małego, prostego pliku, inteligentny system NTFS (w przeciwieństwie do standardu FAT32) umieszcza małą ilość informacji od razu w samym nagłówku wewnątrz struktury MFT – oznaczając te pliki jako atrybut rezydentny nośnika."
+  ],
+  [
+    "Metodą ciągłego zabezpieczania danych przed ich utratą z powodu awarii dysku twardego jest:",
+    [
+      "Tworzenie dodatkowych węzłów i-node do dowiązań miękkich",
+      "Składowanie całego systemu plików na kości ROM",
+      "Żadne z powyższych (prawidłowa: Mirroring, czyli wolumin lustrzany RAID 1)",
+      "Rozlokowanie stref MFT z wykluczeniem stronicowania"
+    ],
+    2,
+    "Klasyczny RAID 1 (lustrzane ułożenie dysków) kopiuje bajt w bajt bloki danych z dysku podstawowego na dyski zapasowe z wykorzystaniem sterownika RAID, na bieżąco powstrzymując katastrofę w razie sprzętowego zużycia pojedynczego modułu magnetycznego."
+  ],
+  [
+    "Algorytm bankiera to:",
+    [
+      "Matematyczny algorytm postarzania zadań dyskowych chroniący przed włamaniami",
+      "Podprogram analizujący straty i zyski na pamięciach swap",
+      "Algorytm sprzętowego dzielenia adresów fizycznych pamięci SDRAM",
+      "Algorytm unikania zakleszczeń"
+    ],
+    3,
+    "Pytanie, które powraca bardzo często. Wymyślony przez naukowca z Holandii grafowy system zapobiega przydziałom blokowym, z których wątki się wzajemnie by już po ich objęciu po prostu nie oddały (co doprowadzi do katastrofy znanej pod symbolem zakleszczenia dead-lock)."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "zostaną wyczerpane wszelkie wolne i-węzły na partycji dyskowej",
+      "nastąpi niepodzielny brak pętli dla systemu operacyjnego",
+      "procesor zajmuje się wymianą stron pomiędzy pamięcią operacyjną a dyskiem twardym a nie wykonywaniem procesów",
+      "powłoka Linuksa (BASH) jest odpytywana przez tryb nasłuchiwania pollingu"
+    ],
+    2,
+    "Powtórka pytania – zjawisko występuje, gdy system brakuje tak dramatycznie miejsca w RAM, że poświęca zasoby wyłączne na obsługę stronicowania pliku stronicowania Windows zamiast na kalkulacje, stąd charakterystyczne ciągłe światełko LED aktywności samego dysku HDD komputera."
+  ],
+  [
+    "W powłoce BASH nawias kwadratowy [ służy do:",
+    [
+      "Przetrzymywania kodów sygnału do wysłania w tle systemowym",
+      "Utworzenia instrukcji z opóźnieniem Sleep dla skryptu jądra powłoki Bsh",
+      "Użycia w pętlach sterujących while",
+      "Zastąpienia polecenia test"
+    ],
+    3,
+    "Kolejne powtarzające się w notatkach pytanie z Basha. Kiedy chcemy stworzyć konstrukcję z warunkiem używamy skróconego mechanizmu od komendy z jądra `test`, którym jest wywołanie polecenia dla powłoki: `[`."
+  ],
+  [
+    "Pamięć podręczna:",
+    [
+      "Stanowi substytut powolnych rejestrów instrukcji ogólnego znaczenia i koprocesora na kartach pamięci Flash PCIe",
+      "Zawsze trzyma wszystkie woluminy systemowe o statusie FAT",
+      "przechowuje ostatnio używany kod lub dane",
+      "Jest jedynym trwałym w komputerze sposobem zachowywania prądu bez awarii (Read-only RAM CMOS z użyciem kwarcu)"
+    ],
+    2,
+    "Rolą buforu pamięci typu Cache na jednostce jest powstrzymywanie procesora o gigantycznym taktowaniu w gigahercach przed opóźnionym zaniżaniem prędkości by obsłużyć wielokrotnie zapytania tych samych porcji danych o wolnej strukturze głównej kości pamięci."
+  ],
+  [
+    "Bufory TLB",
+    [
+      "Wstrzymują generowanie instrukcji w strumieniu pliku na potoku dla starych jednostek MMX Intela",
+      "Są częścią pamięci notatnikowej trzymające cały moduł kodu binarnego Basha pod kontrolą mikro-jądra",
+      "Przechowują ostatnie deskryptory stron",
+      "Nie mogą zostać skompilowane dla żadnego kodu w trybie przestrzeni roota administratora"
+    ],
+    2,
+    "Hardware'owy rejestr Translation Lookaside Buffer optymalizuje skomplikowany, bo spowolniony o cykl zapytań systemowych, narzut mechanizmu translacyjnego, ponieważ działa jak zintegrowany dla procesora podprogram pamięci asocjacyjnej zapamiętujący wyniki żądania adresów liniowych używanych stron bezpośrednio."
+  ],
+  [
+    "W komputerach PowerPC (oraz UltraSPARC) występuje tablica stron:",
+    [
+      "dwupoziomowa",
+      "liniowa",
+      "wielopoziomowa",
+      "odwrócona"
+    ],
+    3,
+    "Architektury takie jak PowerPC czy UltraSPARC implementują odwróconą tablicę stron (Inverted Page Table), gdzie istnieje jeden wpis na każdą fizyczną ramkę pamięci RAM, co zmniejsza narzut pamięciowy samej tablicy."
+  ],
+  [
+    "W jaki sposób zmienia się adres w przypadku stosowania segmentacji ze stronicowaniem?",
+    [
+      "logiczny -> fizyczny",
+      "liniowy -> fizyczny",
+      "logiczny -> liniowy -> fizyczny",
+      "fizyczny -> logiczny"
+    ],
+    2,
+    "Najpierw mechanizm segmentacji sprzętowo tłumaczy adres logiczny generowany przez program na adres liniowy, a dopiero następnie włączony mechanizm stronicowania mapuje ten adres liniowy na ostateczny adres fizyczny w pamięci RAM."
+  ],
+  [
+    "Planistą niskiego poziomu nazywamy inaczej:",
+    [
+      "semafor blokujący",
+      "dyspozytora (dispatcher)",
+      "planistę długoterminowego",
+      "monitor sekcji krytycznej"
+    ],
+    1,
+    "Planista krótkoterminowy (niskiego poziomu) często utożsamiany jest z dyspozytorem (dispatcherem), ponieważ to on podejmuje błyskawiczne decyzje o fizycznym przydziale procesora co kilka milisekund, wybierając proces z kolejki gotowych."
+  ],
+  [
+    "Szamotanie (thrashing) nie występuje:",
+    [
+      "w systemach z przydziałem opartym o kolejki FIFO",
+      "w modelu zbioru roboczego (working set)",
+      "gdy brakuje miejsca na dysku swap",
+      "przy zbyt małej ilości pamięci RAM"
+    ],
+    1,
+    "Model zbioru roboczego bada aplikacje i na bieżąco szacuje, ile ramek dany proces aktywnie potrzebuje do życia. Jeśli system operacyjny widzi, że nie ma wystarczająco dużo wolnego RAMu dla tego zbioru, całkowicie usypia proces, co z definicji jest lekarstwem na zjawisko szamotania."
+  ],
+  [
+    "O wątkach poziomu jądra (Kernel-Level Threads) można powiedzieć, że:",
+    [
+      "są całkowicie zarządzane i rozpoznawalne bezpośrednio przez jądro systemu",
+      "są ukryte przed systemem operacyjnym w bibliotekach użytkownika",
+      "nie mogą działać na nowoczesnych procesorach wielordzeniowych",
+      "wykonują się tylko w nieuprzywilejowanym trybie użytkownika"
+    ],
+    0,
+    "Wątki jądra (w przeciwieństwie do wątków poziomu użytkownika) są dostrzegane, planowane i zarządzane przez samo jądro systemu operacyjnego jako niezależne jednostki uruchomieniowe (system może je przypisać np. do różnych rdzeni procesora)."
+  ],
+  [
+    "W powłoce BASH do przyjęcia parametru o numerze powyżej 9 (np. dziesiątego) użyjemy zapisu z wykorzystaniem:",
+    [
+      "nawiasów kwadratowych []",
+      "dodatkowego znaku dolara $$",
+      "klamry, np. ${10}",
+      "ukośnika, np. $/10"
+    ],
+    2,
+    "Zmienne od $1 do $9 odwołują się do argumentów skryptu bezpośrednio. Aby odwołać się do argumentów dwucyfrowych, należy je bezpiecznie otoczyć klamrami: `${10}`. Zwykły zapis `$10` powłoka odczytałaby jako zawartość zmiennej `$1` z po prostu dopisanym na końcu ciągiem znaku `0`."
+  ],
+  [
+    "Zakończenie transmisji danych poprzez kanał (DMA) sygnalizowane jest przez:",
+    [
+      "zamknięcie pliku tekstowego przez program użytkownika",
+      "operację „sygnalizuj” w podprogramie obsługi przerwań",
+      "natychmiastowe usunięcie procesu z pamięci RAM",
+      "wyczyszczenie wskaźników z bufora TLB"
+    ],
+    1,
+    "Gdy kontroler DMA skończy przesyłać potężny blok danych do pamięci, zgłasza procesorowi przerwanie sprzętowe. W procedurze obsługi tego przerwania wykonywana jest standardowa operacja sygnalizuj (V) na semaforze, by zbudzić uśpiony proces oczekujący na ten odczyt z dysku."
+  ],
+  [
+    "Każdy wątek w ramach tego samego ciężkiego procesu posiada własny i unikalny:",
+    [
+      "obszar deklarowanych zmiennych globalnych",
+      "blok z kodem wykonywalnym programu",
+      "zestaw otwartych i-węzłów i plików w systemie",
+      "stos wywołań oraz licznik rozkazów"
+    ],
+    3,
+    "To kluczowa koncepcja architektury PC. Wątki chętnie współdzielą ze sobą przestrzeń adresową (dane, otwarte pliki), ale żeby mogły się wykonywać w swoim własnym tempie, każdy musi pamiętać oddzielnie swoją historię używanych i deklarowanych lokalnych funkcji (stos) oraz aktualnie zliczaną pozycję w kodzie (licznik)."
+  ],
+  [
+    "W procesorach Intel Core 2 Duo występuje tablica stron:",
+    [
+      "odwrócona dla celów kompatybilności RISC",
+      "liniowa jednopoziomowa",
+      "dwupoziomowa (w tradycyjnym trybie chronionym)",
+      "Zawsze wymuszona sprzętowo tablica 4-poziomowa"
+    ],
+    2,
+    "W kluczach tego przedmiotu prawidłową odpowiedzią jest tablica 'dwupoziomowa'. Procesory z rodziny Core 2 to pierwsze architektury x86-64 z włączonym 4-poziomowym wsparciem, ale działając lub analizując je w starym, klasycznym trybie 32-bitowym (IA-32), nadal bazowały na klasycznej dwupoziomowej strukturze."
+  ],
+  [
+    "W strukturze pierścieniowej (ring architecture) podprogram systemowy może odwoływać się do funkcji:",
+    [
+      "wszystkich warstw wyższych",
+      "żadna z powyższych (tylko do określonej liczby warstw niższych)",
+      "tylko i wyłącznie własnej fizycznej warstwy",
+      "wszystkich warstw systemu absolutnie dowolnie bez zabezpieczeń"
+    ],
+    1,
+    "W strukturze swobodnie warstwowej wyższa warstwa widzi po prostu wszystkie niższe. Jednak ścisła koncepcja pierścieniowa np. sprzętowych trybów ochrony ogranicza te przywileje, pozwalając na odwołania rygorystycznie tylko do najbliższych lub ściśle wymienionych warstw niższych (w dół ula uprawnień)."
+  ],
+  [
+    "Zawartość środowiska ulotnego (kontekst) w momencie asynchronicznej zmiany zadań zapisywana jest przez:",
+    [
+      "zewnętrzny kompilator języka asembler",
+      "planistę niskiego poziomu (dyspozytora)",
+      "sterownik karty graficznej w pamięci VRAM",
+      "system ochrony tablic FAT"
+    ],
+    1,
+    "Niskopoziomowy proces przełączania kontekstu jest jednym z najważniejszych zadań dyspozytora. Musi on przechwycić i zrobić bezbłędny \"zrzut ekranu\" wszystkich rejestrów starego procesu (środowisko ulotne) i przepisać je do struktury bloku kontrolnego przed włączeniem nowej aplikacji."
+  ],
+  [
+    "Podczas działania układu bezpośredniego dostępu do pamięci (DMA) procesor może odwołać się do:",
+    [
+      "pamięci asocjacyjnej TLB karty sieciowej LAN",
+      "przesyłanego w tej samej chwili bloku pamięci współdzielonej DDR",
+      "pamięci podręcznej poziomu 1 (cache L1 / pamięci notatnikowej)",
+      "sektora 0 dysku twardego przy użyciu przerwania INT 13"
+    ],
+    2,
+    "Gdy potężny moduł DMA odcina rdzeń procesora od szyny systemowej (żeby samemu zapisać dane prosto na kość RAM), procesor nadal potrafi wykonywać kod i przeliczenia na bazie tego, co chwilę wcześniej pobrał i ukrył we własnych, niedostępnych z zewnątrz rejestrach (pamięci L1)."
+  ],
+  [
+    "Kolejka procesora zawiera wątki:",
+    [
+      "zawieszone w odpowiedzi na sygnał zewnętrzny",
+      "uśpione na stałe z winy uszkodzonego wskaźnika sterty",
+      "zablokowane w oczekiwaniu na naciśnięcie klawiatury",
+      "wykonywalne (ready)"
+    ],
+    3,
+    "Kolejka procesora (zwana w literaturze Ready Queue) składa się włącznie z tych procesów, które są żywe, mają wszystkie dane i nie czekają absolutnie na żadne zdarzenia – potrzebują tylko zwolnienia się okienka czasu na rdzeniu procesora."
+  ],
+  [
+    "Aktywne czekanie (spin-lock) stosuje się:",
+    [
+      "w procesach pobierających bardzo wielkie pliki z powolnego pendrive'a",
+      "w operacji zajmij (np. w systemach wieloprocesorowych, by uniknąć kosztu przełączania kontekstu)",
+      "tylko do ochrony zmiennych środowiskowych powłoki lokalnej użytkownika",
+      "aby skutecznie zapobiec fragmentacji wewnętrznej partycji ZFS"
+    ],
+    1,
+    "Odpuszczenie czasu rdzenia (wywłaszczenie) do kolejki pochłania tysiące cykli. Jeśli wątek wie, że zasób z semafora po który przyszedł zwolni się np. w 5 cyklów - taniej (i szybciej) jest \"aktywnie czekać\", kręcąc procesor w pustej matematycznej pętli."
+  ],
+  [
+    "Zastosowanie dużych klastrów (jednostek alokacji) na partycji dyskowej:",
+    [
+      "Zmniejsza rozmiar metadanych systemu, zwiększa szybkość dostępu, ale powoduje straty miejsca (Wszystkie powyższe)",
+      "Wyłącznie minimalizuje straty w pamięci wywołane zjawiskiem fragmentacji RAM",
+      "Zmniejsza limit możliwych do sformatowania plików we współdzielonym strumieniu",
+      "Opóźnia przesył bitów do drukarek laserowych obsługiwanych przez system LPD"
+    ],
+    0,
+    "Duże klastry (np. 64KB vs domyślne 4KB) drastycznie zmniejszają tablice opisów MFT i redukują czas ciągłego zczytywania danych. Niestety, w zamian potężnie marnują miejsce na dysku na zjawisku fragmentacji wewnętrznej w przypadku gromadzenia milionów drobnych plików np. systemowych ikonek."
+  ],
+  [
+    "System przydziału tzw. plików zawartych na dysku odpowiada koncepcji:",
+    [
+      "przydziału indeksowego z zastosowaniem super-i-węzłów",
+      "przydziału ciągłego",
+      "drzewa zrównoważonego B+ zaimplementowanego w MacOS",
+      "rejestru łańcuchowego na taśmach magnetycznych MBR"
+    ],
+    1,
+    "Wykładowa pre-alokacja i przydział \"zawarty\" to fizyczne upchnięcie wszystkich bitów pliku na dysku idealnie sąsiadująco obok siebie – definicja przydziału ciągłego. Gwarantuje to najszybszy znany w informatyce czas odczytu."
+  ],
+  [
+    "Prawdopodobieństwo wystąpienia zakleszczenia (deadlock) można zmniejszyć stosując:",
+    [
+      "algorytm zastępowania najdawniej wprowadzonych ramek Belady'ego (FIFO)",
+      "zwiększenie ilości operacji blokad wyłącznych",
+      "pulę urządzeń (wirtualizację np. spooler)",
+      "aktywne uśpienie każdego z dyspozytorów wirtualnych"
+    ],
+    2,
+    "Problemy zakleszczeń powodują rywalizujące, fizycznie niepodzielne drukarki. Zamiana fizycznej drukarki na proces spoolera rozwiązuje konflikt, bo procesy po prostu wrzucają odrębne pule zadań do tymczasowych plików na twardym dysku i kończą pracę nie blokując siebie nawzajem."
+  ],
+  [
+    "System Linux nie może korzystać z systemu plików:",
+    [
+      "Windowsowego standardu NTFS",
+      "Opartego na zliczaniu FAT32 i ExFat",
+      "Rozwiązań przeznaczonych na macierze takie jak ZFS",
+      "Nie ma powyższych ograniczeń"
+    ],
+    3,
+    "Jądro Linux w swojej ogromnej modularności w 2026 roku współpracuje z blisko setką różnych standardów formatów. Poprzez sterowniki natywne lub paczki przestrzeni użytkownika (FUSE) potrafi montować dyski i pendrive’y ze środowisk MS Windows czy nawet systemów Apple bez ingerencji strukturalnej."
+  ],
+  [
+    "Macierz dyskowa z parzystością rozproszoną, przeplotem bloków i podwójną nadmiarowością to macierz typu:",
+    [
+      "Klasycznego RAID 0 (Stripping)",
+      "Złączonego systemu RAID 10 (1+0)",
+      "Popularnego dla zastosowań NAS RAID 5",
+      "Najbezpieczniejszego domowego wariantu RAID 6"
+    ],
+    3,
+    "RAID 5 gwarantował nam tylko jedno ubezpieczenie. Przeplatany blokami RAID 6 dorzuca do równania matematyczną podwójną warstwę parzystości (niezależne od siebie funkcje), dzięki czemu cała zawartość naszego serwera ocalałaby, nawet gdybyśmy wypięli fizycznie z niego na raz dwa różne dyski twarde w trakcie pracy."
+  ],
+  [
+    "Buforowanie wielokrotne w operacjach wejścia i wyjścia:",
+    [
+      "Eliminuje w 100% prawdopodobieństwo i czas wejścia pętli w szamotanie",
+      "Przyspiesza dwukrotnie działanie samej sprzętowej pamięci L3 zintegrowanej wewnątrz obudowy CPU",
+      "Zezwala by kilkanaście wątków edytowało wewnątrz jądra ten sam plik logu bez używania mutexów chroniących",
+      "Żadne z powyższych (prawidłowo: usuwa zatory / poprawia asynchroniczność w dostępie I/O)"
+    ],
+    3,
+    "Ponieważ mechaniczne talerze dysków są miliardy razy wolniejsze od gigahercowego taktowania procesora i5/i7, wprowadzamy wielokrotne zrzuty buforów, by procesor mógł asynchronicznie wpompować porcję do RAM-u (i do potoku wymiany) i zapomnieć o zadaniu wracając do poważniejszych przeliczeń na swoim środowisku ulotnym."
+  ],
+  [
+    "Aby odwołać się do parametru (zmiennej) w skrypcie powłoki BASH używamy znaku:",
+    [
+      "Tyldy w klamrach {~}",
+      "Ampersandu w pętlach sterujących &&",
+      "Dedykowanego znaku wykrzyknika ! przed funkcją powrotną",
+      "Znaku dolara $"
+    ],
+    3,
+    "To absolutna podstawa skryptów terminalowych systemów Unix. Definiując obiekt stringowy piszemy np. `KOLOR=\"czarny\"`, natomiast by go kiedykolwiek wywołać na ekran monitora stosujemy zmienną powołaną znakiem `$`, zlewając się w wywołanie: `echo $KOLOR`."
+  ],
+  [
+    "System plików ext3 w systemie Linux oparty jest architektonicznie o przydział:",
+    [
+      "Zawarty",
+      "Wsadowy ciągły",
+      "Indeksowy",
+      "Listowy (łańcuchowy o podwójnym wiązaniu)"
+    ],
+    2,
+    "Rodzina legendarnych, natywnych formatów ext (czyli z ang. extended file system) implementuje zaawansowany jak na swoje czasy system 'inodów' (węzłów danych). To nic innego jak scentralizowane indeksowanie – każda struktura inoda kryje tabelę lokalizacji (indeksów) do setek odseparowanych z dysku bloków magnetycznych stanowiących docelowo plik użytkownika."
+  ],
+  [
+    "Efektywny czas dostępu do pamięci (EAT) dla stronicowania dwupoziomowego bez wykorzystania pamięci asocjacyjnej wynosi:",
+    [
+      "EAT = 1 * MAT",
+      "EAT = 2 * MAT",
+      "EAT = 3 * MAT",
+      "EAT = 4 * MAT"
+    ],
+    2,
+    "Każde zagnieżdżenie to ułamek sekundy kary. Nie posiadając wspomagania buforem TLB, stronicowanie sprzętowe procesora pochłonie czas 3 razy: 1 uderzenie to sczytanie Katalogu Stron (Directory Page) z pamięci RAM, 2 to odpytanie Tablicy (Table), i w końcu po rozwiązaniu zagadki 3 pobranie naszej poszukiwanej zmiennej. 3 x MAT (czasu operacyjnej kości)."
+  ],
+  [
+    "Księgowanie (kronikowanie / journaling) jako mechanizm plikowy powstrzymujący korupcję systemu:",
+    [
+      "Występuje tylko i wyłącznie w strukturze dyskietek formatu FAT16",
+      "Jest rewolucyjną cechą odróżniającą zaktualizowany system ext3 od starego ext2 (brak w ext2)",
+      "Stanowi o spowolnieniu formatowania warstwy abstrakcyjnej HAL Windowsa 7",
+      "Blokuje i niweczy całkowicie możliwość implementacji jakichkolwiek ułatwień RAID i LVM"
+    ],
+    1,
+    "Gdy system nagle utracił zasilanie przy używaniu ext2, odpalany ręcznie demon diagnostyczny systemu `fsck` skanował miliony pustych bajtów szukając strat. Wdrożenie Journala w ext3 zamieniło ten proces - polega on od teraz na wczytaniu księgi operacji, dogrywając brakujące, odłożone pliki operacji dyskowych z małego, podręcznego ukrytego loga."
+  ],
+  [
+    "Aby odwołać się w skrypcie BASH wprost do nazwy pliku i samego włączanego właśnie wywoływanego skryptu używamy znaku:",
+    [
+      "Parametru zliczającego $#",
+      "Kodu awaryjnego systemu $?",
+      "Rezerwowanej zmiennej zerowej $0",
+      "Znaku z PIDem zadania w tle $!"
+    ],
+    2,
+    "Podobnie jak w kodowaniu przy użyciu popularnych kompilatorów z tablicą `argv[0]`, wbudowana w powłokę natywna zmienna `$0` to po prostu łańcuch znaków przedstawiający identycznie taką samą ścieżkę polecenia, jaką administrator systemu sam z ręki odpalił wywołując ów skrypt do konsoli."
+  ],
+  [
+    "Kończąc podprogram obsługi przerwania zawsze:",
+    [
+      "wchodzimy do trybu nadzoru",
+      "wchodzimy do trybu użytkownika",
+      "czyścimy zawartość pamięci RAM",
+      "resetujemy licznik rozkazów"
+    ],
+    1,
+    "Podprogram obsługi przerwania wykonuje się w uprzywilejowanym trybie nadzoru (jądra). Po zakończeniu jego wykonywania (np. instrukcją powrotu IRET), procesor automatycznie zrzuca przywileje i powraca do przerwanego zadania do bezpiecznego trybu użytkownika."
+  ],
+  [
+    "W strukturze pierścieniowej (ring architecture) podprogram systemowy może odwoływać się do funkcji:",
+    [
+      "wyłącznie własnej warstwy",
+      "wszystkich zdefiniowanych warstw wyższych",
+      "wszystkich warstw systemu absolutnie dowolnie",
+      "żadna z powyższych"
+    ],
+    3,
+    "Odpowiedzią z klucza było 'żadne z powyższych', ponieważ w przeciwieństwie do czystej struktury warstwowej, rygorystyczna struktura pierścieniowa pozwala podprogramowi na odwołanie się wyłącznie do ściśle określonej, dozwolonej liczby warstw niższych, a nie z automatu do wszystkich."
+  ],
+  [
+    "Każdy wątek ma własny (unikalny dla siebie):",
+    [
+      "współdzielony kod programu",
+      "katalog główny systemu plików",
+      "licznik rozkazów",
+      "obszar globalnych deskryptorów i zmiennych"
+    ],
+    2,
+    "Wątki wewnątrz jednego procesu współdzielą przestrzeń adresową (kod, dane, otwarte pliki), ale żeby móc wykonywać się asynchronicznie, każdy z nich musi zapamiętywać swój oddzielny stan w postaci własnego stosu oraz własnego licznika rozkazów (Program Counter)."
+  ],
+  [
+    "Wiązanie adresów logicznych z fizycznymi dopiero w trakcie wykonywania programu (w locie) występuje dla systemu:",
+    [
+      "MS-DOS",
+      "CP/M",
+      "Klasyczny Unix System V",
+      "Windows 7"
+    ],
+    3,
+    "Nowoczesne wielozadaniowe systemy operacyjne (takie jak Windows 7, Linux) wykorzystują sprzętowe wsparcie MMU procesora do wirtualizacji pamięci i wiązania logicznych adresów na fizyczne dynamicznie w tracie wykonywania instrukcji na procesorze."
+  ],
+  [
+    "Podczas bezpośredniego dostępu do pamięci (DMA) procesor może odwoływać się do:",
+    [
+      "karty graficznej przez główną szynę PCI",
+      "głównej operacyjnej pamięci RAM w celu odczytu instrukcji",
+      "pamięci podręcznej (notatnikowej / poziomu 1 i 2)",
+      "bezpośrednio dysku twardego za pomocą mechanizmu pollingu"
+    ],
+    2,
+    "Podczas potężnego transferu DMA kontroler całkowicie przejmuje magistralę. Ponieważ rdzeń procesora zostaje odcięty od kości RAM, do wykonywania pracy używa tylko tych danych i kodu, które znajdują się ukryte we własnej pamięci wewnątrz-procesorowej (pamięci cache L1, L2)."
+  ],
+  [
+    "Zawartość deskryptora procesu może i musi być uaktualniana przez:",
+    [
+      "zewnętrzny proces z innej domeny użytkownika",
+      "programistę podczas wstępnej kompilacji zadania",
+      "planistę niskiego poziomu (dyspozytora / dispatcher)",
+      "sterownik bezpośredni systemu plików NTFS"
+    ],
+    2,
+    "Wszelkie krytyczne zmiany stanu w bloku kontrolnym procesu (PCB / deskryptorze), takie jak zachowanie rejestrów czy zmiana flagi stanu na 'wykonywalny', to z definicji zadanie dyspozytora odpowiedzialnego za ułamkowo-sekundową zmianę kontekstu."
+  ],
+  [
+    "Kolejka zamówień podsystemu urządzenia wejścia/wyjścia zawiera:",
+    [
+      "komunikaty o błędach dysku systemowego MBR",
+      "semafor \"zamówienia załatwione\" (lub niezałatwione)",
+      "wyłącznie wątki uśpione na stałe bez priorytetów",
+      "twarde wektory dla obsługi przerwań jądra systemu"
+    ],
+    1,
+    "Zgodnie z modelową architekturą systemu wejścia/wyjścia, kolejki buforów urządzeń koordynowane są przez klasyczne operacje zajmij/sygnalizuj na dedykowanych semaforach sygnalizujących np. \"zamówienie załatwione\" lub liczbę zgłoszonych oczekujących zamówień."
+  ],
+  [
+    "Dla rotacyjnej kolejki procesora (Round Robin) jako zabezpieczenie przed głodzeniem stosuje się:",
+    [
+      "operację uwolnij na każdym semaforze dysku",
+      "strategię kolejkowania LIFO dla oszczędności stosu",
+      "sztuczne podwyższanie priorytetów procesów długo oczekujących",
+      "żadne z powyższych"
+    ],
+    3,
+    "Algorytm rotacyjny (Round Robin) opiera się o przydzielanie wszystkim równych kwantów czasu i rzucanie wykonanych zadań z powrotem na koniec kolejki. Skoro cykl naturalnie i sprawiedliwie gwarantuje procesor po pewnym czasie dla każdego zadania, jakiekolwiek metody postarzania (aging) lub priorytety nie są tu stosowane (żadne z powyższych)."
+  ],
+  [
+    "System plików FAT32 to system oparty sprzętowo o:",
+    [
+      "tablicę przydziału plików (FAT - File Allocation Table)",
+      "tablicę MFT i super-atrybuty rezydentne",
+      "tablice haszowane ukryte w powłoce systemowej",
+      "zaawansowane drzewa b-tree z podziałem na i-węzły"
+    ],
+    0,
+    "Skrót FAT (File Allocation Table) pochodzi bezpośrednio od scentralizowanej tablicy zlokalizowanej na przodzie partycji. Każdy wpis w tej tablicy tworzy prostą listę jednokierunkową powiązanych ze sobą klastrów danego pliku."
+  ],
+  [
+    "Efektywny czas dostępu do pamięci (EAT) dla stronicowania jednopoziomowego bez wykorzystania pamięci asocjacyjnej TLB wynosi:",
+    [
+      "EAT = 1 * MAT (Memory Access Time)",
+      "EAT = 2 * MAT",
+      "EAT = 3 * MAT",
+      "EAT = P * MAT + (1-P) * TLB"
+    ],
+    1,
+    "Przy jednym poziomie tablicy stron sprzęt musi dotknąć powolnego fizycznego RAMu dwukrotnie podczas jednej instrukcji: najpierw by odczytać numer szukanej ramki ze swojej zlokalizowanej w pamięci Tablicy Stron, a drugi raz, by dobrać się już fizycznie do danych programu."
+  ],
+  [
+    "Fragmentacja wewnętrzna pamięci nie występuje w architekturze zbudowanej z samej:",
+    [
+      "Metody stronicowania stałej wielkości",
+      "Segmentacji ze stronicowaniem stronicowanym",
+      "Trójpoziomowej alokacji opartej o stałe klastry",
+      "Segmentacji"
+    ],
+    3,
+    "Ponieważ jednostka dyspozytorni pamięci bazująca wyłącznie na strukturze Segmentacji tworzy i docina wielkość obszaru idealnie, z dokładnością co do bajta zgodnie z wymogami programu, to nigdy nie tworzy nieużywanej przestrzeni wewnątrz zablokowanego bloku."
+  ],
+  [
+    "Wpisy i atrybuty katalogów oraz folderów na partycji NTFS zapisywane są jako:",
+    [
+      "niezależne pliki tekstowe zaszyte ukrytym procesem systemowym",
+      "lokalne tablice list jednokierunkowych opartych na superblokach",
+      "atrybut centralnej tabeli MFT",
+      "zewnętrzny wpis w małym sektorze rozruchowym dysku twardego"
+    ],
+    2,
+    "Główną i fundamentalną zasadą działania architektury New Technology File System jest teza, że wszystko na partycji traktowane jest jak plik. Nawet struktura nazewnictwa i układ folderów zapisywana jest po prostu jako wewnętrzny indeks atrybutowy głównej bazy (MFT)."
+  ],
+  [
+    "Zaczynając podprogram obsługi przerwania od sprzętowego sterownika zawsze:",
+    [
+      "wychodzimy do bezpiecznego trybu użytkownika bez wyjątku",
+      "wchodzimy asynchronicznie do trybu nadzoru (uprzywilejowanego)",
+      "formatujemy bezpowrotnie stos środowiska ulotnego procesora",
+      "rejestrujemy nową kopię logu boot-loadera GRUB do partycji EFI"
+    ],
+    1,
+    "Ponieważ obsługa komunikatu z np. przegrzewającej się karty graficznej czy awarii błędu strony RAM-u może wymagać fundamentalnych akcji administracyjnych ratujących maszynę z odcięciem procesów od zasilania pamięci, w momencie zgłoszenia sprzęt narzuca kernelowi bezwzględne wejście w tryb najwyższych nadzoru uprawnień jądra maszynowego (Ring 0)."
+  ],
+  [
+    "W klasycznej strukturze czysto warstwowej (layered architecture) podprogram systemowy może odwoływać się do usług:",
+    [
+      "tylko z najbliższej sąsiadującej warstwy wyższej",
+      "z wszystkich całkowicie i dowolnie zdefiniowanych warstw wyższych",
+      "ze wszystkich abstrakcyjnych warstw niższych poniżej niego",
+      "żadnych, ze względów zachowania spójności bezpieczeństwa"
+    ],
+    2,
+    "Z założenia akademickiego układ wielopoziomowy (np. warstwa szósta opierająca się na usługach warstwy piątej i czwartej i sprzęcie niżej) polega na powolnej kompresji abstrakcji z dołu na górę - kod wysokiego poziomu staje się po prostu jednym globalnym klientem dla wszelkich programów pod nim (co zarazem w przypadku błędu na samym spodzie grozi zawaleniem całości domku z kart oprogramowania)."
+  ],
+  [
+    "Tablica haszowana (Zhaszowana tablica stron do pamięci wirtualnej) powszechnie i powszechnie domyślnie występuje dzisiaj sprzętowo w procesorach pracujących w architekturze:",
+    [
+      "8-bitowych i 16-bitowych mikrokontrolerach i procesorach intel",
+      "zależnie procesorach opartych tylko na trybie kooperacyjnym bez wywłaszczania wątku",
+      "64 bitowych",
+      "tylko opartych o jednostkach w systemach plików dla baz MFT"
+    ],
+    2,
+    "Gdy rozmiar RAMU drastycznie wzrósł z nadejściem ery platform 64-bitowych budowanie zagnieżdżonych do sześciu drzew wielopoziomowych tablic było koszmarnie długie dla poszukiwań. Algorytmy sprzętowe zaczęły wyliczać z adresów stały matematyczny skrót mapując stronę metodą z haszowaniem przyśpieszając skok czasowy wyszukiwania bloku."
+  ],
+  [
+    "W jaki sposób w architekturze np. z rodziny Intel X86 (segmentacja ze stronicowaniem) adres generowany bezpośrednio przez nasz kod procesu zmienia się na adres fizyczny w kości RAM?",
+    [
+      "logiczny -> fizyczny",
+      "liniowy -> fizyczny",
+      "logiczny -> liniowy -> fizyczny",
+      "fizyczny -> logiczny -> offset segmentowy"
+    ],
+    2,
+    "Ten bardzo częsty model to fuzja dwustopniowa. Dwuczłonowy logiczny wskaźnik procesu system operacyjny przekuwa przez tablicę LDT/GDT z zachowaniem ochrony wpierw na płaski spójny format liniowy, a ten na koniec sprzęt jednostki stronicowania procesora tnie na mniejsze kwadraty uzyskując fizyczne lokalizacje złącz w strukturze krzemowej modułu RAM."
+  ],
+  [
+    "Wątki wykonujące się w ramach środowiska tego samego, własnego rodzimego procesu bezwzględnie współdzielą dla siebie wspólną:",
+    [
+      "przestrzeń niezależnego, lokalnego stosu ramkowego i zmiennych",
+      "obszar dedykowanych liczników wykonanych komend CPU",
+      "obszar kodu instrukcji binarnej, puli otwartych sieciowo i plikowo deskryptorów i zmiennych z obszarów globalnych sterty",
+      "tablicę priorytetów procesora graficznego do renderingu trójwymiarowego"
+    ],
+    2,
+    "Z punktu widzenia budowy wielowątkowej architektury kodu systemu każdy proces 'matka' wykrawa ze środowiska sprzętowego swój wirtualnie wielki kawał własnego dysku danych oraz kodu źródłowego, natomiast nowo odradzane nici poboczne z punktu definicji swobodnie mają do nich ciągły dostęp, odseparowując od siebie wyizolowanie na siłę jedynie obszary liczące aktualne etapy postępu prac."
+  ],
+  [
+    "Systemy operacyjne do sterowania maszyn i procesów przemysłowych dzieli się ze względu na narzucone reżimy wymuszonego przerwania akcji czasowych rygorystycznie na kategorie:",
+    [
+      "rygorystyczne i łagodne (hard real-time / soft real-time)",
+      "priorytetowe dyspozytorni z algorytmem bankiera i postarzania obrotowego (Round Robin)",
+      "wsadowe skryptowe, a okienkowo interakcyjne",
+      "monolityczne ukryte i warstwowo hybrydowe do sprzętu"
+    ],
+    0,
+    "Każdy dedykowany system klasy Real-Time Operating System posiada wymogi - w łagodnych wariantach strumieniowania spóźnienie to lag, jednak klasa twardych zadań i przerwań (Hard) traktuje każde naruszenie ramy terminu odpowiedzi zwrotnej z milisekundy sprzętowej absolutnie rygorystycznie jako krytyczną porażkę sterowanego systemu na hali czy module napędowym."
+  ],
+  [
+    "Ile maksymalnie w teorii bitów z logicznego wirtualnego, wejściowego adresu adresowego programu na konkretnie ile wyjściowych bitów do szyny fizycznej procesora architektur w Intel Core było początkowo ograniczane w stosowaniu dla mechaniki stronicowania:",
+    [
+      "40 z użyciem pamięci TLB na liniowy format do 32 w trybie realnym DOSu",
+      "36 z rejestrów PAE przydzielanych sztucznie na 48 bazowe ze starszych Xeonów",
+      "48 logicznego wirtualnego, ciętych i limitowanych sprzętowo na zaledwie 40 z pamięci RAM (często również wariacja opcji przy używaniu limitu adresowania rzędu np. 46)",
+      "na sztywno wpisanych bez zmian z obu punktów 32 bitów na równoległą formę dla 40 pinowych listew logicznych na mostku komputera w erze PCI"
+    ],
+    2,
+    "Standard x64 i wczesne systemy mimo rezerwacji rejestrowej tak potężnej siatki i ilości liczb do dziś rzadko realnie rozciąga do opisywania wszystkich dostępnych pełnych rozmiarów wielkości potęg do szóstej (odpadki rzędów bitowych to zapas bezpieczeństwa tablic do gigantycznego pojęcia terabajtów - dlatego pierwsze modele odciążały układ, limitując to sprzętowo do progu zaledwie np. 40 wyjść sprzętowych do układu ramów)."
+  ],
+  [
+    "Główny powód by historycznie zmigrować jądra popularnych wielkich instalacji z systemu formatu systemu plików starszej generacji wariantu ext2 i uruchamiać docelowo macierze pod kontrolą dystrybucji z formatem bazowym opartym całkowicie o pliki na dyskach jako standardowy typ linuksowy generacji ext3 to:",
+    [
+      "węzły inodowe ucięte rozmiarami od klastrów mniejszych o absolutną połowę bez fragmentacji w archiwum b-tree na dysku HDD",
+      "bezwzględny wymóg na braki i brak wsparcia dla skryptowania w powłoce systemowej bash w środowiskach partycji bazowej ext2 dla instalacji boot managera",
+      "występowaniem ulepszającej system w nowej ulepszonej i bezpiecznej wersji dodaniem funkcji dla zabezpieczającej tak zwanej kroniki zapisu i operacji (w pojęciu na księgowanie po angielsku 'journaling system')",
+      "odgórne pozbycie sprzętowo barier od macierzy wolnych partycji rozszerzonych stosowanych przez mechanizmy ograniczeń przestarzałej obsługi GPT u serwerów"
+    ],
+    2,
+    "Narzucenie mechanizmu pliku do odkładania transakcji dziennika systemowego na strukturę od starych serwerów wyeliminowało dla systemów ciągły włączany na dziesiątki uciążliwych minut potężny skaner partycji badający przy zanikach energii braków w metadanych drzew katalogów do pojęcia sekundowego naprawienia błędów wstecz i dalej przed siebie po ponownym powrocie prądu w rejonie gniazdka."
+  ],
+  [
+    "Architektura algorytmu planowania ruchu sprzętowej fizycznej głowicy od odczytu i zapisywania napędów mechanicznych twardego nośnika znana pod technicznym skrótem o nazwie SCAN bywa obrazowo tłumaczona z koncepcją logistyczną nazywaną potocznie w literaturze jak:",
+    [
+      "koncepcyjny algorytm windy",
+      "pętla powiązań odczytu w tak zwanym aktywnym czekaniu dla głodzenia stref",
+      "metodyczne skakanie oparte o system bliźniaków do najkrótszej drogi szczytu",
+      "ciągły odczyt wielokrotny po najkrótszej pracy dla priorytetu wywłaszczenia bez obrotów"
+    ],
+    0,
+    "Głowica pracując modelem zbierania pasażerów wzdłuż trasy igły odcina ciągłe chaotyczne latające rzuty między talerzami dla procesów wpadając docelowo z samego skraja środkowego na krawędź skanując sektory aż odbije na drugą powrotną odmienną trasę zbierając pozostałe obok leżące zadania w czasie cyklu na sposób idealnej windy blokowej."
+  ],
+  [
+    "Do przełączania zadań może służyć:",
+    [
+      "Semafor i Mutex",
+      "Przerwanie programowe w powłoce systemowej",
+      "Algorytm bankiera z pamięci ROM",
+      "Żadne z powyższych (odpowiada za to dyspozytor)"
+    ],
+    3,
+    "Fizycznym przełączaniem kontekstu (zadań) zajmuje się dyspozytor (dispatcher), który ładuje stan środowiska ulotnego. Ponieważ w wariantach odpowiedzi na egzaminie z reguły brakuje tego słowa, jedyną właściwą opcją pozostaje 'Żadne z powyższych'."
+  ],
+  [
+    "Charakterystyczne dla struktury jednolitej systemu operacyjnego jest:",
+    [
+      "Jądro warstwowe",
+      "Mikrojądro ze znikomą ilością kodu",
+      "Powłoka całkowicie odseparowana od sprzętu",
+      "Żadna z powyższych"
+    ],
+    3,
+    "Struktura jednolita (monolityczna) polega na tym, że cały system operacyjny jest jednym wielkim, skompilowanym programem pracującym w trybie jądra. Brakuje tu podziału na typowe warstwy czy mikrojądro, stąd 'żadna z powyższych' jest odp. prawidłową z klucza."
+  ],
+  [
+    "Polecenie ln systemu Linux umożliwia:",
+    [
+      "Usuwanie plików z katalogu domowego",
+      "Tworzenie dowiązań (linków twardych i miękkich)",
+      "Kompresję plików tekstowych do archiwum .tar",
+      "Wyświetlanie zmiennych lokalnych"
+    ],
+    1,
+    "Polecenie 'ln' (skrót od link) służy w systemach z rodziny Unix do tworzenia dowiązań – twardych (bezpośrednich wskaźników na i-węzeł) lub symbolicznych (odpowiedników skrótów Windowsowych za pomocą flagi -s)."
+  ],
+  [
+    "Algorytm bliźniaków to:",
+    [
+      "Strategia unikania zakleszczeń (Deadlock)",
+      "Rodzaj macierzy RAID 1",
+      "Strategia rozmieszczania pamięci (bez stronicowania)",
+      "Algorytm planowania czasu dysku twardego"
+    ],
+    2,
+    "Algorytm bliźniaków (buddy memory allocation) to technika przydziału bloków pamięci, polegająca na cyklicznym dzieleniu dostępnego wolnego obszaru na połowy, aż do uzyskania bloku optymalnego dla żądania procesu."
+  ],
+  [
+    "Operacja sygnalizuj (w semaforach) może:",
+    [
+      "Całkowicie zakończyć działanie systemu operacyjnego",
+      "Uczynić jakiś proces wykonywalnym (zbudzić go)",
+      "Zablokować jądro przed odczytem dysku",
+      "Nadpisać środowisko ulotne bieżącego wątku"
+    ],
+    1,
+    "Operacja sygnalizuj (V) zwiększa wartość semafora. Jeśli w kolejce semafora czekają (są uśpione) jakieś procesy z powodu wcześniejszego braku zasobów, operacja ta budzi jeden z nich, zmieniając jego stan na wykonywalny (ready)."
+  ],
+  [
+    "Operacja czekaj (zajmij na semaforze) może:",
+    [
+      "Wygenerować podproces potomny",
+      "Zakończyć (zablokować / wstrzymać) proces",
+      "Podnieść priorytet dyspozytora zadań",
+      "Zwolnić pamięć wirtualną pliku stronicowania"
+    ],
+    1,
+    "Zgodnie ze starymi kluczami odpowiedzi bywa określana jako operacja mogąca 'zakończyć' proces (w znaczeniu: przerwać/zablokować jego dotychczasowe wykonywanie), ponieważ pożądany zasób jest zajęty, więc proces trafia do kolejki oczekujących."
+  ],
+  [
+    "W procesorach 80386 występuje tablica stron:",
+    [
+      "Liniowa",
+      "Odwrócona",
+      "Dwupoziomowa",
+      "Drzewiasta w formacie B-Tree"
+    ],
+    2,
+    "W klasycznej, 32-bitowej architekturze procesorów x86 (począwszy od 80386) mechanizm wirtualizacji pamięci bazuje sprzętowo na dwupoziomowej strukturze: głównym Katalogu Stron (Page Directory) oraz Tablicach Stron (Page Tables)."
+  ],
+  [
+    "Zawartość środowiska ulotnego może być zapisana przez:",
+    [
+      "Kompilator podczas linkowania kodu",
+      "Dyspozytora (planistę niskiego poziomu)",
+      "Sprzętowy sterownik klawiatury",
+      "Rejestr bazowy pamięci MFT"
+    ],
+    1,
+    "Gdy procesor przerywa zadanie, fizyczne przełączanie kontekstu (czyli zapisanie stanu rejestrów, liczników – tzw. środowiska ulotnego) realizuje moduł jądra zwany dyspozytorem (dispatcher)."
+  ],
+  [
+    "Która z kolejek może być rotacyjna:",
+    [
+      "Kolejka przerwań niemaskowalnych",
+      "Kolejka drukarki systemowej w spoolerze",
+      "Kolejka procesora (gotowych procesów)",
+      "Kolejka dostępu do pojedynczego i-węzła"
+    ],
+    2,
+    "Kolejka rotacyjna (Round Robin) dotyczy najczęściej przydziału czasu CPU (kolejka procesora). Każdy proces gotowy otrzymuje krótki kwant czasu, po czym jest wywłaszczany i wraca na sam koniec kolejki."
+  ],
+  [
+    "Wpis w katalogu składający się z nagłówka i szeregu atrybutów występuje w systemie plików:",
+    [
+      "ext2",
+      "FAT32",
+      "NTFS",
+      "ZFS"
+    ],
+    2,
+    "System NTFS traktuje absolutnie wszystko, łącznie z meta-danymi katalogów, jako atrybuty. Każdy plik czy folder jest rekordem w głównej tabeli plików MFT (Master File Table), posiadającym określony nagłówek i zbiór przypisanych atrybutów."
+  ],
+  [
+    "Plik zostanie odczytany najszybciej dla systemu plików opartego na:",
+    [
+      "Przydziale indeksowym (i-węzły)",
+      "Przydziale listowym z podwójnym wiązaniem",
+      "Przydziale ciągłym",
+      "Przydziale rozproszonym (chmurowym)"
+    ],
+    2,
+    "Przydział ciągły polega na zapisaniu całego pliku w jednym, nieprzerwanym ciągu fizycznych klastrów na dysku. Dzięki temu głowica dysku HDD nie musi 'skakać' by złożyć plik w całość, co gwarantuje najwyższą możliwą prędkość odczytu sekwencyjnego."
+  ],
+  [
+    "Podczas startu systemu pierwsze pliki systemowe są ładowane przez:",
+    [
+      "Sektor rozruchowy partycji / główny sektor rozruchowy MBR",
+      "Proces systemowy explorer.exe",
+      "Powłokę BASH w trybie interakcyjnym",
+      "Antywirusowy moduł zabezpieczeń jądra"
+    ],
+    0,
+    "Kolejność bootowania zakłada, że najpierw BIOS ładuje malutki kod maszynowy z sektora MBR (Sektor 0), który następnie namierza aktywną partycję, wchodzi w jej pierwszy sektor rozruchowy i dopiero stamtąd ładuje właściwy Bootloader systemu operacyjnego."
+  ],
+  [
+    "W strategii wymiany ze stronicowaniem występują metody:",
+    [
+      "odsyłania na dysk najczęściej używanej strony",
+      "odsyłania na dysk najmniej używanej strony (np. algorytm LRU)",
+      "utrzymywania w RAM wyłącznie uszkodzonych stron",
+      "blokowania dostępu do pliku wymiany (swap)"
+    ],
+    1,
+    "Aby zoptymalizować system, algorytmy zastępowania stron (np. LRU - Least Recently Used / LFU - Least Frequently Used) analizują, która strona pamięci nie była dotykana przez procesor od dawna lub wcale, i to właśnie ją odsyłają na powolny dysk twardy."
+  ],
+  [
+    "Przy prawdopodobieństwie braku strony równym 0,0000003 oraz szybkości dostępu do pamięci i dysku równymi 10ns i 10ms średni czas dostępu do pamięci wynosi:",
+    [
+      "100 ns",
+      "Dokładnie 10 ns",
+      "13 ns",
+      "Ponad 10 milisekund"
+    ],
+    2,
+    "Obliczenia z matematycznego wzoru na Efektywny Czas Dostępu (EAT): Prawdopodobieństwo trafienia w RAM to (1 - 0.0000003), a pudła 0.0000003. Odczyt dysku 10ms to aż 10,000,000ns. Podstawiając: EAT = 10ns + (0.0000003 * 10,000,000ns) = 10ns + 3ns = 13ns."
+  ],
+  [
+    "Fragmentacja wewnętrzna nie występuje dla:",
+    [
+      "Segmentacji",
+      "Stronicowania z TLB",
+      "Tablic dyskowych z bardzo dużymi klastrami",
+      "Zwykłego Stronicowania"
+    ],
+    0,
+    "Segmentacja dopasowuje się do idealnych, deklarowanych rozmiarów bloków programu, więc nie marnuje przestrzeni wewnątrz zablokowanego bloku. Problemem segmentacji jest natomiast powstawanie luk pomiędzy blokami – fragmentacja zewnętrzna."
+  ],
+  [
+    "Co NIE JEST warunkiem koniecznym i wystarczającym do powstania zakleszczenia (Deadlock):",
+    [
+      "Wzajemne wykluczanie zasobów (Mutual Exclusion)",
+      "Tworzenie procesów",
+      "Cykliczne oczekiwanie (Circular Wait)",
+      "Trzymanie zasobu i oczekiwanie na kolejny (Hold and Wait)"
+    ],
+    1,
+    "Samo standardowe powoływanie do życia (tworzenie) nowych procesów w systemie nie wywołuje zakleszczenia. Zakleszczenie generują 4 klasyczne warunki Coffmana (wzajemne wykluczanie, brak wywłaszczeń, trzymanie i czekanie, oraz zamknięte koło oczekiwań)."
+  ],
+  [
+    "i-węzeł (i-node w systemach z rodziny Linux) NIE ZAWIERA:",
+    [
+      "Daty modyfikacji i dostępu do pliku",
+      "Praw dostępu (rwx) dla właściciela i grupy",
+      "Nazwy pliku",
+      "Adresów fizycznych bloków danych na dysku"
+    ],
+    2,
+    "I-węzeł przetrzymuje kluczowe statystyki o pliku, ale NIE trzyma samej jego nazwy tekstowej. Nazwy plików zapisane są o jeden poziom wyżej – są one zawartością bloków danych katalogu, który to z kolei dopiero mapuje nazwę tekstową na numer odpowiedniego i-węzła."
+  ],
+  [
+    "Metodą ciągłego zabezpieczania danych przed ich utratą z powodu awarii dysku twardego jest m.in.:",
+    [
+      "Fragmentacja ciągła partycji z logowaniem",
+      "Pamięć wymiany (SWAP) ulokowana na nośniku USB",
+      "Macierz RAID 5 (a także Mirroring np. RAID 1)",
+      "Powiększanie plików rejestru systemu do limitu gigabajta"
+    ],
+    2,
+    "W systemach zabezpieczających macierz RAID 5 rozkłada pakiety danych oraz tzw. kody parzystości równomiernie pomiędzy wszystkie (minimum 3) fizyczne dyski w grupie. Awaria jednego dysku pozwala odtworzyć dane w locie za pomocą pozostałych kodów parzystości."
+  ],
+  [
+    "Zwyczajowo tablica OFT (lub w notatkach OPT - Open File Table) zawiera maksymalnie limit dla procesu wynoszący:",
+    [
+      "4 wpisy",
+      "32 wpisy ze względu na słowo 32-bitowe",
+      "128 wpisów",
+      "256 wpisów"
+    ],
+    2,
+    "Pojęcie z notatek odnosi się do starych narzutów limitów i rejestrów systemowych, w których z góry deklarowana tablica otwartych z punktu widzenia oprogramowania plików (bądź limit rzadziej wspominanych starych deskryptorów dla trybów mieszanych) posiadała rozmiar pre-definiowany do 128 instancji/wpisów."
+  ],
+  [
+    "Pamięć podręczna (Cache, L1/L2):",
+    [
+      "Służy wyłącznie jako wolna przestrzeń dla sterownika graficznego w 3D",
+      "Zastępuje dysk w przydzielaniu i-węzłów z powodu wielkiej pojemności",
+      "Przechowuje linijki pamięci operacyjnej (Cache lines)",
+      "To oprogramowanie instalowane na platformach Linuxowych by omijać BASH"
+    ],
+    2,
+    "Cache w architekturze sprzętowej procesora nie pobiera danych bajt po bajcie. Transfer z kości RAM zorganizowany jest wokół sztywnych bloków zwanych liniami pamięci podręcznej (cache lines) – najczęściej 64 bajtowych wyrównanych fragmentów danych."
+  ],
+  [
+    "Napis ERRORLEVEL 5 w skrypcie Batch/CMD oznacza, że kod zwrotny (błąd) jest:",
+    [
+      "Zawsze równy idealnie liczbie 0, co oznacza sukces, a 5 zostało zignorowane",
+      "Dokładnie równy 5",
+      ">= 5 (Większy bądź równy pięć)",
+      "Mniejszy niż pięć"
+    ],
+    2,
+    "W systemach opartych o starego DOS'a / Windows CMD zapis z instrukcją IF ERRORLEVEL 5 technicznie uruchomi się i będzie prawdziwy, gdy kod powrotu z polecenia będzie wynosił 5, 6, 7, 8... Oznacza to logiczny warunek >= 5."
+  ],
+  [
+    "Aby odwołać się do parametru (zmiennej) w powłoce systemu Linux używamy znaku:",
+    [
+      "Znaku % przed nazwą",
+      "Znaku $",
+      "Klamry { }",
+      "Znaku wykrzyknika !"
+    ],
+    1,
+    "Zarówno w BASH jak i innych powłokach linuxowych standardem odwoływania się do zapisanej zawartości zadeklarowanych wcześniej zmiennych środowiskowych i własnych jest przedrostek dolara `$`, np. `$HOME` lub `$ZMIENNA`."
+  ],
+  [
+    "Zaczynając transmisję przez kanał (DMA) zawsze:",
+    [
+      "opuszczamy tryb nadzorcy",
+      "wchodzimy do trybu użytkownika",
+      "wchodzimy do trybu nadzorcy (uprzywilejowanego)",
+      "żadne z powyższych"
+    ],
+    2,
+    "Transmisja przez kanał (Direct Memory Access) ingeruje bezpośrednio w sprzętowe zarządzanie pamięcią RAM i szyną systemową. Aby system mógł bezpiecznie zainicjować taką operację bez ryzyka naruszenia ochrony, musi podnieść swoje uprawnienia, wchodząc w tryb nadzorcy."
+  ],
+  [
+    "W strukturze warstwowej podprogram systemowy może odwoływać się do funkcji:",
+    [
+      "tylko i wyłącznie warstwy najwyższej (użytkownika)",
+      "wszystkich warstw wyższych",
+      "wszystkich warstw niższych",
+      "żadnej innej warstwy"
+    ],
+    2,
+    "W klasycznej architekturze warstwowej (w odróżnieniu od pierścieniowej, która ma sztywne limity) kod działający na danej warstwie 'n' może swobodnie korzystać z interfejsów i usług zdefiniowanych we wszystkich warstwach leżących pod nią (od 'n-1' aż do sprzętu)."
+  ],
+  [
+    "Każdy proces ciężki ma własny:",
+    [
+      "tylko obszar pamięci danych i programu",
+      "tylko własny licznik rozkazów i stos",
+      "współdzielony z innymi procesami zestaw rejestrów L1",
+      "wszystkie powyższe (obszar danych, programu, licznik, stos)"
+    ],
+    3,
+    "Proces ciężki (pełnoprawny proces systemowy, a nie pojedynczy lekki wątek) to w pełni wyizolowane środowisko. Otrzymuje on od systemu operacyjnego na własność całą autonomiczną przestrzeń: od kodu i zmiennych, po własny stos wywołań i wskaźnik wykonywanej instrukcji."
+  ],
+  [
+    "W systemie CP/M wiązanie adresów występuje w trakcie:",
+    [
+      "kompilacji",
+      "ładowania programu do pamięci RAM",
+      "wykonywania instrukcji w procesorze",
+      "żadne z powyższych"
+    ],
+    0,
+    "Stary, prosty system operacyjny CP/M (Control Program for Microcomputers) nie posiadał mechanizmów relokacji w locie. Adresy bezwzględne były na sztywno generowane i wiązane z fizyczną pamięcią już na etapie kompilacji pliku wynikowego."
+  ],
+  [
+    "Podczas wykonania podprogramu obsługi przerwania system może:",
+    [
+      "całkowicie sformatować środowisko ulotne bez jego zapisu",
+      "zmienić stan procesu",
+      "zatrzymać na stałe zegar systemowy czasu rzeczywistego",
+      "pominąć zabezpieczenie trybu jądra"
+    ],
+    1,
+    "Przerwanie zmusza system do oceny sytuacji. Jeśli przerwanie poinformowało system np. o zakończeniu wczytywania pliku z dysku, dyspozytor może od razu uaktualnić deskryptor procesu czekającego na ten plik, zmieniając jego stan z 'niewykonywalny' na 'gotowy'."
+  ],
+  [
+    "Haszowaną tablicę stron powszechnie stosuje się w procesorach:",
+    [
+      "8-bitowych i 16-bitowych",
+      "wyłącznie 32-bitowych RISC",
+      "64 bitowych",
+      "w mikrokontrolerach bez wirtualizacji"
+    ],
+    2,
+    "Przy 64-bitowej przestrzeni adresowej, tworzenie standardowych wielopoziomowych tablic stron zajęłoby absurdalną ilość pamięci i czasu na ich przeszukiwanie. Tablice haszowane (Hashed Page Tables) skracają ten proces, mapując adres wirtualny przez funkcję matematyczną (hash) do mniejszej tablicy."
+  ],
+  [
+    "Zawartość deskryptora procesu może i musi być uaktualniana przez:",
+    [
+      "zewnętrzne programy narzędziowe użytkownika",
+      "planistę długoterminowego",
+      "planistę niskiego poziomu (dyspozytora)",
+      "proces potomny (zombie)"
+    ],
+    2,
+    "Przełączaniem kontekstów oraz zmianami stanu procesów z ułamku sekundy na ułamek sekundy zajmuje się dyspozytor (często utożsamiany w tych pytaniach z planistą niskiego poziomu)."
+  ],
+  [
+    "Dla priorytetowej kolejki procesora stosuje się:",
+    [
+      "operację uwolnij zasoby",
+      "ochronę przed głodzeniem procesów (postarzanie)",
+      "strategię LIFO",
+      "żadne z powyższych (w zależności od wariantu klucza egzaminu)"
+    ],
+    1,
+    "W Twoich notatkach raz poprawną odpowiedzią jest 'żadne z powyższych', a raz 'ochrona przed głodzeniem'. Logicznie i technicznie algorytmy priorytetowe MUSZĄ stosować ochronę przed głodzeniem (tzw. starzenie/aging), aby procesy o niskim priorytecie nie zostały na zawsze zablokowane przez ciągły napływ ważniejszych zadań."
+  ],
+  [
+    "W jaki sposób w przypadku stosowania segmentacji ze stronicowaniem adres generowany przez proces zmienia się na adres fizyczny komórki pamięci:",
+    [
+      "logiczny -> liniowy -> fizyczny",
+      "liniowy -> fizyczny -> logiczny",
+      "fizyczny -> logiczny -> offset",
+      "logiczny -> sprzętowy -> abstrakcyjny"
+    ],
+    0,
+    "To klasyczny, dwuetapowy proces w architekturach x86. Najpierw segmentacja tłumaczy adres logiczny z programu na ciągły adres liniowy, a następnie jednostka stronicowania tnie ten adres liniowy i mapuje go na absolutny adres fizyczny w kości RAM."
+  ],
+  [
+    "Małe klastry (jednostki alokacji dysku):",
+    [
+      "zwiększają szybkość odczytu ogromnych plików wideo",
+      "zmniejszają całkowity rozmiar tablic systemowych MFT",
+      "powodują gigantyczne straty pojemności dysku przez fragmentację wewnętrzną",
+      "żadne z powyższych (w kluczu to prawidłowa odp.)"
+    ],
+    3,
+    "Małe klastry optymalizują miejsce (bardzo mała fragmentacja wewnętrzna), ale drastycznie powiększają struktury opisowe dysku (np. FAT/MFT) i mogą spowalniać odczyt bardzo dużych plików. W typowym teście z tego przedmiotu żadna z dostępnych tam zalet nie pasowała, stąd 'żadne z powyższych'."
+  ],
+  [
+    "System plików ext3 w systemie Linux oparty jest architektonicznie o przydział:",
+    [
+      "wsadowy",
+      "ciągły (sekwencyjny)",
+      "indeksowy",
+      "listowy z podwójnym wiązaniem"
+    ],
+    2,
+    "Systemy z rodziny EXT korzystają ze struktury i-węzłów (inodów). Jest to klasyczny przykład przydziału indeksowego – centralny punkt (indeks) przechowuje mapę wskaźników do rozsianych po całym dysku bloków pamięci z danymi pliku."
+  ],
+  [
+    "Efektywny czas dostępu do pamięci (EAT) dla stronicowania dwupoziomowego bez wykorzystania pamięci asocjacyjnej wynosi:",
+    [
+      "EAT = 1 * MAT",
+      "EAT = 2 * MAT",
+      "EAT = 3 * MAT",
+      "EAT = 4 * MAT"
+    ],
+    2,
+    "Bez wsparcia szybkiego bufora (TLB), system musi fizycznie uderzyć do pamięci operacyjnej aż trzy razy: 1) by odczytać katalog stron, 2) by odczytać tablicę stron, 3) by finalnie odczytać żądaną komórkę danych. Czas to 3 x Memory Access Time."
+  ],
+  [
+    "Fragmentacja zewnętrzna występuje przy stosowaniu architektury:",
+    [
+      "Stronicowania",
+      "NTFS Atrybutów Rezydentnych",
+      "Segmentacji ze stronicowaniem",
+      "Segmentacji"
+    ],
+    3,
+    "Ponieważ segmentacja ładuje do pamięci bloki o nieregularnych, różnych długościach, to podczas ich zwalniania w RAM-ie pozostają wolne luki ('dziury'). Z czasem jest ich mnóstwo, ale żadna nie jest na tyle duża, by zmieścić nowy program. To właśnie fragmentacja zewnętrzna."
+  ],
+  [
+    "Wpisy w głównej tabeli MFT (Master File Table) systemu NTFS zawierają:",
+    [
+      "i-węzły uniksowe",
+      "wyłącznie kopie zapasowe uszkodzonych sektorów",
+      "atrybuty plików",
+      "logi systemowe jądra ntoskrnl.exe"
+    ],
+    2,
+    "W logice systemu NTFS absolutnie wszystko w pliku jest jego atrybutem (nazwa, data utworzenia, uprawnienia, a nawet same jego dane). Tabela MFT to gigantyczna baza danych przechowująca właśnie zestawy tych atrybutów dla każdego pliku na wolumenie."
+  ],
+  [
+    "Macierz dyskowa bez żadnej nadmiarowości chroniącej przed awarią to macierz typu:",
+    [
+      "RAID 1 (Mirroring)",
+      "RAID 5 (Parzystość)",
+      "RAID 6 (Podwójna parzystość)",
+      "RAID 0 (Stripping)"
+    ],
+    3,
+    "RAID 0 służy wyłącznie zwiększeniu wydajności. Rozbija on (stripping) bloki danych naprzemiennie na wszystkie dyski. Brak tu jakiejkolwiek kopii zapasowej czy sum kontrolnych – padnięcie jednego z dysków trwale niszczy całą macierz."
+  ],
+  [
+    "Prawdopodobieństwo zakleszczenia (deadlock) pomiędzy procesami można zmniejszyć stosując:",
+    [
+      "wywłaszczanie semaforów",
+      "ochronę danych z użyciem zamka i klucza",
+      "spooler urządzeń (np. wydruku)",
+      "wyłączanie mechanizmu stronicowania pamięci"
+    ],
+    2,
+    "Najczęstszą przyczyną zakleszczeń są niepodzielne urządzenia fizyczne (np. drukarka, napęd). Wprowadzenie spoolera (buforowania zadań do plików tymczasowych na dysku) tworzy wirtualne, bezpieczne urządzenie dla procesów, co praktycznie eliminuje ryzyko ich bezpośredniego zderzenia na zasobie."
+  ],
+  [
+    "Zastosowanie puli wątków/prac (Thread Pool / Job Pool):",
+    [
+      "eliminuje zjawisko szamotania z powodu braku RAM",
+      "pozwala by dwa procesy jednocześnie zapisywały do jednego pliku",
+      "przyspiesza działanie pamięci podręcznej procesora",
+      "żadne z powyższych (Pula oszczędza czas na ciągłe tworzenie/zabijanie procesów w tle)"
+    ],
+    3,
+    "Pula zasobów czy procesów to koncepcja trzymania 'w pogotowiu' przygotowanych, pustych wątków czekających na zadania. Nie chroni to przed problemami wymienionymi w błędnych odpowiedziach (szamotanie, wyścigi zapisu), stąd poprawna odp. to 'żadne z powyższych'."
+  ],
+  [
+    "Aby odwołać się w skrypcie BASH do nazwy samego skryptu używamy parametru:",
+    [
+      "$1",
+      "$!",
+      "$#",
+      "$0"
+    ],
+    3,
+    "W systemach unixowych zmienna `$0` wewnątrz skryptu przechowuje ciąg znaków (ścieżkę/nazwę), pod jakim skrypt ten został wywołany z linii poleceń. Argumenty podane przez użytkownika zaczynają się od `$1` w górę."
+  ],
+  [
+    "Deskryptory segmentów są umieszczane w pamięci:",
+    [
+      "tylko trwałej EPROM",
+      "tylko na pliku wymiany SWAP",
+      "asocjacyjnej i operacyjnej",
+      "żadne z powyższych"
+    ],
+    2,
+    "Tablice GDT/LDT trzymające deskryptory znajdują się naturalnie w głównej pamięci operacyjnej (RAM). Jednak ze względu na potrzebę ekstremalnie szybkiego dostępu, ostatnio używane deskryptory ładuje się też sprzętowo do pamięci asocjacyjnej procesora (TLB)."
+  ],
+  [
+    "Struktura klient-serwer zaimplementowana w rdzeniu systemu operacyjnego to:",
+    [
+      "jedyna struktura umożliwiająca przesyłanie komunikatów",
+      "implementacja protokołów sieciowych w systemie (komunikacja przez wiadomości/komunikaty)",
+      "sposób dostępu do danych na serwerach WWW",
+      "żadna z powyższych"
+    ],
+    1,
+    "W mikrokodzie (np. Mach, Windows NT) struktura klient-serwer nie dotyczy Internetu, lecz oddzielenia jądra od usług. Aplikacje (klienci) oraz usługi systemowe (serwery np. serwer plików) komunikują się ze sobą bezpiecznie, przesyłając zlecenia w formie sformalizowanych 'komunikatów' przez mikrojądro."
+  ],
+  [
+    "Jaką nazwę nosi przerwanie sprzętowe, które musi być obsłużone w absolutnie każdej sytuacji:",
+    [
+      "Maskowalne",
+      "Niemaskowalne",
+      "Zamaskowane",
+      "Wyjątek oprogramowania (Exception)"
+    ],
+    1,
+    "Przerwanie niemaskowalne (NMI - Non-Maskable Interrupt) nie może zostać zignorowane (zablokowane) przez ustawienie flag w procesorze. Służy ono do powiadamiania o katastrofalnych awariach sprzętu (np. błąd kości pamięci, awaria napięcia zasilacza)."
+  ],
+  [
+    "Upakowanie pamięci (memory compaction) jest stosowane, aby:",
+    [
+      "odciążyć system obsługi przerwań dyskowych",
+      "zmniejszyć straty wywołane fragmentacją wewnętrzną",
+      "otrzymać ciągły duży blok wolnej pamięci (unikać fragmentacji zewnętrznej) / Żadne z powyższych",
+      "uporządkować deskryptory procesów w tabelach"
+    ],
+    2,
+    "Gdy pamięć RAM ulega drastycznej fragmentacji ZEWNĘTRZNEJ (wiele małych pustych dziur miedzy procesami), system wymusza 'upakowanie' – przesuwa wszystkie procesy w jedno miejsce, tworząc na końcu wielki, ciągły blok na nowy program. W starych kluczach często ukrywane pod odp. 'żadne z powyższych'."
+  ],
+  [
+    "Wiązanie adresów w trakcie kompilacji występuje natywnie dla archaicznych plików w systemie:",
+    [
+      "Windows 2000 (.exe)",
+      "CP/M (oraz wariant .COM pod stary DOS) / Często odp: Żadne z powyższych",
+      "Unix System V",
+      "Linux Debian"
+    ],
+    1,
+    "Generowanie bezwzględnego (statycznego) kodu w trakcie samej kompilacji to przeżytek (zakłada, że z góry wiemy, gdzie dokładnie w fizycznej pamięci program będzie rezydował). Powszechnie stosowane to było w pierwszych systemach takich jak CP/M."
+  ],
+  [
+    "Semafory wykorzystuje się do synchronizacji dostępu do zasobów, dla których:",
+    [
+      "nie istnieje żaden limit równocześnie odwołujących się wątków",
+      "limit równocześnie odwołujących się wątków jest równy ogólnej liczbie wątków w systemie",
+      "istnieje pewien ściśle określony limit równocześnie odwołujących się wątków",
+      "wymagane jest zjawisko aktywnego czekania w pętli nieskończonej"
+    ],
+    2,
+    "Semafor zliczający to najprostszy 'strażnik' puli. Inicjujemy go na konkretną wartość (np. 5, jeśli mamy 5 drukarek). Limit pozwala by najwyżej 5 procesów dostało zasób – szósty odwołujący się wątek zostanie zawieszony w kolejce przez operację 'czekaj'."
+  ],
+  [
+    "Jaki mechanizm sprzętowy umożliwia bezpośredni dostęp do pamięci operacyjnej z całkowitym pominięciem procesora głównego:",
+    [
+      "Dyspozytor jądra",
+      "Stos wywołań wirtualnych",
+      "Wykonywanie wyjątków (Exceptions)",
+      "Mechanizm DMA (Kanał) / Żadne z powyższych"
+    ],
+    3,
+    "Odp. z klucza w teście to 'żadne z powyższych', ponieważ brakowało w opcjach mechanizmu DMA (Direct Memory Access) bądź starego określenia 'Kanał'. DMA pozwala zewnętrznym kartom czy dyskom przerzucać masywne pakiety danych do RAM, odciążając rdzeń CPU."
+  ],
+  [
+    "W procesorach Pentium występuje tablica stron:",
+    [
+      "Haszowana",
+      "Grupowanych",
+      "Odwrócona",
+      "Dwupoziomowa",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Podstawową formą wirtualizacji pamięci w architekturze IA-32 (używanej m.in. w klasycznych procesorach Pentium) jest dwupoziomowa struktura stronicowania składająca się z Katalogu Stron i podrzędnych Tablic Stron."
+  ],
+  [
+    "Przy prawdopodobieństwie braku strony równym 0.000001 oraz szybkości dostępu do pamięci i dysku równym 10 ns i 10 ms średni czas dostępu do pamięci wynosi:",
+    [
+      "1 µs",
+      "10 µs",
+      "10 ns",
+      "20 ns",
+      "100 ns"
+    ],
+    3,
+    "Wyliczenie na podstawie wzoru na Efektywny Czas Dostępu: EAT = (1-p)*T_mem + p*T_dysk. Podstawiając: EAT = (0.999999)*10ns + (0.000001)*10,000,000ns. Daje to około 10ns + 10ns = 20ns."
+  ],
+  [
+    "Adres liniowy jest tożsamy z adresem:",
+    [
+      "Logicznym w segmentacji",
+      "Logicznym w stronicowaniu",
+      "Fizycznym w segmentacji ze stronicowaniem",
+      "Fizycznym w stronicowaniu",
+      "Żadne z powyższych"
+    ],
+    3,
+    "W środowiskach wykorzystujących wyłącznie mechanizm stronicowania (bez segmentacji), generowany przez procesor adres traktowany jest jako liniowy i ulega bezpośredniemu przemapowaniu w jednostkach MMU na twardy adres fizyczny RAM."
+  ],
+  [
+    "Zjawisko głodzenia procesów może najpewniej wystąpić, gdy kolejka procesora jest:",
+    [
+      "Kolejką \"pierwszy przyszedł, pierwszy zostanie obsłużony\" (FIFO)",
+      "Kolejką rotacyjną (Round Robin)",
+      "Kolejką priorytetową",
+      "Kolejką ze sprzężeniem zwrotnym",
+      "Żadne z powyższych"
+    ],
+    2,
+    "Czysty system priorytetowy niesie ze sobą ogromne ryzyko głodu. Procesy o najniższym priorytecie nigdy nie dostaną czasu rdzenia, jeśli dyspozytor będzie nieustannie bombardowany znacznie ważniejszymi procesami systemowymi."
+  ],
+  [
+    "Dynamiczny ciąg działań wykonywanych przez jednostkę centralną to:",
+    [
+      "Wątek",
+      "Program",
+      "Kod źródłowy",
+      "Kod wynikowy",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Zgodnie z klasycznymi definicjami, dynamicznym ciągiem działań ładującym kod wynikowy i korzystającym z zasobów jest z definicji Proces. Skoro brakuje go na liście A-D, to zgodnie z kluczami, odpowiedzią wymuszoną jest \"Żadne z powyższych\"."
+  ],
+  [
+    "Strukturę składającą się z danych, funkcji dostępu i kodu inicjalizującego nazywa się:",
+    [
+      "Semaforem",
+      "Dyspozytorem",
+      "Deskryptorem",
+      "Monitorem",
+      "Żadne z powyższych"
+    ],
+    3,
+    "Monitor to elegancki konstrukt programistyczny do bezpiecznej synchronizacji wielowątkowej. Zamknięte, prywatne dane monitora mogą być modyfikowane wyłącznie przez wywołanie zadeklarowanych w nim publicznych procedur dostępowych."
+  ],
+  [
+    "Utrata miejsca na dysku przy stosowaniu dużych klastrów (jednostek alokacji) wynika z:",
+    [
+      "Wzrostu rozmiarów katalogów",
+      "Wzrostu rozmiaru tablicy FAT",
+      "Fragmentacji wewnętrznej",
+      "Fragmentacji zewnętrznej",
+      "Defragmentacji plików"
+    ],
+    2,
+    "Gdy obszar klastra wynosi 32 KB, a system musi fizycznie zapisać na dysk plik o wielkości np. 2 KB, zajmuje on cały zadeklarowany obszar bloku. Pozostałe wolne w środku 30 KB to tak zwana i nie do odzyskania strata powodowana zjawiskiem fragmentacji wewnętrznej."
+  ],
+  [
+    "W strategii rozmieszczania ze stronicowaniem występują metody:",
+    [
+      "Odsyłania na dysk najdawniej używanej strony",
+      "Odsyłania na dysk najmniej używanej strony",
+      "Odsyłania na dysk najdawniej załadowanej strony",
+      "Wszystkie poprawne",
+      "Żadne z powyższych"
+    ],
+    4,
+    "To klasyczne, podchwytliwe pytanie z testu. Słowo 'rozmieszczanie' przy stronicowaniu nie ma na ogół logicznego znaczenia, a podane opcje (A, B, C) dotyczą strategii WYMIANY/ZASTĘPOWANIA stron RAMu na dysk SWAP, a nie ich rozmieszczania. Właściwa odpowiedź to Żadne z powyższych."
+  ],
+  [
+    "Co stanie się z prawami dostępu (uprawnieniami) do pliku po przeniesieniu go z partycji NTFS na partycję FAT:",
+    [
+      "Zostaną przeniesione w formie zaszyfrowanej",
+      "Nie zostaną przeniesione (tylko znikną w procesie)",
+      "Zostaną ustawione na \"nie zezwalaj na dostęp\"",
+      "System spyta o ponowne przypisanie praw w wierszu poleceń",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Historyczny klucz podaje tutaj opcję 'Żadne z powyższych' z tego powodu, że FAT32 ze względu na swą archaiczną specyfikację absolutnie w ogóle nie obsługuje list Access Control List (ACL) wywodzących się z wariantów NTFS. Skopiowanie pliku trwale czyści całą siatkę jego pierwotnych uprawnień."
+  ],
+  [
+    "Ile możliwych partycji podstawowych można technicznie utworzyć na jednym fizycznym dysku twardym pracującym na systemie MBR:",
+    [
+      "16",
+      "8",
+      "4",
+      "2",
+      "Bez ograniczeń"
+    ],
+    2,
+    "Standardowa, stara tabela partycji MBR (Master Boot Record) limituje opisy woluminów do bardzo małego obszaru na samym początku dysku zerowego, mieszcząc dokładnie cztery unikalne opisy partycji pierwotnych."
+  ],
+  [
+    "Algorytm bankiera to:",
+    [
+      "Algorytm unikania zakleszczeń",
+      "Strategia rozmieszczania bez stronicowania",
+      "Metoda ochrony danych z użyciem zamka i klucza",
+      "Sposób zapisu na macierzy z dyskiem lustrzanym",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Opracowany w ubiegłym wieku przez wybitnego Edsgera Dijkstrę algorytm ten symuluje zachowania procesów. Przyznaje procesom prawa do zasobów tylko wtedy, gdy na 100% nie spowoduje to w przyszłości groźnej sytuacji wzajemnego paraliżu systemu operacyjnego (Dead-Lock / Zakleszczenia)."
+  ],
+  [
+    "Metodą uruchomienia programów większych niż cała dostępna pamięć operacyjna, w systemie bez używania wirtualnego SWAP (pamięci wirtualnej), jest:",
+    [
+      "Duplexing (Raid przestrzeni binarnej)",
+      "Nakładkowanie",
+      "Stronicowanie jednowarstwowe",
+      "Segmentacja o zmiennej wartości",
+      "Żadne z powyższych"
+    ],
+    1,
+    "Tak zwane 'Overlays' (Nakładki). Gdy brakło pamięci z przydziału np. bazowego DOSu wynoszącego tylko marne 640 KB, program musiał inteligentnie nadpisywać własne instrukcje, samemu zczytując moduły graficzne czy gry po kawałkach do bardzo małego bufora, wyrzucając po drodze te już zakończone i niepotrzebne."
+  ],
+  [
+    "Pamięć asocjacyjna:",
+    [
+      "Przechowuje całe strony ostatnio zapisane na twardym nośniku",
+      "Przechowuje deskryptory ostatnio używanych stron",
+      "Zawiera krytyczną konfigurację komputera w czasie jego wyłączenia i skoki napięcia prądu (BIOS)",
+      "Przechowuje ostatnio używany wynik binarny instrukcji z L2",
+      "Jest to inna nazwa pamięci podręcznej typu L3"
+    ],
+    1,
+    "Pojęcie pamięci asocjacyjnej z punktu widzenia pracy operacyjnej odnosi się tu wprost do elementu sprzętowego znanego jako TLB. Ten wybitnie szybki obszar w rdzeniu ma kluczowe zadanie pamiętania, co zostało przetłumaczone na wyjściowy fizyczny adres operacyjny z siatki stron na dysku."
+  ],
+  [
+    "Nawiasy kwadratowe \"[ ]\" w powłoce BASH służą między innymi do:",
+    [
+      "Zastąpienia wywołania klasycznego polecenia 'test'",
+      "Poruszania się po wielkiej historii wydawanych wcześniej poleceń",
+      "Dziedziczenia w klasach i strukturach wewnętrznego skryptu Basha",
+      "Dziedziczenia z klas wyciągniętych poza środowiskiem",
+      "Żadne z powyższych"
+    ],
+    0,
+    "Aby składnia w starszych bashowych pętlach i środowiskach była logiczna i łatwa do czytania (zamiast `if test A > B`), posługiwano się ukrytym poleceniem warunkowym ukrytym pod pojedynczym znakiem graficznym lewego nawiasu `[ `."
+  ],
+  [
+    "Szamotanie występuje gdy:",
+    [
+      "Dwa procesy jednocześnie odwołują się do tych samych zasobów w rejonie krytycznym",
+      "W kolejce do zasobów czeka zbyt wiele wywołanych z uśpienia nowych procesów",
+      "W kolejce szybkiego procesora jest zbyt wiele procesów o najniższym zadeklarowanym priorytecie",
+      "Nie występuje takie zjawisko sprzętowe ani programowe",
+      "Żadne z powyższych"
+    ],
+    4,
+    "W starym notatniku to celowa pułapka. Prawdziwa odpowiedź (tłumacząca, że to zjawisko katastrofy spowalniającej system poprzez wieczne pompowanie z zatorami pliku wymiany dyskowego z uwagi na fizyczne braki w kości RAM zamiast działania aplikacji) nie znajduje się tutaj na spisie w wariantach A-D."
+  ],
+  [
+    "Upakowanie pamięci jest wymuszone przez i stosowane głównie jako obejście i łatanie usterki:",
+    [
+      "Przerwanych awaryjnie w tle systemu sterowników cykli obsługi przerwań dysków SCSI",
+      "Głęboką fragmentację wewnętrzną w architekturach stronicowania",
+      "Błędną synchronizację dwóch bliskich wątków trybu Ring 3 na macierzy plików NTFS",
+      "Stronicowanie za pomocą jednowarstwowej siatki odwróconej",
+      "Żadne z powyższych"
+    ],
+    4,
+    "Odpowiedź A-D znowu są błędne. System operacyjny przesuwa w gęste pakiety (upakowuje) bloki z działającymi programami, aby zgarnąć wielkie wolne poletko pamięci u samego dołu ramu eliminując wadę tak zwanej Fragmentacji Zewnętrznej. W tym wariancie brakowało tej odpowiedzi."
+  ],
+  [
+    "Charakterystyczne dla struktury klient-serwer systemu operacyjnego jest:",
+    [
+      "Przesyłanie komunikatów",
+      "Przesyłanie pakietów przez protokół zdalny TCP/IP",
+      "Przesyłanie plików masowych binarnych poprzez wywołanie spoolera sprzętowego z drukarki",
+      "Wszystkie odpowiedzi są w połowie sprzętowo uznawane za poprawne operacyjnie ze względu na tryb sieci",
+      "Żadna z powyższych"
+    ],
+    0,
+    "W strukturze architektury operacyjnej z izolacją na rdzeniu opisywane moduły udające klasyczną serwerową sieć tak naprawdę nie korzystają z internetowych gniazdek – rdzeń mikroukładu przyjmuje jedynie komendę, odbierając IPC, po czym niesie wiadomość ze środowiska wyżej dalej samemu rozdzialając Przesyłanie Wewnętrznych Komunikatów operacji wywołaniom z trybu API."
+  ],
+  [
+    "Podprogram obsługi przerwania musi z powodu zachowania stabilnego wielowątkowego przełączania na rdzeniu fizycznym sprzętowo zabezpieczyć bezwzględnie:",
+    [
+      "Adres powrotu na stosie w rejestrze SP",
+      "Rejestry główne i logiczne procesora z ALU dla zmiennych w środowisku wywłaszczanym",
+      "Kopie zmienne dla całego procesu, któremu fizycznie przerwano prace w ułamku z sekundy",
+      "Semafory i stan procesów wymuszających tryb wymiany wywłaszczeniowej w tle pętli dyspozytorskiej jądra",
+      "Wszystkie powyższe"
+    ],
+    4,
+    "Wygenerowanie trybu wyjątku od awarii dysku przerwie w brutalny sprzętowy sposób działanie gry czy przeglądarki użytkownika, dlatego, zanim podejmie prace naprawcze (czyszcząc flagi przerwaniowe sprzętowe) zapisze perfekcyjny do ostatniego trzymanego pinu i stanu w pamięci podręcznej rejestru obraz zamrożony."
+  ],
+  [
+    "Wiązanie adresów w locie w tak zwanym powolnym, archaicznym procesie ładowania programu do fizycznej tablicy występuje w ubiegłowiecznym systemie jednozadaniowym:",
+    [
+      "Linux z modułowym kernelem do wersji 1.1",
+      "Z prekompilowanym CP/M z plikami w modelu COM",
+      "Windows Vista w 32-bit",
+      "System MS DOS",
+      "Żadne z powyższych nie posiada adresowania tego wektora i formatowania w ładowarce pętli"
+    ],
+    3,
+    "Gdy dawniej wywoływałeś .EXE pod czarnym ekranem DOS-u na stacji dyskietek, kompilator zapisywał te polecenia jako formaty relokowalne (skoki po zmiennych, np. + 20). System wgrywając dyskietkę do kości decydował jaki przydzielić wolny kawałek bazy zerowej od której program mógł działać bez błędu nadpisując flagi z góry do użycia RAM."
+  ],
+  [
+    "Podczas długich wywołań przesyłu bloków na kanał bezpośredniego dostępu pamięci (DMA) procesor odcięty sztywno bez wywłaszczenia od magistrali ramu komputera może fizycznie odwoływać się dalej do:",
+    [
+      "Pamięci głównej operacyjnej komputera",
+      "Pamięci stałej typu Read Only Memory ROM w architekturze starszej na zworkach BIOSu",
+      "Niezależnej i wpiętej dla samego modułu L1/L2 bardzo elitarnej Pamięci Notatnikowej",
+      "Urządzeń odciętych ze strefy po mostku peryferiów urządzeń wej / wyj ze stanami wait-state przerw",
+      "Z braku zasilania do potoków wektorowych nie może odwoływać się operacyjnie do powyższych w trybie pełnego wykluczenia"
+    ],
+    2,
+    "DMA oszczędza gigantyczny ładunek prądu i siły procesora wyrzucając zadania ładowania wielkich gier ramkami. Skoro DMA monopolizuje sobie magistrale, rdzeń zostaje zdany tylko na odcięty zasób bloku bufora na kości w obudowie i przelicza potoki z cache nie potrzebując RAMu."
+  ],
+  [
+    "W procesorach z rodziny wdrożonych serii modeli x86 o oznaczeniu generacyjnym Intel 80386 dla trybu z rozszerzonym trybem stronicowania występuje fabrycznie fizyczna tablica stron będąca w topologii o układzie:",
+    [
+      "Płaska i liniowa jednopoziomowa pod wywołania 16 bit",
+      "Rozbijająca bity do przesunięcia i strony załatwiająca z rejestru tryb jako klasyczna Dwupoziomowa",
+      "Rozproszona klastrowana w rejonie przerwań magistral sieciowych z token-ring",
+      "Mapująca wirtualnie przez funkcje z potężnego rdzenia do tablic jako opisywana w literaturze struktura Odwrócona",
+      "Żadna z powyższych jako nowinka technologiczna w segmencie z braku zaimplementowanego układu Paging"
+    ],
+    1,
+    "Pojedyncza tabela na tamte lata wżarła by dla 4 GB dysków z zapisu 32 bity całe ponad 4 Megabajty ciągłego bloku dla jednego procesu użytkownika! Generacja podzieliła więc to sztywno na układ dwustopniowy - Page Directory na początku dla ogółów dzieli na zrzucone tablice i w końcu dane. "
+  ],
+  [
+    "Wartość zablokowanego z ujemną siłą zmiennej chroniącego algorytmu semafora może bez wywłaszczania uśpionych zadań w warunkach brzegowych być w trakcie cykli odczytana wprost wywołaniem przez:",
+    [
+      "Proces wyższy rangą w absolutnie dowolnym wybranym dla przerwania maskowalnego wolnym od odświeżania momencie",
+      "Proces wyłącznie z punktu czasu cyklu fizycznego i programowego otwierania dostępu deskryptora do semafora w pętli inicjalizującej od góry",
+      "Tylko z punktu przywilejów systemu nadzorcy operacyjnego w pętli dyspozytorskiej",
+      "Przez wymuszenie i użycie jako argumentu zmiennej proces przekazując żądanie stosując odwołanie do przerwania wyjątkowego systemu operacyjnego z Ring3 pod Ring0",
+      "Żadne z powyższych. Semafor na wyciągnięcie zmiennej odczytywania licznika ma charakter w informatyce całkowicie skryty od API pod zamek i chroniony atomową transakcją pod P oraz V (zajmij/odblokuj)."
+    ],
+    4,
+    "Semafor nie jest w programowaniu flagą z wyciąganiem na tablicę pod zmienną do używania jako np. warunek pętli pisać: while(Semafor==1). On musi pozostać na szczeblu kompilacji nietykalny. Po co ryzykować wyścig? Chcesz użyć - rezerwuj z opóźnieniem w kolejce atomowo komendę zajmij w procedurze p."
+  ],
+  [
+    "Wątek rozpatrując do form plików wykonywalnych ze swoim obszarem zrzutu cykli jako abstrakcja architektoniczna z programowania jest tworem który:",
+    [
+      "Zawsze jest do zatrzymania z zamrożonym stałym adresem liniowym co czyni go w ujęciu statycznym jako ciąg",
+      "Dynamicznie alokuje czas z przelicznikami na rdzeniu jako byt z założenia wykonawczy",
+      "Zostaje dla powłoki po przejściu zamrożenia dyspozytorem określany jako byt statyczny albo dynamiczny w zależności od cykli bieżącego zamrożonego w swap stanu po zapisie z flagą na zablokowany",
+      "Zgodnie z koncepcjami maszyn stanów w Turingu twór z programu jako wektor nie jest do policzenia operacji i nie zostaje zdefiniowany jako byt ani statyczny i tym bardziej absolutnie ani dynamiczny",
+      "Dzieli flagę o stałej pojemności w kodach instrukcji i w locie dlatego ma taki sam dziedziczony po bloku główny określony stan jako domena programu ładującego."
+    ],
+    1,
+    "Program to martwy, statyczny zbiór poleceń zapisanych dla dysku w kodach wynikowych. Wątek wewnątrz procesu (podobnie jak on sam), ulega ciągłym i szybkim metamorfozom – zmienia zmienne, skacze poprzez linie i alokuje od systemu wolny RAM, więc jest ze swojej natury tworem absolutnie działającym – dynamicznym."
+  ],
+  [
+    "Problem głodzenia procesów (stan paraliżu przez wstrzymanie w dół zadań podrzędnych przez nieskończony zator zadawanych w pętli na rdzeń krytycznych procesów od nadzoru dyspozytora) dla systemów o priorytetach eliminuje z włączeniem w trybie natywnym mechanizmów planisty stosując domyślnie tryb przez:",
+    [
+      "Cykle z kolejką wymuszoną i puszczoną bez warunków pobocznych czyli typową rotacyjną sprawiedliwą wymianę wywłaszczania o nazwie z architektury dla procesu",
+      "Dokładnie wrzuconą i chronioną sprzętem kolejkowaniem twardo zablokowaną priorytetową kolejkę priorytetów z góry bez przerw procesu w kolejności wywoływań",
+      "Rozdzielone stosy na tablicach procesów od wywołania w asynchronicznym włączanym przez sterownik przemyconym cyklu blokad od magistrali dyskowych na port I/O systemów pod przerwaniem z klawiatury",
+      "Sekcje o blokadzie tak zwanym monitorze sprzętowym i bloku ochrony danych na wycinki w strefach chronionych zasobów i blokady zmiennej krytycznej programu w komórce z błędem zapisu",
+      "Żadne z powyżej wymienionych na wykładach z uczelni od opcji wyeliminowania uciążliwego zakleszczenia dla zjawiska algorytmów z procesów nie łagodzi i nie naprawia z wyłączeniem w ogóle całkowicie takich blokad ze strony użytkownika."
+    ],
+    0,
+    "Round Robin. Wprowadzając równe kwanty ułamków na mikrosekundę i odsyłając z dołu wyrzucony siłą po braku pracy ukończonej na samym dołem powrotem z blokad kolejki wątek - uzyskujemy z algorytmu sprawiedliwy obieg zamknięty, więc wszystko co żyje dla OS-u zagra po pewnym drobnym czasie swoją role z procesorem u góry (brak tak niszczącego u nas głodu)."
+  ],
+  [
+    "W jaki sposób i formą formatową w przypadku wdrożenia od dołu systemowego ze stosowania trybu opartego wyłącznie na tryb od samej segmentacji logiczny abstrakcyjny wektorowy z wewnątrz kodu format na adres generowany w programie operacyjnie przez proces z warstwy użytkownika na szynę zostaje i zmienia cyklem powłoki od systemu sprzętowego na formę adresu uderzając do ram, dzięki wektorowi w tablicy MMU można uderzyć i odwołać finalnie się już fizycznie do twardo osadzonej wejściowo konkretnej małej bloku tablicy w krzem na komórki pamięci RAM? (pominięcie trybu mieszania Liniowego ze wsparciem stronicowania u Intelowskiej wersji architektury):",
+    [
+      "Logiczny -> fizyczny z wywołaniem flagą rejestru CS:IP i podział na strony liniowy na sam koniec do magistrali bitowej u dołu (Z wariantów i układów ze sztywnego opisu trybu)",
+      "Liniowy płaski model domyślny z wymuszeniem z jądra formatowania przesuwnego zejściem stopnia w tył do trybu segmentowanego formatu od ujęcia zwrotnego logiczny przed barierą zapisu",
+      "Fizyczny jako wyznacznik zerowy u ujęcia powrotu -> następnie skok liniowy od rzędu pojęć dyspozytora do formy w wirtualnej tablicy jako docelowy na wyjściu format uciętym wzorem przez procesory do postaci jako model -> i jako ostatecznie powrotny w abstrakcji powłoki wektor z wskaźnikiem po offset adresowany w modelu z opisu logiczny do użycia pod system programisty",
+      "Z poziomu dwustopniowego prosto od punktu rejestru CS jako wskaźnik pod adres segmentowanej wektorem w formacie wprost potocznie opisywany systemowo w literaturze jako typowy format -> docelowo bezpośrednio w dół omijając i rezygnując z potężnego modelu liniowego do zmapowanego bajt w wektor do przeliczenia w fizyczny na płytce bez stronicowania",
+      "Żadne ze zmyślonych powłok formatu powyższych z opisu bazy danych na wyższych wektorowych w formach u złożeń wyżej od trybu segmentowanego."
+    ],
+    3,
+    "Brak włączenia strony. System dzieli i odlicza za pomocą ułożonej i sprawdzonej o prawach na maskach wielkości bazy adres. Z segmentu od góry z kodu o wielkości od 0 z offsetem wywołanie przelicza sumę pod twardy bajt z pliku na fizycznej płycie i wysyła piny przez płytę (adres logiczny -> fizyczny)."
+  ],
+  [
+    "Deskryptor segmentu jest (w mikroprocesorze 80386):",
+    [
+      "ośmiobitowym rekordem umieszczanym w tablicy GDT lub LDT",
+      "ośmiobajtowym rekordem umieszczanym w tablicy GDT lub LDT",
+      "szesnastobitowym rekordem umieszczanym w tablicy GDT lub LDT",
+      "szesnastobajtowym rekordem umieszczanym w tablicy GDT lub LDT"
+    ],
+    1,
+    "W 32-bitowej architekturze x86 (od procesora Intel 80386) każdy pojedynczy deskryptor segmentu zajmuje w tablicach systemowych GDT (Globalnej) lub LDT (Lokalnej) dokładnie 8 bajtów (64 bity), przechowując m.in. adres bazowy, limit i flagi praw dostępu."
+  ],
+  [
+    "W trybie wirtualnym (chronionym) powiązanie między selektorem a wyznaczonym przezeń segmentem jest zrealizowane przez:",
+    [
+      "deskryptor segmentu",
+      "selektor przestrzeni logicznej",
+      "adres efektywny",
+      "wskaźnik adresowy"
+    ],
+    0,
+    "Selektor to tak naprawdę tylko indeks (numer), który proces przekazuje procesorowi. Na jego podstawie procesor wyszukuje odpowiedni deskryptor segmentu w tablicy (zawierający faktyczny adres początku segmentu w pamięci), co wiąże selektor z fizycznym obszarem."
+  ],
+  [
+    "Instrukcja call w plikach wsadowych systemu Windows/DOS:",
+    [
+      "wywołuje wyłącznie systemowe pliki binarne (.exe)",
+      "wywołuje podprogram",
+      "umożliwia wywołanie innego pliku wsadowego",
+      "żadne z powyższych"
+    ],
+    2,
+    "Użycie komendy `call skrypt2.bat` wewnątrz pliku `skrypt1.bat` pozwala na wykonanie drugiego skryptu, a co najważniejsze – po jego zakończeniu, na powrót i kontynuowanie działania pierwszego skryptu (w przeciwieństwie do zwykłego wpisania jego nazwy)."
+  ],
+  [
+    "Przypisanie wartości zmiennej powłoki w systemie linux jest wykonywane za pomocą operatora:",
+    [
+      ":=",
+      ">",
+      "=>",
+      "="
+    ],
+    3,
+    "W powłokach uniksowych (np. Bash) operatorem przypisania jest standardowy znak równości `=`. Należy pamiętać, że nie używa się wokół niego spacji (np. `ZMIENNA=wartosc`)."
+  ],
+  [
+    "W Windows 2000 (i nowszych) możliwe jest warunkowe przetwarzanie poleceń. Operator && oznacza warunkowe wykonanie poleceń, gdzie:",
+    [
+      "drugie polecenie nie jest wykonywane nigdy",
+      "drugie polecenie jest wykonywane tylko wtedy, gdy pierwsze zakończy się poprawnie",
+      "drugie polecenie jest wykonywane tylko wtedy, gdy pierwsze zakończy się błędem",
+      "oba polecenia są wykonywane jednocześnie"
+    ],
+    1,
+    "Operator `&&` to tzw. logiczne AND (i). Prawa strona wykona się wyłącznie pod warunkiem, że lewa strona zwróciła kod sukcesu (ERRORLEVEL = 0). W przeciwnym razie instrukcja jest przerywana."
+  ],
+  [
+    "Bootstrap loader (program ładujący) to:",
+    [
+      "program umożliwiający zmianę parametrów konfiguracji systemu z poziomu BIOS",
+      "program testujący sprawność komponentów komputera",
+      "program do wymiany danych pomiędzy mikroprocesorem i kością RAM",
+      "procedura szukająca możliwego do załadowania systemu operacyjnego najpierw w stacji dysków, a później na dysku twardym"
+    ],
+    3,
+    "Mały program ładujący jest wywoływany przez BIOS w celu odnalezienia dysku, z którego można przeprowadzić proces rozruchu komputera. Czyta on sektor główny (MBR) i przekazuje kontrolę właściwemu ładowaczowi systemu (np. GRUB czy NTLDR)."
+  ],
+  [
+    "Mikroprocesor 80386 posiada:",
+    [
+      "64 rejestry ogólnego przeznaczenia",
+      "16 rejestrów ogólnego przeznaczenia",
+      "8 rejestrów ogólnego przeznaczenia",
+      "4 rejestry ogólnego przeznaczenia"
+    ],
+    2,
+    "W klasycznej architekturze x86-32 występują rygorystycznie określone 32-bitowe rejestry dla programisty, w tym EAX, EBX, ECX, EDX (akumulatory i bazy) oraz ESI, EDI, ESP, EBP (indeksy i wskaźniki), co łącznie daje klasyczną liczbę 8 rejestrów ogólnego zastosowania."
+  ],
+  [
+    "Każda logiczna partycja na dysku zaczyna się od:",
+    [
+      "MBR (Master Boot Record)",
+      "rekordu ładującego (boot sectora)",
+      "EMBR",
+      "modułu BIOS"
+    ],
+    1,
+    "Cały dysk fizyczny zaczyna się od MBR (sektora 0), natomiast każda wyodrębniona już partycja (wolumin) posiada na swoim początku własny Volume Boot Record (Sektor Rozruchowy Partycji), zawierający informacje o jej systemie plików i opcjonalny kod ładujący system."
+  ],
+  [
+    "Podsystem SAM (Security Account Manager) w rodzinie Windows NT:",
+    [
+      "wprowadza kontrolę dostępu i polisę kontrolną wytworzoną przez system LSA",
+      "odpowiada za rewizję audytu bezpieczeństwa",
+      "zarządza bazą danych zabezpieczeń kont",
+      "uniemożliwia użytkownikowi uzyskanie dostępu do poszczególnych plików"
+    ],
+    2,
+    "SAM (Security Account Manager) to chroniona usługa i część bazy rejestru Windows służąca lokalnemu uwierzytelnianiu użytkowników. Bezpiecznie przechowuje skróty haseł i konfiguracje lokalnych grup zabezpieczeń."
+  ],
+  [
+    "Adres logiczny (wirtualny):",
+    [
+      "jest adresem, do którego bezpośrednio odwołuje się proces z poziomu kodu",
+      "jest wyłącznie 32-bitową liczbą oznaczającą adres w wyższych partiach RAM",
+      "jest adresem wysyłanym z CPU przez szynę adresową prosto do modułów pamięci",
+      "jest równoważny adresowi sprzętowemu"
+    ],
+    0,
+    "Program wygenerowany w nowoczesnym systemie widzi świat tylko jako adresy logiczne, które generuje. To system operacyjny (przy udziale sprzętowego MMU) w tle magicznie tłumaczy to żądanie na fizyczny adres w kości RAM."
+  ],
+  [
+    "Polecenie set bez żadnych parametrów wpisane w wierszu poleceń (Windows/DOS):",
+    [
+      "ustawia czas zgodnie z zegarem systemowym",
+      "nie powoduje żadnej akcji",
+      "wyświetla bieżące ustawienia zmiennych środowiskowych",
+      "ustawia wartość domyślnej zmiennej systemowej na 1"
+    ],
+    2,
+    "Wydanie w konsoli komendy `set` wylistowuje wszystkie aktualnie zadeklarowane w danej sesji zmienne środowiskowe, takie jak PATH, USERPROFILE, czy systemowy TEMP."
+  ],
+  [
+    "Zarządzaniem pamięcią wirtualną zajmuje się:",
+    [
+      "wyłącznie oprogramowanie systemu operacyjnego w trybie użytkownika",
+      "system operacyjny korzystając z potężnych mechanizmów sprzętowych wbudowanych w mikroprocesor",
+      "wyłącznie sprzęt na płycie głównej",
+      "wyłącznie mikrokod modułu BIOS"
+    ],
+    1,
+    "Skuteczna pamięć wirtualna to owoc fuzji sprzętu i softu. System operacyjny buduje tablice mapujące, ale to wbudowany w układ procesora kontroler MMU (Memory Management Unit) ułamki mikrosekund w locie tłumaczy te wektory sprzętowo."
+  ],
+  [
+    "Co to jest EMS w terminologii systemów pamięci MS-DOS?",
+    [
+      "Expanded Memory Specification (Pamięć rozszerzona EMS)",
+      "Extended Memory Storage (Pamięć przedłużona)",
+      "External Management System",
+      "Executable Memory Stack"
+    ],
+    0,
+    "EMS to ubiegłowieczny standard opracowany przez Lotus, Intel i Microsoft pozwalający aplikacjom systemu DOS na ominięcie limitu pierwszych 640 KB pamięci za pomocą metody stronowania ramek u dołu układu przez sprzętową nakładkę."
+  ],
+  [
+    "Wielozadaniowość w systemie Windows NT jest:",
+    [
+      "kooperatywna bez jakiegokolwiek wywłaszczania",
+      "wielozadaniowością z wywłaszczeniem (preemptive)",
+      "pozorna wymuszona wyłącznie w jednym trybie programu",
+      "sprzętowo przydzielana z użyciem pollingu"
+    ],
+    1,
+    "Architektura NT oparta była na stabilnej, pełnej wielozadaniowości z wywłaszczeniem. Jeżeli dowolny proces uległ zawieszeniu lub zapętleniu, system na poziomie sprzętowego przerwania odbierał mu kontrolę nad głównym CPU ratując maszynę przed całkowitym paraliżem."
+  ],
+  [
+    "Co zazwyczaj zawiera katalog /etc/ w systemie Linux?",
+    [
+      "pliki wideo użytkowników",
+      "systemowe pliki konfiguracyjne oraz definicje demonów",
+      "skompilowany rdzeń główny jądra",
+      "środowiska ulotne zawieszonych wątków"
+    ],
+    1,
+    "Zgodnie z systemem hierarchii plików FHS, w katalogu /etc/ i jego podkatalogach ukryta jest cała baza tekstowych plików konfiguracyjnych i inicjalizacyjnych odpowiadających za ustawienia samego środowiska operacyjnego i zachowań usług sieciowych."
+  ],
+  [
+    "W systemach zabezpieczeń plików (np. NTFS) co oznacza typowe dla maski uprawnienie kryjące się pod literą P?",
+    [
+      "Prawo odczytu atrybutów (Read Permissions)",
+      "Change Permission - prawo do zmiany i modyfikacji uprawnień do obiektu",
+      "Prawo do bycia Właścicielem (Ownership)",
+      "Execute Permission (Wykonanie poleceń podpowłoki)"
+    ],
+    1,
+    "W rozszerzonych modelach list kontroli ACL z rodziny Windows NT, uprawnienie oznaczone często w notatkach jako 'P' jest specjalnym przywilejem, które nie dotyczy zczytywania wnętrza pliku a możliwości fizycznego odebrania, bądź dodawania dostępu do obiektu dla zupełnie nowych osób."
+  ],
+  [
+    "Z jakich logicznych szyn składa się ogólna główna magistrala systemowa komputera?",
+    [
+      "Magistrali danych, magistrali adresowej oraz magistrali sterującej",
+      "Szyny przerwaniowej (IRQ) oraz kanałów bezpośrednich transferów DMA",
+      "Magistrali procesorowej i linii kart mostków PCI/AGP",
+      "Kanału wirtualnego pod stronicowanie LDT"
+    ],
+    0,
+    "Klasyczny ustrój komunikacyjny maszyn architektonicznie to podział ról. Dane lecą Szyną Danych (Data Bus), z wytyczeniem drogi do kości z pomocą sztywnych połączeń na Magistrali Adresów (Address Bus), gdzie koordynacje narzucają impulsy np. zgody bądź awarii Szyny Sterowania."
+  ],
+  [
+    "Ile poziomów ochrony trybów uprzywilejowania (Rings) definiuje architektura procesorów rzędu Pentium?",
+    [
+      "2 poziomy (Nadzorca i Aplikacje)",
+      "3 poziomy chroniące wejścia",
+      "4 poziomy (Ring 0, 1, 2, 3)",
+      "10 poziomów ochrony izolowanej"
+    ],
+    2,
+    "Hardware narzuca ustrój warstwowy – na samym zerowym dnie z dostępem do portów Ring 0 (jądro), do góry idąc dla sterowników urządzeń systemowych Ring 1 i 2, a najbardziej po bokach strefy pozbawione absolutnie bezpośredniej kontroli sprzętu dla powłok zwykłego użytkownika z gier Ring 3."
+  ],
+  [
+    "Ile fizycznych kopii w pamięci operacyjnej ładuje się po otwarciu tej samej współdzielonej biblioteki .dll przez cztery odrębne procesy?",
+    [
+      "1 raz",
+      "4 razy (dla zachowania bezpieczeństwa pamięci procesu)",
+      "2 razy (klon z systemów asocjacyjnych na mostku)",
+      "Wcale się nie ładuje na piny, bo działa przez wirtualizację portu sprzętowego"
+    ],
+    0,
+    "Zaletą modułowych bibliotek dynamicznych (DLL/SO) jest drastyczna oszczędność na zasobach fizycznego RAMu. Plik zostaje załadowany przez zarządcę jądra dosłownie 1 raz, ale jego wskaźniki zostają przemapowane do wirtualnych obszarów z punktu widzenia wszystkich tych czterech programów niezależnie."
+  ],
+  [
+    "W którym procesorze, zgodnie z historycznymi notatkami, po raz pierwszy zastosowano dedykowaną obsługę mechanizmu stronicowania RAM-u (Paging)?",
+    [
+      "Intel 8086",
+      "Intel 80286",
+      "Intel 80386",
+      "W pierwszych maszynach Pentium MMX"
+    ],
+    2,
+    "Przełom to generacja układu i386. Przed nią procesor posiadał 16-bitowe okrojone tryby chronione. Dołożenie jednostki MMU na chip procesora na masową skalę po raz pierwszy dało natywną moc wirtualizowania płaskiego liniowego adresu na fizyczne ucięte ramki do tablic dla MS Windows 3 i wyżej."
+  ],
+  [
+    "W jakim systemowym pliku przetrzymuje się tradycyjne boot-menu służące do dokonania przez użytkownika fizycznego wyboru ładowanego systemu w starożytnych architekturach bazujących o Windows NT (np. Win 2000 i XP)?",
+    [
+      "ntoskrnl.exe",
+      "pliku konfiguracyjnym w mbrze o nazwie boot.ini",
+      "z poziomu menadżera bcdedit",
+      "wewnątrz pliku systemowego NTLDR pod partycją dyskietkową w strefie ROMu"
+    ],
+    1,
+    "Zanim Windows z nadejściem ery Visty przerzucił kontrolę na skompilowaną strukturę BCD (Boot Configuration Data), bootloader używał trywialnego, chronionego na partycji C: pliku tekstowego o nazwie \"boot.ini\", gdzie ręcznie dało się dopisywać flagi by diagnozować wejście do jądra np. w oknie trybu safe mode."
+  ],
+  [
+    "Co to jest i gdzie działa obszar HMA na starożytnych komputerach kompatybilnych?",
+    [
+      "High Memory Area (obszar pamięci wysokiej) w pierwszym dodatkowym kawałku 64 KB zaraz ponad 1 MB limitem",
+      "Hardware Memory Allocation chroniona funkcja stosu na kontrolerze na błędy przepełnienia",
+      "Hyper-threading Mode Activity sterowanie cyklami pod koprocesor sprzętowy grafiki",
+      "Obszar strefy zero w kości RAM ROM z BIOSem w rezerwacjach do płyty ATX"
+    ],
+    0,
+    "High Memory Area to słynna usterka u zarania firmy Intel, która zamieniła się w atut. Błąd projektowy obsługi adresowania za oknem powyżej jedynego 1 Megabajta pozwalał ułomnemu architektonicznie DOSowi używać w zworkach małego 64 kilobajtowego fragmentu extra (tzw. Himem.sys)."
+  ],
+  [
+    "Jaki pierwszy twardy kod programowy wykonuje mikroprocesor komputera stacjonarnego bezzwłocznie wybudzony fizycznie w sekundę po przełączeniu przycisku na zasilaczu:",
+    [
+      "NTLDR",
+      "BIOS, a w nim sprzętowa procedura testowa zwana jako POST (Power-On Self Test)",
+      "Menedżer Jądra systemowego bezpośrednio rzucając skrypt .profile z twardego dysku",
+      "Dyspozytor obsługi logowań menedżera kont z serwerami stref"
+    ],
+    1,
+    "Rdzeń po pobudzeniu skacze do jedynego z punktu widzenia fizyki pewnego punktu na mapie podpiętego u pamięci trwałej EEPROM, by zczytać wpisany tam BIOS (lub UEFI). Następnie BIOS realizuje sprzętowy diagnostyczny POST z weryfikacją szyn."
+  ],
+  [
+    "W środowiskach operacyjnych Linux co najprawdopodobniej oznacza wydanie komendy systemowej 'lsmod' do okna powłoki bash:",
+    [
+      "Wymusza twardy załadowany moduł sterownika na magistralach PCIe do sprzętu natywnego",
+      "Wyświetla po prostu na tekstowy ekran listę modułów (sterowników jądra) rezydujących i pracujących z zasilaniem aktualnie w pamięci RAM",
+      "Zapisuje skompresowaną kopię tablic inodów od dysku na serwery kopii",
+      "Dokonuje zmiany praw chmod z liter od rwx do formatu z liczb binarnych o wektorze dostępu"
+    ],
+    1,
+    "Komendy obsługujące warstwę z jądrem i jego sterownikami dla systemu Linux często posiadają bardzo zbite znaczenia. Przedrostek *ls* (list) w pakiecie sklejonym jako lsmod działa analogicznie do systemowego programu Taskmgr z Windows z tą uwagą, że zlicza tylko działające pluginy jądra z obszaru nadzoru."
+  ],
+  [
+    "Jakim prostym poleceniem z narzędzi podstawowych systemu tworzy się w środowiskach opartych o Linuxa struktury nazywane fizycznymi i logicznymi 'dowiązaniami' (Link) pomiędzy plikami?",
+    [
+      "poleceniem bash 'link_fs'",
+      "komendą sprzętową 'alias'",
+      "poleceniem 'ln'",
+      "symbolem ampersanda '&&'"
+    ],
+    2,
+    "Zarówno symlinki odwołujące się do ścieżki i nazwy u sąsiada w innym dysku z przełącznikiem programowym '-s' (dow. miękkie/symboliczne) jak i kopie wskaźnika wprost z uprawnień na indeks węzła i-node na tej samej partycji (dow. twarde) realizuje bardzo stary zaledwie dwuznakowy program konsolowy o nazwie 'ln'."
+  ],
+  [
+    "Podział systemów operacyjnych ze względu na stanowiskowość to:",
+    [
+      "Rozproszone i jednolite",
+      "Interaktywne i warstwowe",
+      "Jednostanowiskowe i wielostanowiskowe",
+      "Jednorodne i niejednorodne"
+    ],
+    2,
+    "Zgodnie z bazą, ze względu na stanowiskowość systemy dzielimy na jednostanowiskowe i wielostanowiskowe."
+  ],
+  [
+    "Przy podziale systemu w zależności od sposobu użytkowania wyróżniamy m.in.:",
+    [
+      "Jednorodne i niejednorodne",
+      "Wsadowe i interaktywne",
+      "Typu klient-serwer i warstwowe",
+      "Rozproszone i wielostanowiskowe"
+    ],
+    1,
+    "Ze względu na sposób użytkowania systemy dzieli się między innymi na systemy wsadowe oraz interaktywne."
+  ],
+  [
+    "Zaznacz właściwe cechy systemu przeznaczonego do sterowania procesami (czasu rzeczywistego):",
+    [
+      "Wielowątkowość, dwustanowiskowość, jednorodność",
+      "Wydajność, wielowątkowość, współbieżność",
+      "Odpowiedzialność, niezawodność, operacyjność",
+      "Sprzężenie zwrotne, bezpieczne wyłączenie po awarii, niezawodność"
+    ],
+    3,
+    "Systemy czasu rzeczywistego charakteryzują się sprzężeniem zwrotnym, niezawodnością oraz bezpiecznym wyłączeniem na wypadek awarii."
+  ],
+  [
+    "Czy systemy wsadowe charakteryzują się tym, że:",
+    [
+      "Użytkownik zleca wykonanie zadania do systemu, a po jego uruchomieniu nie ma możliwości ingerencji",
+      "Użytkownik podaje parametry do dalszej pracy systemu w trakcie jego działania",
+      "Umożliwiają szybką wymianę informacji między użytkownikami w sieci",
+      "Użytkownik ma pełną możliwość ingerencji w wykonywanie zadania"
+    ],
+    0,
+    "W systemach wsadowych zadanie jest zlecane do wykonania, a użytkownik nie ma możliwości ingerencji w proces przetwarzania w jego trakcie."
+  ],
+  [
+    "Które z poniższych zdań najlepiej opisuje systemy interaktywne:",
+    [
+      "Nie posiadają możliwości współpracy z użytkownikiem podczas wykonywania zadania",
+      "Użytkownik nie ma możliwości podania jakichkolwiek parametrów",
+      "Posiadają możliwość współpracy z użytkownikiem (podawanie parametrów w trakcie pracy)",
+      "Wyniki przekazywane są wyłącznie w formie wydruku na koniec zadania"
+    ],
+    2,
+    "Systemy interaktywne cechuje możliwość bieżącej współpracy z użytkownikiem podczas działania."
+  ],
+  [
+    "Na jakie typy dzielimy systemy rozproszone?",
+    [
+      "Jednorodne i niejednorodne",
+      "Warstwowe i wsadowe",
+      "Wielozadaniowe i wielostanowiskowe",
+      "Klient-serwer i modułowe"
+    ],
+    0,
+    "Według dostarczonych notatek systemy rozproszone dzielimy na jednorodne oraz niejednorodne."
+  ],
+  [
+    "Na jakie struktury dzielimy system operacyjny?",
+    [
+      "Niejednolita, trójwarstwowa",
+      "Klient-moduł, modułowa, warstwowa",
+      "Rozproszona, warstwowa, wielopoziomowa",
+      "Jednolita, warstwowa, typu klient-serwer"
+    ],
+    3,
+    "Podstawowe architektury (struktury) systemów to: struktura jednolita, warstwowa oraz klient-serwer."
+  ],
+  [
+    "Które z poniższych systemów operacyjnych NIE istnieją:",
+    [
+      "Apple MacOS",
+      "Sun Solaris",
+      "SGI Irix",
+      "Apple MacOS/2 oraz BeSO"
+    ],
+    3,
+    "Nazwy 'Apple MacOS/2' oraz 'BeSO' są błędne/zmyślone w przeciwieństwie do prawdziwych systemów OS/2 i BeOS."
+  ],
+  [
+    "Do czego przeznaczony jest system Novell NetWare 6:",
+    [
+      "Do modelowania zjawisk matematyczno-fizycznych",
+      "Do obsługi serwerów baz danych wyłącznie w trybie tekstowym",
+      "Do obsługi sieci rozległych, małych lub średnich sieci lokalnych",
+      "Do monitorowania zjawisk atmosferycznych"
+    ],
+    2,
+    "Novell NetWare 6 to klasyczny sieciowy system operacyjny używany do obsługi sieci lokalnych i rozległych."
+  ],
+  [
+    "Macierzystymi systemami plików OS/2 są:",
+    [
+      "NTFS i FAT32",
+      "HPFS i FAT16",
+      "HPDJ i API",
+      "ext2 i ext3"
+    ],
+    1,
+    "System OS/2 natywnie używał plików w formacie HPFS (High Performance File System) i wspierał stary system FAT16."
+  ],
+  [
+    "Które z poniższych systemów wywodzą się z implementacji systemu Berkeley (BSD):",
+    [
+      "CloseBSD i SetBSD",
+      "NetBSD i FreeBSD",
+      "TakeBSD i GetBSD",
+      "SGI Irix i Sun Solaris"
+    ],
+    1,
+    "Z uniksowej gałęzi Berkeley Software Distribution (BSD) wywodzą się m.in. znane darmowe systemy NetBSD oraz FreeBSD."
+  ],
+  [
+    "Wśród rekomendowanych przez IBM serwerów plików dla PC z systemem AIX NIE znajdują się:",
+    [
+      "Samba",
+      "VisionFS (SCO)",
+      "Advanced Server for UNIX",
+      "AUX Connection i AIX Slow Connect"
+    ],
+    3,
+    "Nazwy 'AUX Connection' oraz 'AIX Slow Connect' to celowo wymyślone dystraktory nieistniejących usług."
+  ],
+  [
+    "Które z poniższych NIE SĄ dystrybucjami Linuxa:",
+    [
+      "Red Hat i Debian",
+      "Aurox i Slackware",
+      "Ret Had i Mendreyk",
+      "Wszystkie powyższe są dystrybucjami"
+    ],
+    2,
+    "Zniekształcone nazwy 'Ret Had' i 'Mendreyk' stanowią błędy (właściwe to Red Hat i Mandrake)."
+  ],
+  [
+    "Jakie środowiska graficzne występują w systemie Linux?",
+    [
+      "KWB i GLON",
+      "XPStyle i Xterm",
+      "GNOME, KDE, Flux Box, Window Maker",
+      "Tylko i wyłącznie tekstowa konsola BASH"
+    ],
+    2,
+    "W linuksie istnieje wiele środowisk graficznych, z których klasyczne to GNOME, KDE, Window Maker i Flux Box."
+  ],
+  [
+    "Co to jest DOS?",
+    [
+      "Wieloużytkownikowy system operacyjny",
+      "Jednoużytkownikowy, dyskowy system operacyjny",
+      "Język programowania",
+      "Powłoka środowiska Linux"
+    ],
+    1,
+    "DOS (Disk Operating System) to prosty, jednomodułowy i jednoużytkownikowy system dyskowy z linii poleceń."
+  ],
+  [
+    "Na czym polega współbieżność?",
+    [
+      "Czas procesora jest dzielony na kilka jednocześnie działających procesów",
+      "Wiele procesorów wykonuje jednocześnie jeden wspólny proces",
+      "Na wykorzystaniu specjalnego rejestru CR (Concurrency Register)",
+      "Wyłącznie na dzieleniu zasobów dyskowych"
+    ],
+    0,
+    "Współbieżność polega na wykonywaniu kilku procesów w tym samym czasie dzięki podziałowi czasu procesora."
+  ],
+  [
+    "Współbieżność pełna zachodzi, gdy:",
+    [
+      "Liczba procesów jest większa niż liczba procesorów",
+      "Ilość procesów działających w systemie jest nie większa niż ilość działających procesorów",
+      "Procesor podczas wykonywania procesu nie przełącza się w ogóle na inne",
+      "Procesor obsługuje technologię wielowątkowości"
+    ],
+    1,
+    "O pełnej (rzeczywistej) współbieżności mówimy wtedy, gdy dla każdego procesu fizycznie dostępny jest dedykowany procesor."
+  ],
+  [
+    "Rodzaje współbieżności to:",
+    [
+      "Braterska, bez wywłaszczenia, Pozorna",
+      "Pełna, Niepełna, Koleżeńska",
+      "Pełna, Pozorna, Koleżeńska (pozorna bez wywłaszczenia)",
+      "Pozorna, Z wywłaszczeniem, Wielopotokowa"
+    ],
+    2,
+    "W notatkach wyróżniono trzy typy: pełną, pozorną oraz koleżeńską (która jest rodzajem współbieżności pozornej bez wywłaszczania)."
+  ],
+  [
+    "Proces to:",
+    [
+      "Statyczny zestaw instrukcji wykonywanych przez procesor",
+      "Zestaw instrukcji opisujących pewne działanie na dysku",
+      "Element wykonujący rozkazy procesora",
+      "Dynamiczny ciąg działań wykonywanych przez sprzęt lub program"
+    ],
+    3,
+    "Zgodnie z definicją, proces to żywy, dynamiczny ciąg działań realizowany na podstawie instrukcji w pamięci."
+  ],
+  [
+    "Co to jest Program?",
+    [
+      "Dynamiczny ciąg działań wykonywanych przez sprzęt",
+      "Kod wysyłany bezpośrednio przez klienta do serwera",
+      "Statyczny zestaw instrukcji opisujących pewne działania",
+      "Dynamiczny zestaw instrukcji wykonywanych przez CPU"
+    ],
+    2,
+    "W przeciwieństwie do procesu, program to pasywny, statyczny zbiór instrukcji przechowywany np. na dysku."
+  ],
+  [
+    "Semafor to:",
+    [
+      "Liczba rzeczywista porządkująca procesy",
+      "Liczba ujemna określająca kolejność zadań",
+      "Dodatnia liczba, na której można wykonać tylko operację sygnalizuj",
+      "Nieujemna liczba całkowita, na której można wykonać operacje czekaj i sygnalizuj"
+    ],
+    3,
+    "Klasyczny semafor służący synchronizacji przyjmuje wartości nieujemne i jest sterowany dwiema operacjami: czekaj i sygnalizuj."
+  ],
+  [
+    "Blokada (Zakleszczenie) to:",
+    [
+      "Zakończony proces pozostawiający bezużyteczne dane w pamięci",
+      "Przeciążenie ruchu przesyłowego na magistrali",
+      "Sytuacja, w której jeden proces chce skorzystać z zasobu używanego przez drugi proces (który czeka na coś innego)",
+      "Sytuacja, w której dwa procesy próbują uzyskać dostęp wyłącznie do procesora"
+    ],
+    2,
+    "Blokada to sytuacja permanentnego oczekiwania, gdzie proces nie może kontynuować działania, bo pożądany zasób jest zajęty."
+  ],
+  [
+    "Zasoby podzielne to:",
+    [
+      "Zasoby z których mogą korzystać tylko urządzenia peryferyjne",
+      "Zasoby takie jak pamięć wirtualna, pliki do odczytu i procesory (wiele procesów jednocześnie)",
+      "Zasoby dzielone tylko i wyłącznie przez urządzenia tego samego typu",
+      "Zasoby, które system musi zawsze podzielić na równe połowy"
+    ],
+    1,
+    "Zasoby podzielne to te, do których bez ryzyka błędu może bezpiecznie i jednocześnie odwoływać się wiele procesów (np. pamięć do odczytu)."
+  ],
+  [
+    "Fragment kodu, który odwołuje się do zasobu niepodzielnego to:",
+    [
+      "Warstwa krytyczna",
+      "Masa krytyczna",
+      "Segment zabezpieczony",
+      "Sekcja krytyczna (lub region krytyczny)"
+    ],
+    3,
+    "Aby uniknąć wyścigów, fragmenty kodu modyfikujące zmienne współdzielone nazywamy sekcjami krytycznymi."
+  ],
+  [
+    "Operacje czekaj i sygnalizuj:",
+    [
+      "Ustawiają na nowo priorytet wszystkich procesów",
+      "Służą jako bramki sprzętowe pamięci RAM",
+      "Są operacjami podzielnymi generującymi szamotanie",
+      "Działają na semaforach (odpowiednio zmniejszając lub zwiększając ich wartość)"
+    ],
+    3,
+    "Te fundamentalne operacje służą manipulacji zmienną wewnątrz semafora i zawieszaniu lub budzeniu procesów."
+  ],
+  [
+    "W skład struktury Monitora wchodzi:",
+    [
+      "Tablica deskryptorów i procesor wewnętrzny",
+      "Tylko jeden semafor globalny bez procedur",
+      "Zbiór danych stanowiących obiekt dzielony, procedury dostępu oraz kod inicjujący",
+      "Identyfikator procesu wywołującego monitor"
+    ],
+    2,
+    "Monitor to wysokopoziomowa struktura synchronizacyjna. Składa się z prywatnych, hermetyzowanych danych (obiekt dzielony), metod (procedur) na nich operujących oraz kodu początkowego."
+  ],
+  [
+    "API systemu operacyjnego udostępnia m.in. następujące sposoby synchronizacji wątków:",
+    [
+      "Synchronizacja wsadowa i interaktywna",
+      "Zdarzenia (Events), mutexy i semafory",
+      "Rejestry segmentowe CS i DS",
+      "Pliki wsadowe z atrybutem ukrytym"
+    ],
+    1,
+    "W interfejsach programistycznych (takich jak WinAPI czy POSIX) programiści wykorzystują obiekty jądra takie jak muteksy, semafory oraz obiekty zdarzeń do koordynacji pracy wątków."
+  ],
+  [
+    "Rozwiązanie problemu sekcji krytycznej musi spełniać warunki:",
+    [
+      "Nieograniczonego oczekiwania i regresu priorytetów",
+      "Zablokowania przerwań sprzętowych w trybie chronionym",
+      "Tylko i wyłącznie postępu bez wykluczania",
+      "Wzajemnego wykluczania, postępu oraz ograniczonego czekania"
+    ],
+    3,
+    "Każdy prawidłowy algorytm ochrony sekcji krytycznej musi gwarantować: wzajemne wykluczanie (tylko 1 proces wewnątrz), postęp (brak martwego punktu w decydowaniu kto wejdzie) oraz ograniczone czekanie (brak głodzenia)."
+  ],
+  [
+    "Jakie rodzaje wątków powszechnie występują w systemach operacyjnych:",
+    [
+      "Wątki statyczne i wątki wsadowe",
+      "Wątki poziomu użytkownika (tzw. lekkie LWP) oraz wątki poziomu jądra",
+      "Wątki tylko-do-odczytu",
+      "Procesy ciężkie udające strukturę wątkową"
+    ],
+    1,
+    "Istnieją wątki zarządzane wyłącznie w przestrzeni użytkownika przez biblioteki (szybkie w przełączaniu) oraz wątki jądra, które są bezpośrednio widzialne i szeregowane przez system operacyjny."
+  ],
+  [
+    "Który z poniższych komunikatów w WinAPI NIE służy do informowania o zdarzeniach pochodzących z klawiatury:",
+    [
+      "WM_CHAR",
+      "WM_SYSDEADCHAR",
+      "WM_EXECUTECHAR (oraz WM_KILLCHAR)",
+      "WM_KEYDOWN"
+    ],
+    2,
+    "Komunikaty takie jak WM_EXECUTECHAR czy WM_KILLCHAR są fałszywe i nie istnieją w specyfikacji obsługi wiadomości Windows API. Prawdziwe to m.in. WM_CHAR, WM_DEADCHAR czy WM_KEYDOWN."
+  ],
+  [
+    "Co to jest API?",
+    [
+      "Zbiór instrukcji maszynowych procesora",
+      "Application Programming Interface (Interfejs programowania aplikacji)",
+      "Association of Programmers Inc.",
+      "Algorytm planowania priorytetowego"
+    ],
+    1,
+    "API to zestaw zdefiniowanych reguł i funkcji udostępnianych przez system operacyjny (lub bibliotekę), za pomocą których programiści mogą pisać aplikacje odwołujące się do usług systemu."
+  ],
+  [
+    "Co na najniższym poziomie zarządza fizycznym wznawianiem oraz wstrzymywaniem procesów:",
+    [
+      "Kompilator i linker",
+      "Planista długoterminowy",
+      "Dyspozytor (Dispatcher)",
+      "Rejestr CR3"
+    ],
+    2,
+    "To dyspozytor (część planisty niskiego poziomu) fizycznie odpowiada za przełączenie kontekstu: zapisuje stan starego procesu i ładuje do procesora środowisko sprzętowe wznawianego zadania."
+  ],
+  [
+    "Co zawiera struktura wpisu katalogu w tradycyjnych systemach plików (np. UNIX):",
+    [
+      "Tylko łańcuch bloków danych pliku",
+      "Skrypt inicjujący rozruch systemu",
+      "Mapę bitową uszkodzonych sektorów",
+      "Nazwę pliku oraz dowiązanie do jego struktury/deskryptora (np. i-węzła)"
+    ],
+    3,
+    "Katalog z punktu widzenia systemu to po prostu specjalny plik tekstowy/binarny, który zawiera listę par: nazwa pliku oraz wskaźnik (dowiązanie trwałe) do faktycznego rekordu z opisem tego pliku."
+  ],
+  [
+    "Jakie znasz historyczne struktury organizacji katalogów:",
+    [
+      "Tylko struktura płaska",
+      "Kilkupoziomowa ograniczona do 3 poziomów",
+      "Jednopoziomowa, dwupoziomowa oraz drzewiasta (wielopoziomowa) / grafowa",
+      "Graficzna oparta wyłącznie na klasach C++"
+    ],
+    2,
+    "Na początku systemy posiadały 1 wspólny katalog dla wszystkich (jednopoziomowa), potem wprowadzono osobne dla każdego użytkownika (dwupoziomowa), by w końcu przejść na powszechną dziś, nieograniczoną strukturę drzewiastą."
+  ],
+  [
+    "Jaki był bazowy/minimalny fizyczny rozmiar bloku (sektora) na klasycznych dyskach twardych:",
+    [
+      "8 Bajtów",
+      "15 Bajtów",
+      "512 Bajtów",
+      "17 Bajtów"
+    ],
+    2,
+    "Przez dekady branżowym standardem wielkości pojedynczego, najmniejszego fizycznego bloku do zapisu/odczytu na dysku magnetycznym (sektora) było 512 bajtów (obecnie odchodzi się na rzecz standardu 4K - 4096 bajtów)."
+  ],
+  [
+    "Do głównych zadań systemu plików należy:",
+    [
+      "Tworzenie nowych kont użytkowników",
+      "Tworzenie i usuwanie plików, zarządzanie pamięcią masową oraz przestrzenią nazw",
+      "Kompresja pamięci RAM typu swap",
+      "Sterowanie zegarem czasu rzeczywistego (RTC)"
+    ],
+    1,
+    "System plików stanowi warstwę abstrakcji: ukrywa przed użytkownikiem fizyczne sektory dysku, oferując w zamian wygodny mechanizm nazywania, tworzenia, organizowania i bezpiecznego usuwania plików."
+  ],
+  [
+    "Mechanizmami kontroli i współdzielenia plików w systemach wielodostępnych są m.in.:",
+    [
+      "Maski ochrony (np. chmod) oraz Listy Kontroli Dostępu (ACL)",
+      "Bity pisania wymuszane tylko dla roota",
+      "Kompresja GZIP i pliki TAR",
+      "Ukrywanie plików bez zmiany uprawnień"
+    ],
+    0,
+    "Aby chronić pliki, systemy operacyjne wykorzystują klasyczne maski uprawnień (rwx dla właściciela/grupy/innych) oraz zaawansowane tablice ACL pozwalające dodać dokładne prawa dla wybranych, unikalnych użytkowników."
+  ],
+  [
+    "Sposobami (metodami) przydziału fizycznego miejsca na dysku dla plików są struktury oparte o:",
+    [
+      "Klastry nieskończone na dyskach ROM",
+      "Mechanizmy RAID 0",
+      "Przydział ciągły, łańcuch powiązanych bloków (listowy) oraz bloki indeksów (np. i-węzły)",
+      "Segmentację ze stronicowaniem"
+    ],
+    2,
+    "System operacyjny może zapisać plik w 1 kawałku (ciągły), porozrzucać go i połączyć listą jednokierunkową w blokach (FAT) lub zapisać mapę klastrów w jednej wielkiej scentralizowanej tablicy z indeksami (np. Ext3)."
+  ],
+  [
+    "Co zawiera deskryptor centralny pliku (np. struktura i-węzła / FCB):",
+    [
+      "Kopię samego pliku binarnego",
+      "Nazwę długą pliku wymuszaną przez Windows",
+      "Rejestr bazy pamięci cache L2",
+      "Tryb dostępu (prawa), właściciela, czasy modyfikacji oraz lokalizację (adresy fizyczne bloków)"
+    ],
+    3,
+    "Główny blok kontrolny pliku (File Control Block / i-node) przechowuje komplet metadanych o obiekcie. Nigdy jednak nie przechowuje znakowej nazwy pliku – ta znajduje się tylko w katalogu."
+  ],
+  [
+    "Prawami dostępu w klasycznych systemach UNIX-owych NIE są:",
+    [
+      "Prawo do czytania (r)",
+      "Prawo do tworzenia i kasowania jako niezależne atrybuty dla pliku",
+      "Prawo do wykonania (x)",
+      "Prawo do pisania/zmiany (w)"
+    ],
+    1,
+    "W systemach Linux/Unix nie ma dedykowanego prawa do kasowania pliku zapisanego na samym pliku. O tym, czy możemy usunąć lub utworzyć nowy plik, decyduje wyłącznie prawo zapisu (w) do KATALOGU, w którym ten plik ma się znaleźć."
+  ],
+  [
+    "Deskryptor lokalny pliku (wpis z poziomu katalogu) zawiera przede wszystkim:",
+    [
+      "Skompresowaną kopię pierwszych bajtów pliku",
+      "Licznik całkowity użycia wirtualnego",
+      "Nazwę tekstową pliku oraz adres (wskaźnik) do jego głównego deskryptora centralnego",
+      "Prawa właściciela w formacie szesnastkowym"
+    ],
+    2,
+    "W warstwowej architekturze wpis w katalogu jest niezwykle 'chudy'. Służy on tylko temu, by związać czytelną dla człowieka nazwę (np. 'raport.txt') z numerem i-węzła (deskryptorem centralnym)."
+  ],
+  [
+    "Zaawansowane techniki harmonogramowania ruchu głowicy dysku HDD w celu optymalizacji odczytu to:",
+    [
+      "Wymiana stron (FIFO, LRU)",
+      "SSTF (Shortest Seek Time First), SCAN oraz C-SCAN",
+      "Model sieci rozproszonej Token-Ring",
+      "Algorytm Bankiera i postarzania priorytetów"
+    ],
+    1,
+    "Zamiast wykonywać polecenia zapisu w kolejności ich nadejścia, system sortuje je na bieżąco, używając algorytmów analizujących położenie głowicy dysku (SSTF, SCAN), co redukuje czas mechanicznych skoków ramienia do minimum."
+  ],
+  [
+    "W systemach pamięci masowej technika SCAN charakteryzuje się:",
+    [
+      "Wyłącznym obsługiwaniem sektorów na brzegach talerza",
+      "Wybieraniem najpierw najkrótszego czasu przeszukiwania",
+      "Realizacją techniki z ruchem w jedną stronę bez powrotu",
+      "Powrotem i jednoczesną realizacją napotkanych zleceń wzdłuż całej osi talerza (algorytm windy)"
+    ],
+    3,
+    "W algorytmie SCAN głowica wędruje płynnie od środka na zewnątrz talerza, obsługując na bieżąco wszystkie zlecenia po drodze, po czym dobija do granicy i analogicznie powraca, zbierając resztę (niczym winda w bloku)."
+  ],
+  [
+    "W systemie plików NTFS w systemie Windows, oprócz standardowych skrótów, występują następujące typy właściwych dowiązań:",
+    [
+      "Tylko dowiązania nietrwałe (zmienne w czasie)",
+      "Dowiązania twarde (Hard links) oraz dowiązania symboliczne i punkty połączeń (Junctions)",
+      "Dowiązania listowe ucięte",
+      "Dowiązania alfabetyczne"
+    ],
+    1,
+    "NTFS pozwala zaawansowanym administratorom tworzyć hardlinki (wiele nazw dla jednego wspólnego pliku bez dublowania zajętego miejsca na dysku) oraz softlinki (dowiązania symboliczne) podobne funkcjonalnie do tych z systemów Linux."
+  ],
+  [
+    "Nadmiarowa kontrola i bezpieczeństwo danych realizowana jest między innymi przez struktury macierzy dyskowych typu:",
+    [
+      "RAID 0 (przeplot bez redundancji)",
+      "RAID 1 (Mirroring / Lustrzane odbicie) oraz RAID 5 (Parzystość)",
+      "RAID abstrakcyjny sieciowy",
+      "Klastrowanie wirtualne bez dublowania sektorów"
+    ],
+    1,
+    "Głównym zadaniem technologii RAID 1 (gdzie dane klonują się bajt w bajt) i RAID 5 (gdzie tworzone są sumy parzystości pozwalające na rekonstrukcję) jest ocalenie pliku użytkownika przy jednoczesnej mechanicznej śmierci dysku magnetycznego."
+  ],
+  [
+    "Warunkami koniecznymi (dostatecznymi) do wystąpienia katastrofalnego zakleszczenia (Deadlock) NIE są:",
+    [
+      "Wzajemne wykluczanie i brak możliwości wywłaszczenia zasobów",
+      "Cykliczne oczekiwanie (procesów na siebie w zamkniętym kole)",
+      "Procesy przetrzymują już posiadane zasoby, żądając dostępu do nowych",
+      "Zasoby w środowisku informatycznym są całkowicie podzielne i niezależne"
+    ],
+    3,
+    "Jeśli zasób komputera jest w pełni podzielny (np. plik otwarty w trybie 'Tylko do odczytu' przez 10 osób), to w ogóle nie generuje on warunku wzajemnego wykluczenia i z jego powodu zakleszczenie jest niemożliwe."
+  ],
+  [
+    "Techniką wyjścia (naprawy) systemu po zaistnieniu blokady (Deadlocku) jest:",
+    [
+      "Usunięcie wszystkich semaforów z pamięci RAM i powrotu do algorytmu wsadowego",
+      "Dodanie do systemu jeszcze więcej procesów blokujących",
+      "Zastosowanie wyłącznie planisty krótkoterminowego",
+      "Usunięcie procesu z łańcucha zakleszczenia (zabicie go) lub cofnięcie procesu do punktu kontrolnego"
+    ],
+    3,
+    "Gdy algorytmy prewencyjne zawiodą, by ocalić system trzeba brutalnie zaingerować: cofnąć transakcję procesu z pamięci i odebrać mu zasoby, a jeśli aplikacja na to nie pozwala – bezlitośnie ubić (Kill/End Task) jeden z zakleszczonych programów."
+  ],
+  [
+    "Okazjami do obligatoryjnego przebudzenia (uaktywnienia) planisty i dyspozytora NIE jest:",
+    [
+      "Nadejście zgłoszonego sprzętowo żądania o priorytetowy zasób",
+      "Zwolnienie przez stary proces użytkowanych dotąd zasobów",
+      "Przejście procesu z trybu użytkownika w normalny tryb edycji grafiki",
+      "Zakończenie działania programu lub wymuszone przerwanie zegarowe"
+    ],
+    2,
+    "Dyspozytor aktywuje się w momentach przejść krytycznych procesów (tworzenie, blokowanie zasobem, budzenie, koniec). Samo zmienianie instrukcji wewnętrznych aplikacji lub przeliczanie matematyki podczas już otrzymanego czasu procesora nie jest powodem do jego wołania."
+  ],
+  [
+    "Algorytm Bankiera pozwala systemowi z czystym sumieniem przydzielić wolne zasoby tylko wtedy, gdy:",
+    [
+      "Zamówienie przekracza maksymalne dopuszczalne zgłoszone roszczenie z rezerw",
+      "Rozmiar RAM spada poniżej 1 MB dla stref operacyjnych jądra",
+      "Realizuje to technikę rotacyjną FIFO",
+      "Symulacja matematyczna wykaże, że pozostawi to system w tzw. 'Stanie Bezpiecznym' (umożliwi zakończenie prac wszystkim)"
+    ],
+    3,
+    "Algorytm Bankiera bada potencjalną pożyczkę. Sprawdza graf zapotrzebowań – oddaje urządzenie wątkowi tylko w przypadku udowodnienia, że w najgorszym pesymistycznym scenariuszu istnieje ścieżka umożliwiająca zakończenie pracy każdemu procesowi w kolejce bez blokady."
+  ],
+  [
+    "Zwyczajowo priorytet działającego sprzętowo procesowego Planisty/Dyspozytora w systemie operacyjnym jest:",
+    [
+      "Zrównany sprawiedliwie algorytmem z procesami w trybie pierścienia zerowego",
+      "Całkowicie podrzędny dla ochrony czasu gier użytkownika",
+      "Oznaczony w tablicy jako uśpiony proces pasywny",
+      "Najwyższy (Większy od wszystkich pozostałych procesów aplikacyjnych systemu)"
+    ],
+    3,
+    "Ponieważ planista jądra sprawuje absolutną i nadrzędną kontrolę na dystrybucją cennego zasobu jakim jest moc przeliczeniowa, sprzęt rezerwuje dla niego najwyższy z priorytetów by dyspozytor zadziałał jak wyrocznia w krytycznym ułamku sekundy dla maszyny."
+  ]
+]

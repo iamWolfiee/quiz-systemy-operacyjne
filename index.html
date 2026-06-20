@@ -70,12 +70,14 @@
             gap: 1rem;
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
+            
         }
 
         .dataset-btn {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--primary);
             color: var(--text-muted);
+            min-width: 210;
             padding: 0.6rem 1.5rem;
             border-radius: 8px;
             font-size: 0.95rem;
@@ -268,8 +270,7 @@
         <h1>Systemy operacyjne</h1>
         
         <div class="dataset-toggle">
-            <button id="btn-po2017" class="dataset-btn active" onclick="loadDataset('questions_po2017.json', 'po2017')">BAZA PO 2017</button>
-            <button id="btn-przed2017" class="dataset-btn" onclick="loadDataset('questions_przed2017.json', 'przed2017')">BAZA PRZED 2017</button>
+            <button id="btn-przed2017" class="dataset-btn" onclick="loadDataset('questions.json', 'przed2017')">BAZA PYTAŃ</button>
             <button id="btn-random" class="dataset-btn" onclick="startRandomMode('random')">LOSOWANE PYTANIE</button>
         </div>
 
@@ -329,7 +330,6 @@ async function loadDataset(filename, btnId) {
     }
 }
 
-// Inicjacja Trybu Losowego
 async function startRandomMode(btnId) {
     isRandomMode = true;
     document.getElementById('list-score-title').innerText = "Seria losowa (Wszystkie bazy)";
@@ -341,15 +341,12 @@ async function startRandomMode(btnId) {
     document.getElementById('sections-navigation').innerHTML = '';
 
     try {
-        // Pobieranie obu baz jednocześnie i ignorowanie błędów w razie braku jednej z nich
-        const [res1, res2] = await Promise.all([
-            fetch('questions_po2017.json').catch(() => null),
-            fetch('questions_przed2017.json').catch(() => null)
+        const [res1] = await Promise.all([
+            fetch('questions.json').catch(() => null),
         ]);
 
         let pool = [];
         if (res1 && res1.ok) pool = pool.concat(await res1.json());
-        if (res2 && res2.ok) pool = pool.concat(await res2.json());
 
         if (pool.length === 0) {
             throw new Error('Nie udało się załadować żadnej bazy pytań. Upewnij się, że pliki JSON istnieją.');
