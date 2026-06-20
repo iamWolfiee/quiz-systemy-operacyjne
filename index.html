@@ -70,14 +70,13 @@
             gap: 1rem;
             margin-bottom: 1.5rem;
             flex-wrap: wrap;
-            
         }
 
         .dataset-btn {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--primary);
             color: var(--text-muted);
-            min-width: 210;
+            min-width: 210px;
             padding: 0.6rem 1.5rem;
             border-radius: 8px;
             font-size: 0.95rem;
@@ -270,7 +269,7 @@
         <h1>Systemy operacyjne</h1>
         
         <div class="dataset-toggle">
-            <button id="btn-przed2017" class="dataset-btn" onclick="loadDataset('questions.json', 'przed2017')">BAZA PYTAŃ</button>
+            <button id="btn-main" class="dataset-btn" onclick="loadDataset('questions.json', 'main')">LISTA PYTAŃ</button>
             <button id="btn-random" class="dataset-btn" onclick="startRandomMode('random')">LOSOWANE PYTANIE</button>
         </div>
 
@@ -283,7 +282,7 @@
             <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: #34d399;">Rozwiązano: 0</div>
         </div>
         
-        <div id="list-container">Wybierz bazę pytań, aby rozpocząć...</div>
+        <div id="list-container">Ładowanie pytań...</div>
         
         <div style="text-align: center; margin-top: 2rem;">
              <button class="outline" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Wróć na górę &uarr;</button>
@@ -309,7 +308,8 @@ async function loadDataset(filename, btnId) {
 
     try {
         document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
-        document.getElementById(`btn-${btnId}`).classList.add('active');
+        const activeBtn = document.getElementById(`btn-${btnId}`);
+        if(activeBtn) activeBtn.classList.add('active');
 
         document.getElementById('list-container').innerHTML = '<div style="text-align:center; padding: 2rem;">Ładowanie pytań...</div>';
         document.getElementById('sections-navigation').innerHTML = '';
@@ -332,27 +332,26 @@ async function loadDataset(filename, btnId) {
 
 async function startRandomMode(btnId) {
     isRandomMode = true;
-    document.getElementById('list-score-title').innerText = "Seria losowa (Wszystkie bazy)";
+    document.getElementById('list-score-title').innerText = "Tryb losowy";
 
     document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(`btn-${btnId}`).classList.add('active');
 
-    document.getElementById('list-container').innerHTML = '<div style="text-align:center; padding: 2rem;">Łączenie baz pytań...</div>';
+    document.getElementById('list-container').innerHTML = '<div style="text-align:center; padding: 2rem;">Losowanie...</div>';
     document.getElementById('sections-navigation').innerHTML = '';
 
     try {
-        const [res1] = await Promise.all([
-            fetch('questions.json').catch(() => null),
-        ]);
-
-        let pool = [];
-        if (res1 && res1.ok) pool = pool.concat(await res1.json());
-
-        if (pool.length === 0) {
-            throw new Error('Nie udało się załadować żadnej bazy pytań. Upewnij się, że pliki JSON istnieją.');
+        const response = await fetch('questions.json');
+        if (!response.ok) {
+            throw new Error('Nie udało się załadować bazy pytań.');
         }
 
-        randomPool = pool;
+        randomPool = await response.json();
+
+        if (randomPool.length === 0) {
+            throw new Error('Baza pytań jest pusta.');
+        }
+
         randomStats = { answered: 0, corrects: 0 };
         renderRandomQuestion();
 
@@ -364,7 +363,7 @@ async function startRandomMode(btnId) {
 function renderRandomQuestion() {
     if (!isRandomMode) return;
     
-    // Losowanie pytania z połączonej puli
+    // Losowanie pytania
     const randomIndex = Math.floor(Math.random() * randomPool.length);
     currentRandomQuestion = randomPool[randomIndex];
     
@@ -401,7 +400,6 @@ window.handleRandomAnswer = function(btn, index) {
     const optionsContainer = document.getElementById('random-opt');
     const allBtns = optionsContainer.querySelectorAll('.option');
 
-    // Blokada przycisków po odpowiedzi
     allBtns.forEach(b => b.disabled = true);
 
     let isCorrect = (index === q[2]);
@@ -479,7 +477,8 @@ function renderList() {
     let htmlBuffer = '';
     sectionQuestions.forEach((q, localIdx) => {
         const globalIdx = startIndex + localIdx; 
-        const hasAnswered = listAnswers[globalIdx] !== null;
+        const selectedIndex = listAnswers[globalIdx];
+        const hasAnswered = selectedIndex !== null;
 
         htmlBuffer += `
         <div class="glass-card">
@@ -490,7 +489,11 @@ function renderList() {
                     let disabledAttr = hasAnswered ? 'disabled' : '';
                     
                     if (hasAnswered) {
-                        if (i === q[2]) extraClass = ' correct';
+                        if (i === q[2]) {
+                            extraClass = ' correct';
+                        } else if (i === selectedIndex && selectedIndex !== q[2]) {
+                            extraClass = ' wrong';
+                        }
                     }
 
                     return `<button class="option${extraClass}" ${disabledAttr} onclick="handleList(${globalIdx}, this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
@@ -503,16 +506,6 @@ function renderList() {
     });
     
     container.innerHTML = htmlBuffer;
-    
-    for (let gIdx = startIndex; gIdx < endIndex; gIdx++) {
-        if (listAnswers[gIdx] === false) {
-            const optionsContainer = document.getElementById(`list-opt-${gIdx}`);
-            if (optionsContainer) {
-                const allBtns = optionsContainer.querySelectorAll('.option');
-            }
-        }
-    }
-
     if (typeof hljs !== 'undefined') hljs.highlightAll();
 }
 
@@ -526,7 +519,7 @@ window.handleList = function(globalIdx, btn, index) {
     allBtns.forEach(b => b.disabled = true);
 
     let isCorrect = (index === q[2]);
-    listAnswers[globalIdx] = isCorrect;
+    listAnswers[globalIdx] = index;
 
     if(isCorrect) {
         btn.classList.add('correct');
@@ -546,7 +539,13 @@ function updateListStats() {
     const currentSectionAnswers = listAnswers.slice(startIndex, endIndex);
 
     const answered = currentSectionAnswers.filter(a => a !== null).length;
-    const corrects = currentSectionAnswers.filter(a => a === true).length;
+    
+    const sectionQuestions = qData.slice(startIndex, endIndex);
+    const corrects = currentSectionAnswers.filter((selectedIdx, localIdx) => {
+        if (selectedIdx === null) return false;
+        return selectedIdx === sectionQuestions[localIdx][2];
+    }).length;
+
     const totalInSection = endIndex - startIndex;
     const scoreText = document.getElementById('list-score');
 
@@ -570,9 +569,9 @@ function formatTextWithCode(text) {
     return text.replace(/\n/g, '<br>');
 }
 
-// Uruchamiamy ładowanie bazy "po 2017" jako domyślnej po wejściu na stronę
+// Uruchamiamy ładowanie jedynej bazy od razu
 window.onload = () => {
-    loadDataset('questions_po2017.json', 'po2017');
+    loadDataset('questions.json', 'main');
 };
 </script>
 

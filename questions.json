@@ -3841,5 +3841,830 @@
     ],
     3,
     "Ponieważ planista jądra sprawuje absolutną i nadrzędną kontrolę na dystrybucją cennego zasobu jakim jest moc przeliczeniowa, sprzęt rezerwuje dla niego najwyższy z priorytetów by dyspozytor zadziałał jak wyrocznia w krytycznym ułamku sekundy dla maszyny."
+  ],
+  [
+    "Zamawianie i zwalnianie zasobów można zaimplementować za pomocą procedur:",
+    [
+      "odblokuj i zaalokuj zasoby",
+      "pobierz zasoby i przejmij zasoby",
+      "zamów zasoby oraz zwolnij zasoby",
+      "żadne z powyższych"
+    ],
+    2,
+    "W teorii systemów operacyjnych klasyczne procedury operujące na dostępności zasobów to po prostu komendy 'zamów zasoby' i 'zwolnij zasoby'."
+  ],
+  [
+    "Celem algorytmu planowania (szeregowania) jest:",
+    [
+      "organizacja pracy dla zwiększenia zadowolenia użytkownika oraz ogólne zwiększenie wydajności",
+      "wzajemne wyłączanie procesów",
+      "zapobieganie blokadom dysków twardych",
+      "ograniczenie liczby procesów do stałego limitu w systemie"
+    ],
+    0,
+    "Algorytmy planowania odpowiednio rozdzielają czas procesora, aby maksymalizować wydajność obliczeniową maszyny i poprawiać komfort pracy użytkownika."
+  ],
+  [
+    "Które z poniższych NIE jest algorytmem planowania przydziału czasu procesora:",
+    [
+      "Najpierw najkrótsza praca (SJF)",
+      "Algorytm rotacyjny (Round Robin)",
+      "Kolejka dwupoziomowa",
+      "Algorytm Bankiera"
+    ],
+    3,
+    "Algorytm Bankiera nie służy do szeregowania czasu procesora, lecz jest matematyczną strategią zapobiegania zjawisku zakleszczeń (deadlock) na zasobach."
+  ],
+  [
+    "Mówiąc w systemach o mechanizmach przydziału mamy na myśli:",
+    [
+      "ograniczenia uprawnień do plików i folderów systemowych",
+      "ogólną politykę decyzyjną jądra",
+      "praktyczne środki wykonywania przydziału",
+      "planowanie długoterminowe zasobów"
+    ],
+    2,
+    "W inżynierii systemów rozróżnia się ogólną 'politykę' (cel) od 'mechanizmów', które stanowią konkretne, praktyczne środki sprzętowe lub programowe do zrealizowania tej polityki."
+  ],
+  [
+    "Algorytm planowania „najpierw najkrótsza praca” (SJF) cechuje się:",
+    [
+      "zminimalizowaniem długości średniego cyklu przetwarzania prac",
+      "najdłuższym czasem oczekiwania w kolejce CPU",
+      "umożliwieniem procesom macierzystym nadzorowania potomnych",
+      "brakiem możliwości sprzętowego zawłaszczenia procesora"
+    ],
+    0,
+    "Algorytm SJF jest dowiedziono optymalny, jeśli chodzi o minimalizację średniego czasu oczekiwania procesu w systemie, ponieważ najpierw ubywają najszybsze zadania."
+  ],
+  [
+    "Zadaniem procedury „stwórz proces” w systemie jest m.in.:",
+    [
+      "usunięcie mechanizmu buforującego (spoolera)",
+      "zamiana dwóch sąsiednich procesów starych z nowymi",
+      "utworzenie deskryptora dla danego procesu i dowiązanie go do struktury procesów",
+      "skasowanie bieżącego deskryptora z RAM"
+    ],
+    2,
+    "Zainicjowanie nowego procesu wymaga od systemu stworzenia dla niego bloku kontrolnego (deskryptora z nowym PID) i wpięcia go we właściwą strukturę oczekujących kolejek."
+  ],
+  [
+    "Przydział zasobów w systemie informatycznym formalnie składa się z:",
+    [
+      "metodyki i obranego celu",
+      "polityki oraz zaimplementowanych mechanizmów",
+      "ogólnej taktyki i strategii przydzielania",
+      "wyłącznie samego planowania czasu"
+    ],
+    1,
+    "Zarządzanie opiera się o nadrzędną Politykę (np. traktujemy procesy sprawiedliwie po równo) realizowaną przez konkretne Mechanizmy (np. przerwanie zegarowe wywłaszczające zadania)."
+  ],
+  [
+    "Planowanie (szeregowanie) można zdefiniować jako:",
+    [
+      "fragment ogólnego zagadnienia przydziału zasobów związany z przydziałem samego procesora",
+      "mechanizm pozwalający na wymuszanie pożądanych zakleszczeń dla bezpieczeństwa systemu",
+      "modyfikowanie maski uprawnień do plików systemowych",
+      "środki służące do usuwania usterek plików wsadowych"
+    ],
+    0,
+    "Czas pracy procesora traktowany jest jak każdy inny ograniczony zasób. Planowanie to po prostu dedykowany system rozdzielania (przydziału) tego właśnie zasobu na aplikacje."
+  ],
+  [
+    "Rozliczanie ilości zużytych zasobów (biling) jest stosowane powszechnie dla:",
+    [
+      "pojedynczych stacji roboczych domowych",
+      "starego systemu operacyjnego MS-DOS",
+      "laptopów i przenośnych maszyn wirtualnych",
+      "dużych serwerów komercyjnych (np. typu Mainframe)"
+    ],
+    3,
+    "Dokładne śledzenie czasu procesora, użytego RAM-u i liczby operacji na dysku od dekad służy komercyjnym serwerom do rozliczania swoich klientów za faktyczne zużycie zasobów chmury."
+  ],
+  [
+    "Prace czekające dopiero na wprowadzanie i wykonanie w pamięci operacyjnej są gromadzone w:",
+    [
+      "kolejce priorytetowej rotacyjnej",
+      "odpowiednim semaforze systemowym na portach I/O",
+      "puli prac (na dysku)",
+      "pamięci podręcznej L2 mikroprocesora"
+    ],
+    2,
+    "Procesy, które nie zmieściły się jeszcze w operacyjnej pamięci RAM komputera, czekają na swoją kolej doładowania przez system w tzw. puli prac na dysku masowym."
+  ],
+  [
+    "Termin 'ochrona' w kontekście inżynierii systemów operacyjnych odnosi się m.in. do:",
+    [
+      "tworzenia bezpiecznych kopii plików na nośnikach optycznych",
+      "zapobiegania przepięciom w linii 12V na płycie głównej komputera",
+      "mechanizmów kontrolowania dostępu programów do zasobów systemowych",
+      "całkowitego wyłączenia systemu po detekcji groźnej awarii"
+    ],
+    2,
+    "Ochrona to precyzyjne środki programowe i sprzętowe wymuszające kontrolę nad tym, co dany proces użytkownika może przeczytać lub zmienić w zasobach wewnętrznych komputera."
+  ],
+  [
+    "Jednym z najważniejszych celów wprowadzania mechanizmów ochrony jest:",
+    [
+      "szybkie wykrywanie błędów fizycznych na powierzchni dysku",
+      "zapobieganie wpływaniu wad jednych procesów na działanie innych procesów",
+      "naprawienie bezpośrednich skutków błędów",
+      "zwiększenie częstotliwości taktowania procesora bez ryzyka zawieszenia"
+    ],
+    1,
+    "Ochrona izoluje zadania od siebie (np. przydzielając osobną przestrzeń RAM). Dzięki temu programista nie martwi się, że awaria zewnętrznej aplikacji nagle wyłączy jego własny program."
+  ],
+  [
+    "Domena ochrony definiuje m.in.:",
+    [
+      "wady i błędy środowiska oprogramowania",
+      "harmonogram napraw bloków systemu plików na partycji NTFS",
+      "zbiór obiektów dostępnych w danej domenie oraz rodzaje operacji, które można na nich wykonać",
+      "wyłącznie numery przerwań maskowalnych"
+    ],
+    2,
+    "Domena precyzyjnie określa kompetencje użytkownika (lub procesu) wyznaczając zbiór zasobów do jakich ma on dostęp, wraz z wyszczególnieniem dozwolonych praw (np. tylko odczyt)."
+  ],
+  [
+    "Sposobami reprezentacji (realizacji) domeny ochrony w systemie mogą być:",
+    [
+      "użytkownik, proces lub program",
+      "wyłącznie grupy administratorów z systemu Windows",
+      "procesory w maszynach wielordzeniowych i ich gniazda",
+      "hasła systemowe szyfrowane w pliku /etc/shadow"
+    ],
+    0,
+    "Rolę podmiotu w systemie, z którym wiąże się pule uprawnień i domenę ochrony, może pełnić zalogowany człowiek (użytkownik), ale również sam działający automatycznie w tle proces."
+  ],
+  [
+    "Jakie elementarne mechanizmy sprzętowe procesora wykorzystuje system do podstawowej ochrony pamięci:",
+    [
+      "sprzętowy koń trojański",
+      "kontrola plików wymiany FAT",
+      "przełącznik trybu (Nadzorca/Użytkownik), rejestr bazowy i rejestr graniczny",
+      "nadmiarowość szyn danych układu MBR"
+    ],
+    2,
+    "Sprzęt wspomaga system tworząc tryb jądra wywołujący wszystkie instrukcje oraz tryb użytkownika, który ograniczony jest sprzętowymi rejestrami wyznaczającymi przydzielone mu krawędzie RAMu."
+  ],
+  [
+    "W systemowej macierzy dostępu (Access Matrix) historycznie NIE mogą zaistnieć następujące prawa przypisane dla procesu:",
+    [
+      "prawo właściciela",
+      "prawo odczytu i prawo przełączania warstw",
+      "prawo kopiowania nadanego dostępu w inne miejsce tabeli",
+      "prawo przejęcia absolutnie całej macierzy dostępu i prawo definiowania własnych dowolnych praw"
+    ],
+    3,
+    "Aby system był bezpieczny, żadna aplikacja w trybie użytkownika nie może sobie samowolnie dopisywać uprawnień, ani przejmować głównej bazy zabezpieczeń chronionej przez jądro."
+  ],
+  [
+    "W jaki sposób w praktyce inżynierii programowania NIE realizuje się macierzy dostępu:",
+    [
+      "za pomocą tabeli praw powiązanych globalnie z wykazami ACL dla obiektów",
+      "za pomocą zmyślonego mechanizmu labiryntu-nitki",
+      "za pomocą mechanizmu zamka-klucza",
+      "za pomocą wykazów określających uprawnienia poszczególnych domen (Capabilities)"
+    ],
+    1,
+    "W odpowiedziach z notatek ukryto fałszywy zmyślony mechanizm 'labiryntu-nitki'. Reszta podpunktów to poprawne wdrożenia sprzętowe koncepcji dostępu Macierzy."
+  ],
+  [
+    "Czego absolutnie NIE wykorzystuje się jako sposobu fizycznego cofania przydzielonych już w systemie praw dostępu:",
+    [
+      "bufory zapisu i asynchroniczne semafory procesów",
+      "mechanizm kluczy dostępowych",
+      "technik wskaźników zwrotnych",
+      "opóźnionego wtórnego pozyskiwania referencji obiektu z bazy"
+    ],
+    0,
+    "Bufory oraz semafory to typowe mechanizmy synchronizacji i wymiany danych z systemem strumieni wejścia/wyjścia (I/O). Nie służą one kompletnie do regulacji lub cofania uprawnień ochronnych dla powłok użytkownika."
+  ],
+  [
+    "Alternatywnymi określeniami używanymi jako inne terminy dla pojęcia Domeny (Dziedziny ochrony) są m.in.:",
+    [
+      "rejestry dyskompleksowe",
+      "sfera lub reżim",
+      "ustawiennictwo tablic dyskowych systemu",
+      "modułowość warstwowa zabezpieczeń"
+    ],
+    1,
+    "W anglojęzycznej, starej literaturze technicznej pojęcie domen ochrony (protection domains) bywa tłumaczone na język polski potocznie również jako sfery bezpieczeństwa lub odpowiednio reżimy."
+  ],
+  [
+    "Motywację do wprowadzania złożonych mechanizmów ochrony w wielodostępnych systemach wielozadaniowych przedstawia się m.in. jako chronienie użytkowników przed:",
+    [
+      "występowaniem w systemie algorytmu bankiera",
+      "wadami na talerzach twardych dysków sieciowych SCSI",
+      "złymi i celowymi zamiarami obcych jednostek / hakerów (złośliwymi naruszeniami)",
+      "zakleszczeniami w pamięci stronicowania RAM-u komputera"
+    ],
+    2,
+    "W erze podpięcia maszyn wieloużytkownikowych i współdzielonych chmur koncepcja ochrony przestała bronić system tylko i wyłącznie przed przypadkowymi usterkami wadliwego kodu oprogramowania, a zaczęła też przed celowymi wirusami i kradzieżą bazy haseł."
+  ],
+  [
+    "W abstrakcyjnym mechanizmie weryfikacji o nazwie Zamek-Klucz występują:",
+    [
+      "tablice globalne z wirtualnym klucznikiem",
+      "wyłącznie proste, szyfrujące zamki zabezpieczające foldery przed otwarciem systemowym logiem MBR",
+      "klucze domenowe wbudowane w porty sterujące LPT dla drukarek",
+      "zamki chroniące poszczególne obiekty i klucze przypisane do poszczególnych domen żądających wejścia"
+    ],
+    3,
+    "W modelu tym każdy obiekt w systemie posiada bitowy 'zamek'. Dostęp jest odblokowany i umożliwiony wyłącznie z weryfikacji procesów, które wylegitymują się podczas wywołań prawidłowo dopasowanym pod maskę zera i jedynek 'kluczem'."
+  ],
+  [
+    "Historyczny system MULTICS stworzony dla wielkich maszyn serwerowych charakteryzował się w warstwie bezpieczeństwa m.in.:",
+    [
+      "posiadaniem bardzo skomplikowanej struktury pierścieniowej oraz segmentowej przestrzeni adresowej",
+      "brakiem możliwości podziału plików i folderów ze względu na strukturę jednolitą monolitu",
+      "opieraniem dostępu całkowicie na nieuporządkowanej strukturze gwiazdy w środowisku dyskowym FDD",
+      "wyeliminowaniem całkowitym układów o pamięci wirtualnej"
+    ],
+    0,
+    "System MULTICS był absolutnym protoplastą sprzętowych rozwiązań dla wczesnego Unixa. To tam powołano pierwszy raz silną i mocno krytyczną ochronę obszarów ułożoną na modelu bezpiecznych koncentrycznych ringów wywołań w przestrzeni pamięci na segmenty."
+  ],
+  [
+    "W teoretycznej i modelowej Macierzy Dostępu (Access Matrix):",
+    [
+      "tablica nie przypisuje żadnych uciętych poziomów ani pionów dla wywoływań operacyjnych zadań w tablicy",
+      "wiersze zawsze reprezentują absolutnie zbiory wyłączne samych obiektów jak bloki drukarek i plików z FAT-a",
+      "wiersze reprezentują żądające domeny (podmioty), natomiast jej kolumny ucieleśniają docelowe obiekty oraz również same ewentualne domeny",
+      "kolumny po prawej stronie ograniczają zliczanie dla wątków dyspozytora systemowego bez powłok poleceń skryptu"
+    ],
+    2,
+    "Koncepcja to prosta tabela informacyjna. Poziome rzędy i wiersze od lewej określają, KTO prosi o działanie, a na osi poziomej dla kolumn umiejscawia się wykaz punktów pokazujący z wyszczególnieniem CO dany człowiek po złączeniu palców z punktem praw z siatki będzie mógł odczytać lub usunąć na stałe."
+  ],
+  [
+    "Klamra Dostępu (Access Bracket) odnotowywana w archaicznych układach zarządzania dla systemu z epoki MULTICS jest:",
+    [
+      "organizacją w locie gwarantującą przydzielanie danemu rygorystycznemu segmentowi zbioru kolejnych, precyzyjnych pierścieni ochrony pod wywołanie dostępu procesora",
+      "specjalnym atrybutem na dostępy z usuwaniem w trybach administratora",
+      "strukturą organizującą wolne na pozycjach katalogowych i-węzły bez odniesień",
+      "wirtualnym mechanizmem tablic dla wolnego pliku bootloadera na serwer"
+    ],
+    2,
+    "Zabezpieczenia ringów ustalały przedziały numerów (np. warstwa 1-2 zezwalała na operacje z odczytu, podczas gdy operacje modyfikacji w locie akceptowane były tylko od trybu super jądra w Ringu najniższym o wartości zera)."
+  ],
+  [
+    "Znak symbolicznej Gwiazdki (*) spotykany podczas adnotacji dopisanej przy nadanym określonym prawie (np. przy prawie czytania R*) na schematycznej macierzy dla domeny w systemie operacyjnym:",
+    [
+      "zobowiązuje administratora z reguły do natychmiastowego obcięcia tego ujemnego prawnego zapisu tylko do domen o wyższym ukrytym ID katalogu macierzystego serwera",
+      "pozwala dla zysku programistycznego tylko na ograniczone zrzuty zapisowe we wskazanej kolumnie bloku powiązania bazy relacyjnej SQL z macierzą dysków w oparciu RAID5 z sumami kontrolnymi obok siebie",
+      "zabrania po wsze czasy absolutnie po formacie całkowitego modyfikowania i zapisywania poleceń usuwania",
+      "oznacza techniczną i fizyczną możliwość skopiowania, czyli udostępniania i transferowania dla tej zmiennej prawa z naszej zadeklarowanej na matrycy domeny bezpośrednio do dowolnych tablic i domen u innych"
+    ],
+    3,
+    "Prawo kopiowania uprawnień to atrybut rozszerzający polegający na przeniesieniu uprawnień. Jeżeli nadano dla mnie plik z dostępem Read* na odczyt z adnotacją flagi symbolizującej kopię – oprócz wyciągnięcia przez proces tego samego testu do ramu, udostępnia interfejs upoważniający przydział wywołujący go też dla innych domowników grupy pracującej pod spodem konta."
+  ],
+  [
+    "Przełącznik trybu (tryb nadzorcy/tryb użytkownika) to w systemie operacyjnym:",
+    [
+      "rejestr bazowy używany przy stronicowaniu",
+      "wyłącznie interfejs do przesyłania danych w DMA",
+      "rejestr graniczny pamięci",
+      "elementarna postać ochrony / zarządza możliwością wykonywania rozkazów uprzywilejowanych"
+    ],
+    3,
+    "Sprzętowy przełącznik trybu procesora to podstawowy mechanizm bezpieczeństwa. Gwarantuje, że niebezpieczne komendy mogą być wykonane tylko przez system w trybie jądra."
+  ],
+  [
+    "Podczas projektowania mechanizmów cofania praw dostępu NIE należy uwzględniać następujących kwestii (co jest pojęciem zmyślonym):",
+    [
+      "czy cofanie jest wybiórcze czy ogólne",
+      "czy cofanie jest czasowe czy na stałe",
+      "czy cofanie jest natychmiastowe czy z opóźnieniem",
+      "czy cofanie ma przebiegać gwałtownie czy taktownie (agresywnie czy progresywnie)"
+    ],
+    3,
+    "Opcje takie jak 'gwałtownie czy taktownie' to dystraktory. System interesuje tylko aspekt techniczny wycofywania uprawnień (np. natychmiastowe vs opóźnione)."
+  ],
+  [
+    "Z ilu plików na dysku składa się tradycyjne jądro w dawnych systemach operacyjnych takich jak Linux czy DOS?",
+    [
+      "Linux – 1 plik (np. vmlinuz), DOS – 1 plik (np. msdos.sys / io.sys)",
+      "OS/2 – z 10 plików bazy MFT",
+      "Windows NT – z braku plików (jądro rozproszone)",
+      "Zawsze składa się z minimum kilkunastu bibliotek .dll"
+    ],
+    0,
+    "Zgodnie z podziałem w notatkach: jądro Linuxa czy DOSu to w tradycyjnym ujęciu jeden główny, skompilowany plik ładowany do pamięci przy starcie."
+  ],
+  [
+    "Które z poniższych narzędzi (poleceń) w systemie Linux odwołują się i służą do zarządzania modułami jądra?",
+    [
+      "rm, cp, addmod",
+      "makeconfig, configure, make install",
+      "cd, kernelmode, make bzImage",
+      "insmod, lsmod, rmmod, depmod"
+    ],
+    3,
+    "Programy z przyrostkiem 'mod' (module) w Linuksie odpowiadają za ładowanie (insmod), wyświetlanie (lsmod) i usuwanie (rmmod) dynamicznych sterowników jądra."
+  ],
+  [
+    "Które polecenie powłoki z rodziny Make dokona fizycznej kompilacji kodu źródłowego jądra (Linux)?",
+    [
+      "make clean",
+      "make dep",
+      "make zImage / make bzImage",
+      "make kernel"
+    ],
+    2,
+    "Komenda make bzImage buduje i od razu kompresuje obraz jądra systemu, przygotowując go do umieszczenia w partycji rozruchowej."
+  ],
+  [
+    "Co NIE JEST klasycznym podstawowym składnikiem jądra systemu operacyjnego?",
+    [
+      "Podsystem plików",
+      "Sterowniki urządzeń I/O",
+      "Podsystem sterujący procesami i pamięcią",
+      "Pakiety GUI (Graficznego Interfejsu Użytkownika)"
+    ],
+    3,
+    "GUI (środowisko okienkowe) w klasycznej architekturze działa w przestrzeni użytkownika, a nie jądra. System może działać poprawnie z samego terminala."
+  ],
+  [
+    "W jakim języku napisane jest jądro z rodziny systemów Windows (np. NT):",
+    [
+      "PHP 4.0",
+      "Visual Basic",
+      "FortRun",
+      "C / C++ (oraz asembler dla najniższych warstw sprzętu)"
+    ],
+    3,
+    "Ze względów wydajnościowych rdzeń jądra pisany jest w języku C i C++, z użyciem wstawek niskopoziomowego asemblera tam, gdzie wymagany jest bezpośredni kontakt ze sprzętem."
+  ],
+  [
+    "W jakim języku napisane jest jądro systemu Linux?",
+    [
+      "C#",
+      "Object Pascal",
+      "C (z użyciem asemblera)",
+      "Visual Basic"
+    ],
+    2,
+    "Linux został napisany przez Linusa Torvaldsa i społeczność w strukturalnym języku C, który jest standardem dla systemów typu UNIX."
+  ],
+  [
+    "Jakim poleceniem tekstowym konfigurujemy opcje do kompilacji jądra systemu Linux?",
+    [
+      "make zImage",
+      "make clean",
+      "make dep",
+      "make config (bądź make menuconfig / make xconfig)"
+    ],
+    3,
+    "Make config uruchamia skrypt przeprowadzający użytkownika przez dziesiątki opcji włączania lub wyłączania modułów przed finalną kompilacją."
+  ],
+  [
+    "Co przede wszystkim stanowi jądro systemu operacyjnego (jego najważniejszą część decyzyjną):",
+    [
+      "kanał DMA",
+      "operacje czekaj i sygnalizuj dla powłoki bsh",
+      "dyspozytor procesów (w tym obsługa wątków i przerwań)",
+      "jednostka arytmetyczno-logiczna ALU"
+    ],
+    2,
+    "Sercem jądra jest moduł zarządzający czasem procesora i pamięcią – to dyspozytor sprzętowy pozwala maszynie na wielozadaniowość."
+  ],
+  [
+    "Jakie główne zadanie spełnia proces wstępnej obsługi przerwań (Interrupt Handler):",
+    [
+      "Zainicjować obsługę i określić źródło przerwania",
+      "Przydzielać manualnie przerwania dla nowych urządzeń I/O w BIOSie",
+      "Inicjować procesy uprzywilejowane w powłoce systemowej",
+      "Obsługiwać pliki MFT"
+    ],
+    0,
+    "Pierwszym zadaniem procedury przerwania jest szybka identyfikacja (określenie źródła), które z urządzeń sprzętowych na płycie wygenerowało sygnał, by dobrać dla niego odpowiedni sterownik."
+  ],
+  [
+    "Jądro systemu operacyjnego:",
+    [
+      "kontroluje pracę tylko i wyłącznie dysku twardego",
+      "konwertuje strumień standardowy na potok TCP/IP",
+      "tworzy niskopoziomowy interfejs między sprzętem a pozostałymi, wyższymi warstwami systemu operacyjnego",
+      "działa zawsze z uprawnieniami zwykłego użytkownika"
+    ],
+    2,
+    "Jądro to warstwa abstrakcji, która ukrywa przed oprogramowaniem trudny, fizyczny sprzęt maszynowy, podsuwając mu w zamian ustandaryzowane API."
+  ],
+  [
+    "W czystej, rygorystycznej warstwowej budowie systemu operacyjnego do jądra (warstwy 0) odwołać mogą się:",
+    [
+      "wszystkie warstwy jednocześnie",
+      "tylko i wyłącznie urządzenia zewnętrzne",
+      "żadna z warstw, jądro jest wyizolowane",
+      "tylko warstwa bliska jądru (np. warstwa 1)"
+    ],
+    3,
+    "Zgodnie z klasyczną i rygorystyczną teorią modelów warstwowych, dana warstwa 'N' może komunikować się wyłącznie ze swoimi bezpośrednimi sąsiadami z warstwy 'N-1'."
+  ],
+  [
+    "Ostatnią czynnością wykonywaną podczas rozruchu przez program ładujący NTLDR (w starszych Windows) jest:",
+    [
+      "uruchamianie procedury testowej POST",
+      "ładowanie pliku boot.ini",
+      "ładowanie pliku ntdetect.com w celu szukania sprzętu",
+      "ładowanie jądra systemu Windows (ntoskrnl.exe) i przekazanie mu sterowania"
+    ],
+    3,
+    "Gdy NTLDR skończy czytać ustawienia i ładować bazowe sterowniki, wciąga do pamięci jądro, uruchamia je i od tego momentu sam kończy pracę."
+  ],
+  [
+    "Jakie istnieją klasyczne konwencje nazewnictwa wersji jądra w systemie Linux?",
+    [
+      "Wersja mobilna i wersja użytkownika",
+      "Wersja stabilna (np. parzysta) i rozwojowa / niestabilna (np. nieparzysta)",
+      "Wersja okrojona i pełna",
+      "Wersja zabezpieczona i odblokowana"
+    ],
+    1,
+    "Historycznie twórcy jądra nadawali wersjom parzystym status wydań stabilnych, natomiast wersje nieparzyste służyły programistom do eksperymentów rozwojowych."
+  ],
+  [
+    "Który z poniższych zaliczany jest do dawnych systemów o jednolitej, niechronionej budowie uważanej za 'system bez wyodrębnionego jądra' (z perspektywy architektury NT/Unix):",
+    [
+      "Windows NT i Windows 2000",
+      "Linux",
+      "OS/2",
+      "Windows 9x (Windows 95/98) oraz system DOS"
+    ],
+    3,
+    "Rodzina Windows 9x opierała się na MS-DOS i nie posiadała pełnej izolacji przestrzeni pamięci jądra od programów. Wszystko działało jako wielki monolit, w którym aplikacja użytkownika mogła zawiesić cały sprzęt."
+  ],
+  [
+    "W jakim głównym pliku wykonywalnym znajduje się rdzeń jądra systemu operacyjnego (w zależności od architektury):",
+    [
+      "boot.ini",
+      "ntdetect.com",
+      "notpad.exe",
+      "ntoskrnl.exe (w Windows NT) lub np. vmlinuz (w Linux)"
+    ],
+    3,
+    "Kernel systemu Windows nosi techniczną nazwę NT OS Kernel (ntoskrnl.exe), a w Linuksie jest to plik ze skompresowanym obrazem (vmlinuz)."
+  ],
+  [
+    "W jaki sposób działa algorytm rozmieszczania pamięci - algorytm bliźniaków (buddy system)?",
+    [
+      "Dziury układane są według adresu i przydzielane od najmniejszej",
+      "Sprawia, że bloki pamięci dzielone są na 2 (potęgi dwójki) i przy zwalnianiu sąsiednie bloki o tym samym rozmiarze są od razu scalane",
+      "Dziury na dysku uporządkowane są od największej do najmniejszej",
+      "Utrzymuje dwa procesory wykonujące ten sam program w poszukiwaniu błędów"
+    ],
+    1,
+    "Buddy memory allocation dzieli bloki na połowy tak, aby szybko dopasować je do żądań procesów, a w razie zwolnienia sąsiadujących bliźniaków, szybko łączy je z powrotem w większą ciągłą pulę RAM."
+  ],
+  [
+    "Bezpośredni dostęp do pamięci (o którym procesor nie musi decydować bajt po bajcie) posiadają:",
+    [
+      "wyłącznie urządzenia wejścia typu mysz i klawiatura",
+      "monitory i ekrany",
+      "tylko jednostka ALU w procesorze",
+      "procesor oraz urządzenia współpracujące przez kontroler kanału (DMA)"
+    ],
+    3,
+    "Zarówno główny procesor jak i urządzenia zewnętrzne posiadające wsparcie DMA (np. karty sieciowe, dyski) potrafią kierować bity prosto na adresy kości pamięci RAM."
+  ],
+  [
+    "W archaicznej technice nakładkowania (overlays) dla systemów z niedostatkiem pamięci:",
+    [
+      "Nakładki mogą być wczytywane tylko według rozmiaru tablicy MFT",
+      "System ładuje do pamięci cały program naraz i korzysta z pliku wymiany dyskowej",
+      "System operacyjny ładuje do pamięci rdzeń (program główny), a sam program z własnej inicjatywy dociąga z dysku kolejne niezbędne mu moduły",
+      "Technika ta całkowicie eliminuje problem braku pamięci bez ubytków na szybkości"
+    ],
+    2,
+    "Nakładkowanie to praca przerzucona na programistę. To kod aplikacji musi decydować, kiedy nadpisać stary obszar w RAM nową logiką odczytaną z pliku z dysku."
+  ],
+  [
+    "Historyczna Pamięć Konwencjonalna (w architekturze DOS) to:",
+    [
+      "Pamięć podręczna poziomu pierwszego (L1 cache)",
+      "Rozszerzony rejestr XMS u góry RAM",
+      "Pamięć podstawowa nie przekraczająca bariery pierwszych 640 KB",
+      "Cała dostępna pamięć komputera (powyżej 640 KB)"
+    ],
+    2,
+    "Architektura pierwszych IBM PC limitowała obszar adresowy dla programów użytkownika do pierwszych 640 KB pamięci RAM, co długo stanowiło poważną barierę dla programistów."
+  ],
+  [
+    "Pamięć asocjacyjna (TLB - Translation Lookaside Buffer) używana przy wirtualizacji RAM:",
+    [
+      "Buforuje tylko pliki multimedialne i pliki MP3",
+      "Przechowuje wyniki błędnych operacji arytmetycznych z ALU procesora",
+      "Zawiera wybrane deskryptory stron pamięci do których potrzebny jest ekstremalnie szybki, sprzętowy dostęp",
+      "Przechowuje wielkie pliki wymiany dysku wirtualnego (swap)"
+    ],
+    2,
+    "TLB pełni funkcję sprzętowego pamiętnika – zapamiętuje ostatnio przetłumaczone adresy stron z pamięci wirtualnej na fizyczną, redukując narzut potrzebny na odpytywanie tablic w RAM."
+  ],
+  [
+    "W strategiach rozmieszczania pamięci (dla alokacji ciągłej) używa się takich wariantów dopasowań jak Pierwsze, Najlepsze czy Najgorsze. Czego tam NIE używamy?",
+    [
+      "Pierwszego dopasowania (First fit)",
+      "Najlepszego przyporządkowania (Best fit)",
+      "Wariantu najgorszego dopasowania (Worst fit)",
+      "Rozmieszczenia z przewidywaniem"
+    ],
+    3,
+    "Rozmieszczanie określa 'gdzie' wepchnąć plik. 'Przewidywanie' to termin z mechaniki pobierania (czyli 'kiedy' pobrać stronę dysku do RAM), a nie mechaniki jej umiejscowienia."
+  ],
+  [
+    "Co to jest UMA (w klasycznej architekturze komputerów x86)?",
+    [
+      "Pamięć konwencjonalna dla aplikacji poniżej 640 KB",
+      "Zewnętrzna pamięć masowa i dyski USB",
+      "Pamięć podręczna procesora Cache",
+      "Upper Memory Area - obszar pamięci (pomiędzy 640 KB a 1 MB) wykorzystywany do celów systemowych, BIOS i sprzętu"
+    ],
+    3,
+    "Dziura adresowa pomiędzy 640 KB a okrągłym pierwszym megabajtem była rezerwowana przez pamięć kart rozszerzeń, wideo (VRAM) oraz zrzuty układu wejścia-wyjścia (BIOS)."
+  ],
+  [
+    "Głównymi strategiami przydziału i obsługi dla systemowego menedżera pamięci są m.in.:",
+    [
+      "Fragmentacja i defragmentacja listowa",
+      "Nakładkowanie na portach RS232",
+      "Segmentacja strumieniowa i wielowątkowa",
+      "Wymiana (zastępowanie stron), rozmieszczanie oraz pobieranie"
+    ],
+    3,
+    "Zarządzanie pamięcią wirtualną opiera się na 3 filarach: kiedy pobrać nową stronę, w które miejsce fizyczne ją umieścić i kogo usunąć (wymienić), jeśli RAM jest pełny."
+  ],
+  [
+    "Ochrona pamięci operacyjnej zaimplementowana bezpośrednio na poziomie stronicowania obejmuje m.in.:",
+    [
+      "sprawdzanie typów segmentów na magistrali zewnętrznej",
+      "kopiowanie zawartości pamięci zapasowej i mechanizm mirroring",
+      "sprawdzanie typów operacji (bit R/W) i ograniczanie dostępu do uprzywilejowanych stron (bit U/S)",
+      "tylko i wyłącznie limitowanie przerwań systemowych"
+    ],
+    2,
+    "Sprzętowy mechanizm stron używa wbudowanych flag: R/W (Read/Write) do ochrony przed niechcianym nadpisaniem kodu oraz U/S (User/Supervisor) do blokowania programom użytkownika dostępu do stron jądra."
+  ],
+  [
+    "Które z poniższych stwierdzeń opisujących koncepcje zarządzania pamięcią w systemach operacyjnych jest NIEPRAWIDŁOWE (fałszywe):",
+    [
+      "do poszczególnego segmentu jest możliwość określenia praw dostępu",
+      "rozmiar segmentu może być różny w zależności od struktury programu",
+      "segment posiada zawsze sztywny i stały rozmiar 4 KB",
+      "istnieje możliwość łączenia technik segmentacji ze stronicowaniem"
+    ],
+    2,
+    "To zdanie jest nieprawidłowe, ponieważ stały sprzętowy rozmiar (np. 4 KB) jest cechą pojedynczej 'strony'. 'Segment' ze swej natury dopasowuje swój rozmiar dynamicznie do funkcji czy tablic, na które dzieli się program."
+  ],
+  [
+    "Czym w architekturze pamięci wirtualnej jest zbiór roboczy (Working Set) konkretnego procesu:",
+    [
+      "maksymalną możliwą pulą wolnej pamięci RAM komputera dla całego systemu",
+      "zestawem wszystkich otwartych przez system plików i sterowników",
+      "specjalną zamkniętą pulą sprzętowych rejestrów pamięci cache procesora",
+      "minimalną liczbą stron pamięci głównej, wymaganą dla procesu, by mógł efektywnie pracować (bez szamotania)"
+    ],
+    3,
+    "Zbiór roboczy szacuje zestaw stron, do których proces bardzo aktywnie i często się odwołuje w danym momencie. Brak tych stron w fizycznym RAM-ie gwarantuje potężny spadek wydajności zwany szamotaniem (thrashing)."
+  ],
+  [
+    "Jakimi dwiema podstawowymi technikami pobierania (sprowadzania z dysku) stron do pamięci operacyjnej posługują się systemy operacyjne:",
+    [
+      "pobieraniem opartym o fragmentację zewnętrzną i wewnętrzną",
+      "pobieraniem blokowym i strumieniowym poprzez sieć",
+      "pobieraniem na żądanie (demand paging) oraz z wyprzedzającym przewidywaniem (prepaging)",
+      "pobieraniem jednowarstwowym oraz techniką nakładkowania"
+    ],
+    2,
+    "System pobiera stronę z nośnika dopiero gdy proces zgłosi sprzętowy błąd jej braku (na żądanie), lub system heurystycznie ładuje kolejne strony wcześniej, przewidując, że dany wątek za ułamek sekundy o nie poprosi (z przewidywaniem)."
+  ],
+  [
+    "Pełny adres logiczny w 32-bitowym trybie chronionym architektury mikroprocesorów x86 składa się z:",
+    [
+      "jednego ciągłego 64-bitowego wektora liniowego",
+      "16-bitowego selektora segmentu oraz 32-bitowego offsetu (przesunięcia)",
+      "32-bitowego rejestru bazowego przypiętego do MBR dysku",
+      "8-bitowego selektora oraz 16-bitowego kodu komendy CPU"
+    ],
+    1,
+    "Program wywołując adres podaje tzw. wskaźnik far, z którego 16 bitów określa, w jakiej wirtualnej tabeli leży deskryptor segmentu (selektor), a 32 bity wyznaczają w którym konkretnie bajcie od początku tego segmentu leży pożądana zmienna."
+  ],
+  [
+    "Realizacja nowożytnej pamięci wirtualnej sprzętowo związana jest powszechnie z mechanizmem:",
+    [
+      "kontrolą tablic alokacji i-węzłów Ext3",
+      "wymianą kluczy między semaforami dostępu",
+      "występowaniem w systemie rejestru flag statusu eFLAGS",
+      "wykorzystaniem układów stronicowania (oraz opcjonalnie segmentacji)"
+    ],
+    3,
+    "Sama idea wirtualnego SWAP-u (zrzucania i pobierania zawartości RAM z dysku bez wiedzy programu) wymusiła i spopularyzowała powszechne w procesorach układy oparte o dzielenie RAM-u na małe, odrębne części – czyli stronicowanie."
+  ],
+  [
+    "Sprzętowy cykl bezpośredniego dostępu do pamięci komputera z pominięciem procesora (DMA) poprzedza m.in.:",
+    [
+      "wystawienie komendy uśpienia całego systemu HALT",
+      "sygnał wymuszenia przerwania niemaskowalnego NMI w układzie zegara",
+      "sygnał od kontrolera z żądaniem zwolnienia magistrali oraz fizyczne potwierdzenie jej zwolnienia przez procesor",
+      "sformatowanie sektora dyskowego w modelu blokowym"
+    ],
+    2,
+    "Kontroler DMA, zanim zacznie pisać po kościach RAM, musi bezpiecznie zgłosić procesorowi chęć użycia głównej płyty (sygnał HOLD) i poczekać na sygnał zwrotny odłączenia procesora od styków (Hold Acknowledge)."
+  ],
+  [
+    "Dodatkowe bity dołączone jako atrybuty do każdego pojedynczego elementu tablicy stron zawierają m.in.:",
+    [
+      "adres logiczny początku wywoływanego segmentu",
+      "flagi stanu strony (np. bit modyfikacji/dirty bit czy bit odniesienia używany w statystykach jądra)",
+      "współdzielony wskaźnik na rozmiar zainstalowanej fizycznie w maszynie pamięci RAM",
+      "tekstową nazwę pliku, który dana strona prezentuje w środowisku Windows"
+    ],
+    1,
+    "Wpisy (PTE - Page Table Entry) poza wskazaniem numeru ramki w fizycznej pamięci muszą zawierać metadane zliczające zachowanie procesu. Dzięki bitom takim jak 'Modify' system wie, czy musi przed usunięciem strony zapisać ją jako edytowaną na dysku do SWAP."
+  ],
+  [
+    "Systemowe ograniczenie dostępu do wybranego segmentu w pamięci trybu chronionego x86 realizowane jest technicznie poprzez nałożenie:",
+    [
+      "wartości określającej tzw. poziomy uprzywilejowania (2-bitowa wartość, czyli DPL 0-3)",
+      "szyfru wygenerowanego losowo przez 8-bitową wartość hash",
+      "fizycznych blokad na portach I/O płyty ATX",
+      "wyłącznie limitów definiujących maksymalny rozmiar i-węzłów partycji"
+    ],
+    0,
+    "Zasady bezpieczeństwa sprawdzają, czy proces użytkownika posiada wystarczająco wysoki poziom przywileju (np. Ring 3 - najniższy), by odwołać się do struktury z wyższej warstwy Ring 0. Kodowane to jest w 2 bitach deskryptora (Descriptor Privilege Level)."
+  ],
+  [
+    "Deskryptor urządzenia (wirtualny układ informacji systemowej opisującej sprzęt wejścia/wyjścia) zawiera m.in.:",
+    [
+      "szczegóły o strukturze katalogów plików graficznych",
+      "adres pracującego sprzętu w maszynie, identyfikator urządzenia oraz spis rozkazów wykonywanych przez oprogramowanie jądra na danym urządzeniu",
+      "liczniki zegara czasu rzeczywistego płyty głównej komputera",
+      "kompilator potrzebny do instalacji peryferyjnych myszy optycznych"
+    ],
+    1,
+    "Podsystem WE/WY dla każdego podpiętego sprzętu w komputerze przechowuje bloki kontrolne z takimi parametrami by wiedzieć: z czym się komunikuje, pod jakim sprzętowym adresem (portem) oraz jaki sterownik udostępnia mu zestaw procedur."
+  ],
+  [
+    "Na czym polega zasada działania tzw. kanału I/O (zastępowanego dzisiaj m.in przez układy w technologii DMA):",
+    [
+      "zmienia kolejność i pule przypisanych w powłoce BIOS przerwań",
+      "dzieli wyjściowe napięcia dla wentylatorów zasilacza",
+      "umożliwia procesorowi głównemu szyfrowanie danych za pomocą kluczy",
+      "umożliwia bezpośredni i masowy dostęp urządzenia zewnętrznego do pamięci RAM, oszczędzając czas procesora"
+    ],
+    3,
+    "Zarówno dawne inteligentne procesory kanałowe w maszynach mainframe, jak i układy DMA pozwalały wyznaczyć sprzętowi adres początku RAM i wielkość bajtów, zostawiając im w tle automatyczny transfer wielkich danych dyskowych bez ciągłego zajmowania uwagi głównego procesora."
+  ],
+  [
+    "Typowy deskryptor otwartego pliku operacyjnego (zwracany do wątku przez dyspozytora) zawiera np.:",
+    [
+      "szczegóły związane z wewnętrzną organizacją, informacje o pozycjach kursora czytania oraz narzucone na obiekt tryby otwartego dostępu",
+      "tylko ścieżkę do wirtualnej drukarki tekstowej LPT",
+      "rejestry środowisk ulotnych zatrzymanych aplikacji",
+      "kod źródłowy wywoływanego programu napisanego w języku C"
+    ],
+    0,
+    "Aby po wywołaniu poleceń zapisu lub czytania wątek wiedział od którego momentu ma to zrobić, korzysta on z wewnętrznego identyfikatora pliku w pamięci procesu, w którym jądro chowa informację o jego prawach modyfikacji (r/w) i wskaźnikach postępu."
+  ],
+  [
+    "Programowy dostęp do urządzeń fizycznych i zewnętrznych systemy operacyjne dzielą powszechnie na dwie wielkie ustandaryzowane kategorie:",
+    [
+      "dostęp wirtualny lokalny oraz dostęp skokowy",
+      "dostęp blokowy masowy i dostęp ciągły znakowy (strumieniowy)",
+      "dostęp równoległy matrycowy i szeregowy grafowy",
+      "dostęp przerwaniowy na pętli uśpienia"
+    ],
+    1,
+    "To absolutny podział całej infrastruktury. Z urządzeniami znakowymi rozmawia się tylko w jednym kierunku, bit po bicie (np. wpisy z klawiatury). Urządzenia blokowe można w dowolnej chwili przewijać tam i z powrotem odczytując konkretne gigabajty klastrów (np. dyski twarde)."
+  ],
+  [
+    "Do typowych reprezentacji zwanych jako „urządzenia wirtualne” ukrywanych przez model architektury WE/WY dla powłoki programisty należą chociażby:",
+    [
+      "szyny i styki magistrali ISA na mostku zasilania płyty głównej komputera",
+      "fizyczne porty i lutowane sterowniki na sprzęcie z rodziny SCSI",
+      "abstrakcyjne strumienie (dla urządzeń znakowych) i bloki (dla urządzeń dyskowych)",
+      "fizyczna podłączana bezprzewodowo mysz USB"
+    ],
+    2,
+    "Dla twórcy edytora tekstowego sprzęt się nie liczy. W wirtualnej warstwie plików (np. w katalogu /dev w Linuksie) klawiatura jawi się jako strumień potoku, z którego odczytywane są kody ASCII, a dysk to plik blokowy, w który wrzucamy kilobajty pamięci."
+  ],
+  [
+    "Powszechnymi w otoczeniu komputerowym przykładami na urządzenia zwane znakowymi (strumieniowymi) są:",
+    [
+      "dyski twarde z mechaniką HDD",
+      "systemowe dyski wirtualne montowane dla pliku RAM i zipów archiwalnych",
+      "masowe nośniki pamięci typu optycznego czytnika DVD-ROM",
+      "interaktywne terminale, klawiatury oraz myszy podające sekwencyjnie instrukcje użytkownika"
+    ],
+    3,
+    "Dyski i płyty podają informację na dowolne, losowe wywołanie skoku w megabajtowym bloku danych. Mysz lub terminal tekstowy musi być natomiast stale nasłuchiwany strumieniem niepodzielnym, wysyłając litera po literze w jednokierunkowym wężu ułożonych w czasie przerw."
+  ],
+  [
+    "W procesach wejścia/wyjścia działanie tzw. buforowania (bufferingu) w dużej mierze polega technicznie na:",
+    [
+      "trwałym zapisywaniu danych wynikowych w rejestrach bazy CPU jako forma zapobiegawcza w szamotaniu",
+      "całkowitym ucięciu przesyłu od urządzeń wyjściowych by zapewnić programom stabilne pętle operacyjne",
+      "czasowym umieszczaniu przesyłanej do urządzenia lub do systemu informacji w pamięci RAM, niwelując dramatyczne skoki różnic w prędkości odczytu sprzętu",
+      "usuwaniu logów awaryjnych drukarki LPT załadowanej bez papieru"
+    ],
+    2,
+    "Ponieważ procesor pracuje o tysiące razy szybciej niż jakikolwiek fizyczny napęd magnetyczny lub klawiatura z bufora L1, jądro wymyśliło bufory operacyjne na kościach RAMu jako przesiadkowe poczekalnie odkładanych z I/O pakietów łagodząc skoki i przepaście ich prędkości taktowania."
+  ],
+  [
+    "Czym w logice systemów zarządzających oprogramowaniem środowiska operacyjnego komputera PC jest moduł sprzętowy znany pod popularną nazwą jako 'Sterownik (Driver)':",
+    [
+      "dedykowanym sprzętowym procesem sterującym absolutnie pulami RAM-u w tablicy TLB w kości operacyjnej",
+      "jest plikiem naprawczym instalacyjnym do obsługi systemu plików",
+      "specyficznym zbiorem funkcji dającym jądru OS niskopoziomowy sposób dla dostępu konfiguracji, odczytów i obsługi do zadeklarowanego dedykowanego układu fizycznego pod kontroler",
+      "nie istnieje pojęcie w warstwie obsługi architektury - wszystkie procesy bazowe wbudowano domyślnie od producenta pod mostek płyty z opisywanym oprogramowaniem"
+    ],
+    2,
+    "Z powodu mnogości tysięcy różnorodnych sprzętów z chin (kamerki, dyski NVME) jądro musi wykreować do warstw operacyjnych moduł 'tłumacza'. Driver w tym wypadku komunikuje dziwne żądania przerwań i rozkazy autorskie do zrozumiałej standardowej komendy blokowej dla dyspozytora w pamięci Ring0."
+  ],
+  [
+    "Uwzględniając wykorzystywany w środowiskach inżynieryjnych mechanizm z podziału klas technicznej obsługi oprogramowania na portach przerwań operacyjnych komputery kategoryzują z reguły instalowane sterowniki na formy m.in.:",
+    [
+      "natywne pod bazy rejestrowe i z wiersza poleceń terminalowe",
+      "abstrakcyjne sterowniki rozproszonych powłok tekstowych skryptu sh",
+      "sterowniki nieustannie odpytujące sprzęt w poszukiwaniu odzewu (polling drivers) oraz natywne sterowniki przerwaniowe wybudzane",
+      "zoptymalizowane na stronicowania dla wątków dyskowych"
+    ],
+    2,
+    "Stary port i protokół by odczytać co robisz wymuszał obciążające 'odpytanie' np. procesor ciągle pętlami skanował po setki razy mysz w poszukiwaniu kliknięć. Sterowniki Przerwaniowe asynchronicznie siedzą i same oddają moc CPU dla innych wyczekując na sprzętowy dzwonek na przerwaniu, gdy tylko sprzęt da sygnał by wstać."
+  ],
+  [
+    "W systemowej wielowątkowej obsłudze tzw. urządzeń stricte niepodzielnych dla wielu programów instalowanych jednocześnie w systemie technologia bufora pośredniczącego zwanego popularnie 'Spoolerem' zapewnia bez zakleszczeń:",
+    [
+      "możliwość fizycznego podziału na niezależne podzadania do zapisywania klastrów stronicowanych z archiwizacji",
+      "iluzję obsługi podzielnej i bezpieczną zaporę z kolejką zrzutów bez błędów w trybie wielozadaniowości do jedynego takiego wolnego urządzenia z natury (jak jedna fizyczna drukarka papieru laserowa drukująca na porcie w biurze)",
+      "urządzeniom kontrolę przepływu w prędkości dla magistrali masowych napędów by opóźnienia przerwania miały stały wymiar z milisekund z zegarem jądra w pamięci w procesach jądrowych",
+      "natychmiastowe przeliczenia potokowe procesora L1"
+    ],
+    1,
+    "Spooling wyrzuca operację w postaci tymczasowego zadania do uformowania ukrytej szpulki wydruku jako plik do zamknięcia w podprocesach na twardym nośniku, naśladując pod programy złudzenie z bezbłędnej niekonfliktowej natychmiastowej obsługi wielodostępu nie zważając na blokadę fizyczną zapisanego dyspozytorowi sprzętu w pokoju."
+  ],
+  [
+    "Z punktu mechaniki inżynierii sprzętu zgłoszony na żądania błąd z tablic zwany poprawniej mianem Sprzętowego Przerwania generowany z układu wejść to u rdzenia:",
+    [
+      "asynchroniczne sprzętowo-elektroniczne natychmiastowe zdarzenie z płytki sygnałowej przez które nieznany uśpiony lub pobudzony osprzęt pilnie żąda zablokowania lub zwraca uwagę głównego pracującego procesora by ten położył na niego instrukcje",
+      "tylko opóźniona flaga z zegara o cyklach pod proces do opóźniania transferów bitowych jako uśpienie w DMA pod przydział kanału blokującego i oczekującego na cykle szamotania systemów w pamięciach",
+      "narzucone z opisu skryptu synchronizujące dla obsługi cykli wywołanie powrotów od wyjścia kodu w kompilatorach omijając przerwy jako pole do komend pod kanały w strumieniu znaków",
+      "proces zajmujący operacyjnie obszar bazy pamięci adresowej systemów w rejestrze flagi."
+    ],
+    0,
+    "Pojęcie przerwania w elektronice maszyn to asynchroniczna akcja (przychodząca z zewnątrz nagle i nieplanowanie do pętli operacyjnej). Urządzenie wysyłając krótki impuls elektryczny przerywa w pół zadania logikę jądra dyspozytora wymagając pilnej reakcji przed przepełnieniem własnego cache lub dla celów wznawiania błędów (Page Fault)."
+  ],
+  [
+    "Systemową konsolę komunikacyjną Standardu (Standard Input/Output) nazywaną terminalem maszyn podpinaną u powłok systemów operacyjnych dla logującego z zewnątrz administratora stanowią u fizycznej architektury tradycyjnie peryferia takie jak:",
+    [
+      "układy podwójne od dysków na taśmach pod archiwum magnetyczne i skanery",
+      "niezbędny procesor rdzenia x86 i chipset na moście północnym RAMu (jako standard we/wy układu bazowego)",
+      "tylko serwery na portach komunikacji modemu ruterowego ethernet",
+      "urządzenie standardowego pisania (np. klawiatura) zrzucane na sprzętowe wideo wyświetlające komunikaty trybów tekstowych powłok na wyjściu (monitorze podpiętym od stacji PC)"
+    ],
+    3,
+    "Powłoka (Shell) i koncepcja terminali TTY zakłada istnienie na węźle dwóch standardów. Jednego zrzutu danych na wejście strumienia i wypisywania odebranych z powrotem ech i wyników błędów z systemu do operatora. Podłączona po stykach konsola opiera się z tych ról na klawiaturach i ekranach na linii."
+  ],
+  [
+    "Jakiego z punktu natury osprzętowego w układach dla procesów przydzielanych urządzeń obwodowych (we/wy portów z peryferiami i płyt wideo), z definicji informatycznej po prostu NIE MOŻNA w ogóle logicznie zamontować (zmountować pod alias jako pamięć plików dla odczytu tablic) z punktu dostępu pod obsługi z polecenia Linuxa `mount`:",
+    [
+      "partycji ze sprzętowymi formatami plikowymi systemów konkurencji np. macierzy i logów z baz formatu NTFS Windows 2000 na portach",
+      "masowych twardych magnetycznych mechanizmów blokowych oraz nośników po taśmach USB czy ZIP i stacjach miękkich magnetyków włożonych jako dyskietki we-wy do bazy urządzenia płyty głównej (fdd1)",
+      "bezpośrednio napędów CD lub optycznych laserowych płytek z ISO po włożeniu jako DVD by wyświetlić strumieniowo foldery z archiwum paczek",
+      "używanych po sprzętach i-węzłowych tak zwanych u ról jednokierunkowych przesyłu w osprzętach znakowych i strumieniowych np. fizycznego terminala bez baz, podpinanego myszką laserową lub styków monitora ekranu CRT na styk VGA u wejścia"
+    ],
+    3,
+    "Narzędzie mount wpina nową wolną i odkrytą na pinach sprzętowo tablicę od alokacji struktury systemu z klastrami od urządzenia blokowego (dyski, czytniki pod usb) prosto u pnia logicznego widoku z drzewa Linuxowych hierarchii. Urządzenia znakowe (myszy, rzutniki VGA z obrazem) z natury plują strumieniami bajtów ciągiem stąd ich zamontowanie jak nośników bez baz od odczytów losowych mijałoby się zupełnie w budowie z celem."
+  ],
+  [
+    "Działający po powrocie obsługi jądra dla wątku z urządzenia proces powiązany z obsługami przerwaniowymi i żądań fizycznego podsystemu we/wy dla układów masowych fizycznie musi realizować np.:",
+    [
+      "zawieszanie całych stref systemowych SWAP i operacyjnie pętli logowania by asynchronicznie przerywać operacje blokowe po sieci w tle",
+      "przewraca do zmian fizycznie logowania kolejności u przypisanych twardo wektorowo pinu linii z układem sprzętowych przerwań dla odpalanych pobocznie urządzeń np. płyty IRQ z mostku",
+      "wywołanie w układach rejestrów do uśpienia i inicjowanie wybranej odpowiednio od góry komendy z zapisu w stacji z operacji i czekanie na fizyczne potwierdzenia sygnałowe ukończeń po powrotach sygnału dla we/wy urządzenia i wstrzymywania procesu o dane od jądra dyspozytora na semaforze dla obsługi do kolejki zamówień",
+      "skanuje na tablicę wielkości i alokuje wolno po dysku pliki z wymiany pamięci bez obsług dyspozytora dla logów ze zrzutami z RAMu na blok I/O"
+    ],
+    2,
+    "Aby uświadomić system że plik po skopiowaniu leży na fizycznym nośniku (urządzeniu z opóźnieniami z mechaniki) jądro musi zrzucić zlecenie i fizycznie na rejestrach zająć zadanie powrotne. Oczekuje i kładzie na pauzie dla uśpionego w wywłaszczeniu zadania żądającego aż napęd zakończy swoją ślamazarną w cyklach z powolną obsługę, a powrotny mechanizm u sygnałów odesłanych w przerwaniach obudzi uśpiony nad proces i zwolni ze stosu w kolejkach w status obsługowy operację semaforem o gotowości."
+  ],
+  [
+    "Przez zastosowanie z portów z logiką na płytach i magistral w układzie z urządzeniami od sprzętów zewnętrznych na magistrali systemowej można na wtykach poprawnie we/wy wpinać potężne masowe magazyny u dysków używając obsługujących dla komunikacji i szyn z danymi transferowymi z procesorami u protokołów dla złącz typu:",
+    [
+      "do Ultra szyn PCI od rozszerzeń od pinów w starych procesorach pod architekturę bez I/O",
+      "dedykowane po starych kablach dyskowych od napędów blokowych gniazd tasiemcowych protokołu z kontrolerami u standaryzacji rzędu sprzętu SCSI lub dla klasyków PC na złącza wariantowe w klasie IDE (bądź obecnie USB PnP)",
+      "tylko i wyłącznie za pomocą wejścia wtykówek dla sprzętowej obsługi powolnego portu z układem od archaicznych we/wy szeregowych jak gniazdo ISA czy starszych myszy",
+      "korzystając domyślnie z dedykowanych architektur i portu pod rozszerzenia w piny szybkie miedziowe dla AGP stworzone od stacji gier w rendering dla wideo i port"
+    ],
+    1,
+    "Sprzęt i peryferia dyskowe z zapisami (HDD, cd-rom) pod system do płyty wpinało się architektonicznie na bardzo sztywne ramy taśm IDE/ATA bądź kontrolerami wyspecjalizowanymi po korporacyjne serwerownie u układów magistralowych np. klasycznego szybkiego Small Computer System Interface w standardach wyjścia."
+  ],
+  [
+    "Abstrakcyjna definicja z podsystemów operacyjnych Linux we/wy nazywająca i kreująca kanałowy wirtualny układ przesyłowy na plik o architekturze komunikacyjnej 'Strumieniowy / Strumień (Stream)' stanowi u budowy dla systemów rodzaj wektorowy mechanizmu który na terminal:",
+    [
+      "realizuje przydziały do oddzielnego awaryjnego izolowanego podpięcia na wyjście jako przerwaniowy kanał na twarde linie zapasu na mostku dla DMA",
+      "jest w logice dwustronnie otwartym komunikacyjnie czyli pełnodwupleksowym we/wy w połączeniu z działającymi obustronnie procesami użytkowymi na wejście a sterującym sprzętem po niższych powłokach podprogramem wymuszonym z obsługą urządzającą do jądra pod znaki bajtów",
+      "został zrodzony i stworzony u celów uciążliwie skomplikowanego buforowania potoków na szamotanie w chęci napraw po problemie wektorowania",
+      "stanowi domyślne przydziały do współdzielonej awaryjnie izolowanej pamięci cache pod operację u buforowania strumieni u przesyłów na podwójny kanał RAM z protokołami np. sprzętowym powiązaniem dla magistralowych taśm masowych ze sterownikami do trybów UDMA przy usterkach w odczycie dla systemów plikowych Windowsa u bloków mft."
+    ],
+    1,
+    "Potoki uniksowe połączyły się do udoskonalonych strumieni (Streams z UNIX System V). Ta zmyślna potężna ukryta jako warstwowa idea stosu z połączenia otwiera symetryczny, pełnodupleksowy po obu rurach dwukierunkowy przepływ od powłok i zadań usera (jako zrzut bajt po bajcie) spływający elastycznie po obróbce u jądra i sterowników wyjściowych aż w tył na osprzęt na pinach stacji terminalowej u I/O z echem klawiaturowo wyjściowym."
   ]
 ]
