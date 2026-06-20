@@ -59,9 +59,40 @@
             padding-top: 2rem;
             padding-bottom: 0.5rem;
             background: -webkit-linear-gradient(45deg, #818cf8, #c084fc);
-            background-clip: unset;
+            background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .dataset-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .dataset-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--primary);
+            color: var(--text-muted);
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .dataset-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--text-main);
+        }
+
+        .dataset-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
         }
 
         .sections-nav {
@@ -69,7 +100,6 @@
             justify-content: center;
             gap: 0.5rem;
             flex-wrap: wrap;
-            margin-top: 0.5rem;
         }
 
         .btn-section {
@@ -81,6 +111,9 @@
             border-radius: 20px;
             cursor: pointer;
             transition: all 0.2s ease;
+            min-width: 110px;
+            text-align: center;
+            display: inline-block;
         }
 
         .btn-section:hover {
@@ -106,23 +139,17 @@
             transition: all 0.3s ease;
         }
 
-        button {
+        button.outline {
             font-family: 'Inter', sans-serif;
-            background: var(--primary);
-            color: white;
-            border: none;
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
-        }
-
-        button.outline {
-            background: transparent;
-            border: 1px solid var(--primary);
-            color: var(--primary);
         }
 
         button.outline:hover {
@@ -143,6 +170,8 @@
         }
 
         .option {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem;
@@ -150,6 +179,7 @@
             cursor: pointer;
             text-align: left;
             color: var(--text-main);
+            transition: all 0.2s ease;
         }
 
         .option:hover:not(:disabled) {
@@ -236,16 +266,23 @@
 <div id="app">
     <header>
         <h1>Systemy operacyjne</h1>
+        
+        <div class="dataset-toggle">
+            <button id="btn-po2017" class="dataset-btn active" onclick="loadDataset('questions_po2017.json', 'po2017')">BAZA PO 2017</button>
+            <button id="btn-przed2017" class="dataset-btn" onclick="loadDataset('questions_przed2017.json', 'przed2017')">BAZA PRZED 2017</button>
+            <button id="btn-random" class="dataset-btn" onclick="startRandomMode('random')">LOSOWANE PYTANIE</button>
+        </div>
+
         <div class="sections-nav" id="sections-navigation"></div>
     </header>
 
     <div>
         <div class="progress-sidebar">
-            <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Wynik bieżącego zestawu</div>
+            <div id="list-score-title" style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Wynik bieżącego zestawu</div>
             <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: #34d399;">Rozwiązano: 0</div>
         </div>
         
-        <div id="list-container">Ładowanie pytań...</div>
+        <div id="list-container">Wybierz bazę pytań, aby rozpocząć...</div>
         
         <div style="text-align: center; margin-top: 2rem;">
              <button class="outline" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Wróć na górę &uarr;</button>
@@ -259,15 +296,31 @@ let listAnswers = [];
 const QUESTIONS_PER_SECTION = 50;
 let currentSection = 0;
 
-async function initQuiz() {
+// Zmienne dla trybu losowego
+let isRandomMode = false;
+let randomPool = [];
+let randomStats = { answered: 0, corrects: 0 };
+let currentRandomQuestion = null;
+
+async function loadDataset(filename, btnId) {
+    isRandomMode = false;
+    document.getElementById('list-score-title').innerText = "Wynik bieżącego zestawu";
+
     try {
-        const response = await fetch('questions.json');
+        document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById(`btn-${btnId}`).classList.add('active');
+
+        document.getElementById('list-container').innerHTML = '<div style="text-align:center; padding: 2rem;">Ładowanie pytań...</div>';
+        document.getElementById('sections-navigation').innerHTML = '';
+        
+        const response = await fetch(filename);
         if (!response.ok) {
-            throw new Error('Problem z załadowaniem pliku z pytaniami.');
+            throw new Error(`Nie znaleziono pliku: ${filename}. Upewnij się, że plik istnieje w folderze.`);
         }
+        
         qData = await response.json();
-        // Tablica odpowiedzi zachowuje stan dla wszystkich pytań globalnie
         listAnswers = new Array(qData.length).fill(null);
+        currentSection = 0;
         
         renderSectionTabs();
         renderList();
@@ -276,29 +329,136 @@ async function initQuiz() {
     }
 }
 
-// Generowanie zakładek u góry strony
+// Inicjacja Trybu Losowego
+async function startRandomMode(btnId) {
+    isRandomMode = true;
+    document.getElementById('list-score-title').innerText = "Seria losowa (Wszystkie bazy)";
+
+    document.querySelectorAll('.dataset-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(`btn-${btnId}`).classList.add('active');
+
+    document.getElementById('list-container').innerHTML = '<div style="text-align:center; padding: 2rem;">Łączenie baz pytań...</div>';
+    document.getElementById('sections-navigation').innerHTML = '';
+
+    try {
+        // Pobieranie obu baz jednocześnie i ignorowanie błędów w razie braku jednej z nich
+        const [res1, res2] = await Promise.all([
+            fetch('questions_po2017.json').catch(() => null),
+            fetch('questions_przed2017.json').catch(() => null)
+        ]);
+
+        let pool = [];
+        if (res1 && res1.ok) pool = pool.concat(await res1.json());
+        if (res2 && res2.ok) pool = pool.concat(await res2.json());
+
+        if (pool.length === 0) {
+            throw new Error('Nie udało się załadować żadnej bazy pytań. Upewnij się, że pliki JSON istnieją.');
+        }
+
+        randomPool = pool;
+        randomStats = { answered: 0, corrects: 0 };
+        renderRandomQuestion();
+
+    } catch (error) {
+        document.getElementById('list-container').innerHTML = `<div class="glass-card" style="color: var(--error);">Błąd: ${error.message}</div>`;
+    }
+}
+
+function renderRandomQuestion() {
+    if (!isRandomMode) return;
+    
+    // Losowanie pytania z połączonej puli
+    const randomIndex = Math.floor(Math.random() * randomPool.length);
+    currentRandomQuestion = randomPool[randomIndex];
+    
+    updateRandomStats();
+
+    const container = document.getElementById('list-container');
+    const q = currentRandomQuestion;
+    
+    let htmlBuffer = `
+    <div class="glass-card">
+        <div style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Wylosowano 1 z ${randomPool.length} dostępnych pytań</div>
+        <div class="question-text">${formatTextWithCode(q[0])}</div>
+        <div class="options" id="random-opt">
+            ${q[1].map((opt, i) => {
+                return `<button class="option" onclick="handleRandomAnswer(this, ${i})">\${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
+            }).join('')}
+        </div>
+        <div class="explanation" id="random-exp">
+            <strong>Wyjaśnienie: </strong> ${q[3]}
+            <div style="margin-top: 1.5rem; text-align: center;">
+                <button class="outline" onclick="renderRandomQuestion()">Następne losowe pytanie &rarr;</button>
+            </div>
+        </div>
+    </div>`;
+    
+    container.innerHTML = htmlBuffer;
+    if (typeof hljs !== 'undefined') hljs.highlightAll();
+}
+
+window.handleRandomAnswer = function(btn, index) {
+    if (!isRandomMode) return;
+
+    const q = currentRandomQuestion;
+    const optionsContainer = document.getElementById('random-opt');
+    const allBtns = optionsContainer.querySelectorAll('.option');
+
+    // Blokada przycisków po odpowiedzi
+    allBtns.forEach(b => b.disabled = true);
+
+    let isCorrect = (index === q[2]);
+    
+    randomStats.answered++;
+    if (isCorrect) randomStats.corrects++;
+
+    if(isCorrect) {
+        btn.classList.add('correct');
+    } else {
+        btn.classList.add('wrong');
+        allBtns[q[2]].classList.add('correct');
+    }
+
+    document.getElementById('random-exp').classList.add('show');
+    updateRandomStats();
+}
+
+function updateRandomStats() {
+    const scoreText = document.getElementById('list-score');
+    if(randomStats.answered === 0) {
+        scoreText.innerText = `Rozwiązano: 0`;
+    } else {
+        scoreText.innerText = `Rozwiązano: ${randomStats.answered} | Punkty: ${randomStats.corrects} (${Math.round(randomStats.corrects/randomStats.answered*100)}%)`;
+    }
+}
+
+// ---------------- STANDARDOWE FUNKCJE LISTY ----------------
+
 function renderSectionTabs() {
+    if (isRandomMode) return;
     const nav = document.getElementById('sections-navigation');
     nav.innerHTML = '';
     
     const totalSections = Math.ceil(qData.length / QUESTIONS_PER_SECTION);
     
-    // Jeśli pytań jest mniej niż limit na sekcję, nie ma sensu wyświetlać paska
     if (totalSections <= 1) return;
 
     for (let i = 0; i < totalSections; i++) {
+        const startNum = i * QUESTIONS_PER_SECTION + 1;
+        const endNum = Math.min((i + 1) * QUESTIONS_PER_SECTION, qData.length);
+
         const btn = document.createElement('button');
         btn.className = `btn-section ${i === currentSection ? 'active' : ''}`;
-        btn.innerText = `Zestaw ${i + 1}`;
+        btn.innerText = `${startNum}-${endNum}`;
         btn.onclick = () => switchSection(i);
         nav.appendChild(btn);
     }
 }
 
 function switchSection(sectionIndex) {
+    if (isRandomMode) return;
     currentSection = sectionIndex;
     
-    // Aktualizacja podświetlenia aktywnej zakładki
     const buttons = document.querySelectorAll('.btn-section');
     buttons.forEach((btn, idx) => {
         if (idx === sectionIndex) btn.classList.add('active');
@@ -310,18 +470,17 @@ function switchSection(sectionIndex) {
 }
 
 function renderList() {
+    if (isRandomMode) return;
     const container = document.getElementById('list-container');
     container.innerHTML = '';
     updateListStats();
 
-    // Obliczanie zakresu pytań dla bieżącej sekcji
     const startIndex = currentSection * QUESTIONS_PER_SECTION;
     const endIndex = Math.min(startIndex + QUESTIONS_PER_SECTION, qData.length);
     const sectionQuestions = qData.slice(startIndex, endIndex);
 
     let htmlBuffer = '';
     sectionQuestions.forEach((q, localIdx) => {
-        // Globalny indeks pytania w pełnej tablicy qData
         const globalIdx = startIndex + localIdx; 
         const hasAnswered = listAnswers[globalIdx] !== null;
 
@@ -333,13 +492,8 @@ function renderList() {
                     let extraClass = '';
                     let disabledAttr = hasAnswered ? 'disabled' : '';
                     
-                    // Jeśli użytkownik już odpowiedział na to pytanie wcześniej, odtwórz stan klas CSS
                     if (hasAnswered) {
                         if (i === q[2]) extraClass = ' correct';
-                        // Jeśli to była błędna odpowiedź użytkownika
-                        if (listAnswers[globalIdx] === false && i !== q[2]) {
-                            // Czyste renderowanie, logikę pominęliśmy dla zachowania prostoty
-                        }
                     }
 
                     return `<button class="option${extraClass}" ${disabledAttr} onclick="handleList(${globalIdx}, this, ${i})">${opt.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</button>`;
@@ -353,6 +507,15 @@ function renderList() {
     
     container.innerHTML = htmlBuffer;
     
+    for (let gIdx = startIndex; gIdx < endIndex; gIdx++) {
+        if (listAnswers[gIdx] === false) {
+            const optionsContainer = document.getElementById(`list-opt-${gIdx}`);
+            if (optionsContainer) {
+                const allBtns = optionsContainer.querySelectorAll('.option');
+            }
+        }
+    }
+
     if (typeof hljs !== 'undefined') hljs.highlightAll();
 }
 
@@ -380,6 +543,7 @@ window.handleList = function(globalIdx, btn, index) {
 }
 
 function updateListStats() {
+    if (isRandomMode) return;
     const startIndex = currentSection * QUESTIONS_PER_SECTION;
     const endIndex = Math.min(startIndex + QUESTIONS_PER_SECTION, qData.length);
     const currentSectionAnswers = listAnswers.slice(startIndex, endIndex);
@@ -409,7 +573,10 @@ function formatTextWithCode(text) {
     return text.replace(/\n/g, '<br>');
 }
 
-initQuiz();
+// Uruchamiamy ładowanie bazy "po 2017" jako domyślnej po wejściu na stronę
+window.onload = () => {
+    loadDataset('questions_po2017.json', 'po2017');
+};
 </script>
 
 </body>
