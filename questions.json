@@ -1054,5 +1054,257 @@
     ],
     2,
     "Dla utrzymania wydajności wektorów, klasyczne kontrolery systemowe zabezpieczają jedynie wysoce newralgiczne zbiory, takie jak rejestr wskaźnika rozkazów (EIP), rejestry flag, oraz kontekst kodu - wstrzymując kopiowanie ogromnych banków danych (np. setek bitów na rejestrach AVX) jeżeli układ ich jednoznacznie nie wezwał."
+  ],
+  [
+    "Głodzenie procesów jest charakterystyczne dla kolejki procesora:",
+    [
+      "rotacyjnej",
+      "priorytetowej",
+      "wielopoziomowej",
+      "wszystkie powyższe",
+      "żadna z powyższych"
+    ],
+    1,
+    "Głodzenie (starvation) to zjawisko, w którym procesy o niskim priorytecie nigdy nie otrzymują czasu procesora, ponieważ ciągle wyprzedzają je procesy o wyższym priorytecie. Jest to główny problem algorytmów priorytetowych."
+  ],
+  [
+    "W strukturze pierścieniowej podprogram systemowy nie może odwołać się do funkcji:",
+    [
+      "wyłącznie własnej warstwy",
+      "wszystkich warstw niższych",
+      "wszystkich warstw wyższych",
+      "wszystkie odpowiedzi poprawne",
+      "żadna z powyższych"
+    ],
+    4,
+    "W modelu ochrony pierścieniowej (np. x86), kod z pierścienia o niższym poziomie uprzywilejowania nie może bezpośrednio 'odwołać się' (skoczyć) do funkcji w pierścieniu bardziej uprzywilejowanym – musi użyć kontrolowanej bramy (trap/interrupt). Ze względu na nieścisłość terminów 'wyższe/niższe', najbezpieczniejszą w kluczach tego testu odpowiedzią jest 'żadna z powyższych'."
+  ],
+  [
+    "Każdy wątek ma własny:",
+    [
+      "obszar pamięci pomocniczej",
+      "obszar pamięci programu",
+      "deskryptor sprzętowy",
+      "podprogram obsługi przerwań",
+      "wszystkie powyższe"
+    ],
+    2,
+    "Wątki współdzielą obszar pamięci (kod, dane, pliki), ale każdy wątek musi posiadać swój własny kontekst sprzętowy (deskryptor sprzętowy obejmujący m.in. rejestry procesora, licznik rozkazów i wskaźnik stosu)."
+  ],
+  [
+    "Wiązanie adresów w trakcie wykonywania występuje dla:",
+    [
+      "CP/M",
+      "MS DOS",
+      "BIOS",
+      "wszystkie powyższe",
+      "żadne powyższe"
+    ],
+    4,
+    "Wiązanie w trakcie wykonywania (dynamiczne) wymaga wsparcia sprzętowego (np. jednostki MMU). Przestarzałe systemy takie jak CP/M czy MS-DOS realizują to odpowiednio w czasie kompilacji lub ładowania. Prawidłowa odpowiedź to 'żadne powyższe'."
+  ],
+  [
+    "Podczas bezpośredniego dostępu do pamięci (DMA) procesor może odwołać się do:",
+    [
+      "pamięci operacyjnej",
+      "pamięci pomocniczej",
+      "urządzeń wejścia/wyjścia",
+      "pamięci notatnikowej",
+      "nie może odwołać się do powyższych"
+    ],
+    3,
+    "W trakcie transferu DMA (Bezpośredni Dostęp do Pamięci), urządzenie przejmuje kontrolę nad magistralą systemową. Procesor w tym czasie nie ma dostępu do RAM, ale może kontynuować pracę korzystając z pamięci podręcznej/notatnikowej (SRAM)."
+  ],
+  [
+    "W procesorach PowerPC występuje tablica stron:",
+    [
+      "rozproszona",
+      "odwrócona",
+      "dwupoziomowa",
+      "haszowana",
+      "żadna z powyższych"
+    ],
+    1,
+    "Procesory oparte na architekturze PowerPC (oraz starsze konstrukcje UltraSPARC) wykorzystują mechanizm odwróconej tablicy stron (Inverted Page Table)."
+  ],
+  [
+    "Stan procesu może być zmieniony przez:",
+    [
+      "proces w dowolnym momencie",
+      "proces tylko w czasie wykonywania operacji zajmij",
+      "proces tylko w czasie wykonywania operacji uwolnij",
+      "przez planistę niskiego poziomu",
+      "żadne z powyższych"
+    ],
+    3,
+    "Za faktyczną zmianę stanów procesu (np. przejście ze stanu gotowości do wykonywania) i przełączanie kontekstu odpowiada moduł jądra zwany dyspozytorem (planistą niskiego poziomu)."
+  ],
+  [
+    "Struktura procesów zawiera tylko wątki:",
+    [
+      "wykonywalne",
+      "niewykonywalne",
+      "statyczne",
+      "wstrzymane",
+      "żadne z powyższych"
+    ],
+    4,
+    "Prawdopodobnie chodziło o 'Kolejkę procesora', która zawiera tylko wątki wykonywalne. Struktura procesu jako takiego (np. tabela procesów) przechowuje wątki we wszystkich możliwych stanach. Stąd poprawna to 'żadne z powyższych'."
+  ],
+  [
+    "Aktywne czekanie (spinlock) stosuje się:",
+    [
+      "w operacji uwolnij",
+      "dla kolejki priorytetowej procesora",
+      "w operacji wejścia wyjścia",
+      "by oddzielić stosy procesów",
+      "żadne z powyższych"
+    ],
+    4,
+    "Aktywne czekanie wykorzystuje się w operacji 'zajmij' (P / wait) dla niskopoziomowych mechanizmów synchronizacji (np. zamków wirujących). Skoro nie ma takiej opcji, prawidłowa jest 'żadne z powyższych'."
+  ],
+  [
+    "W rozmieszczeniu bez stronicowania typu najlepsze dopasowanie (Best Fit), dziury są uporządkowane:",
+    [
+      "wg rozmiaru rosnąco",
+      "wg rozmiaru malejąco",
+      "zgodnie z adresem",
+      "wg czasu powstania",
+      "żadne z powyższych"
+    ],
+    0,
+    "Algorytm Best Fit wyszukuje najmniejszą wolną pamięć (dziurę), w której zmieści się proces. Aby zoptymalizować wyszukiwanie, listę wolnych bloków często utrzymuje się posortowaną według rozmiaru rosnąco."
+  ],
+  [
+    "Duże klastry na dysku:",
+    [
+      "zwiększają struktury dyskowe",
+      "zmniejszają szybkość dostępu do pliku",
+      "powodują straty pojemności dysku",
+      "wszystkie powyższe",
+      "żadne z powyższych"
+    ],
+    2,
+    "Większy klaster zmniejsza rozmiar tablicy alokacji i przyspiesza odczyt, ale głównym problemem jest tzw. fragmentacja wewnętrzna – małe pliki marnują niewykorzystaną część dużego klastra, powodując realne straty w pojemności."
+  ],
+  [
+    "W i-węźle (i-node) realizuje się przydział pliku:",
+    [
+      "ciągły",
+      "listowy",
+      "indeksowy",
+      "listowo-indeksowy",
+      "drzewiasty"
+    ],
+    2,
+    "System i-węzłów (znany np. z systemów Unix/Linux) to flagowy przykład struktury opartej na wielopoziomowym przydziale indeksowym, w którym węzeł zawiera bezpośrednie, pośrednie i podwójnie pośrednie wskaźniki do bloków danych."
+  ],
+  [
+    "Jednym z warunków zakleszczenia jest:",
+    [
+      "ustalenie porządku dostępu do zasobów niepodzielnych",
+      "użycie algorytmu bankiera",
+      "brak zawłaszczania (wywłaszczania) zasobów",
+      "brak współbieżności procesów",
+      "żaden z powyższych"
+    ],
+    2,
+    "Aby doszło do zakleszczenia, muszą zostać spełnione 4 warunki Coffmana. Jednym z nich jest brak wywłaszczania (tutaj przetłumaczone jako 'brak zawłaszczania'), co oznacza, że procesu nie można siłą pozbawić trzymanego zasobu."
+  ],
+  [
+    "Fragmentacja zewnętrzna nie występuje dla:",
+    [
+      "segmentacji",
+      "segmentacji ze stronicowaniem",
+      "implementacji opartej o rejestr bazowy i graniczny",
+      "wszystkich powyższych",
+      "żadne z powyższych"
+    ],
+    1,
+    "Wprowadzenie mechanizmu stronicowania do segmentacji (podział fizycznej pamięci na równe wielkością ramki) całkowicie eliminuje problem narastających pustych przestrzeni między blokami (fragmentacji zewnętrznej)."
+  ],
+  [
+    "Księgowanie (journaling) posiada system plików:",
+    [
+      "FAT12",
+      "FAT32",
+      "ext2",
+      "ext3",
+      "wszystkie powyższe"
+    ],
+    3,
+    "Systemy FAT oraz Linuxowy ext2 nie wspierają księgowania. Ext3 to w uproszczeniu rozszerzenie systemu ext2 o funkcję kronikowania (journaling), która zapobiega uszkodzeniom przy zaniku zasilania."
+  ],
+  [
+    "Małe pliki na partycji NTFS zapisane są jako:",
+    [
+      "części dużego pliku specjalnego",
+      "zawartość ostatniego klastra dużego pliku eliminując fragmentację wewnętrzną",
+      "atrybut rezydentny tabeli MFT",
+      "plik na partycji ukrytej",
+      "żadne z powyższych"
+    ],
+    2,
+    "Ze względów optymalizacyjnych, system NTFS przechowuje pliki poniżej określonego rozmiaru (zwykle około kilkuset bajtów) całkowicie wewnątrz rekordu Głównej Tabeli Plików (MFT) jako tzw. atrybuty rezydentne."
+  ],
+  [
+    "Macierz dyskowa z rozproszoną parzystością, z przeplotem bloków i pojedynczą nadmiarowością to macierz typu:",
+    [
+      "RAID 0",
+      "RAID 1+0",
+      "RAID 2",
+      "RAID 5",
+      "żadne z powyższych"
+    ],
+    3,
+    "Jest to klasyczna definicja poziomu RAID 5, gdzie dane są przeplatane blokowo, a bity parzystości (odporność na awarię jednego dysku - pojedyncza nadmiarowość) są równomiernie rozproszone na wszystkich nośnikach."
+  ],
+  [
+    "Prawdopodobieństwo zakleszczenia można zmniejszyć używając:",
+    [
+      "wywłaszczenia semaforów",
+      "spooler'a",
+      "ochronę danych z użyciem zamka i klucza",
+      "segmentację",
+      "żadne z powyższych"
+    ],
+    1,
+    "Spooler wirtualizuje urządzenia niepodzielne (takie jak np. drukarki). W efekcie wiele procesów wysyła dane do demona w tym samym czasie (łagodząc warunek wzajemnego wykluczania) bez ryzyka zakleszczenia."
+  ],
+  [
+    "Buforowanie wielokrotne:",
+    [
+      "eliminuje szamotanie",
+      "jest konieczne do prawidłowego działania zbioru roboczego",
+      "pozwala by dwa procesy jednocześnie korzystały z tych samych zasobów niepodzielnych",
+      "przyspiesza działanie pamięci podręcznej",
+      "żadne z powyższych"
+    ],
+    4,
+    "Buforowanie wielokrotne służy do maskowania opóźnień między pracą CPU a powolnymi urządzeniami I/O (zapewnia potokowość strumienia). Ponieważ nie ma na liście poprawnego sformułowania (np. 'zapobiega przestojom'), odpowiedzią jest 'żadne z powyższych'."
+  ],
+  [
+    "Aby odwołać się do parametru w pliku wsadowym używamy znaku:",
+    [
+      "#",
+      "@",
+      "%",
+      "$",
+      "żadne z powyższych"
+    ],
+    2,
+    "W plikach wsadowych w ekosystemie MS-DOS i Windows (pliki .bat / .cmd) znakiem służącym do wywoływania zmiennych systemowych lub parametrów jest procent (np. `%1`, `%PATH%`)."
+  ],
+  [
+    "Działanie operacji wejścia/wyjścia (I/O) i procesu obsługi urządzenia przypomina problem:",
+    [
+      "producenta i konsumenta",
+      "pisarzy i czytelników",
+      "pięciu filozofów",
+      "złotej rybki",
+      "żadne z powyższych"
+    ],
+    0,
+    "Model sprzężenia procesor-urządzenie świetnie odzwierciedla klasyczny problem producenta-konsumenta (tzw. problem ograniczonego bufora), w którym jedno ogniwo produkuje strumień bajtów, a drugie ściąga go z bufora z inną prędkością."
   ]
 ]
