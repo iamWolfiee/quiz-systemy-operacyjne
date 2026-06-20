@@ -2168,28 +2168,6 @@
     "Każdy dedykowany system klasy Real-Time Operating System posiada wymogi - w łagodnych wariantach strumieniowania spóźnienie to lag, jednak klasa twardych zadań i przerwań (Hard) traktuje każde naruszenie ramy terminu odpowiedzi zwrotnej z milisekundy sprzętowej absolutnie rygorystycznie jako krytyczną porażkę sterowanego systemu na hali czy module napędowym."
   ],
   [
-    "Ile maksymalnie w teorii bitów z logicznego wirtualnego, wejściowego adresu adresowego programu na konkretnie ile wyjściowych bitów do szyny fizycznej procesora architektur w Intel Core było początkowo ograniczane w stosowaniu dla mechaniki stronicowania:",
-    [
-      "40 z użyciem pamięci TLB na liniowy format do 32 w trybie realnym DOSu",
-      "36 z rejestrów PAE przydzielanych sztucznie na 48 bazowe ze starszych Xeonów",
-      "48 logicznego wirtualnego, ciętych i limitowanych sprzętowo na zaledwie 40 z pamięci RAM (często również wariacja opcji przy używaniu limitu adresowania rzędu np. 46)",
-      "na sztywno wpisanych bez zmian z obu punktów 32 bitów na równoległą formę dla 40 pinowych listew logicznych na mostku komputera w erze PCI"
-    ],
-    2,
-    "Standard x64 i wczesne systemy mimo rezerwacji rejestrowej tak potężnej siatki i ilości liczb do dziś rzadko realnie rozciąga do opisywania wszystkich dostępnych pełnych rozmiarów wielkości potęg do szóstej (odpadki rzędów bitowych to zapas bezpieczeństwa tablic do gigantycznego pojęcia terabajtów - dlatego pierwsze modele odciążały układ, limitując to sprzętowo do progu zaledwie np. 40 wyjść sprzętowych do układu ramów)."
-  ],
-  [
-    "Główny powód by historycznie zmigrować jądra popularnych wielkich instalacji z systemu formatu systemu plików starszej generacji wariantu ext2 i uruchamiać docelowo macierze pod kontrolą dystrybucji z formatem bazowym opartym całkowicie o pliki na dyskach jako standardowy typ linuksowy generacji ext3 to:",
-    [
-      "węzły inodowe ucięte rozmiarami od klastrów mniejszych o absolutną połowę bez fragmentacji w archiwum b-tree na dysku HDD",
-      "bezwzględny wymóg na braki i brak wsparcia dla skryptowania w powłoce systemowej bash w środowiskach partycji bazowej ext2 dla instalacji boot managera",
-      "występowaniem ulepszającej system w nowej ulepszonej i bezpiecznej wersji dodaniem funkcji dla zabezpieczającej tak zwanej kroniki zapisu i operacji (w pojęciu na księgowanie po angielsku 'journaling system')",
-      "odgórne pozbycie sprzętowo barier od macierzy wolnych partycji rozszerzonych stosowanych przez mechanizmy ograniczeń przestarzałej obsługi GPT u serwerów"
-    ],
-    2,
-    "Narzucenie mechanizmu pliku do odkładania transakcji dziennika systemowego na strukturę od starych serwerów wyeliminowało dla systemów ciągły włączany na dziesiątki uciążliwych minut potężny skaner partycji badający przy zanikach energii braków w metadanych drzew katalogów do pojęcia sekundowego naprawienia błędów wstecz i dalej przed siebie po ponownym powrocie prądu w rejonie gniazdka."
-  ],
-  [
     "Architektura algorytmu planowania ruchu sprzętowej fizycznej głowicy od odczytu i zapisywania napędów mechanicznych twardego nośnika znana pod technicznym skrótem o nazwie SCAN bywa obrazowo tłumaczona z koncepcją logistyczną nazywaną potocznie w literaturze jak:",
     [
       "koncepcyjny algorytm windy",
@@ -2944,78 +2922,6 @@
     ],
     3,
     "Gdy dawniej wywoływałeś .EXE pod czarnym ekranem DOS-u na stacji dyskietek, kompilator zapisywał te polecenia jako formaty relokowalne (skoki po zmiennych, np. + 20). System wgrywając dyskietkę do kości decydował jaki przydzielić wolny kawałek bazy zerowej od której program mógł działać bez błędu nadpisując flagi z góry do użycia RAM."
-  ],
-  [
-    "Podczas długich wywołań przesyłu bloków na kanał bezpośredniego dostępu pamięci (DMA) procesor odcięty sztywno bez wywłaszczenia od magistrali ramu komputera może fizycznie odwoływać się dalej do:",
-    [
-      "Pamięci głównej operacyjnej komputera",
-      "Pamięci stałej typu Read Only Memory ROM w architekturze starszej na zworkach BIOSu",
-      "Niezależnej i wpiętej dla samego modułu L1/L2 bardzo elitarnej Pamięci Notatnikowej",
-      "Urządzeń odciętych ze strefy po mostku peryferiów urządzeń wej / wyj ze stanami wait-state przerw",
-      "Z braku zasilania do potoków wektorowych nie może odwoływać się operacyjnie do powyższych w trybie pełnego wykluczenia"
-    ],
-    2,
-    "DMA oszczędza gigantyczny ładunek prądu i siły procesora wyrzucając zadania ładowania wielkich gier ramkami. Skoro DMA monopolizuje sobie magistrale, rdzeń zostaje zdany tylko na odcięty zasób bloku bufora na kości w obudowie i przelicza potoki z cache nie potrzebując RAMu."
-  ],
-  [
-    "W procesorach z rodziny wdrożonych serii modeli x86 o oznaczeniu generacyjnym Intel 80386 dla trybu z rozszerzonym trybem stronicowania występuje fabrycznie fizyczna tablica stron będąca w topologii o układzie:",
-    [
-      "Płaska i liniowa jednopoziomowa pod wywołania 16 bit",
-      "Rozbijająca bity do przesunięcia i strony załatwiająca z rejestru tryb jako klasyczna Dwupoziomowa",
-      "Rozproszona klastrowana w rejonie przerwań magistral sieciowych z token-ring",
-      "Mapująca wirtualnie przez funkcje z potężnego rdzenia do tablic jako opisywana w literaturze struktura Odwrócona",
-      "Żadna z powyższych jako nowinka technologiczna w segmencie z braku zaimplementowanego układu Paging"
-    ],
-    1,
-    "Pojedyncza tabela na tamte lata wżarła by dla 4 GB dysków z zapisu 32 bity całe ponad 4 Megabajty ciągłego bloku dla jednego procesu użytkownika! Generacja podzieliła więc to sztywno na układ dwustopniowy - Page Directory na początku dla ogółów dzieli na zrzucone tablice i w końcu dane. "
-  ],
-  [
-    "Wartość zablokowanego z ujemną siłą zmiennej chroniącego algorytmu semafora może bez wywłaszczania uśpionych zadań w warunkach brzegowych być w trakcie cykli odczytana wprost wywołaniem przez:",
-    [
-      "Proces wyższy rangą w absolutnie dowolnym wybranym dla przerwania maskowalnego wolnym od odświeżania momencie",
-      "Proces wyłącznie z punktu czasu cyklu fizycznego i programowego otwierania dostępu deskryptora do semafora w pętli inicjalizującej od góry",
-      "Tylko z punktu przywilejów systemu nadzorcy operacyjnego w pętli dyspozytorskiej",
-      "Przez wymuszenie i użycie jako argumentu zmiennej proces przekazując żądanie stosując odwołanie do przerwania wyjątkowego systemu operacyjnego z Ring3 pod Ring0",
-      "Żadne z powyższych. Semafor na wyciągnięcie zmiennej odczytywania licznika ma charakter w informatyce całkowicie skryty od API pod zamek i chroniony atomową transakcją pod P oraz V (zajmij/odblokuj)."
-    ],
-    4,
-    "Semafor nie jest w programowaniu flagą z wyciąganiem na tablicę pod zmienną do używania jako np. warunek pętli pisać: while(Semafor==1). On musi pozostać na szczeblu kompilacji nietykalny. Po co ryzykować wyścig? Chcesz użyć - rezerwuj z opóźnieniem w kolejce atomowo komendę zajmij w procedurze p."
-  ],
-  [
-    "Wątek rozpatrując do form plików wykonywalnych ze swoim obszarem zrzutu cykli jako abstrakcja architektoniczna z programowania jest tworem który:",
-    [
-      "Zawsze jest do zatrzymania z zamrożonym stałym adresem liniowym co czyni go w ujęciu statycznym jako ciąg",
-      "Dynamicznie alokuje czas z przelicznikami na rdzeniu jako byt z założenia wykonawczy",
-      "Zostaje dla powłoki po przejściu zamrożenia dyspozytorem określany jako byt statyczny albo dynamiczny w zależności od cykli bieżącego zamrożonego w swap stanu po zapisie z flagą na zablokowany",
-      "Zgodnie z koncepcjami maszyn stanów w Turingu twór z programu jako wektor nie jest do policzenia operacji i nie zostaje zdefiniowany jako byt ani statyczny i tym bardziej absolutnie ani dynamiczny",
-      "Dzieli flagę o stałej pojemności w kodach instrukcji i w locie dlatego ma taki sam dziedziczony po bloku główny określony stan jako domena programu ładującego."
-    ],
-    1,
-    "Program to martwy, statyczny zbiór poleceń zapisanych dla dysku w kodach wynikowych. Wątek wewnątrz procesu (podobnie jak on sam), ulega ciągłym i szybkim metamorfozom – zmienia zmienne, skacze poprzez linie i alokuje od systemu wolny RAM, więc jest ze swojej natury tworem absolutnie działającym – dynamicznym."
-  ],
-  [
-    "Problem głodzenia procesów (stan paraliżu przez wstrzymanie w dół zadań podrzędnych przez nieskończony zator zadawanych w pętli na rdzeń krytycznych procesów od nadzoru dyspozytora) dla systemów o priorytetach eliminuje z włączeniem w trybie natywnym mechanizmów planisty stosując domyślnie tryb przez:",
-    [
-      "Cykle z kolejką wymuszoną i puszczoną bez warunków pobocznych czyli typową rotacyjną sprawiedliwą wymianę wywłaszczania o nazwie z architektury dla procesu",
-      "Dokładnie wrzuconą i chronioną sprzętem kolejkowaniem twardo zablokowaną priorytetową kolejkę priorytetów z góry bez przerw procesu w kolejności wywoływań",
-      "Rozdzielone stosy na tablicach procesów od wywołania w asynchronicznym włączanym przez sterownik przemyconym cyklu blokad od magistrali dyskowych na port I/O systemów pod przerwaniem z klawiatury",
-      "Sekcje o blokadzie tak zwanym monitorze sprzętowym i bloku ochrony danych na wycinki w strefach chronionych zasobów i blokady zmiennej krytycznej programu w komórce z błędem zapisu",
-      "Żadne z powyżej wymienionych na wykładach z uczelni od opcji wyeliminowania uciążliwego zakleszczenia dla zjawiska algorytmów z procesów nie łagodzi i nie naprawia z wyłączeniem w ogóle całkowicie takich blokad ze strony użytkownika."
-    ],
-    0,
-    "Round Robin. Wprowadzając równe kwanty ułamków na mikrosekundę i odsyłając z dołu wyrzucony siłą po braku pracy ukończonej na samym dołem powrotem z blokad kolejki wątek - uzyskujemy z algorytmu sprawiedliwy obieg zamknięty, więc wszystko co żyje dla OS-u zagra po pewnym drobnym czasie swoją role z procesorem u góry (brak tak niszczącego u nas głodu)."
-  ],
-  [
-    "W jaki sposób i formą formatową w przypadku wdrożenia od dołu systemowego ze stosowania trybu opartego wyłącznie na tryb od samej segmentacji logiczny abstrakcyjny wektorowy z wewnątrz kodu format na adres generowany w programie operacyjnie przez proces z warstwy użytkownika na szynę zostaje i zmienia cyklem powłoki od systemu sprzętowego na formę adresu uderzając do ram, dzięki wektorowi w tablicy MMU można uderzyć i odwołać finalnie się już fizycznie do twardo osadzonej wejściowo konkretnej małej bloku tablicy w krzem na komórki pamięci RAM? (pominięcie trybu mieszania Liniowego ze wsparciem stronicowania u Intelowskiej wersji architektury):",
-    [
-      "Logiczny -> fizyczny z wywołaniem flagą rejestru CS:IP i podział na strony liniowy na sam koniec do magistrali bitowej u dołu (Z wariantów i układów ze sztywnego opisu trybu)",
-      "Liniowy płaski model domyślny z wymuszeniem z jądra formatowania przesuwnego zejściem stopnia w tył do trybu segmentowanego formatu od ujęcia zwrotnego logiczny przed barierą zapisu",
-      "Fizyczny jako wyznacznik zerowy u ujęcia powrotu -> następnie skok liniowy od rzędu pojęć dyspozytora do formy w wirtualnej tablicy jako docelowy na wyjściu format uciętym wzorem przez procesory do postaci jako model -> i jako ostatecznie powrotny w abstrakcji powłoki wektor z wskaźnikiem po offset adresowany w modelu z opisu logiczny do użycia pod system programisty",
-      "Z poziomu dwustopniowego prosto od punktu rejestru CS jako wskaźnik pod adres segmentowanej wektorem w formacie wprost potocznie opisywany systemowo w literaturze jako typowy format -> docelowo bezpośrednio w dół omijając i rezygnując z potężnego modelu liniowego do zmapowanego bajt w wektor do przeliczenia w fizyczny na płytce bez stronicowania",
-      "Żadne ze zmyślonych powłok formatu powyższych z opisu bazy danych na wyższych wektorowych w formach u złożeń wyżej od trybu segmentowanego."
-    ],
-    3,
-    "Brak włączenia strony. System dzieli i odlicza za pomocą ułożonej i sprawdzonej o prawach na maskach wielkości bazy adres. Z segmentu od góry z kodu o wielkości od 0 z offsetem wywołanie przelicza sumę pod twardy bajt z pliku na fizycznej płycie i wysyła piny przez płytę (adres logiczny -> fizyczny)."
   ],
   [
     "Deskryptor segmentu jest (w mikroprocesorze 80386):",
@@ -4107,17 +4013,6 @@
     "Zabezpieczenia ringów ustalały przedziały numerów (np. warstwa 1-2 zezwalała na operacje z odczytu, podczas gdy operacje modyfikacji w locie akceptowane były tylko od trybu super jądra w Ringu najniższym o wartości zera)."
   ],
   [
-    "Znak symbolicznej Gwiazdki (*) spotykany podczas adnotacji dopisanej przy nadanym określonym prawie (np. przy prawie czytania R*) na schematycznej macierzy dla domeny w systemie operacyjnym:",
-    [
-      "zobowiązuje administratora z reguły do natychmiastowego obcięcia tego ujemnego prawnego zapisu tylko do domen o wyższym ukrytym ID katalogu macierzystego serwera",
-      "pozwala dla zysku programistycznego tylko na ograniczone zrzuty zapisowe we wskazanej kolumnie bloku powiązania bazy relacyjnej SQL z macierzą dysków w oparciu RAID5 z sumami kontrolnymi obok siebie",
-      "zabrania po wsze czasy absolutnie po formacie całkowitego modyfikowania i zapisywania poleceń usuwania",
-      "oznacza techniczną i fizyczną możliwość skopiowania, czyli udostępniania i transferowania dla tej zmiennej prawa z naszej zadeklarowanej na matrycy domeny bezpośrednio do dowolnych tablic i domen u innych"
-    ],
-    3,
-    "Prawo kopiowania uprawnień to atrybut rozszerzający polegający na przeniesieniu uprawnień. Jeżeli nadano dla mnie plik z dostępem Read* na odczyt z adnotacją flagi symbolizującej kopię – oprócz wyciągnięcia przez proces tego samego testu do ramu, udostępnia interfejs upoważniający przydział wywołujący go też dla innych domowników grupy pracującej pod spodem konta."
-  ],
-  [
     "Przełącznik trybu (tryb nadzorcy/tryb użytkownika) to w systemie operacyjnym:",
     [
       "rejestr bazowy używany przy stronicowaniu",
@@ -4589,83 +4484,6 @@
     ],
     2,
     "Stary port i protokół by odczytać co robisz wymuszał obciążające 'odpytanie' np. procesor ciągle pętlami skanował po setki razy mysz w poszukiwaniu kliknięć. Sterowniki Przerwaniowe asynchronicznie siedzą i same oddają moc CPU dla innych wyczekując na sprzętowy dzwonek na przerwaniu, gdy tylko sprzęt da sygnał by wstać."
-  ],
-  [
-    "W systemowej wielowątkowej obsłudze tzw. urządzeń stricte niepodzielnych dla wielu programów instalowanych jednocześnie w systemie technologia bufora pośredniczącego zwanego popularnie 'Spoolerem' zapewnia bez zakleszczeń:",
-    [
-      "możliwość fizycznego podziału na niezależne podzadania do zapisywania klastrów stronicowanych z archiwizacji",
-      "iluzję obsługi podzielnej i bezpieczną zaporę z kolejką zrzutów bez błędów w trybie wielozadaniowości do jedynego takiego wolnego urządzenia z natury (jak jedna fizyczna drukarka papieru laserowa drukująca na porcie w biurze)",
-      "urządzeniom kontrolę przepływu w prędkości dla magistrali masowych napędów by opóźnienia przerwania miały stały wymiar z milisekund z zegarem jądra w pamięci w procesach jądrowych",
-      "natychmiastowe przeliczenia potokowe procesora L1"
-    ],
-    1,
-    "Spooling wyrzuca operację w postaci tymczasowego zadania do uformowania ukrytej szpulki wydruku jako plik do zamknięcia w podprocesach na twardym nośniku, naśladując pod programy złudzenie z bezbłędnej niekonfliktowej natychmiastowej obsługi wielodostępu nie zważając na blokadę fizyczną zapisanego dyspozytorowi sprzętu w pokoju."
-  ],
-  [
-    "Z punktu mechaniki inżynierii sprzętu zgłoszony na żądania błąd z tablic zwany poprawniej mianem Sprzętowego Przerwania generowany z układu wejść to u rdzenia:",
-    [
-      "asynchroniczne sprzętowo-elektroniczne natychmiastowe zdarzenie z płytki sygnałowej przez które nieznany uśpiony lub pobudzony osprzęt pilnie żąda zablokowania lub zwraca uwagę głównego pracującego procesora by ten położył na niego instrukcje",
-      "tylko opóźniona flaga z zegara o cyklach pod proces do opóźniania transferów bitowych jako uśpienie w DMA pod przydział kanału blokującego i oczekującego na cykle szamotania systemów w pamięciach",
-      "narzucone z opisu skryptu synchronizujące dla obsługi cykli wywołanie powrotów od wyjścia kodu w kompilatorach omijając przerwy jako pole do komend pod kanały w strumieniu znaków",
-      "proces zajmujący operacyjnie obszar bazy pamięci adresowej systemów w rejestrze flagi."
-    ],
-    0,
-    "Pojęcie przerwania w elektronice maszyn to asynchroniczna akcja (przychodząca z zewnątrz nagle i nieplanowanie do pętli operacyjnej). Urządzenie wysyłając krótki impuls elektryczny przerywa w pół zadania logikę jądra dyspozytora wymagając pilnej reakcji przed przepełnieniem własnego cache lub dla celów wznawiania błędów (Page Fault)."
-  ],
-  [
-    "Systemową konsolę komunikacyjną Standardu (Standard Input/Output) nazywaną terminalem maszyn podpinaną u powłok systemów operacyjnych dla logującego z zewnątrz administratora stanowią u fizycznej architektury tradycyjnie peryferia takie jak:",
-    [
-      "układy podwójne od dysków na taśmach pod archiwum magnetyczne i skanery",
-      "niezbędny procesor rdzenia x86 i chipset na moście północnym RAMu (jako standard we/wy układu bazowego)",
-      "tylko serwery na portach komunikacji modemu ruterowego ethernet",
-      "urządzenie standardowego pisania (np. klawiatura) zrzucane na sprzętowe wideo wyświetlające komunikaty trybów tekstowych powłok na wyjściu (monitorze podpiętym od stacji PC)"
-    ],
-    3,
-    "Powłoka (Shell) i koncepcja terminali TTY zakłada istnienie na węźle dwóch standardów. Jednego zrzutu danych na wejście strumienia i wypisywania odebranych z powrotem ech i wyników błędów z systemu do operatora. Podłączona po stykach konsola opiera się z tych ról na klawiaturach i ekranach na linii."
-  ],
-  [
-    "Jakiego z punktu natury osprzętowego w układach dla procesów przydzielanych urządzeń obwodowych (we/wy portów z peryferiami i płyt wideo), z definicji informatycznej po prostu NIE MOŻNA w ogóle logicznie zamontować (zmountować pod alias jako pamięć plików dla odczytu tablic) z punktu dostępu pod obsługi z polecenia Linuxa `mount`:",
-    [
-      "partycji ze sprzętowymi formatami plikowymi systemów konkurencji np. macierzy i logów z baz formatu NTFS Windows 2000 na portach",
-      "masowych twardych magnetycznych mechanizmów blokowych oraz nośników po taśmach USB czy ZIP i stacjach miękkich magnetyków włożonych jako dyskietki we-wy do bazy urządzenia płyty głównej (fdd1)",
-      "bezpośrednio napędów CD lub optycznych laserowych płytek z ISO po włożeniu jako DVD by wyświetlić strumieniowo foldery z archiwum paczek",
-      "używanych po sprzętach i-węzłowych tak zwanych u ról jednokierunkowych przesyłu w osprzętach znakowych i strumieniowych np. fizycznego terminala bez baz, podpinanego myszką laserową lub styków monitora ekranu CRT na styk VGA u wejścia"
-    ],
-    3,
-    "Narzędzie mount wpina nową wolną i odkrytą na pinach sprzętowo tablicę od alokacji struktury systemu z klastrami od urządzenia blokowego (dyski, czytniki pod usb) prosto u pnia logicznego widoku z drzewa Linuxowych hierarchii. Urządzenia znakowe (myszy, rzutniki VGA z obrazem) z natury plują strumieniami bajtów ciągiem stąd ich zamontowanie jak nośników bez baz od odczytów losowych mijałoby się zupełnie w budowie z celem."
-  ],
-  [
-    "Działający po powrocie obsługi jądra dla wątku z urządzenia proces powiązany z obsługami przerwaniowymi i żądań fizycznego podsystemu we/wy dla układów masowych fizycznie musi realizować np.:",
-    [
-      "zawieszanie całych stref systemowych SWAP i operacyjnie pętli logowania by asynchronicznie przerywać operacje blokowe po sieci w tle",
-      "przewraca do zmian fizycznie logowania kolejności u przypisanych twardo wektorowo pinu linii z układem sprzętowych przerwań dla odpalanych pobocznie urządzeń np. płyty IRQ z mostku",
-      "wywołanie w układach rejestrów do uśpienia i inicjowanie wybranej odpowiednio od góry komendy z zapisu w stacji z operacji i czekanie na fizyczne potwierdzenia sygnałowe ukończeń po powrotach sygnału dla we/wy urządzenia i wstrzymywania procesu o dane od jądra dyspozytora na semaforze dla obsługi do kolejki zamówień",
-      "skanuje na tablicę wielkości i alokuje wolno po dysku pliki z wymiany pamięci bez obsług dyspozytora dla logów ze zrzutami z RAMu na blok I/O"
-    ],
-    2,
-    "Aby uświadomić system że plik po skopiowaniu leży na fizycznym nośniku (urządzeniu z opóźnieniami z mechaniki) jądro musi zrzucić zlecenie i fizycznie na rejestrach zająć zadanie powrotne. Oczekuje i kładzie na pauzie dla uśpionego w wywłaszczeniu zadania żądającego aż napęd zakończy swoją ślamazarną w cyklach z powolną obsługę, a powrotny mechanizm u sygnałów odesłanych w przerwaniach obudzi uśpiony nad proces i zwolni ze stosu w kolejkach w status obsługowy operację semaforem o gotowości."
-  ],
-  [
-    "Przez zastosowanie z portów z logiką na płytach i magistral w układzie z urządzeniami od sprzętów zewnętrznych na magistrali systemowej można na wtykach poprawnie we/wy wpinać potężne masowe magazyny u dysków używając obsługujących dla komunikacji i szyn z danymi transferowymi z procesorami u protokołów dla złącz typu:",
-    [
-      "do Ultra szyn PCI od rozszerzeń od pinów w starych procesorach pod architekturę bez I/O",
-      "dedykowane po starych kablach dyskowych od napędów blokowych gniazd tasiemcowych protokołu z kontrolerami u standaryzacji rzędu sprzętu SCSI lub dla klasyków PC na złącza wariantowe w klasie IDE (bądź obecnie USB PnP)",
-      "tylko i wyłącznie za pomocą wejścia wtykówek dla sprzętowej obsługi powolnego portu z układem od archaicznych we/wy szeregowych jak gniazdo ISA czy starszych myszy",
-      "korzystając domyślnie z dedykowanych architektur i portu pod rozszerzenia w piny szybkie miedziowe dla AGP stworzone od stacji gier w rendering dla wideo i port"
-    ],
-    1,
-    "Sprzęt i peryferia dyskowe z zapisami (HDD, cd-rom) pod system do płyty wpinało się architektonicznie na bardzo sztywne ramy taśm IDE/ATA bądź kontrolerami wyspecjalizowanymi po korporacyjne serwerownie u układów magistralowych np. klasycznego szybkiego Small Computer System Interface w standardach wyjścia."
-  ],
-  [
-    "Abstrakcyjna definicja z podsystemów operacyjnych Linux we/wy nazywająca i kreująca kanałowy wirtualny układ przesyłowy na plik o architekturze komunikacyjnej 'Strumieniowy / Strumień (Stream)' stanowi u budowy dla systemów rodzaj wektorowy mechanizmu który na terminal:",
-    [
-      "realizuje przydziały do oddzielnego awaryjnego izolowanego podpięcia na wyjście jako przerwaniowy kanał na twarde linie zapasu na mostku dla DMA",
-      "jest w logice dwustronnie otwartym komunikacyjnie czyli pełnodwupleksowym we/wy w połączeniu z działającymi obustronnie procesami użytkowymi na wejście a sterującym sprzętem po niższych powłokach podprogramem wymuszonym z obsługą urządzającą do jądra pod znaki bajtów",
-      "został zrodzony i stworzony u celów uciążliwie skomplikowanego buforowania potoków na szamotanie w chęci napraw po problemie wektorowania",
-      "stanowi domyślne przydziały do współdzielonej awaryjnie izolowanej pamięci cache pod operację u buforowania strumieni u przesyłów na podwójny kanał RAM z protokołami np. sprzętowym powiązaniem dla magistralowych taśm masowych ze sterownikami do trybów UDMA przy usterkach w odczycie dla systemów plikowych Windowsa u bloków mft."
-    ],
-    1,
-    "Potoki uniksowe połączyły się do udoskonalonych strumieni (Streams z UNIX System V). Ta zmyślna potężna ukryta jako warstwowa idea stosu z połączenia otwiera symetryczny, pełnodupleksowy po obu rurach dwukierunkowy przepływ od powłok i zadań usera (jako zrzut bajt po bajcie) spływający elastycznie po obróbce u jądra i sterowników wyjściowych aż w tył na osprzęt na pinach stacji terminalowej u I/O z echem klawiaturowo wyjściowym."
   ],
   [
     "W pliku wsadowym (Windows/DOS) do wywołania innego pliku wsadowego z opcją powrotu i kontynuacji należy użyć polecenia:",
