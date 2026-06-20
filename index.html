@@ -38,6 +38,7 @@
             max-width: 850px;
             width: 100%;
             padding: 2rem;
+            padding-top: 0rem;
             box-sizing: border-box;
         }
 
@@ -54,7 +55,9 @@
 
         h1 {
             font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            margin-top: 0rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
             background: -webkit-linear-gradient(45deg, #818cf8, #c084fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -223,7 +226,6 @@ let listAnswers = [];
 
 async function initQuiz() {
     try {
-        // Pobieranie pliku (musi być w tym samym folderze lub pod wskazanym adresem)
         const response = await fetch('questions.json');
         if (!response.ok) {
             throw new Error('Problem z załadowaniem pliku z pytaniami.');
