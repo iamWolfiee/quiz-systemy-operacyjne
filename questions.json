@@ -30,10 +30,10 @@
       "Rejestry procesora",
       "Zmienne procesu przerywanego",
       "Semafory procesu przerywanego",
-      "Wszystkie powyższe"
+      "Adres powrotu i rejestry procesora"
     ],
     4,
-    "Aby proces przerywany mógł bezbłędnie kontynuować działanie po powrocie z przerwania, cały jego kontekst procesora oraz nienaruszony stan pamięci muszą zostać zachowane."
+    "Podprogram obsługi przerwania zabezpiecza kontekst sprzętowy (rejestry oraz adres powrotu). Zmienne i semafory pozostają w pamięci operacyjnej i nie są fizycznie kopiowane ani 'zabezpieczane' przez sam mechanizm przerwania."
   ],
   [
     "Wiązanie adresów w trakcie ładowania występuje w systemie:",
@@ -398,14 +398,14 @@
   [
     "Przy prawdopodobieństwie błędu braku strony równym 0.00001 (oraz parametrach RAM 10 ns i HDD 10 ms) średni czas dostępu wynosi:",
     [
-      "100 ns",
+      "110 ns",
       "10 ns",
       "1 \u03bcs",
       "10 \u03bcs",
       "Żadne z powyższych"
     ],
     0,
-    "Podstawiając do wzoru EAT: 0.99999*10ns + 0.00001*10000000ns \u2248 10ns + 100ns = 110ns, co w przybliżeniu daje wynik 100 ns."
+    "Podstawiając do wzoru EAT: 0.99999*10ns + 0.00001*10000000ns = 9.9999ns + 100ns = 109.9999ns, co w przybliżeniu daje wynik 110 ns."
   ],
   [
     "W powłoce BASH, aby odwołać się do parametru pozycyjnego o indeksie wyższym niż 9 (np. dziesiątego), należy użyć:",
@@ -418,5 +418,257 @@
     ],
     2,
     "Bez nawiasów klamrowych zapis $10 zostanie zinterpretowany jako zmienna $1 z doklejonym znakiem tekstowym '0'. Klamry ${10} jednoznacznie wskazują na dwucyfrowy indeks."
+  ],
+  [
+    "Zakończenie transmisji poprzez kanał sygnalizowane jest przez:",
+    [
+      "operacje sygnalizuj w podprogramie obsługi przerwań",
+      "fragmentację zewnętrzną",
+      "wątek zarządcy sprzętu",
+      "zwolnienie stosu systemowego",
+      "żadne z powyższych"
+    ],
+    4,
+    "Zakończenie transmisji przez kanał wejścia/wyjścia sygnalizowane jest sprzętowo poprzez wygenerowanie przerwania (Interrupt) od danego kontrolera."
+  ],
+  [
+    "Każdy wątek ma własny:",
+    [
+      "obszar pamięci danych globalnych",
+      "obszar pamięci programu (kod)",
+      "stos",
+      "podprogram obsługi przerwania",
+      "wszystkie powyższe"
+    ],
+    2,
+    "Wątki współdzielą kod, dane globalne oraz zasoby procesu, ale każdy z nich posiada własny, niezależny stos oraz licznik rozkazów (PC) do obsługi wywołań funkcji."
+  ],
+  [
+    "W procesorach Core 2 Duo występuje tablica stron:",
+    [
+      "rozproszona",
+      "odwrócona",
+      "dwupoziomowa",
+      "haszowana",
+      "żadna z powyższych"
+    ],
+    4,
+    "Procesory Core 2 Duo to architektura 64-bitowa (x86-64), która natywnie wykorzystuje czteropoziomową tablicę stron. Dlatego żadna z wymienionych opcji nie jest w pełni poprawna dla domyślnego trybu pracy tego procesora."
+  ],
+  [
+    "W strukturze pierścieniowej (ochrony jądra) podprogram może wywoływać procedury z:",
+    [
+      "wyłącznie własnej warstwy",
+      "wszystkich warstw niższych",
+      "wszystkich warstw wyższych",
+      "wszystkie odpowiedzi są poprawne",
+      "żadna z powyższych"
+    ],
+    4,
+    "W klasycznym modelu pierścieni bezpośrednie wywołanie kodu z innej warstwy jest z zasady zabronione. Przejście do warstwy bardziej uprzywilejowanej (o niższym numerze) wymaga użycia specjalnych bramek (np. wywołań systemowych), a nie zwykłego wywołania podprogramu."
+  ],
+  [
+    "Zawartość środowiska ulotnego może być zapisana przez:",
+    [
+      "proces w dowolnym momencie",
+      "proces tylko w czasie otwierania semafora",
+      "przez planistę wysokiego poziomu",
+      "przez proces stosując odwołanie do systemu operacyjnego",
+      "żadne z powyższych"
+    ],
+    4,
+    "Środowisko ulotne (rejestry procesora) jest zapisywane automatycznie przez mechanizmy sprzętowe CPU oraz procedury niskiego poziomu jądra w trakcie obsługi przerwań lub przełączania kontekstu."
+  ],
+  [
+    "Wiązanie adresów w trakcie ładowania występuje dla:",
+    [
+      "CP/M",
+      "MS-DOS",
+      "BIOS",
+      "wszystkie powyższe",
+      "żadne z powyższych"
+    ],
+    1,
+    "System MS-DOS w przypadku programów wykonywalnych typu .EXE dokonuje relokacji i ostatecznego wiązania adresów w momencie ładowania programu do pamięci."
+  ],
+  [
+    "Podczas bezpośredniego dostępu do pamięci procesor może odwołać się do:",
+    [
+      "pamięci operacyjnej",
+      "pamięci ROM (BIOS)",
+      "urządzeń wejściowo-wyjściowych",
+      "pamięci podręcznej poziomu 1",
+      "nie może odwołać się do powyższych"
+    ],
+    3,
+    "Pamięć podręczna poziomu 1 (L1 Cache) jest integralną, najszybszą częścią struktury rdzenia procesora, do której CPU ma natychmiastowy i bezpośredni dostęp w cyklach rozkazowych."
+  ],
+  [
+    "W jaki sposób w przypadku stosowania segmentacji adres generowany przez proces zmienia się na adres, dzięki któremu możemy odwołać się do konkretnej komórki pamięci?:",
+    [
+      "Logiczny -> fizyczny -> liniowy",
+      "Liniowy -> logiczny",
+      "Fizyczny -> liniowy -> logiczny",
+      "Logiczny -> fizyczny",
+      "żadne z powyższych"
+    ],
+    4,
+    "W czystej segmentacji adres logiczny zmienia się od razu w adres fizyczny. W architekturze x86 występuje kombinacja segmentacji ze stronicowaniem, dając ciąg: logiczny -> liniowy -> fizyczny. Ponieważ nie ma tu takiej opcji, poprawna to 'żadne z powyższych'."
+  ],
+  [
+    "Kolejka procesora zawiera wątki:",
+    [
+      "statyczne",
+      "wstrzymane",
+      "wykonywalne",
+      "niewykonywalne",
+      "żaden z powyższych"
+    ],
+    2,
+    "Kolejka procesów gotowych (ready queue) przechowuje wyłącznie wątki/procesy w stanie wykonywalnym, które oczekują na przydział czasu procesora."
+  ],
+  [
+    "Aktywne czekanie (spinlock) stosuje się:",
+    [
+      "w operacji zajmij",
+      "w operacji uwolnij",
+      "dla kolejki priorytetowej procesora",
+      "by oddalić stosy procesów",
+      "żadne z powyższych"
+    ],
+    0,
+    "Aktywne czekanie polega na ciągłym testowaniu warunku w pętli. Jest stosowane w podstawowej implementacji operacji 'zajmij' (lock/wait) na muteksach lub semaforach nisko-poziomowych."
+  ],
+  [
+    "Duże klastry na dysku twardym powodują:",
+    [
+      "zmniejszenie struktur dyskowych alokacji",
+      "zwiększenie szybkości sekwencyjnego dostępu do plików",
+      "straty pojemności dysku (fragmentacja wewnętrzna)",
+      "wszystkie powyższe",
+      "żadne z powyższych"
+    ],
+    3,
+    "Większy klaster oznacza mniej wpisów w tablicy alokacji (mniejsze struktury) i szybszy odczyt dużych plików, ale generuje marnowanie miejsca przy małych plikach."
+  ],
+  [
+    "Fragmentacja wewnętrzna nie występuje dla:",
+    [
+      "stronicowania",
+      "segmentacji",
+      "segmentacji ze stronicowaniem",
+      "wszystkich powyższych",
+      "żadne z powyższych"
+    ],
+    1,
+    "Segmentacja przydziela procesom dokładnie tyle pamięci, ile wymagają (bloki o zmiennej długości), eliminując fragmentację wewnętrzną na rzecz fragmentacji zewnętrznej."
+  ],
+  [
+    "System plików ciągłych to inaczej przydział:",
+    [
+      "ciągły",
+      "liniowy",
+      "indeksowy",
+      "listowo-indeksowy",
+      "drzewiasty"
+    ],
+    0,
+    "Przydział ciągły polega na zapisaniu pliku w jednym, zwartym i nieprzerwanym obszarze sąsiadujących po sobie bloków lub klastrów na dysku."
+  ],
+  [
+    "Przy prawdopodobieństwie braku strony równym 0.001 oraz szybkości dostępu do pamięci i dysku równym 10 ns i 10 ms średni czas dostępu do pamięci wynosi około:",
+    [
+      "1 ms",
+      "10 \u03bcs",
+      "11 ns",
+      "20 ns",
+      "110 ns"
+    ],
+    1,
+    "Wyliczenie: EAT = 0.999 * 10 ns + 0.001 * 10,000,000 ns = 9.99 ns + 10,000 ns = 10,009.99 ns, co w zaokrągleniu daje dokładnie 10 mikrosekund (\u03bcs)."
+  ],
+  [
+    "Prawdopodobieństwo zakleszczenia można zmniejszyć stosując:",
+    [
+      "wywłaszczanie semaforów",
+      "pulę urządzeń (np. spooling dla drukarek)",
+      "stronicowanie dynamiczne",
+      "blokowanie pamięci podręcznej",
+      "żadne z powyższych"
+    ],
+    1,
+    "Zastosowanie spoolera/puli urządzeń przekształca urządzenie o dostępie wyłącznym (niepodzielne) w urządzenie współdzielone wirtualnie, co eliminuje warunek wzajemnego wykluczania."
+  ],
+  [
+    "Linux nie może korzystać z systemu plików:",
+    [
+      "FAT32",
+      "ext2",
+      "ext3",
+      "ReiserFS",
+      "nie ma powyższych ograniczeń"
+    ],
+    4,
+    "Nowoczesne jądro Linux posiada wbudowane sterowniki lub moduły FUSE pozwalające na natywną obsługę wszystkich popularnych systemów plików (w tym FAT32 czy starszych ext/ReiserFS)."
+  ],
+  [
+    "Małe pliki na partycji NTFS zapisywane są jako:",
+    [
+      "Części dużego pliku specjalnego",
+      "Zawartość ostatniego klastra dużego pliku eliminując fragmentację wewnętrzną",
+      "Atrybut rezydentny tabeli MFT",
+      "Plik na partycji ukrytej",
+      "żadne z powyższych"
+    ],
+    2,
+    "W systemie NTFS, jeśli plik jest wystarczająco mały, jego dane są zapisywane bezpośrednio w rekordzie tabeli MFT jako atrybut rezydentny."
+  ],
+  [
+    "Stos procesów i wątków jest umieszczony w pamięci:",
+    [
+      "operacyjnej",
+      "asocjacyjnej",
+      "pomocniczej",
+      "notatnikowej",
+      "żadne z powyższych"
+    ],
+    0,
+    "Stos (Stack) oraz sterta (Heap) to logiczne części przestrzeni adresowej procesu zlokalizowane fizycznie w pamięci RAM (operacyjnej) komputera."
+  ],
+  [
+    "Macierz dyskowa z parzystością z przeplotem bloków i podwójną nadmiarowością to macierz typu:",
+    [
+      "RAID 0",
+      "RAID 1",
+      "RAID 5",
+      "RAID 6",
+      "żadne z powyższych"
+    ],
+    3,
+    "RAID 6 rozszerza schemat RAID 5 o dodatkowy blok parzystości, realizując podwójną nadmiarowość danych z przeplotem na poziomie bloków (odporność na awarię dwóch dysków naraz)."
+  ],
+  [
+    "Buforowanie wielokrotne:",
+    [
+      "eliminuje szamotanie",
+      "jest konieczne do prawidłowego działania zbioru roboczego",
+      "pozwala unikać przestojów i zwiększa równoległość pracy procesów I/O",
+      "przyśpiesza działanie sprzętowej pamięci podręcznej",
+      "żadne z powyższych"
+    ],
+    2,
+    "Zastosowanie wielu buforów (np. podwójnego lub potrójnego) pozwala procesowi produkować dane do jednego bufora, podczas gdy system przesyła dane z innego bufora do urządzenia we/wy."
+  ],
+  [
+    "Aby odwołać się do wartości zmiennej lub parametru w skrypcie BASH, używamy znaku:",
+    [
+      "#",
+      "@",
+      "$",
+      "%",
+      "żadne z powyższych"
+    ],
+    2,
+    "W powłoce Bash znak dolara ($) służy jako operator wyciągnięcia wartości przypisanej do zmiennej lub pobrania wartości parametru pozycyjnego (np. $1, $var)."
   ]
 ]
