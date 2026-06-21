@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         :root {
-            --bg-color: #0d0d0d;         
+            --bg-color: #0d0d0d;        
             --card-bg: #1a1a1a;          
             --border-color: #2e2e2e;     
             --text-main: #f5f5f5;        
@@ -38,17 +38,6 @@
             justify-content: center;
         }
 
-        .explanation {
-            margin-top: 1.5rem;
-            padding: 1.25rem;
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-            display: none;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
         #app {
             max-width: 850px;
             width: 100%;
@@ -57,15 +46,16 @@
             box-sizing: border-box;
         }
 
+        /* --- NAPRAWIONY NAGŁÓWEK STICKY --- */
         header {
             text-align: center;
             margin-bottom: 1.5rem;
             position: sticky;
             top: 0;
-            background: var(--bg-gradient);
+            background-color: #0c0c0c; /* Stałe tło zapobiegające prześwitywaniu */
             z-index: 1000;
             padding-bottom: 1rem;
-            border-bottom: 1px solid var(--card-border);
+            border-bottom: 1px solid var(--border-color); 
         }
 
         h1 {
@@ -104,17 +94,56 @@
 
         .dataset-btn.active {
             background: var(--primary);
-            color: white;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+            color: #000; /* Zmiana tekstu na czarny dla lepszego kontrastu */
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         }
 
+        /* --- NAWIGACJA SEKCJI (DESKTOP I MOBILE) --- */
         .sections-nav {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .desktop-nav {
             display: flex;
-            padding-left: 50px;
-            padding-right: 50px;
             justify-content: center;
             gap: 0.5rem;
             flex-wrap: wrap;
+        }
+
+        .mobile-nav-container {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .mobile-nav-select {
+            width: 100%;
+            max-width: 300px;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            appearance: none; /* Ukrywa domyślną strzałkę systemową na niektórych przeglądarkach */
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23c2c2c2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem top 50%;
+            background-size: 0.65rem auto;
+        }
+
+        .mobile-nav-select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .mobile-nav-select option {
+            background-color: var(--bg-color);
+            color: var(--text-main);
         }
 
         .btn-section {
@@ -132,26 +161,27 @@
         }
 
         .btn-section:hover {
-            background: rgba(99, 102, 241, 0.2);
-            color: var(--car-bg);
+            background: rgba(255, 255, 255, 0.15);
         }
 
         .btn-section.active {
             background: var(--primary);
             color: #000;
             border-color: var(--primary);
-            box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
         }
 
+        @media (max-width: 768px) {
+            .desktop-nav { display: none; }
+            .mobile-nav-container { display: block; }
+        }
+
+        /* --- RESZTA STYLÓW --- */
         .glass-card {
-            background: #1a1a1a;
-            border: 1px solid #2e2e2e;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: var(--border-radius);
             padding: 2rem;
             margin-bottom: 1.5rem;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            transition: all 0.3s ease;
         }
 
         button.outline {
@@ -168,7 +198,7 @@
         }
 
         button.outline:hover {
-            background: rgba(99, 102, 241, 0.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .question-text {
@@ -206,18 +236,29 @@
         .option.correct {
             background: var(--success-bg);
             border-color: var(--success);
-            color: #34d399;
+            color: var(--success);
             font-weight: 600;
         }
 
         .option.wrong {
             background: var(--error-bg);
             border-color: var(--error);
-            color: #f87171;
+            color: var(--error);
+        }
+
+        .explanation {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            display: none;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .explanation.show { display: block; animation: fadeIn 0.4s ease forwards; }
-        .explanation strong { color: #818cf8; }
+        .explanation strong { color: var(--primary); }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
@@ -225,11 +266,11 @@
         }
 
         pre {
-            background: rgba(0,0,0,0.3);
+            background: #000;
             padding: 1rem;
             border-radius: 8px;
             overflow-x: auto;
-            border: 1px solid var(--card-border);
+            border: 1px solid var(--border-color);
         }
         
         code {
@@ -243,12 +284,10 @@
             left: 20px;
             transform: translateY(-50%);
             z-index: 1000;
-            background: #1a1a1a;
+            background: var(--card-bg);
             padding: 1.5rem;
             border-radius: var(--border-radius);
-            border: 1px solid var(--primary);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
             text-align: center;
         }
 
@@ -283,7 +322,7 @@
     <div>
         <div class="progress-sidebar">
             <div id="list-score-title" style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;">Wynik bieżącego zestawu</div>
-            <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: #34d399;">Rozwiązano: 0</div>
+            <div id="list-score" style="font-weight: bold; font-size: 1.1rem; color: var(--success);">Rozwiązano: 0</div>
         </div>
         
         <div id="list-container">Ładowanie pytań...</div>
@@ -300,7 +339,6 @@ let listAnswers = [];
 const QUESTIONS_PER_SECTION = 50;
 let currentSection = 0;
 
-// Zmienne dla trybu losowego
 let isRandomMode = false;
 let randomPool = [];
 let randomStats = { answered: 0, corrects: 0 };
@@ -345,7 +383,6 @@ async function startRandomMode(btnId) {
     document.getElementById('sections-navigation').innerHTML = '';
 
     try {
-        // Próba pobrania obu baz i połączenia ich w jedną dużą pulę losową
         const [res1, res2] = await Promise.all([
             fetch('questions.json').catch(() => null),
             fetch('questions_najnowsze.json').catch(() => null)
@@ -371,7 +408,6 @@ async function startRandomMode(btnId) {
 function renderRandomQuestion() {
     if (!isRandomMode) return;
     
-    // Losowanie pytania
     const randomIndex = Math.floor(Math.random() * randomPool.length);
     currentRandomQuestion = randomPool[randomIndex];
     
@@ -446,27 +482,43 @@ function renderSectionTabs() {
     
     if (totalSections <= 1) return;
 
+    // Tworzymy wersję dla Desktopu (przyciski)
+    let desktopHTML = `<div class="desktop-nav">`;
+    // Tworzymy wersję dla Mobile (Select/Dropdown)
+    let mobileHTML = `<div class="mobile-nav-container">
+                        <select class="mobile-nav-select" onchange="switchSection(parseInt(this.value))">`;
+
     for (let i = 0; i < totalSections; i++) {
         const startNum = i * QUESTIONS_PER_SECTION + 1;
         const endNum = Math.min((i + 1) * QUESTIONS_PER_SECTION, qData.length);
+        const label = `${startNum} - ${endNum}`;
 
-        const btn = document.createElement('button');
-        btn.className = `btn-section ${i === currentSection ? 'active' : ''}`;
-        btn.innerText = `${startNum}-${endNum}`;
-        btn.onclick = () => switchSection(i);
-        nav.appendChild(btn);
+        desktopHTML += `<button class="btn-section ${i === currentSection ? 'active' : ''}" onclick="switchSection(${i})">${label}</button>`;
+        mobileHTML += `<option value="${i}" ${i === currentSection ? 'selected' : ''}>Pytania: ${label}</option>`;
     }
+
+    desktopHTML += `</div>`;
+    mobileHTML += `</select></div>`;
+
+    nav.innerHTML = desktopHTML + mobileHTML;
 }
 
 function switchSection(sectionIndex) {
     if (isRandomMode) return;
     currentSection = sectionIndex;
     
+    // Aktualizacja wizualna przycisków na PC
     const buttons = document.querySelectorAll('.btn-section');
     buttons.forEach((btn, idx) => {
         if (idx === sectionIndex) btn.classList.add('active');
         else btn.classList.remove('active');
     });
+
+    // Aktualizacja wartości na telefonach
+    const mobileSelect = document.querySelector('.mobile-nav-select');
+    if (mobileSelect) {
+        mobileSelect.value = sectionIndex;
+    }
 
     renderList();
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -577,7 +629,6 @@ function formatTextWithCode(text) {
     return text.replace(/\n/g, '<br>');
 }
 
-// Uruchamiamy ładowanie głównej bazy od razu
 window.onload = () => {
     loadDataset('questions.json', 'main');
 };
